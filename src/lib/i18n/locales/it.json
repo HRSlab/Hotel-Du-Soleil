@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "overview": "Panoramica",
+    "rooms": "Sistemazioni",
+    "restaurant": "Gusto Alpino",
+    "wellness": "Wellness",
+    "sport": "Sport & Outdoor",
+    "experiences": "Territorio",
+    "book": "Prenota"
+  },
+  "megamenu": {
+    "overview": {
+      "title": "Panoramica",
+      "links": ["La Struttura", "La Nostra Storia", "Posizione & Dintorni", "Sostenibilità"],
+      "featured_label": "In Evidenza",
+      "featured_text": "Scopri il fascino autentico di un rifugio a 1.500 metri. L'eleganza della semplicità e il calore di una gestione familiare dal 1980.",
+      "featured_cta": "Scopri l'Hotel"
+    },
+    "rooms": {
+      "title": "Sistemazioni",
+      "links": [
+        { "name": "Camera Matrimoniale", "href": "/camere/matrimoniale" },
+        { "name": "Camera Tripla", "href": "/camere/tripla" },
+        { "name": "Quadrupla Standard", "href": "/camere/quadrupla_standard" },
+        { "name": "Quadrupla Familiare", "href": "/camere/familiare" }
+      ],
+      "featured_label": "In Evidenza",
+      "featured_text": "Spazi pensati per il tuo riposo. Legno naturale, luce alpina e un comfort essenziale per rigenerarsi dopo una giornata in quota.",
+      "featured_cta": "Tutte le camere"
+    },
+    "restaurant": {
+      "title": "Gusto Alpino",
+      "links": ["Il Ristorante Centrale", "Menù Tradizionale", "Lounge Bar & Camino", "La Cantina"],
+      "featured_label": "In Evidenza",
+      "featured_text": "I sapori autentici della Valle d'Aosta. Materie prime a km 0, ricette di famiglia tramandate con cura e un'atmosfera conviviale.",
+      "featured_cta": "Scopri il menù"
+    },
+    "wellness": {
+      "title": "Wellness",
+      "links": ["La SPA in Quota", "Massaggi Sportivi", "Trattamenti Corpo", "Private SPA (Notturna)"],
+      "featured_label": "In Evidenza",
+      "featured_text": "Il lusso del silenzio. Ritrova il tuo equilibrio con i nostri percorsi benessere e lasciati coccolare dalle mani esperte dei nostri terapisti.",
+      "featured_cta": "Rilassati"
+    },
+    "sport": {
+      "title": "Attività",
+      "links": ["Sci & Snowboard (Ski-in)", "Mountain Bike & E-Bike", "Trekking in Alpeggio", "Ski Box & Noleggio"],
+      "featured_label": "In Evidenza",
+      "featured_text": "L'adrenalina inizia a 20 metri dalla nostra porta. Accesso diretto agli impianti in inverno e a infiniti sentieri panoramici in estate.",
+      "featured_cta": "Vai all'Outdoor"
+    },
+    "experiences": {
+      "title": "Il Territorio",
+      "links": ["Degustazione Fontina DOP", "Ciaspolate Notturne", "Yoga in Quota", "Guide Alpine Partner"],
+      "featured_label": "In Evidenza",
+      "featured_text": "Non una semplice vacanza, ma una collezione di ricordi. Esplora il territorio attraverso attività autentiche, in totale sintonia con i ritmi della montagna.",
+      "featured_cta": "Lasciati ispirare"
+    }
+  },
+  "hero": {
+    "title": "Il Tuo Rifugio <br/> nel Silenzio.",
+    "subtitle": "Torgnon, Valle d'Aosta"
+  },
+  "booking": {
+    "arrival": "Arrivo",
+    "departure": "Partenza",
+    "guests": "Ospiti",
+    "check": "Verifica",
+    "adults": "Adulti",
+    "children": "Bambini"
+  }
+}

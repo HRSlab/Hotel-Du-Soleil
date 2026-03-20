@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "rooms": "Accommodations",
+    "restaurant": "Alpine Taste",
+    "wellness": "Wellness",
+    "sport": "Sport & Outdoor",
+    "experiences": "Territory",
+    "book": "Book Now"
+  },
+  "megamenu": {
+    "overview": {
+      "title": "Overview",
+      "links": ["The Structure", "Our History", "Location & Surroundings", "Sustainability"],
+      "featured_label": "Highlighted",
+      "featured_text": "Discover the authentic charm of a retreat at 1,500 meters. The elegance of simplicity and the warmth of a family-run hotel since 1980.",
+      "featured_cta": "Discover the Hotel"
+    },
+    "rooms": {
+      "title": "Accommodations",
+      "links": [
+        { "name": "Double Room", "href": "/camere/matrimoniale" },
+        { "name": "Triple Room", "href": "/camere/tripla" },
+        { "name": "Standard Quadruple", "href": "/camere/quadrupla_standard" },
+        { "name": "Family Quadruple", "href": "/camere/familiare" }
+      ],
+      "featured_label": "Highlighted",
+      "featured_text": "Spaces designed for your rest. Natural wood, alpine light, and essential comfort to regenerate after a day in the heights.",
+      "featured_cta": "All Rooms"
+    },
+    "restaurant": {
+      "title": "Alpine Taste",
+      "links": ["Central Restaurant", "Traditional Menu", "Lounge Bar & Fireplace", "The Cellar"],
+      "featured_label": "Highlighted",
+      "featured_text": "Authentic flavors of Aosta Valley. Zero-mile raw materials, family recipes passed down with care, and a convivial atmosphere.",
+      "featured_cta": "Discover the Menu"
+    },
+    "wellness": {
+      "title": "Wellness",
+      "links": ["SPA in the Heights", "Sports Massages", "Body Treatments", "Private SPA (Night)"],
+      "featured_label": "Highlighted",
+      "featured_text": "The luxury of silence. Find your balance with our wellness paths and let yourself be pampered by the expert hands of our therapists.",
+      "featured_cta": "Relax"
+    },
+    "sport": {
+      "title": "Activities",
+      "links": ["Ski & Snowboard (Ski-in)", "Mountain Bike & E-Bike", "Alp Trekking", "Ski Box & Rental"],
+      "featured_label": "Highlighted",
+      "featured_text": "Adrenaline starts 20 meters from our door. Direct access to the lifts in winter and infinite panoramic trails in summer.",
+      "featured_cta": "Go Outdoor"
+    },
+    "experiences": {
+      "title": "The Territory",
+      "links": ["Fontina DOP Tasting", "Night Snowshoeing", "High-Altitude Yoga", "Partner Alpine Guides"],
+      "featured_label": "Highlighted",
+      "featured_text": "Not a simple vacation, but a collection of memories. Explore the territory through authentic activities, in total harmony with the rhythms of the mountain.",
+      "featured_cta": "Get Inspired"
+    }
+  },
+  "hero": {
+    "title": "Your Refuge <br/> in Silence.",
+    "subtitle": "Torgnon, Aosta Valley"
+  },
+  "booking": {
+    "arrival": "Arrival",
+    "departure": "Departure",
+    "guests": "Guests",
+    "check": "Check",
+    "adults": "Adults",
+    "children": "Children"
+  }
+}

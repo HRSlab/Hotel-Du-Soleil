@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "overview": "نظرة عامة",
+    "rooms": "الإقامة",
+    "restaurant": "المطعم و البار",
+    "wellness": "منطقة العافية",
+    "sport": "الرياضة",
+    "events": "الفعاليات",
+    "experiences": "تجارب",
+    "book": "احجز الآن"
+  },
+  "hero": {
+    "title": "ملاذك <br/> في صمت.",
+    "subtitle": "تورجنون، وادي أوستا"
+  },
+  "booking": {
+    "arrival": "وصول",
+    "departure": "مغادرة",
+    "guests": "ضيوف",
+    "check": "تحقق",
+    "adults": "بالغين",
+    "children": "أطفال"
+  }
+}

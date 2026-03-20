@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "rooms": "Accommodations",
+    "restaurant": "Restaurant & Bar",
+    "wellness": "Wellness Area",
+    "sport": "Sport",
+    "events": "Events",
+    "experiences": "Experiences",
+    "book": "Book Now"
+  },
+  "hero": {
+    "title": "Your Refuge <br/> in Silence.",
+    "subtitle": "Torgnon, Aosta Valley"
+  },
+  "booking": {
+    "arrival": "Arrival",
+    "departure": "Departure",
+    "guests": "Guests",
+    "check": "Check",
+    "adults": "Adults",
+    "children": "Children"
+  }
+}
