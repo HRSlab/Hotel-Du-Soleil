@@ -13,13 +13,7 @@
 <!-- HERO SECTION -->
 <header class="relative h-screen w-full overflow-hidden bg-[#1a1a1a]">
 	<div class="absolute inset-0">
-		<video
-			autoplay
-			loop
-			muted
-			playsinline
-			class="h-full w-full object-cover opacity-100"
-		>
+		<video autoplay loop muted playsinline class="h-full w-full object-cover opacity-100">
 			<source src="/imgs/bg_video_hero.webm" type="video/webm" />
 		</video>
 		<div class="absolute inset-0 bg-black/40"></div>
