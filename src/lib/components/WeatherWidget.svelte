@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Cloud, Sun, CloudRain, Wind, Eye, SunDim } from 'lucide-svelte';
+  import { Cloud, Sun, CloudRain, Wind, Eye, SunDim, Snowflake, Activity } from 'lucide-svelte';
   import { t, locale } from '$lib/i18n';
 
   type WeatherData = {
@@ -11,6 +11,8 @@
     visibility: string;
     uv: string;
     precip: string;
+    snow: string;
+    chanceSnow: string;
     icon: any;
   };
 
@@ -22,6 +24,7 @@
       if (!res.ok) throw new Error('API Error');
       const data = await res.json();
       const current = data.current_condition[0];
+      const today = data.weather[0];
       
       weather = {
         temp: current.temp_C,
@@ -31,6 +34,8 @@
         visibility: current.visibility,
         uv: current.uvIndex,
         precip: current.precipMM,
+        snow: today.totalSnow_cm || "0",
+        chanceSnow: today.hourly[0].chanceofsnow || "0",
         icon: parseInt(current.weatherCode) < 116 ? Sun : Cloud
       };
     } catch (e) {
@@ -41,7 +46,10 @@
 </script>
 
 {#if weather}
-  <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-alpine-text/60 text-[9px] uppercase tracking-[0.15em] font-bold">
+  <a 
+    href="/meteo" 
+    class="flex flex-wrap items-center gap-x-6 gap-y-2 text-alpine-text/60 text-[9px] uppercase tracking-[0.15em] font-bold hover:text-alpine-text transition-all group"
+  >
     <!-- Main -->
     <div class="flex items-center gap-2">
       <weather.icon class="w-3.5 h-3.5 text-alpine-gold" />
@@ -49,26 +57,31 @@
       <span class="opacity-60 ml-1">({weather.desc})</span>
     </div>
 
-    <!-- Outdoor Details -->
-    <div class="flex items-center gap-4 opacity-80 border-l border-alpine-border pl-6">
+    <!-- Snow/Outdoor Details -->
+    <div class="flex items-center gap-4 border-l border-alpine-border pl-6">
+      
+      <!-- Snow Depth / Forecast -->
+      {#if parseFloat(weather.snow) > 0 || parseFloat(weather.chanceSnow) > 10}
+        <div class="flex items-center gap-1.5 text-alpine-gold" title="Neve">
+          <Snowflake class="w-3 h-3" />
+          <span>{weather.snow} cm / {weather.chanceSnow}% Neve</span>
+        </div>
+      {:else}
+        <div class="flex items-center gap-1.5 opacity-40" title="Neve al suolo (stimata)">
+          <Snowflake class="w-3 h-3" />
+          <span>Fresco & Stabile</span>
+        </div>
+      {/if}
+
       <div class="flex items-center gap-1.5" title="Vento">
         <Wind class="w-3 h-3" />
         <span>{weather.wind} km/h</span>
       </div>
-      <div class="flex items-center gap-1.5" title="Visibilità">
-        <Eye class="w-3 h-3" />
-        <span>{weather.visibility} km</span>
+      
+      <div class="flex items-center gap-1.5 text-alpine-gold opacity-0 group-hover:opacity-100 transition-opacity ml-2">
+        <span class="text-[8px]">In-Depth</span>
+        <Activity class="w-3 h-3" />
       </div>
-      <div class="flex items-center gap-1.5" title="Indice UV">
-        <SunDim class="w-3 h-3" />
-        <span>UV {weather.uv}</span>
-      </div>
-      {#if parseFloat(weather.precip) > 0}
-        <div class="flex items-center gap-1.5 text-blue-500/70" title="Precipitazioni">
-          <CloudRain class="w-3 h-3" />
-          <span>{weather.precip} mm</span>
-        </div>
-      {/if}
     </div>
-  </div>
+  </a>
 {/if}

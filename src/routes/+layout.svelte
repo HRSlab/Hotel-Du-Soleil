@@ -4,6 +4,7 @@
   import { page } from '$app/state';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import SecurityGuard from '$lib/components/SecurityGuard.svelte';
 
   let { children } = $props();
 
@@ -43,6 +44,7 @@
   });
 </script>
 
+<SecurityGuard />
 <Navbar />
 
 <main class="min-h-screen">

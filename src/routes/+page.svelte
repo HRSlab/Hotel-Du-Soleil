@@ -13,12 +13,17 @@
 <!-- HERO SECTION -->
 <header class="relative h-screen w-full overflow-hidden bg-[#1a1a1a]">
 	<div class="absolute inset-0">
-		<img
-			src="https://www.hotel-du-soleil.it/Resources/hotel-du-soleil/gallery/gallery01.jpg"
-			alt="Hotel du Soleil Torgnon"
-			class="ken-burns h-full w-full object-cover opacity-90"
-		/>
-		<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-alpine-bg"></div>
+		<video
+			autoplay
+			loop
+			muted
+			playsinline
+			class="h-full w-full object-cover opacity-100"
+		>
+			<source src="/imgs/bg_video_hero.webm" type="video/webm" />
+		</video>
+		<div class="absolute inset-0 bg-black/40"></div>
+		<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-alpine-bg"></div>
 	</div>
 
 	<div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-32 text-center">

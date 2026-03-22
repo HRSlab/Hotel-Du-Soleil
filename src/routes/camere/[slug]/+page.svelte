@@ -59,6 +59,13 @@
               {/each}
             </ul>
           </div>
+
+          <!-- Emotional Tagline -->
+          <div class="mt-16 py-12 border-t border-alpine-border">
+            <p class="font-serif text-2xl md:text-3xl text-alpine-text italic leading-snug">
+              "A soli 20 metri dalle piste da sci, la vostra stanza non è solo un letto: è il vostro <span class="text-alpine-gold">Base Camp</span>."
+            </p>
+          </div>
         </div>
 
         <!-- Sticky Sidebar (Booking Widget) -->

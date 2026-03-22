@@ -11,7 +11,7 @@
 <div class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
   <div class="absolute inset-0">
     <img 
-      src="https://www.hotel-du-soleil.it/Resources/hotel-du-soleil/gallery/gallery01.jpg" 
+      src="/imgs/Rooms/matrimoniale-superior-hero.webp" 
       alt="Sistemazioni Hero" 
       class="w-full h-full object-cover ken-burns opacity-70"
     >

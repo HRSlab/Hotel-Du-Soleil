@@ -30,7 +30,12 @@
     },
     "restaurant": {
       "title": "Gusto Alpino",
-      "links": ["Il Ristorante Centrale", "Menù Tradizionale", "Lounge Bar & Camino", "La Cantina"],
+      "links": [
+        { "name": "Ristorante", "href": "/ristorante" },
+        { "name": "Menu Tradizionale", "href": "/ristorante/menu" },
+        { "name": "Lounge Bar & Camino", "href": "/ristorante/lounge-bar" },
+        { "name": "La Cantina", "href": "/ristorante/cantina" }
+      ],
       "featured_label": "In Evidenza",
       "featured_text": "I sapori autentici della Valle d'Aosta. Materie prime a km 0, ricette di famiglia tramandate con cura e un'atmosfera conviviale.",
       "featured_cta": "Scopri il menù"

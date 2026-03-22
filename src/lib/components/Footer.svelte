@@ -38,7 +38,7 @@
   </div>
 
   <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest opacity-60">
-    <p>&copy; 2026 Hotel du Soleil. Tutti i diritti riservati.</p>
-    <p class="mt-4 md:mt-0">Design Minimalist Alpine</p>
+    <p>&copy; 2026 Futuro srl - Hotel du Soleil. Tutti i diritti riservati.</p>
+    <p class="mt-4 md:mt-0">made with ❤️ by CB</p>
   </div>
 </footer>
