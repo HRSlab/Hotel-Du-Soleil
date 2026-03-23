@@ -59,7 +59,7 @@
 			{$t('home.philosophy_text')}
 		</p>
 		<a
-			href={"/storia"}
+			href="/storia"
 			class="border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
 		>
 			{$t('home.philosophy_cta')}
@@ -79,6 +79,101 @@
 	</div>
 
 	<RoomCarousel />
+</section>
+
+<!-- EDITORIAL SECTIONS (Restaurant, Wellness, Activities) -->
+<section class="bg-white py-24 lg:py-48">
+	<div class="mx-auto max-w-7xl px-6 space-y-32 lg:space-y-64">
+		<!-- Part 1: Ristorante -->
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+			<div class="fade-up-element order-2 lg:order-1">
+				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
+					<img 
+						src="/imgs/home_restaurant.png" 
+						alt="Ristorante Hotel du Soleil" 
+						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+					/>
+				</div>
+			</div>
+			<div class="fade-up-element order-1 lg:order-2">
+				<span class="mb-4 block text-[10px] font-bold tracking-[0.3em] text-alpine-gold uppercase md:text-xs">
+					{#if $t('nav.restaurant')} {$t('nav.restaurant')} {/if}
+				</span>
+				<h2 class="mb-8 font-serif text-4xl lg:text-6xl text-alpine-text">
+					{$t('home.restaurant_section_title')}
+				</h2>
+				<p class="mb-10 text-sm lg:text-lg leading-relaxed font-light text-alpine-muted max-w-lg">
+					{$t('home.restaurant_section_text')}
+				</p>
+				<a
+					href="/ristorante"
+					class="inline-block border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
+				>
+					Scopri la cucina
+				</a>
+			</div>
+		</div>
+
+		<!-- Part 2: Wellness -->
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+			<div class="fade-up-element lg:pr-12">
+				<span class="mb-4 block text-[10px] font-bold tracking-[0.3em] text-alpine-gold uppercase md:text-xs">
+					{#if $t('nav.wellness')} {$t('nav.wellness')} {/if}
+				</span>
+				<h2 class="mb-8 font-serif text-4xl lg:text-6xl text-alpine-text">
+					{$t('home.wellness_section_title')}
+				</h2>
+				<p class="mb-10 text-sm lg:text-lg leading-relaxed font-light text-alpine-muted max-w-lg">
+					{$t('home.wellness_section_text')}
+				</p>
+				<a
+					href="/wellness"
+					class="inline-block border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
+				>
+					Ritrova il tempo
+				</a>
+			</div>
+			<div class="fade-up-element">
+				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
+					<img 
+						src="/imgs/home_wellness.png" 
+						alt="Wellness & Spa" 
+						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!-- Part 3: Activities -->
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+			<div class="fade-up-element order-2 lg:order-1">
+				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
+					<img 
+						src="/imgs/home_activities.png" 
+						alt="Attività Outdoor" 
+						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+					/>
+				</div>
+			</div>
+			<div class="fade-up-element order-1 lg:order-2">
+				<span class="mb-4 block text-[10px] font-bold tracking-[0.3em] text-alpine-gold uppercase md:text-xs">
+					{#if $t('nav.sport')} {$t('nav.sport')} {/if}
+				</span>
+				<h2 class="mb-8 font-serif text-4xl lg:text-6xl text-alpine-text">
+					{$t('home.sport_section_title')}
+				</h2>
+				<p class="mb-10 text-sm lg:text-lg leading-relaxed font-light text-alpine-muted max-w-lg">
+					{$t('home.sport_section_text')}
+				</p>
+				<a
+					href="/sport"
+					class="inline-block border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
+				>
+					Vivi l'Alpe
+				</a>
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- ESPERIENZA ALPINA -->

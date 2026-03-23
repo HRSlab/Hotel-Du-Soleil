@@ -103,7 +103,13 @@
     "feature_food_text": "Half board offers menus that respect Aosta Valley tradition. Excellent raw materials, recipes handed down with care.",
     "feature_comfort_title": "Logistic Comfort",
     "feature_comfort_text": "Dedicated covered garage, Wi-Fi in common areas, and a warm lounge with a fireplace to relax at the end of the day.",
-    "rooms_cta": "Explore Details"
+    "rooms_cta": "Explore Details",
+    "restaurant_section_title": "Alpine Taste",
+    "restaurant_section_text": "Authentic flavors of Aosta Valley. Zero-mile raw materials, family recipes passed down with care, and a convivial atmosphere that smells like home.",
+    "wellness_section_title": "Wellness & Regeneration",
+    "wellness_section_text": "The luxury of silence at 1,500 meters. Find your balance between sauna, Turkish bath, and our relaxation area overlooking the peaks.",
+    "sport_section_title": "Activities & Outdoor",
+    "sport_section_text": "Adrenaline starts 20 meters from the door. Direct access to the lifts in winter and breathtaking panoramic trails in summer."
   },
   "struttura": {
     "subtitle": "Alpine Elegance",

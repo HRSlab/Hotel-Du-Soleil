@@ -103,7 +103,13 @@
     "feature_food_text": "La mezza pensione offre menù che rispettano la tradizione valdostana. Materie prime eccellenti, ricette tramandate con cura.",
     "feature_comfort_title": "Comfort Logistico",
     "feature_comfort_text": "Garage coperto riservato, wifi nelle aree comuni e un caldo salotto con camino dove rilassarsi a fine giornata.",
-    "rooms_cta": "Esplora Dettagli"
+    "rooms_cta": "Esplora Dettagli",
+    "restaurant_section_title": "Gusto Alpino",
+    "restaurant_section_text": "I sapori autentici della Valle d'Aosta. Materie prime a km 0, ricette di famiglia tramandate con cura e un'atmosfera conviviale che profuma di casa.",
+    "wellness_section_title": "Wellness & Rigenerazione",
+    "wellness_section_text": "Il lusso del silenzio a 1.500 metri. Ritrova il tuo equilibrio tra sauna, bagno turco e la nostra area relax affacciata sulle vette.",
+    "sport_section_title": "Attività & Outdoor",
+    "sport_section_text": "L'adrenalina inizia a 20 metri dalla porta. Accesso diretto agli impianti in inverno e sentieri panoramici mozzafiato in estate."
   },
   "struttura": {
     "subtitle": "Eleganza Alpina",
