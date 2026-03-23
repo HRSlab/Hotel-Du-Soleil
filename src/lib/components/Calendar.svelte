@@ -10,7 +10,7 @@
   let { 
     arrival = $bindable(''), 
     departure = $bindable(''), 
-    onSelect = (a: string, d: string) => {} 
+    onSelect = () => {} 
   } = $props();
 
   let viewDate = $state(new Date());
@@ -64,35 +64,35 @@
   function nextMonth() { viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1); }
 </script>
 
-<div class="calendar-component p-4 bg-white select-none">
-  <div class="flex items-center justify-between mb-4">
-    <button onclick={prevMonth} type="button" class="p-2 hover:bg-alpine-bg rounded-full transition-colors">
-      <ArrowLeft class="w-3 h-3 text-alpine-muted" />
+<div class="calendar-component p-4 bg-white select-none lg:p-8">
+  <div class="flex items-center justify-between mb-4 lg:mb-8">
+    <button onclick={prevMonth} type="button" class="p-1 hover:bg-alpine-bg rounded-full transition-colors">
+      <ArrowLeft class="w-4 h-4 text-alpine-muted" />
     </button>
-    <span class="text-[11px] font-bold uppercase tracking-widest text-alpine-text">
+    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text lg:text-sm">
       {monthNames[viewDate.getMonth()]} {viewDate.getFullYear()}
     </span>
-    <button onclick={nextMonth} type="button" class="p-2 hover:bg-alpine-bg rounded-full transition-colors">
-      <ArrowRight class="w-3 h-3 text-alpine-muted" />
+    <button onclick={nextMonth} type="button" class="p-1 hover:bg-alpine-bg rounded-full transition-colors">
+      <ArrowRight class="w-4 h-4 text-alpine-muted" />
     </button>
   </div>
 
-  <div class="grid grid-cols-7 gap-1 text-center mb-2">
-    {#each ['L', 'M', 'M', 'G', 'V', 'S', 'D'] as day}
-      <span class="text-[9px] font-bold text-alpine-muted/40 uppercase">{day}</span>
+  <div class="grid grid-cols-7 gap-2 text-center mb-2">
+    {#each ['L', 'M', 'M', 'G', 'V', 'S', 'D'] as day, i (i)}
+      <span class="text-[10px] font-bold text-alpine-muted/60 uppercase lg:text-xs">{day}</span>
     {/each}
   </div>
 
-  <div class="grid grid-cols-7 gap-1">
-    {#each days() as date}
+  <div class="grid grid-cols-7 gap-1 lg:gap-2">
+    {#each days() as date, i (i)}
       {#if date}
         <button 
           type="button"
           onclick={() => selectDate(date)}
           disabled={date < today}
           class={cn(
-            "aspect-square text-[10px] flex items-center justify-center transition-all relative z-10",
-            date < today ? "text-alpine-muted/30 cursor-not-allowed" : "hover:bg-alpine-gold/10",
+            "aspect-square text-[13px] font-medium flex items-center justify-center transition-all relative z-10 lg:text-base",
+            date < today ? "text-alpine-muted/30 cursor-not-allowed" : "text-alpine-text hover:bg-alpine-gold/10",
             isSelected(date) ? "bg-alpine-text text-white font-bold" : "",
             isInRange(date) ? "bg-alpine-gold/10" : ""
           )}

@@ -41,12 +41,17 @@
   }
 
   .img-elegant {
-    filter: brightness(0.9) contrast(1.05);
-    transition: filter 0.8s ease, transform 1.2s ease;
+    /* Unified sophisticated filter for consistency: slight desaturation, warm highlight, improved contrast */
+    filter: sepia(0.05) saturate(0.85) contrast(1.02) brightness(0.95);
+    transition: filter 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
   }
   .group:hover .img-elegant {
-    filter: brightness(1) contrast(1.1);
+    filter: sepia(0) saturate(1) contrast(1.05) brightness(1);
     transform: scale(1.03);
+  }
+
+  .img-unified {
+    filter: sepia(0.05) saturate(0.85) contrast(1.02) brightness(0.95);
   }
 
   .deco-line {

@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Sistemazioni | Hotel du Soleil</title>
+  <title>{$t('rooms.title')} | Hotel du Soleil</title>
 </svelte:head>
 
 <div class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
@@ -15,11 +15,11 @@
       alt="Sistemazioni Hero" 
       class="w-full h-full object-cover ken-burns opacity-70"
     >
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-alpine-bg"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-alpine-bg"></div>
   </div>
-  <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center z-10 pt-20">
-    <h1 class="font-serif text-5xl md:text-7xl text-white font-light tracking-tight">Le Nostre Camere</h1>
-    <p class="mt-6 text-white/80 text-sm md:text-base tracking-[0.2em] uppercase font-light">Sostanza, Legno e Luce Alpina</p>
+  <div class="absolute inset-0 flex flex-col items-center justify-end px-6 pb-24 text-center z-10 pt-20">
+    <h1 class="font-serif text-5xl md:text-7xl text-white font-light tracking-tight fade-up-element">{$t('rooms.main_title') || "Le Nostre Camere"}</h1>
+    <p class="mt-6 text-white/80 text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold fade-up-element">{$t('home.rooms_subtitle')}</p>
   </div>
 </div>
 
@@ -32,17 +32,17 @@
           href="/camere/{key}" 
           class="group fade-up-element cursor-pointer {i % 2 === 1 ? 'md:mt-32' : ''}"
         >
-          <div class="aspect-[4/5] overflow-hidden bg-alpine-border mb-8">
+          <div class="aspect-4/5 overflow-hidden bg-alpine-border mb-8 shadow-sm">
             <img 
               src={room.image} 
-              alt={room.name} 
+              alt={$t(`rooms_data.${key}.name`)} 
               class="w-full h-full object-cover img-elegant transition-transform duration-1000 group-hover:scale-105" 
             />
           </div>
           <div class="flex justify-between items-start">
             <div>
-              <h3 class="font-serif text-3xl mb-2 text-alpine-text">{room.name}</h3>
-              <p class="text-xs text-alpine-muted uppercase tracking-widest font-light">{room.price}</p>
+              <h3 class="font-serif text-3xl mb-2 text-alpine-text">{$t(`rooms_data.${key}.name`)}</h3>
+              <p class="text-xs text-alpine-muted uppercase tracking-widest font-bold tracking-widest">{room.price}</p>
             </div>
             <div class="w-10 h-10 rounded-full border border-alpine-border flex items-center justify-center group-hover:bg-alpine-text group-hover:text-white transition-all">
               <ArrowRight class="w-4 h-4" />

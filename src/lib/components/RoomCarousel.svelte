@@ -1,7 +1,8 @@
 <script lang="ts">
   import { rooms } from '$lib/rooms';
-  import { ArrowLeft, ArrowRight, Minus } from 'lucide-svelte';
+  import { ArrowLeft, ArrowRight } from 'lucide-svelte';
   import { fade, fly } from 'svelte/transition';
+  import { t } from '$lib/i18n';
 
   const roomList = Object.entries(rooms);
   let currentIndex = $state(0);
@@ -14,7 +15,8 @@
     currentIndex = (currentIndex - 1 + roomList.length) % roomList.length;
   }
 
-  const currentRoom = $derived(roomList[currentIndex][1]);
+  const currentRoomKey = $derived(roomList[currentIndex][0]);
+  const currentRoomData = $derived(roomList[currentIndex][1]);
 </script>
 
 <div class="relative w-full overflow-hidden py-12">
@@ -24,7 +26,7 @@
       
       <!-- Image Column -->
       <div class="lg:col-span-7 relative group">
-        <div class="aspect-[16/10] overflow-hidden bg-alpine-border relative">
+        <div class="aspect-16/10 overflow-hidden bg-stone-200 relative shadow-sm">
           {#key currentIndex}
             <div 
               in:fade={{ duration: 800 }} 
@@ -32,8 +34,8 @@
               class="absolute inset-0"
             >
               <img 
-                src={currentRoom.image} 
-                alt={currentRoom.name} 
+                src={currentRoomData.image} 
+                alt={$t(`rooms_data.${currentRoomKey}.name`)} 
                 class="w-full h-full object-cover img-elegant transform scale-100 group-hover:scale-105 transition-transform duration-[2s]"
               />
             </div>
@@ -41,10 +43,10 @@
           
           <!-- Overlay Controls (Mobile) -->
           <div class="absolute bottom-0 right-0 flex lg:hidden bg-white/90 backdrop-blur-md">
-            <button onclick={prev} aria-label="Camera precedente" class="p-6 hover:bg-alpine-text hover:text-white transition-colors">
+            <button onclick={prev} aria-label={$t('common.prev') || "Precedente"} class="p-6 hover:bg-alpine-text hover:text-white transition-colors">
               <ArrowLeft class="w-5 h-5" />
             </button>
-            <button onclick={next} aria-label="Prossima camera" class="p-6 hover:bg-alpine-text hover:text-white transition-colors">
+            <button onclick={next} aria-label={$t('common.next') || "Successiva"} class="p-6 hover:bg-alpine-text hover:text-white transition-colors">
               <ArrowRight class="w-5 h-5" />
             </button>
           </div>
@@ -63,20 +65,20 @@
               <div class="h-[1px] w-8 bg-alpine-gold/30"></div>
             </div>
             
-            <h3 class="font-serif text-5xl md:text-6xl text-alpine-text leading-tight">
-              {currentRoom.name}
+            <h3 class="font-serif text-5xl md:text-6xl text-alpine-text leading-tight font-light">
+              {$t(`rooms_data.${currentRoomKey}.name`)}
             </h3>
             
-            <p class="text-alpine-muted leading-relaxed font-light text-lg line-clamp-3">
-              {currentRoom.description}
+            <p class="text-alpine-muted leading-relaxed font-light text-sm md:text-base line-clamp-3">
+              {$t(`rooms_data.${currentRoomKey}.description`)}
             </p>
 
             <div class="pt-6">
               <a 
-                href="/camere/{roomList[currentIndex][0]}" 
+                href="/camere/{currentRoomKey}" 
                 class="inline-flex items-center gap-4 group/btn"
               >
-                <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-alpine-text">Esplora Dettagli</span>
+                <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-alpine-text mt-1">{$t('home.rooms_cta') || "Esplora Dettagli"}</span>
                 <div class="w-12 h-12 rounded-full border border-alpine-border flex items-center justify-center group-hover/btn:bg-alpine-text group-hover/btn:text-white transition-all duration-500">
                   <ArrowRight class="w-4 h-4" />
                 </div>
@@ -90,14 +92,14 @@
           <div class="flex gap-4">
             <button 
               onclick={prev} 
-              aria-label="Camera precedente"
+              aria-label={$t('common.prev') || "Precedente"}
               class="w-14 h-14 rounded-full border border-alpine-border flex items-center justify-center hover:bg-alpine-text hover:text-white transition-all duration-500"
             >
               <ArrowLeft class="w-5 h-5" />
             </button>
             <button 
               onclick={next} 
-              aria-label="Prossima camera"
+              aria-label={$t('common.next') || "Successiva"}
               class="w-14 h-14 rounded-full border border-alpine-border flex items-center justify-center hover:bg-alpine-text hover:text-white transition-all duration-500"
             >
               <ArrowRight class="w-5 h-5" />
@@ -109,7 +111,7 @@
             {#each roomList as _, i}
               <button 
                 onclick={() => currentIndex = i}
-                aria-label="Vai alla camera {i + 1}"
+                aria-label="Room {i + 1}"
                 class="h-1 transition-all duration-500 {currentIndex === i ? 'w-12 bg-alpine-gold' : 'w-4 bg-alpine-border hover:bg-alpine-muted'}"
               ></button>
             {/each}

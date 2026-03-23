@@ -8,7 +8,7 @@
 
 <header class="relative h-[50vh] w-full overflow-hidden bg-[#1a1a1a]">
   <img src="/imgs/deer_dish_hero.webp" class="ken-burns h-full w-full object-cover opacity-60" alt="Cucina Alpina" />
-  <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-alpine-bg"></div>
+  <div class="absolute inset-0 bg-linear-to-b from-black/80 to-alpine-bg"></div>
   <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-16 text-center">
     <span class="mb-4 block text-[10px] font-bold tracking-[0.4em] text-white/80 uppercase fade-up-element">Menù Degustazione</span>
     <h1 class="font-serif text-5xl md:text-7xl leading-tight font-light text-white fade-up-element">Alchimia Alpina</h1>

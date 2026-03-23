@@ -4,6 +4,7 @@
 	import Calendar from '$lib/components/Calendar.svelte';
 	import { clsx, type ClassValue } from 'clsx';
 	import { twMerge } from 'tailwind-merge';
+	import { SvelteURLSearchParams } from 'svelte/reactivity';
 
 	function cn(...inputs: ClassValue[]) {
 		return twMerge(clsx(inputs));
@@ -16,7 +17,7 @@
 
 	const bookingUrl = $derived(() => {
 		const base = 'https://booking.passepartout.cloud/booking';
-		const params = new URLSearchParams({
+		const params = new SvelteURLSearchParams({
 			oidPortale: '17552',
 			lingua: $locale,
 			arrivo: arrival || '',
@@ -39,7 +40,7 @@
 
 <div class="fade-up-element sticky top-32 border border-alpine-border bg-white p-8 shadow-sm">
 	<h3 class="mb-8 font-serif text-2xl font-light text-alpine-text italic">
-		Prenota il tuo soggiorno
+		{$t('booking.title') || "Prenota il tuo soggiorno"}
 	</h3>
 
 	<div class="space-y-8">
@@ -51,21 +52,21 @@
 		<!-- Selection Summary -->
 		<div class="grid grid-cols-2 gap-4 border-t border-alpine-border pt-8">
 			<div class="space-y-1">
-				<span class="text-[9px] font-bold tracking-widest text-alpine-muted uppercase">Arrivo</span>
-				<p class="font-serif text-sm">{arrival || 'Seleziona'}</p>
+				<span class="text-[9px] font-bold tracking-widest text-alpine-muted uppercase">{$t('booking.arrival')}</span>
+				<p class="font-serif text-sm">{arrival || ($t('common.select') || 'Seleziona')}</p>
 			</div>
 			<div class="space-y-1">
 				<span class="text-[9px] font-bold tracking-widest text-alpine-muted uppercase"
-					>Partenza</span
+					>{$t('booking.departure')}</span
 				>
-				<p class="font-serif text-sm">{departure || 'Seleziona'}</p>
+				<p class="font-serif text-sm">{departure || ($t('common.select') || 'Seleziona')}</p>
 			</div>
 		</div>
 
 		<!-- Guests -->
 		<div class="space-y-4 border-t border-alpine-border pt-8">
 			<div class="flex items-center justify-between">
-				<span class="text-[10px] font-bold tracking-widest text-alpine-muted uppercase">Adulti</span
+				<span class="text-[10px] font-bold tracking-widest text-alpine-muted uppercase">{$t('booking.adults')}</span
 				>
 				<div class="flex items-center gap-4 bg-alpine-bg px-4 py-2">
 					<button onclick={() => (adults = Math.max(1, adults - 1))} class="text-lg">-</button>
@@ -75,7 +76,7 @@
 			</div>
 			<div class="flex items-center justify-between">
 				<span class="text-[10px] font-bold tracking-widest text-alpine-muted uppercase"
-					>Bambini</span
+					>{$t('booking.children')}</span
 				>
 				<div class="flex items-center gap-4 bg-alpine-bg px-4 py-2">
 					<button onclick={() => (children = Math.max(0, children - 1))} class="text-lg">-</button>
@@ -97,11 +98,11 @@
 						: 'pointer-events-none cursor-not-allowed bg-alpine-border text-alpine-muted'
 				)}
 			>
-				<span>Prenota Ora</span>
+				<span>{$t('booking.check') || "Prenota Ora"}</span>
 				<ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-1" />
 			</a>
 			<p class="mt-4 text-center text-[9px] tracking-widest text-alpine-muted uppercase opacity-60">
-				Miglior Tariffa Garantita
+				{$t('booking.best_rate') || "Miglior Tariffa Garantita"}
 			</p>
 		</div>
 	</div>

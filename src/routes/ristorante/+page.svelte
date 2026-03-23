@@ -16,7 +16,7 @@
 			class="ken-burns h-full w-full object-cover opacity-80"
 		/>
 		<div class="absolute inset-0 bg-black/40"></div>
-		<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-alpine-bg"></div>
+		<div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
 	</div>
 
 	<div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-32 text-center">
@@ -111,7 +111,7 @@
 <!-- IMAGE GRID -->
 <section class="bg-white py-24">
 	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
-		<div class="group aspect-[4/5] overflow-hidden">
+		<div class="group aspect-4/5 overflow-hidden">
 			<img
 				src="imgs/deer_dish_hds.png"
 				alt="Cucina Alpina"

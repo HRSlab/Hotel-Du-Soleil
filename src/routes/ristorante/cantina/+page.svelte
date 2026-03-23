@@ -85,7 +85,7 @@
 		class="ken-burns h-full w-full object-cover opacity-70"
 		alt="Wine Cellar"
 	/>
-	<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-alpine-bg"></div>
+	<div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
 	<div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-24 text-center">
 		<h1 class="fade-up-element font-serif text-5xl leading-tight font-light text-white md:text-7xl">
 			La Cantina
@@ -164,7 +164,7 @@
 <style>
 	/* Svelte scopes CSS automatically, keeping things perfectly clean */
 	.menu-leader {
-		flex-grow: 1;
+		grow: 1;
 		border-bottom: 1px dotted #d6d3cd;
 		position: relative;
 		top: -6px;

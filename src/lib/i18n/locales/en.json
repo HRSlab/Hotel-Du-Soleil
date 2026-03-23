@@ -1,4 +1,11 @@
 {
+  "common": {
+    "prev": "Previous",
+    "next": "Next",
+    "back": "Back",
+    "close": "Close",
+    "loading": "Loading..."
+  },
   "nav": {
     "overview": "Overview",
     "rooms": "Accommodations",
@@ -11,7 +18,12 @@
   "megamenu": {
     "overview": {
       "title": "Overview",
-      "links": ["The Structure", "Our History", "Location & Surroundings", "Sustainability"],
+      "links": [
+        { "name": "The Structure", "href": "/struttura" },
+        { "name": "Our History", "href": "/storia" },
+        { "name": "Location & Surroundings", "href": "/posizione" },
+        { "name": "Sustainability", "href": "/sostenibilita" }
+      ],
       "featured_label": "Highlighted",
       "featured_text": "Discover the authentic charm of a retreat at 1,500 meters. The elegance of simplicity and the warmth of a family-run hotel since 1980.",
       "featured_cta": "Discover the Hotel"
@@ -30,31 +42,179 @@
     },
     "restaurant": {
       "title": "Alpine Taste",
-      "links": ["Central Restaurant", "Traditional Menu", "Lounge Bar & Fireplace", "The Cellar"],
+      "links": [
+        { "name": "Central Restaurant", "href": "/ristorante" },
+        { "name": "Traditional Menu", "href": "/ristorante/menu" },
+        { "name": "Lounge Bar & Fireplace", "href": "/ristorante/lounge-bar" },
+        { "name": "The Cellar", "href": "/ristorante/cantina" }
+      ],
       "featured_label": "Highlighted",
       "featured_text": "Authentic flavors of Aosta Valley. Zero-mile raw materials, family recipes passed down with care, and a convivial atmosphere.",
       "featured_cta": "Discover the Menu"
     },
     "wellness": {
       "title": "Wellness",
-      "links": ["SPA in the Heights", "Sports Massages", "Body Treatments", "Private SPA (Night)"],
+      "links": [
+        { "name": "SPA in the Heights", "href": "/wellness/spa" },
+        { "name": "Sports Massages", "href": "/wellness/massaggi" },
+        { "name": "Body Treatments", "href": "/wellness/trattamenti" },
+        { "name": "Private SPA (Night)", "href": "/wellness/private-spa" }
+      ],
       "featured_label": "Highlighted",
       "featured_text": "The luxury of silence. Find your balance with our wellness paths and let yourself be pampered by the expert hands of our therapists.",
       "featured_cta": "Relax"
     },
     "sport": {
       "title": "Activities",
-      "links": ["Ski & Snowboard (Ski-in)", "Mountain Bike & E-Bike", "Alp Trekking", "Ski Box & Rental"],
+      "links": [
+        { "name": "Ski & Snowboard (Ski-in)", "href": "/sport/sci" },
+        { "name": "Mountain Bike & E-Bike", "href": "/sport/bike" },
+        { "name": "Alp Trekking", "href": "/sport/trekking" },
+        { "name": "Ski Box & Rental", "href": "/sport/noleggio" }
+      ],
       "featured_label": "Highlighted",
       "featured_text": "Adrenaline starts 20 meters from our door. Direct access to the lifts in winter and infinite panoramic trails in summer.",
       "featured_cta": "Go Outdoor"
     },
     "experiences": {
       "title": "The Territory",
-      "links": ["Fontina DOP Tasting", "Night Snowshoeing", "High-Altitude Yoga", "Partner Alpine Guides"],
+      "links": [
+        { "name": "Fontina DOP Tasting", "href": "/esperienze/degustazione" },
+        { "name": "Night Snowshoeing", "href": "/esperienze/ciaspolate" },
+        { "name": "High-Altitude Yoga", "href": "/esperienze/yoga" },
+        { "name": "Partner Alpine Guides", "href": "/esperienze/guide" }
+      ],
       "featured_label": "Highlighted",
       "featured_text": "Not a simple vacation, but a collection of memories. Explore the territory through authentic activities, in total harmony with the rhythms of the mountain.",
       "featured_cta": "Get Inspired"
+    }
+  },
+  "home": {
+    "philosophy_title": "We believe in the luxury of the essential, in human warmth, and in the value of slowed-down time.",
+    "philosophy_text": "Hotel du Soleil is your Base Camp at 1,500 meters altitude. We have eliminated the superfluous to leave room for what truly matters: natural wood, the authentic flavor of alpine cuisine, and the majesty of nature just outside the door.",
+    "philosophy_cta": "Discover our history",
+    "rooms_title": "Resting Spaces",
+    "rooms_subtitle": "Substance & Comfort",
+    "experience_title": "The Alpine Experience",
+    "experience_text": "Our promise is a practical and warm hospitality. Forget logical stress and let yourself be spoiled by the true flavors of our valley.",
+    "feature_access_title": "Direct Access",
+    "feature_access_text": "Just 20 meters from the ski lifts and main trails. The mountain literally starts from our door.",
+    "feature_food_title": "True Dining",
+    "feature_food_text": "Half board offers menus that respect Aosta Valley tradition. Excellent raw materials, recipes handed down with care.",
+    "feature_comfort_title": "Logistic Comfort",
+    "feature_comfort_text": "Dedicated covered garage, Wi-Fi in common areas, and a warm lounge with a fireplace to relax at the end of the day.",
+    "rooms_cta": "Explore Details"
+  },
+  "struttura": {
+    "subtitle": "Alpine Elegance",
+    "title": "The Structure",
+    "philosophy_title": "The warmth of wood, the strength of stone.",
+    "philosophy_text": "Hotel du Soleil was conceived to integrate harmoniously into the Torgnon landscape. Every detail reflects Aosta Valley tradition, reinterpreted with a modern and functional taste.",
+    "common_spaces_title": "Common Spaces",
+    "common_spaces_text": "From our cozy hall to the fireplace room, every space is designed to encourage relaxation and conviviality. Large windows open onto the surrounding panorama, bringing the majesty of the Alps inside the hotel.",
+    "amenities": ["Fireplace Room & Library", "Solarium Panorama Terrace", "Winter Garden"]
+  },
+  "storia": {
+    "subtitle": "Since 1980",
+    "title": "Our History",
+    "philosophy_title": "Family passion, heart of the mountain.",
+    "philosophy_text": "We are the second generation of a family that has chosen to dedicate its life to hospitality. What started as a small mountain refuge has become a point of reference for those seeking authenticity and warmth.",
+    "roots_title": "The Roots",
+    "roots_label": "1980 - Beginning of the Adventure",
+    "roots_text": "It all started from the vision of creating a place where guests would feel like part of the family. With humility and determination, we built every brick of our reputation, one season at a time."
+  },
+  "posizione": {
+    "subtitle": "In the Heart of Aosta Valley",
+    "title": "Location & Surroundings",
+    "philosophy_title": "Torgnon, the natural terrace on the Alps.",
+    "philosophy_text": "We are located at 1,500 meters altitude, in a strategic position that enjoys enviable sun exposure. The village of Torgnon still preserves the authentic atmosphere of the Aosta Valley mountains.",
+    "arrival_title": "How to Get Here",
+    "arrival_text": "Easily reachable from the A5 motorway, exit at Châtillon/Saint-Vincent and follow the signs for Torgnon. We are only 40 minutes from Aosta and an hour and a half from Turin and Milan.",
+    "maps_cta": "Open Google Maps"
+  },
+  "sostenibilita": {
+    "subtitle": "In Harmony with the Environment",
+    "title": "Sustainability",
+    "philosophy_title": "We respect the mountain, we care for the future.",
+    "philosophy_text": "We are custodians of a precious and fragile territory. For this reason, we daily adopt sustainable practices that reduce our environmental impact and promote the local economy.",
+    "features": {
+      "energy": { "title": "Clean Energy", "text": "Solar panels for hot water production and low-consumption LED lighting." },
+      "plastic": { "title": "Zero Plastic", "text": "We have eliminated plastic single-portions in favor of dispensers and glass bottles." },
+      "water": { "title": "Spring Water", "text": "We value the pure water from the Torgnon springs, filtered and served at the table." },
+      "km0": { "title": "Km 0 & Organic", "text": "We prioritize valley producers to reduce emissions related to transport." }
+    }
+  },
+  "wellness": {
+    "main_title": "Alpine Wellness",
+    "main_subtitle": "High Altitude Regeneration",
+    "spa": { "title": "The SPA in the Heights", "subtitle": "Deep Regeneration", "cta": "Discover the SPA" },
+    "massaggi": { "title": "Sports Massages", "subtitle": "Muscle Recovery", "cta": "Massages" },
+    "trattamenti": { "title": "Body Treatments", "subtitle": "Alpine Rituals", "cta": "See Treatments" },
+    "private_spa": { "title": "Private Night SPA", "subtitle": "Exclusivity & Romance", "cta": "Private Experience" }
+  },
+  "sport": {
+    "main_title": "Sport & Outdoor",
+    "main_subtitle": "The Mountain to Live",
+    "sci": { "title": "Ski & Snowboard", "subtitle": "Ski-in / Ski-out", "cta": "Ski in Torgnon" },
+    "bike": { "title": "MTB & E-Bike", "subtitle": "Iconic Trails", "cta": "By Bike" },
+    "trekking": { "title": "Trekking in Alpeggio", "subtitle": "Slow Exploration", "cta": "Trekking Trails" },
+    "noleggio": { "title": "Ski Box & Rental", "subtitle": "Convenient & Safe Services", "cta": "Ski Services" }
+  },
+  "experiences": {
+    "main_title": "Alpine Experiences",
+    "main_subtitle": "Authentic Memories",
+    "degustazione": { "title": "Fontina DOP", "subtitle": "Gastronomic Experience", "cta": "Tasting" },
+    "ciaspolate": { "title": "Night Snowshoeing", "subtitle": "The Magic of the Night", "cta": "Night Excursions" },
+    "yoga": { "title": "High Altitude Yoga", "subtitle": "Inner Balance", "cta": "Yoga Lessons" },
+    "guide": { "title": "Partner Alpine Guides", "subtitle": "Mountain Experts", "cta": "Contact Guides" }
+  },
+  "meteo": {
+    "title": "Weather & Snow Report",
+    "subtitle": "Torgnon — Aosta Valley",
+    "status_open": "Lifts Open",
+    "current_conditions": "Current Conditions",
+    "feels_like": "Feels Like",
+    "wind": "Wind",
+    "visibility": "Visibility",
+    "uv_index": "UV Index",
+    "snow_report": "Snow Report",
+    "snow_depth_base": "Snow Depth (Base)",
+    "snow_depth_top": "Snow Depth (Top)",
+    "snow_quality": "Quality",
+    "last_snowfall": "Last Snowfall",
+    "slopes_lifts": "Slopes & Lifts",
+    "slopes_open": "Slopes Open",
+    "lifts_running": "Lifts in Operation",
+    "webcam_title": "360° Panorama Live Webcam",
+    "fullscreen": "Fullscreen",
+    "activate_stream": "Activate Live Stream"
+  },
+  "termini": {
+    "title": "Terms & Conditions",
+    "updated": "Last update: March 2026",
+    "section1_title": "1. Bookings and Payments",
+    "section1_text": "Bookings made through the website or direct channels are confirmed upon receipt of a 30% deposit of the total stay. The balance will be paid at the property upon check-out.",
+    "section2_title": "2. Cancellation Policy",
+    "section2_text": "Free cancellation up to 14 days before arrival. In case of late cancellation or no-show, the deposit will not be refunded.",
+    "section3_title": "3. Check-in and Check-out Times",
+    "section3_text": "Rooms are available from 2:00 PM on the day of arrival. Check-out must be completed by 10:30 AM on the day of departure."
+  },
+  "rooms_data": {
+    "matrimoniale": {
+      "name": "Double Room",
+      "description": "Our double room in Torgnon offer a simple, warm, and functional refuge, perfect for couples or skiers who want a practical stay in the Aosta Valley. Characterized by traditional solid wood furnishings, these rooms blend the warmth of classic design with an extraordinary view of the surrounding peaks."
+    },
+    "tripla": {
+      "name": "Triple Room",
+      "description": "Our triple room in Torgnon is the ideal solution for those looking for a mountain holiday in the Aosta Valley without sacrificing space. With a surface area of up to 20sqm, these rooms offer an atmosphere of quiet."
+    },
+    "quadrupla_standard": {
+      "name": "Standard Quadruple",
+      "description": "Quadruple Room in Torgnon: The Ideal Space for your Family. If you are planning a family holiday in the Aosta Valley, our quadruple rooms in Torgnon offer the perfect refuge."
+    },
+    "familiare": {
+      "name": "Family Quadruple",
+      "description": "The most exclusive accommodation, designed for the maximum comfort of the family in the mountains. Ample spaces and premium finishes."
     }
   },
   "hero": {
@@ -67,6 +227,17 @@
     "guests": "Guests",
     "check": "Check",
     "adults": "Adults",
-    "children": "Children"
+    "children": "Children",
+    "title": "Book your stay",
+    "best_rate": "Best Rate Guaranteed",
+    "select_dates": "Select Dates",
+    "guests_label": "Guests"
+  },
+  "rooms": {
+    "title": "Accommodations",
+    "main_title": "Our Rooms",
+    "back_link": "All Accommodations",
+    "description_label": "Description",
+    "amenities_label": "Amenities included"
   }
 }

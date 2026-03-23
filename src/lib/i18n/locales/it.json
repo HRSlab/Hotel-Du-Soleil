@@ -1,4 +1,11 @@
 {
+  "common": {
+    "prev": "Precedente",
+    "next": "Successiva",
+    "back": "Indietro",
+    "close": "Chiudi",
+    "loading": "Caricamento..."
+  },
   "nav": {
     "overview": "Panoramica",
     "rooms": "Sistemazioni",
@@ -11,7 +18,12 @@
   "megamenu": {
     "overview": {
       "title": "Panoramica",
-      "links": ["La Struttura", "La Nostra Storia", "Posizione & Dintorni", "Sostenibilità"],
+      "links": [
+        { "name": "La Struttura", "href": "/struttura" },
+        { "name": "La Nostra Storia", "href": "/storia" },
+        { "name": "Posizione & Dintorni", "href": "/posizione" },
+        { "name": "Sostenibilità", "href": "/sostenibilita" }
+      ],
       "featured_label": "In Evidenza",
       "featured_text": "Scopri il fascino autentico di un rifugio a 1.500 metri. L'eleganza della semplicità e il calore di una gestione familiare dal 1980.",
       "featured_cta": "Scopri l'Hotel"
@@ -42,24 +54,158 @@
     },
     "wellness": {
       "title": "Wellness",
-      "links": ["La SPA in Quota", "Massaggi Sportivi", "Trattamenti Corpo", "Private SPA (Notturna)"],
+      "links": [
+        { "name": "La SPA in Quota", "href": "/wellness/spa" },
+        { "name": "Massaggi Sportivi", "href": "/wellness/massaggi" },
+        { "name": "Trattamenti Corpo", "href": "/wellness/trattamenti" },
+        { "name": "Private SPA (Notturna)", "href": "/wellness/private-spa" }
+      ],
       "featured_label": "In Evidenza",
       "featured_text": "Il lusso del silenzio. Ritrova il tuo equilibrio con i nostri percorsi benessere e lasciati coccolare dalle mani esperte dei nostri terapisti.",
       "featured_cta": "Rilassati"
     },
     "sport": {
       "title": "Attività",
-      "links": ["Sci & Snowboard (Ski-in)", "Mountain Bike & E-Bike", "Trekking in Alpeggio", "Ski Box & Noleggio"],
+      "links": [
+        { "name": "Sci & Snowboard (Ski-in)", "href": "/sport/sci" },
+        { "name": "Mountain Bike & E-Bike", "href": "/sport/bike" },
+        { "name": "Trekking in Alpeggio", "href": "/sport/trekking" },
+        { "name": "Ski Box & Noleggio", "href": "/sport/noleggio" }
+      ],
       "featured_label": "In Evidenza",
       "featured_text": "L'adrenalina inizia a 20 metri dalla nostra porta. Accesso diretto agli impianti in inverno e a infiniti sentieri panoramici in estate.",
       "featured_cta": "Vai all'Outdoor"
     },
     "experiences": {
       "title": "Il Territorio",
-      "links": ["Degustazione Fontina DOP", "Ciaspolate Notturne", "Yoga in Quota", "Guide Alpine Partner"],
+      "links": [
+        { "name": "Degustazione Fontina DOP", "href": "/esperienze/degustazione" },
+        { "name": "Ciaspolate Notturne", "href": "/esperienze/ciaspolate" },
+        { "name": "Yoga in Quota", "href": "/esperienze/yoga" },
+        { "name": "Guide Alpine Partner", "href": "/esperienze/guide" }
+      ],
       "featured_label": "In Evidenza",
       "featured_text": "Non una semplice vacanza, ma una collezione di ricordi. Esplora il territorio attraverso attività autentiche, in totale sintonia con i ritmi della montagna.",
       "featured_cta": "Lasciati ispirare"
+    }
+  },
+  "home": {
+    "philosophy_title": "Crediamo nel lusso dell'essenziale, nel calore umano e nel valore del tempo rallentato.",
+    "philosophy_text": "L'Hotel du Soleil è il tuo Base Camp a 1.500 metri di quota. Abbiamo eliminato il superfluo per lasciare spazio a ciò che conta davvero: il legno naturale, il sapore autentico della cucina alpina e la maestosità della natura appena fuori dalla porta.",
+    "philosophy_cta": "Scopri la nostra storia",
+    "rooms_title": "Spazi di Riposo",
+    "rooms_subtitle": "Sostanza & Comfort",
+    "experience_title": "L'Esperienza Alpina",
+    "experience_text": "La nostra promessa è un'ospitalità pratica e calda. Dimenticate lo stress logistico e lasciatevi viziare dai sapori veri della nostra valle.",
+    "feature_access_title": "Accesso Diretto",
+    "feature_access_text": "A soli 20 metri dagli impianti di risalita e dai principali sentieri. La montagna inizia letteralmente dalla nostra porta.",
+    "feature_food_title": "Ristorazione Vera",
+    "feature_food_text": "La mezza pensione offre menù che rispettano la tradizione valdostana. Materie prime eccellenti, ricette tramandate con cura.",
+    "feature_comfort_title": "Comfort Logistico",
+    "feature_comfort_text": "Garage coperto riservato, wifi nelle aree comuni e un caldo salotto con camino dove rilassarsi a fine giornata.",
+    "rooms_cta": "Esplora Dettagli"
+  },
+  "struttura": {
+    "subtitle": "Eleganza Alpina",
+    "title": "La Struttura",
+    "philosophy_title": "Il calore del legno, la forza della pietra.",
+    "philosophy_text": "L'Hotel du Soleil è stato concepito per integrarsi armoniosamente nel paesaggio di Torgnon. Ogni dettaglio riflette la tradizione valdostana, reinterpretata con un gusto moderno e funzionale.",
+    "common_spaces_title": "Spazi Comuni",
+    "common_spaces_text": "Dalla nostra hall accogliente fino alla sala camino, ogni spazio è pensato per favorire il relax e la convivialità. Grandi vetrate si aprono sul panorama circostante, portando la maestosità delle Alpi all'interno dell'hotel.",
+    "amenities": ["Sala Camino & Library", "Terrazza Solarium Panorama", "Winter Garden"]
+  },
+  "storia": {
+    "subtitle": "Dal 1980",
+    "title": "La Nostra Storia",
+    "philosophy_title": "Passione di famiglia, cuore di montagna.",
+    "philosophy_text": "Siamo la seconda generazione di una famiglia che ha scelto di dedicare la propria vita all'accoglienza. Quello che è iniziato come un piccolo rifugio è diventato un punto di riferimento per chi cerca autenticità e calore.",
+    "roots_title": "Le Radici",
+    "roots_label": "1980 - Inizio Avventura",
+    "roots_text": "Tutto è cominciato dalla visione di creare un luogo dove gli ospiti si sentissero parte della famiglia. Con umiltà e determinazione abbiamo costruito ogni mattone della nostra reputazione, una stagione alla volta."
+  },
+
+  "sostenibilita": {
+    "subtitle": "In Armonia con l'Ambiente",
+    "title": "Sostenibilità",
+    "philosophy_title": "Rispettiamo la montagna, curiamo il futuro.",
+    "philosophy_text": "Siamo custodi di un territorio prezioso e fragile. Per questo motivo adottiamo quotidianamente pratiche sostenibili che riducono il nostro impatto ambientale e promuovono l'economia locale.",
+    "features": {
+      "energy": { "title": "Energia Pulita", "text": "Pannelli solari per la produzione di acqua calda e illuminazione LED a basso consumo." },
+      "plastic": { "title": "Zero Plastica", "text": "Abbiamo eliminato le monoporzioni di plastica in favore di dispenser e bottiglie di vetro." },
+      "water": { "title": "Acqua di Fonte", "text": "Valorizziamo l'acqua purissima delle sorgenti di Torgnon, filtrata e servita al tavolo." }
+    }
+  },
+  "wellness": {
+    "main_title": "Benessere Alpino",
+    "main_subtitle": "Rigenerazione ad Alta Quota",
+    "spa": { "title": "La SPA in Quota", "subtitle": "Rigenerazione Profonda", "cta": "Scopri la SPA" },
+    "massaggi": { "title": "Massaggi Sportivi", "subtitle": "Recupero Muscolare", "cta": "I Massaggi" },
+    "trattamenti": { "title": "Trattamenti Corpo", "subtitle": "Rituali Alpini", "cta": "Vedi Trattamenti" },
+    "private_spa": { "title": "Private SPA Notturna", "subtitle": "Esclusività & Romanticismo", "cta": "Esperienza Privata" }
+  },
+  "sport": {
+    "main_title": "Sport & Outdoor",
+    "main_subtitle": "La Montagna da Vivere",
+    "sci": { "title": "Sci & Snowboard", "subtitle": "Ski-in / Ski-out", "cta": "Sciare a Torgnon" },
+    "bike": { "title": "MTB & E-Bike", "subtitle": "Sentieri Iconici", "cta": "In Bici" },
+    "trekking": { "title": "Trekking in Alpeggio", "subtitle": "Esplorazione Lenta", "cta": "Sentieri Trekking" },
+    "noleggio": { "title": "Ski Box & Noleggio", "subtitle": "Servizi Comodi & Sicuri", "cta": "Servizi Sci" }
+  },
+  "experiences": {
+    "main_title": "Esperienze Alpine",
+    "main_subtitle": "Ricordi Autentici",
+    "degustazione": { "title": "Fontina DOP", "subtitle": "Esperienza Gastronomica", "cta": "La Degustazione" },
+    "ciaspolate": { "title": "Ciaspolate Notturne", "subtitle": "La Magia della Notte", "cta": "Escursioni Notturne" },
+    "yoga": { "title": "Yoga in Quota", "subtitle": "Equilibrio Interiore", "cta": "Lezioni Yoga" },
+    "guide": { "title": "Guide Alpine Partner", "subtitle": "Esperti della Montagna", "cta": "Contatta Guide" }
+  },
+  "meteo": {
+    "title": "Meteo & Snow Report",
+    "subtitle": "Torgnon — Valle d'Aosta",
+    "status_open": "Impianti Aperti",
+    "current_conditions": "Condizioni Attuali",
+    "feels_like": "Percepita",
+    "wind": "Vento",
+    "visibility": "Visibilità",
+    "uv_index": "Indice UV",
+    "snow_report": "Bollettino Neve",
+    "snow_depth_base": "Altezza Neve (Base)",
+    "snow_depth_top": "Altezza Neve (Cima)",
+    "snow_quality": "Qualità",
+    "last_snowfall": "Ultima Neve",
+    "slopes_lifts": "Piste & Impianti",
+    "slopes_open": "Piste Aperte",
+    "lifts_running": "Impianti in funzione",
+    "webcam_title": "Webcam Live 360° Panorama",
+    "fullscreen": "Schermo Intero",
+    "activate_stream": "Attiva Streaming Live"
+  },
+  "termini": {
+    "title": "Termini & Condizioni",
+    "updated": "Ultimo aggiornamento: Marzo 2026",
+    "section1_title": "1. Prenotazioni e Pagamenti",
+    "section1_text": "Le prenotazioni effettuate tramite il sito web o canali diretti sono confermate al ricevimento di una caparra confirmatoria pari al 30% del totale del soggiorno. Il saldo verrà effettuato in struttura al momento del check-out.",
+    "section2_title": "2. Politica di Cancellazione",
+    "section2_text": "Cancellazione gratuita fino a 14 giorni prima dell'arrivo. In caso di cancellazione tardiva o mancata presentazione (no-show), la caparra non sarà rimborsata.",
+    "section3_title": "3. Orari di Check-in e Check-out",
+    "section3_text": "Le camere sono disponibili a partire dalle ore 14:00 del giorno di arrivo. Il check-out deve essere effettuato entro le ore 10:30 del giorno di partenza."
+  },
+  "rooms_data": {
+    "matrimoniale": {
+      "name": "Camera Matrimoniale",
+      "description": "La nostra camera doppia a Torgnon offre un rifugio semplice, caldo e funzionale, perfetto per le coppie o gli sciatori che desiderano un soggiorno pratico in Valle d’Aosta. Caratterizzate dall'arredamento tradizionale in legno massiccio, queste stanze fondono il calore del design classico con una vista straordinaria sulle cime circostanti."
+    },
+    "tripla": {
+      "name": "Camera Tripla",
+      "description": "La nostra camera tripla a Torgnon è la soluzione ideale per chi cerca una vacanza in montagna in Valle d’Aosta senza rinunciare allo spazio. Con una superficie che arriva fino a 20mq, queste stanze offrono un’atmosfera di quiete."
+    },
+    "quadrupla_standard": {
+      "name": "Quadrupla Standard",
+      "description": "Camera Quadrupla a Torgnon: Lo Spazio Ideale per la tua Famiglia. Se stai pianificando una vacanza in famiglia in Valle d’Aosta, le nostre camere quadruple a Torgnon offrono il rifugio perfetto."
+    },
+    "familiare": {
+      "name": "Quadrupla Familiare",
+      "description": "L'alloggio più esclusivo, pensato per il massimo comfort della famiglia in montagna. Spazi ampi e finiture premium."
     }
   },
   "hero": {
@@ -72,6 +218,38 @@
     "guests": "Ospiti",
     "check": "Verifica",
     "adults": "Adulti",
-    "children": "Bambini"
-  }
+    "children": "Bambini",
+    "title": "Prenota il tuo soggiorno",
+    "best_rate": "Miglior Tariffa Garantita",
+    "select_dates": "Seleziona Date",
+    "guests_label": "Ospiti"
+  },
+  "rooms": {
+    "title": "Sistemazioni",
+    "main_title": "Le Nostre Camere",
+    "back_link": "Tutte le sistemazioni",
+    "description_label": "Descrizione",
+    "amenities_label": "Servizi inclusi"
+  },
+"posizione": {
+  "title": "Posizione",
+  "subtitle": "Il Cuore di Torgnon",
+  "philosophy_title": "Dove la strada finisce, inizia la montagna.",
+  "philosophy_text": "Situato a 1.500 metri di altitudine, l'Hotel du Soleil domina la valle del Cervino. Un rifugio facilmente accessibile ma meravigliosamente isolato dal caos quotidiano.",
+  "arrival_title": "Il tuo Base Camp",
+  "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Situati nel centro del paese, offriamo un garage coperto riservato ai nostri ospiti e l'incredibile comodità di avere gli impianti di risalita a due passi dalla hall.",
+  "maps_cta": "Apri su Google Maps",
+  "directions_title": "Come Raggiungerci",
+  "by_car_title": "In Auto",
+  "by_car_text": "Autostrada A5 Torino-Aosta, uscita Châtillon-Saint-Vincent. Proseguire sulla SR 9 in direzione Valtournenche, poi svoltare per Torgnon (circa 20 min dal casello).",
+  "by_train_title": "In Treno",
+  "by_train_text": "Stazione ferroviaria di Châtillon-Saint-Vincent. Da qui, servizio autobus di linea SAVDA diretto per Torgnon o servizio taxi convenzionato con l'hotel.",
+  "by_plane_title": "In Aereo",
+  "by_plane_text": "Gli aeroporti più vicini sono Torino Caselle (110 km), Milano Malpensa (170 km) e Ginevra (180 km). Organizziamo transfer privati su richiesta.",
+  "distances_title": "Punti di Interesse",
+  "dist_ski": "Impianti di Risalita (Ski-in/Ski-out)",
+  "dist_cervinia": "Breuil-Cervinia",
+  "dist_aosta": "Aosta (Centro Storico)",
+  "dist_milano": "Milano"
+}
 }

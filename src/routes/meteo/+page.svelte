@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Cloud, Sun, CloudRain, Wind, Eye, SunDim, Snowflake, Map, Mountain, Activity, ExternalLink, Camera, ArrowRight } from 'lucide-svelte';
-  import { t, locale } from '$lib/i18n';
+  import { Sun, Cloud, Snowflake, Map, Camera, ExternalLink } from 'lucide-svelte';
+  import { t } from '$lib/i18n';
+  import type { ComponentType } from 'svelte';
 
   type WeatherData = {
     temp: string;
@@ -13,12 +14,11 @@
     precip: string;
     snow: string;
     chanceSnow: string;
-    icon: any;
+    icon: ComponentType;
   };
 
   let weather = $state<WeatherData | null>(null);
   
-  // Real-time data from Aosta Valley Resort (Manual/Mocked for demo but realistic)
   const skiStats = {
     slopes: { open: 18, total: 18, details: { blue: 5, red: 11, black: 2 } },
     lifts: { open: 5, total: 6 },
@@ -54,7 +54,7 @@
 </script>
 
 <svelte:head>
-  <title>Meteo & Snow Report | Hotel du Soleil</title>
+  <title>{$t('meteo.title')} | Hotel du Soleil</title>
 </svelte:head>
 
 <main class="min-h-screen bg-alpine-bg pt-32 pb-24">
@@ -63,12 +63,12 @@
     <!-- Title & Status -->
     <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-alpine-border pb-8">
       <div>
-        <h1 class="font-serif text-5xl text-alpine-text mb-4">Ski & Meteo Report</h1>
-        <p class="text-xs uppercase tracking-[0.3em] text-alpine-muted">Torgnon — Valle d'Aosta</p>
+        <h1 class="font-serif text-5xl text-alpine-text mb-4">{$t('meteo.title')}</h1>
+        <p class="text-xs uppercase tracking-[0.3em] text-alpine-muted">{$t('meteo.subtitle')}</p>
       </div>
       <div class="mt-8 md:mt-0 flex items-center gap-4 bg-white px-6 py-3 border border-alpine-border">
         <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span class="text-[10px] font-bold uppercase tracking-widest text-alpine-text">Impianti Aperti</span>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-alpine-text">{$t('meteo.status_open')}</span>
       </div>
     </div>
 
@@ -79,7 +79,7 @@
       <div class="lg:col-span-4 space-y-8">
         <div class="bg-white p-8 border border-alpine-border shadow-sm h-full">
           <h2 class="text-[11px] uppercase tracking-[0.2em] text-alpine-muted font-bold mb-10 flex items-center gap-2">
-            <Sun class="w-4 h-4 text-alpine-gold" /> Condizioni Attuali
+            <Sun class="w-4 h-4 text-alpine-gold" /> {$t('meteo.current_conditions')}
           </h2>
           
           {#if weather}
@@ -94,19 +94,19 @@
 
               <div class="grid grid-cols-2 gap-8 border-t border-alpine-border/50 pt-8">
                 <div class="space-y-2">
-                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">Percepita</span>
+                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">{$t('meteo.feels_like')}</span>
                   <p class="text-lg font-serif italic text-alpine-text">{weather.feelsLike}°C</p>
                 </div>
                 <div class="space-y-2">
-                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">Vento</span>
+                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">{$t('meteo.wind')}</span>
                   <p class="text-lg font-serif italic text-alpine-text">{weather.wind} <span class="text-xs font-sans not-italic font-bold">km/h</span></p>
                 </div>
                 <div class="space-y-2">
-                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">Visibilità</span>
+                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">{$t('meteo.visibility')}</span>
                   <p class="text-lg font-serif italic text-alpine-text">{weather.visibility} <span class="text-xs font-sans not-italic font-bold">km</span></p>
                 </div>
                 <div class="space-y-2">
-                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">Indice UV</span>
+                  <span class="text-[9px] uppercase tracking-widest text-alpine-muted">{$t('meteo.uv_index')}</span>
                   <p class="text-lg font-serif italic text-alpine-text">{weather.uv}</p>
                 </div>
               </div>
@@ -128,24 +128,24 @@
           <div class="bg-alpine-text text-white p-8 border border-alpine-text/10 shadow-xl overflow-hidden relative">
             <Snowflake class="absolute -right-8 -top-8 w-48 h-48 opacity-10" />
             <h2 class="text-[11px] uppercase tracking-[0.2em] text-white/60 font-bold mb-10 flex items-center gap-2">
-               Bollettino Neve
+               {$t('meteo.snow_report')}
             </h2>
             <div class="space-y-12 relative z-10">
               <div class="flex justify-between items-end border-b border-white/20 pb-4">
-                <span class="text-sm font-light italic">Altezza Neve (Base)</span>
+                <span class="text-sm font-light italic">{$t('meteo.snow_depth_base')}</span>
                 <span class="text-4xl font-serif">{skiStats.snowDepth.base}</span>
               </div>
               <div class="flex justify-between items-end border-b border-white/20 pb-4">
-                <span class="text-sm font-light italic">Altezza Neve (Cima)</span>
+                <span class="text-sm font-light italic">{$t('meteo.snow_depth_top')}</span>
                 <span class="text-4xl font-serif">{skiStats.snowDepth.top}</span>
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div class="p-4 bg-white/10">
-                  <span class="block text-[9px] uppercase tracking-widest text-white/50 mb-1">Qualità</span>
+                  <span class="block text-[9px] uppercase tracking-widest text-white/50 mb-1">{$t('meteo.snow_quality')}</span>
                   <p class="text-xs font-bold">{skiStats.snowQuality}</p>
                 </div>
                 <div class="p-4 bg-white/10">
-                  <span class="block text-[9px] uppercase tracking-widest text-white/50 mb-1">Ultima Neve</span>
+                  <span class="block text-[9px] uppercase tracking-widest text-white/50 mb-1">{$t('meteo.last_snowfall')}</span>
                   <p class="text-xs font-bold">{skiStats.lastSnowfall}</p>
                 </div>
               </div>
@@ -155,27 +155,26 @@
           <!-- Slopes Status -->
           <div class="bg-white p-8 border border-alpine-border shadow-sm">
             <h2 class="text-[11px] uppercase tracking-[0.2em] text-alpine-muted font-bold mb-10 flex items-center gap-2">
-              <Map class="w-4 h-4 text-alpine-gold" /> Piste & Impianti
+              <Map class="w-4 h-4 text-alpine-gold" /> {$t('meteo.slopes_lifts')}
             </h2>
             <div class="space-y-10">
               <div class="flex gap-4 items-center">
                 <div class="text-6xl font-serif text-alpine-text">{skiStats.slopes.open} <span class="text-2xl text-alpine-muted">/ {skiStats.slopes.total}</span></div>
-                <div class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold leading-tight">Piste<br/>Aperte</div>
+                <div class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold leading-tight">{$t('meteo.slopes_open')}</div>
               </div>
               
               <div class="grid grid-cols-3 gap-2">
-                <div class="bg-blue-500 h-1" style="width: 100%" title="Blu: {skiStats.slopes.details.blue}"></div>
-                <div class="bg-red-500 h-1" style="width: 100%" title="Rosse: {skiStats.slopes.details.red}"></div>
-                <div class="bg-black h-1" style="width: 100%" title="Nere: {skiStats.slopes.details.black}"></div>
+                <div class="bg-blue-500 h-1" style="width: 100%"></div>
+                <div class="bg-red-500 h-1" style="width: 100%"></div>
+                <div class="bg-black h-1" style="width: 100%"></div>
               </div>
 
               <div class="space-y-6 pt-6 border-t border-alpine-border/50">
                 <div class="flex justify-between items-center">
-                  <span class="text-xs font-medium text-alpine-muted uppercase tracking-widest">Impianti in funzione</span>
+                  <span class="text-xs font-medium text-alpine-muted uppercase tracking-widest">{$t('meteo.lifts_running')}</span>
                   <span class="text-lg font-serif text-alpine-text">{skiStats.lifts.open} / {skiStats.lifts.total}</span>
                 </div>
-                <!-- Mini Progress Bar Lifts -->
-                <div class="bg-alpine-bg h-1.5 w-full">
+                <div class="bg-alpine-bg h-1.5 w-full overflow-hidden">
                   <div class="bg-alpine-gold h-full" style="width: {(skiStats.lifts.open / skiStats.lifts.total) * 100}%"></div>
                 </div>
               </div>
@@ -192,57 +191,26 @@
         <div class="bg-white border border-alpine-border shadow-sm overflow-hidden">
           <div class="p-8 border-b border-alpine-border flex justify-between items-center">
             <h2 class="text-[11px] uppercase tracking-[0.2em] text-alpine-muted font-bold flex items-center gap-2">
-              <Camera class="w-4 h-4 text-alpine-gold" /> Webcam Live 360° Panorama
+              <Camera class="w-4 h-4 text-alpine-gold" /> {$t('meteo.webcam_title')}
             </h2>
             <a href="https://torgnon-skiarea.panomax.com/" target="_blank" class="text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 hover:text-alpine-gold transition-colors">
-              Schermo Intero <ExternalLink class="w-3.5 h-3.5" />
+              {$t('meteo.fullscreen')} <ExternalLink class="w-3.5 h-3.5" />
             </a>
           </div>
-          <div class="aspect-[21/9] bg-alpine-bg relative group">
-             <!-- Preview with high-res placeholder from Panomax area -->
+          <div class="aspect-21/9 bg-alpine-bg relative group">
              <img 
                src="https://www.hotel-du-soleil.it/Resources/hotel-du-soleil/gallery/gallery06.jpg" 
                alt="Torgnon Webcam Preview"
                class="w-full h-full object-cover opacity-80" 
              />
              <div class="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
-               <a href="https://torgnon-skiarea.panomax.com/" target="_blank" class="bg-white px-10 py-5 text-[11px] font-bold uppercase tracking-[0.3em] shadow-2xl hover:bg-alpine-text hover:text-white transition-all transform hover:scale-105">
-                 Attiva Streaming Live
-               </a>
-             </div>
-          </div>
-          <div class="p-6 bg-white flex flex-wrap gap-x-12 gap-y-4">
-             <div class="flex items-center gap-3">
-               <div class="w-1.5 h-1.5 rounded-full bg-alpine-gold"></div>
-               <span class="text-[10px] font-medium uppercase tracking-widest text-alpine-muted italic">Partenza telecabina Mongnod</span>
-             </div>
-             <div class="flex items-center gap-3">
-               <div class="w-1.5 h-1.5 rounded-full bg-alpine-gold"></div>
-               <span class="text-[10px] font-medium uppercase tracking-widest text-alpine-muted italic">Arrivo seggiovia Collet</span>
-             </div>
-             <div class="flex items-center gap-3">
-               <div class="w-1.5 h-1.5 rounded-full bg-alpine-gold"></div>
-               <span class="text-[10px] font-medium uppercase tracking-widest text-alpine-muted italic">Vista Area Winter Park</span>
+                <a href="https://torgnon-skiarea.panomax.com/" target="_blank" class="bg-white px-10 py-5 text-[11px] font-bold uppercase tracking-[0.3em] shadow-2xl hover:bg-alpine-text hover:text-white transition-all transform hover:scale-105">
+                  {$t('meteo.activate_stream')}
+                </a>
              </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Useful Links -->
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-       <a href="https://www.skilife.ski/en/torgnon/snow-report/" target="_blank" class="bg-white p-6 border border-alpine-border hover:border-alpine-gold transition-colors flex items-center justify-between group">
-          <span class="text-[11px] font-bold uppercase tracking-widest text-alpine-text font-serif italic">Skilife Official Report</span>
-          <ArrowRight class="w-4 h-4 text-alpine-gold -rotate-45 group-hover:rotate-0 transition-transform" />
-       </a>
-       <a href="https://www.3bmeteo.com/meteo/torgnon" target="_blank" class="bg-white p-6 border border-alpine-border hover:border-alpine-gold transition-colors flex items-center justify-between group">
-          <span class="text-[11px] font-bold uppercase tracking-widest text-alpine-text font-serif italic">3BMeteo Torgnon</span>
-          <ArrowRight class="w-4 h-4 text-alpine-gold -rotate-45 group-hover:rotate-0 transition-transform" />
-       </a>
-       <a href="https://www.cervinia.it/smart-tv#" target="_blank" class="bg-white p-6 border border-alpine-border hover:border-alpine-gold transition-colors flex items-center justify-between group">
-          <span class="text-[11px] font-bold uppercase tracking-widest text-alpine-text font-serif italic">Ski Paradise Dashboard</span>
-          <ArrowRight class="w-4 h-4 text-alpine-gold -rotate-45 group-hover:rotate-0 transition-transform" />
-       </a>
     </div>
 
   </div>

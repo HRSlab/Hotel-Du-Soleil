@@ -7,18 +7,30 @@ import ru from './locales/ru.json';
 import es from './locales/es.json';
 import ar from './locales/ar.json';
 
-const translations: any = { it, en, fr, de, ru, es, ar };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const translations: Record<string, any> = { it, en, fr, de, ru, es, ar };
 
 export const locale = writable('it');
 
 export const t = derived(locale, ($locale) => {
   return (key: string) => {
     const keys = key.split('.');
-    let value = translations[$locale] || translations['it'];
+    
+    // Try current locale
+    let value = translations[$locale];
     for (const k of keys) {
       value = value?.[k];
     }
-    return value || key;
+    
+    // Fallback to 'it' if not found and current locale is not 'it'
+    if (value === undefined && $locale !== 'it') {
+      value = translations['it'];
+      for (const k of keys) {
+        value = value?.[k];
+      }
+    }
+    
+    return value;
   };
 });
 
