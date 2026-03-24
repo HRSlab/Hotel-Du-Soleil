@@ -33,9 +33,9 @@
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 fade-up-element mt-20">
       <div class="bg-white p-12 border border-alpine-border shadow-sm">
-        <h3 class="font-serif text-3xl mb-6 text-alpine-text">{$t('wellness.spa.title')}</h3>
+        <h3 class="font-serif text-3xl mb-6 text-alpine-text">{$t('wellness.trattamenti.title')}</h3>
         <p class="text-alpine-muted font-light leading-relaxed">
-          {$t('wellness.spa.subtitle')}
+          {$t('wellness.trattamenti.subtitle')}
         </p>
       </div>
       <div class="bg-white p-12 border border-alpine-border shadow-sm">

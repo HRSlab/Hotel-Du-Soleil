@@ -59,7 +59,7 @@
 			{$t('home.philosophy_text')}
 		</p>
 		<a
-			href="/storia"
+			href="/struttura"
 			class="border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
 		>
 			{$t('home.philosophy_cta')}

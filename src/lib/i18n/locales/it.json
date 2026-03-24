@@ -20,8 +20,9 @@
       "title": "Panoramica",
       "links": [
         { "name": "La Struttura", "href": "/struttura" },
-        { "name": "La Nostra Storia", "href": "/storia" },
         { "name": "Posizione & Dintorni", "href": "/posizione" },
+        { "name": "Kids Club", "href": "/kids-club" },
+        { "name": "Meeting & Eventi", "href": "/eventi" },
         { "name": "Sostenibilità", "href": "/sostenibilita" }
       ],
       "featured_label": "In Evidenza",
@@ -44,7 +45,6 @@
       "title": "Gusto Alpino",
       "links": [
         { "name": "Ristorante", "href": "/ristorante" },
-        { "name": "Menu Tradizionale", "href": "/ristorante/menu" },
         { "name": "Lounge Bar & Camino", "href": "/ristorante/lounge-bar" },
         { "name": "La Cantina", "href": "/ristorante/cantina" }
       ],
@@ -55,7 +55,6 @@
     "wellness": {
       "title": "Wellness",
       "links": [
-        { "name": "La SPA in Quota", "href": "/wellness/spa" },
         { "name": "Massaggi Sportivi", "href": "/wellness/massaggi" },
         { "name": "Trattamenti Corpo", "href": "/wellness/trattamenti" },
         { "name": "Private SPA (Notturna)", "href": "/wellness/private-spa" }
@@ -92,7 +91,7 @@
   "home": {
     "philosophy_title": "Crediamo nel lusso dell'essenziale, nel calore umano e nel valore del tempo rallentato.",
     "philosophy_text": "L'Hotel du Soleil è il tuo Base Camp a 1.500 metri di quota. Abbiamo eliminato il superfluo per lasciare spazio a ciò che conta davvero: il legno naturale, il sapore autentico della cucina alpina e la maestosità della natura appena fuori dalla porta.",
-    "philosophy_cta": "Scopri la nostra storia",
+    "philosophy_cta": "Esplora l'Hotel",
     "rooms_title": "Spazi di Riposo",
     "rooms_subtitle": "Sostanza & Comfort",
     "experience_title": "L'Esperienza Alpina",
@@ -120,15 +119,6 @@
     "common_spaces_text": "Dalla nostra hall accogliente fino alla sala camino, ogni spazio è pensato per favorire il relax e la convivialità. Grandi vetrate si aprono sul panorama circostante, portando la maestosità delle Alpi all'interno dell'hotel.",
     "amenities": ["Sala Camino & Library", "Terrazza Solarium Panorama", "Winter Garden"]
   },
-  "storia": {
-    "subtitle": "Dal 1980",
-    "title": "La Nostra Storia",
-    "philosophy_title": "Passione di famiglia, cuore di montagna.",
-    "philosophy_text": "Siamo la seconda generazione di una famiglia che ha scelto di dedicare la propria vita all'accoglienza. Quello che è iniziato come un piccolo rifugio è diventato un punto di riferimento per chi cerca autenticità e calore.",
-    "roots_title": "Le Radici",
-    "roots_label": "1980 - Inizio Avventura",
-    "roots_text": "Tutto è cominciato dalla visione di creare un luogo dove gli ospiti si sentissero parte della famiglia. Con umiltà e determinazione abbiamo costruito ogni mattone della nostra reputazione, una stagione alla volta."
-  },
 
   "sostenibilita": {
     "subtitle": "In Armonia con l'Ambiente",
@@ -152,8 +142,18 @@
   "sport": {
     "main_title": "Sport & Outdoor",
     "main_subtitle": "La Montagna da Vivere",
-    "sci": { "title": "Sci & Snowboard", "subtitle": "Ski-in / Ski-out", "cta": "Sciare a Torgnon" },
-    "bike": { "title": "MTB & E-Bike", "subtitle": "Sentieri Iconici", "cta": "In Bici" },
+    "philosophy_title": "L'adrenalina inizia a 20 metri dalla hall.",
+    "philosophy_text": "Dimentica l'auto. A Torgnon, a 1.500 metri, la natura non è una destinazione, è il tuo punto di partenza. Che sia sci-in/ski-out o trekking eroico, noi ti offriamo il comfort perfetto prima e dopo l'avventura.",
+    "sci": { 
+      "title": "Sci & Snowboard", 
+      "subtitle": "Accesso diretto al comprensorio di Torgnon. Piste perfettamente battute, panorami mozzafiato sul Cervino e la comodità di rientrare in hotel con gli sci ai piedi.",
+      "cta": "Sciare a Torgnon" 
+    },
+    "bike": { 
+      "title": "MTB & E-Bike", 
+      "subtitle": "Esplora i sentieri della Valle d'Aosta su due ruote. Dai percorsi adrenalinici per esperti alle dolci passeggiate panoramiche per famiglie, Torgnon è un paradiso per i bikers.",
+      "cta": "In Bici" 
+    },
     "trekking": { "title": "Trekking in Alpeggio", "subtitle": "Esplorazione Lenta", "cta": "Sentieri Trekking" },
     "noleggio": { "title": "Ski Box & Noleggio", "subtitle": "Servizi Comodi & Sicuri", "cta": "Servizi Sci" }
   },
@@ -257,5 +257,28 @@
   "dist_cervinia": "Breuil-Cervinia",
   "dist_aosta": "Aosta (Centro Storico)",
   "dist_milano": "Milano"
-}
+},
+  "footer": {
+    "description": "Un rifugio silenzioso nel cuore di Torgnon. Sostanza, eleganza e il calore della Valle d'Aosta dal 1980.",
+    "contacts_title": "Contatti",
+    "explore_title": "Esplora",
+    "links": {
+      "structure": "La Struttura",
+      "rooms": "Le Camere",
+      "restaurant": "Il Ristorante",
+      "terms": "Termini e Condizioni"
+    },
+    "rights": "© 2026 Futuro srl - Hotel du Soleil. Tutti i diritti riservati.",
+    "made_by": "made with ❤️ by CB"
+  },
+  "kids_club": {
+    "title": "Kids Club",
+    "subtitle": "Divertimento in Quota",
+    "description": "Uno spazio dedicato ai nostri ospiti più piccoli, dove la fantasia non ha confini. Giochi, attività creative e assistenza qualificata per permettere ai genitori di rilassarsi sapendo che i propri figli sono in buone mani."
+  },
+  "eventi": {
+    "title": "Meeting & Eventi",
+    "subtitle": "Spazi Versatili",
+    "description": "L'ambiente ideale per i vostri incontri di lavoro o eventi privati. Sale attrezzate, vista panoramica e un servizio catering d'eccellenza curato dal nostro ristorante."
+  }
 }

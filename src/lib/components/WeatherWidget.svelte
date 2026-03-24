@@ -44,11 +44,10 @@
     }
   });
 </script>
-
 {#if weather}
   <a 
     href="/meteo" 
-    class="flex flex-wrap items-center gap-x-6 gap-y-2 text-alpine-text/60 text-[9px] uppercase tracking-[0.15em] font-bold hover:text-alpine-text transition-all group"
+    class="flex flex-wrap items-center gap-x-6 gap-y-2 text-alpine-text/60 text-[0.75em] uppercase tracking-[0.15em] font-bold hover:text-alpine-text transition-all group"
   >
     <!-- Main -->
     <div class="flex items-center gap-2">

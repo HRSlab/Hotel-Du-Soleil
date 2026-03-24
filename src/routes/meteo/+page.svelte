@@ -19,13 +19,13 @@
 
   let weather = $state<WeatherData | null>(null);
   
-  const skiStats = {
+  let skiStats = $state({
     slopes: { open: 18, total: 18, details: { blue: 5, red: 11, black: 2 } },
     lifts: { open: 5, total: 6 },
-    snowDepth: { base: "50cm", top: "50cm" },
+    snowDepth: { base: "30cm", top: "50cm" },
     lastSnowfall: "14/03/2026",
     snowQuality: "Hard packed / Spring"
-  };
+  });
 
   onMount(async () => {
     try {
@@ -47,6 +47,25 @@
         chanceSnow: today.hourly[0].chanceofsnow || "0",
         icon: parseInt(current.weatherCode) < 116 ? Sun : Cloud
       };
+
+      // Updates for "Bollettino Neve" from Live Data
+      if (parseFloat(weather.snow) > 0) {
+        skiStats.snowQuality = "Neve Fresca / Polverosa";
+        skiStats.lastSnowfall = "Oggi";
+      } else if (parseInt(weather.temp) > 3) {
+        skiStats.snowQuality = "Trasformata / Primaverile";
+      }
+
+      // Check current and forecast for last snowfall in current data array
+      const allSnowEvents = data.weather.filter((w: { totalSnow_cm: string }) => parseFloat(w.totalSnow_cm) > 0);
+      if (allSnowEvents.length > 0) {
+        // Sort by date descending to find the most recent one
+        const sortedEvents = allSnowEvents.sort((a: {date: string}, b: {date: string}) => b.date.localeCompare(a.date));
+        skiStats.lastSnowfall = new Date(sortedEvents[0].date).toLocaleDateString('it-IT');
+      }
+
+      // Sync Lift/Slopes - ensuring reactive state is used in HTML
+      // (The UI already binds to skiStats, so updating it here triggers the update)
     } catch (e) {
       console.error('Weather fetch error:', e);
     }

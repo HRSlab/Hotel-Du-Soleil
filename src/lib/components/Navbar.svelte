@@ -17,7 +17,7 @@
     let isMobileMenuOpen = $state(false);
     let isBookingMenuOpen = $state(false);
 
-    const darkHeroRoutes = ['/', '/camere', '/struttura', '/storia', '/posizione', '/sostenibilita', '/wellness', '/sport', '/esperienze'];
+    const darkHeroRoutes = ['/', '/camere', '/struttura', '/posizione', '/sostenibilita', '/wellness', '/sport', '/esperienze'];
     const isDarkHero = $derived(
         darkHeroRoutes.includes(page.url.pathname) || 
         page.url.pathname.startsWith('/camere/') ||
@@ -68,7 +68,7 @@
 >
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-6">
         
-        <a href={"/"} class="z-20 flex shrink-0 cursor-pointer items-center gap-3 text-left transition-transform duration-300 hover:scale-105">
+        <a href="/" class="z-20 flex shrink-0 cursor-pointer items-center gap-3 text-left transition-transform duration-300 hover:scale-105">
             <img src="/imgs/logo.png" alt="Logo Hotel du Soleil" class="h-10 w-auto object-contain drop-shadow-md md:h-12" />
             
             <div class="flex flex-col items-start justify-center pt-1">

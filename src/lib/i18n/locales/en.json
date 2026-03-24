@@ -20,8 +20,9 @@
       "title": "Overview",
       "links": [
         { "name": "The Structure", "href": "/struttura" },
-        { "name": "Our History", "href": "/storia" },
         { "name": "Location & Surroundings", "href": "/posizione" },
+        { "name": "Kids Club", "href": "/kids-club" },
+        { "name": "Meetings & Events", "href": "/eventi" },
         { "name": "Sustainability", "href": "/sostenibilita" }
       ],
       "featured_label": "Highlighted",
@@ -44,7 +45,6 @@
       "title": "Alpine Taste",
       "links": [
         { "name": "Central Restaurant", "href": "/ristorante" },
-        { "name": "Traditional Menu", "href": "/ristorante/menu" },
         { "name": "Lounge Bar & Fireplace", "href": "/ristorante/lounge-bar" },
         { "name": "The Cellar", "href": "/ristorante/cantina" }
       ],
@@ -55,7 +55,6 @@
     "wellness": {
       "title": "Wellness",
       "links": [
-        { "name": "SPA in the Heights", "href": "/wellness/spa" },
         { "name": "Sports Massages", "href": "/wellness/massaggi" },
         { "name": "Body Treatments", "href": "/wellness/trattamenti" },
         { "name": "Private SPA (Night)", "href": "/wellness/private-spa" }
@@ -92,7 +91,7 @@
   "home": {
     "philosophy_title": "We believe in the luxury of the essential, in human warmth, and in the value of slowed-down time.",
     "philosophy_text": "Hotel du Soleil is your Base Camp at 1,500 meters altitude. We have eliminated the superfluous to leave room for what truly matters: natural wood, the authentic flavor of alpine cuisine, and the majesty of nature just outside the door.",
-    "philosophy_cta": "Discover our history",
+    "philosophy_cta": "Explore the Hotel",
     "rooms_title": "Resting Spaces",
     "rooms_subtitle": "Substance & Comfort",
     "experience_title": "The Alpine Experience",
@@ -120,23 +119,26 @@
     "common_spaces_text": "From our cozy hall to the fireplace room, every space is designed to encourage relaxation and conviviality. Large windows open onto the surrounding panorama, bringing the majesty of the Alps inside the hotel.",
     "amenities": ["Fireplace Room & Library", "Solarium Panorama Terrace", "Winter Garden"]
   },
-  "storia": {
-    "subtitle": "Since 1980",
-    "title": "Our History",
-    "philosophy_title": "Family passion, heart of the mountain.",
-    "philosophy_text": "We are the second generation of a family that has chosen to dedicate its life to hospitality. What started as a small mountain refuge has become a point of reference for those seeking authenticity and warmth.",
-    "roots_title": "The Roots",
-    "roots_label": "1980 - Beginning of the Adventure",
-    "roots_text": "It all started from the vision of creating a place where guests would feel like part of the family. With humility and determination, we built every brick of our reputation, one season at a time."
-  },
   "posizione": {
-    "subtitle": "In the Heart of Aosta Valley",
+    "subtitle": "In the Heart of Torgnon",
     "title": "Location & Surroundings",
-    "philosophy_title": "Torgnon, the natural terrace on the Alps.",
-    "philosophy_text": "We are located at 1,500 meters altitude, in a strategic position that enjoys enviable sun exposure. The village of Torgnon still preserves the authentic atmosphere of the Aosta Valley mountains.",
-    "arrival_title": "How to Get Here",
-    "arrival_text": "Easily reachable from the A5 motorway, exit at Châtillon/Saint-Vincent and follow the signs for Torgnon. We are only 40 minutes from Aosta and an hour and a half from Turin and Milan.",
-    "maps_cta": "Open Google Maps"
+    "philosophy_title": "Where the road ends, the mountain begins.",
+    "philosophy_text": "Situated at 1,500 meters altitude, Hotel du Soleil overlooks the Matterhorn valley. An easily accessible yet wonderfully secluded refuge from daily chaos.",
+    "arrival_title": "Your Base Camp",
+    "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Located in the town center, we offer a dedicated covered garage for our guests and the incredible convenience of having the ski lifts just steps from the hall.",
+    "maps_cta": "Open on Google Maps",
+    "directions_title": "How to Reach Us",
+    "by_car_title": "By Car",
+    "by_car_text": "A5 Turin-Aosta motorway, Châtillon-Saint-Vincent exit. Continue on SR 9 towards Valtournenche, then turn for Torgnon (about 20 min from the exit).",
+    "by_train_title": "By Train",
+    "by_train_text": "Châtillon-Saint-Vincent railway station. From here, direct SAVDA bus service to Torgnon or hotel-contracted taxi service.",
+    "by_plane_title": "By Plane",
+    "by_plane_text": "The nearest airports are Turin Caselle (110 km), Milan Malpensa (170 km), and Geneva (180 km). We organize private transfers upon request.",
+    "distances_title": "Points of Interest",
+    "dist_ski": "Ski Lifts (Ski-in/Ski-out)",
+    "dist_cervinia": "Breuil-Cervinia",
+    "dist_aosta": "Aosta (Historic Center)",
+    "dist_milano": "Milan"
   },
   "sostenibilita": {
     "subtitle": "In Harmony with the Environment",
@@ -160,10 +162,20 @@
   },
   "sport": {
     "main_title": "Sport & Outdoor",
-    "main_subtitle": "The Mountain to Live",
-    "sci": { "title": "Ski & Snowboard", "subtitle": "Ski-in / Ski-out", "cta": "Ski in Torgnon" },
-    "bike": { "title": "MTB & E-Bike", "subtitle": "Iconic Trails", "cta": "By Bike" },
-    "trekking": { "title": "Trekking in Alpeggio", "subtitle": "Slow Exploration", "cta": "Trekking Trails" },
+    "main_subtitle": "Live the Mountain",
+    "philosophy_title": "Adrenaline starts 20 meters from the hall.",
+    "philosophy_text": "Forget the car. In Torgnon, at 1,500 meters, nature is not a destination, it's your starting point. Whether it's ski-in/ski-out or heroic trekking, we offer you the perfect comfort before and after the adventure.",
+    "sci": { 
+      "title": "Ski & Snowboard", 
+      "subtitle": "Direct access to the Torgnon ski area. Perfectly groomed slopes, breathtaking views of the Matterhorn, and the convenience of returning to the hotel with your skis on.",
+      "cta": "Ski in Torgnon" 
+    },
+    "bike": { 
+      "title": "MTB & E-Bike", 
+      "subtitle": "Explore the trails of the Aosta Valley on two wheels. From adrenaline-pumping routes for experts to gentle panoramic walks for families, Torgnon is a paradise for bikers.",
+      "cta": "By Bike" 
+    },
+    "trekking": { "title": "Alp Trekking", "subtitle": "Slow Exploration", "cta": "Trekking Trails" },
     "noleggio": { "title": "Ski Box & Rental", "subtitle": "Convenient & Safe Services", "cta": "Ski Services" }
   },
   "experiences": {
@@ -245,5 +257,28 @@
     "back_link": "All Accommodations",
     "description_label": "Description",
     "amenities_label": "Amenities included"
+  },
+  "footer": {
+    "description": "A silent refuge in the heart of Torgnon. Substance, elegance, and the warmth of Aosta Valley since 1980.",
+    "contacts_title": "Contacts",
+    "explore_title": "Explore",
+    "links": {
+      "structure": "The Structure",
+      "rooms": "The Rooms",
+      "restaurant": "The Restaurant",
+      "terms": "Terms and Conditions"
+    },
+    "rights": "© 2026 Futuro srl - Hotel du Soleil. All rights reserved.",
+    "made_by": "made with ❤️ by CB"
+  },
+  "kids_club": {
+    "title": "Kids Club",
+    "subtitle": "Fun in the Heights",
+    "description": "A space dedicated to our youngest guests, where imagination knows no bounds. Games, creative activities, and qualified assistance to allow parents to relax knowing their children are in good hands."
+  },
+  "eventi": {
+    "title": "Meetings & Events",
+    "subtitle": "Versatile Spaces",
+    "description": "The ideal environment for your business meetings or private events. Equipped rooms, panoramic views, and an excellent catering service curated by our restaurant."
   }
 }
