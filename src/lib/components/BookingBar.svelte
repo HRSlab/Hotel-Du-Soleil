@@ -77,7 +77,7 @@
             onclick={(e) => e.stopPropagation()}
             onkeydown={(e) => e.stopPropagation()}
             role="presentation"
-            class="absolute top-full left-0 mt-2 w-[340px] bg-white shadow-2xl border border-alpine-border z-50 animate-in fade-in slide-in-from-top-2 duration-300"
+            class="absolute top-full mt-4 w-[90vw] max-w-[340px] md:w-[340px] bg-white shadow-2xl border border-alpine-border z-50 animate-in fade-in slide-in-from-top-2 duration-300 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0"
           >
             <Calendar bind:arrival bind:departure onSelect={handleDateSelect} />
           </div>
@@ -106,7 +106,7 @@
             onclick={(e) => e.stopPropagation()}
             onkeydown={(e) => e.stopPropagation()}
             role="presentation"
-            class="absolute top-full left-0 mt-2 w-full min-w-[280px] bg-white shadow-2xl border border-alpine-border p-8 z-50 animate-in fade-in slide-in-from-top-2 duration-300 space-y-8"
+            class="absolute top-full mt-4 w-[90vw] max-w-[340px] md:w-full bg-white shadow-2xl border border-alpine-border p-8 z-50 animate-in fade-in slide-in-from-top-2 duration-300 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 space-y-8"
           >
             <div class="flex items-center justify-between">
               <span class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('booking.adults')}</span>

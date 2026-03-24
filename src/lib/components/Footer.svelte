@@ -11,8 +11,8 @@
         {$t('footer.description')}
       </p>
       <div class="flex gap-6">
-        <a href="/" class="text-white hover:text-alpine-gold transition-colors text-sm uppercase tracking-widest font-semibold">Instagram</a>
-        <a href="/" class="text-white hover:text-alpine-gold transition-colors text-sm uppercase tracking-widest font-semibold">Facebook</a>
+        <a href="https://www.instagram.com/hotel_du_soleil_?igsh=MWI4NjJ3d2t3anR2OQ%3D%3D" class="text-white hover:text-alpine-gold transition-colors text-sm uppercase tracking-widest font-semibold">Instagram</a>
+        <a href="https://www.facebook.com/share/1D9sq5H7nA/" class="text-white hover:text-alpine-gold transition-colors text-sm uppercase tracking-widest font-semibold">Facebook</a>
       </div>
     </div>
 

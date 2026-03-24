@@ -205,24 +205,41 @@
         <img src="/imgs/logo.webp" alt="Logo Hotel du Soleil" class="h-10 w-auto object-contain" />
     </div>
 
-    <nav class="mt-10 flex flex-col gap-6 text-center">
+    <nav class="mt-20 flex flex-col gap-8 text-center pb-20">
         {#each navItems as item (item.key)}
-            <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
-            <a href={item.href as any} class="font-serif text-3xl" onclick={() => (isMobileMenuOpen = false)}
-                >{$t(`nav.${item.key}`)}</a>
+            <div class="flex flex-col gap-2">
+                <a href={item.href as any} class="font-serif text-3xl text-alpine-text" onclick={() => (isMobileMenuOpen = false)}>
+                    {$t(`nav.${item.key}`)}
+                </a>
+                
+                {#if Array.isArray($t(`megamenu.${item.key}.links`)) && $t(`megamenu.${item.key}.links`).length > 0}
+                    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 px-4 opacity-60">
+                        {#each $t(`megamenu.${item.key}.links`) as link, i (i)}
+                             <a 
+                                href={(typeof link === 'object' && link !== null && 'href' in link ? (link as any).href : item.href) as any}
+                                class="text-[10px] uppercase tracking-widest font-bold"
+                                onclick={() => (isMobileMenuOpen = false)}
+                             >
+                                {typeof link === 'object' && link !== null && 'name' in link ? (link as any).name : link}
+                             </a>
+                        {/each}
+                    </div>
+                {/if}
+            </div>
         {/each}
-        <div class="mt-8">
+        
+        <div class="mt-4 px-6">
             <button
                 onclick={() => {
                     isMobileMenuOpen = false;
                     isBookingMenuOpen = true;
                 }}
-                class="block w-full bg-alpine-text px-10 py-4 text-xs tracking-[0.2em] text-white uppercase"
+                class="block w-full bg-alpine-text px-10 py-5 text-xs tracking-[0.2em] text-white uppercase shadow-lg"
                 >{$t('nav.book')}</button
             >
         </div>
 
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <div class="mt-6 flex flex-wrap justify-center gap-6">
             {#each locales as l (l)}
                 <button
                     onclick={() => {
@@ -230,8 +247,8 @@
                         isMobileMenuOpen = false;
                     }}
                     class={cn(
-                        'text-xs uppercase',
-                        $locale === l ? 'font-bold text-alpine-gold' : 'opacity-50'
+                        'text-[11px] uppercase tracking-widest',
+                        $locale === l ? 'font-bold text-alpine-gold' : 'opacity-40'
                     )}
                 >
                     {l}

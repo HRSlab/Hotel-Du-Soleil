@@ -23,7 +23,7 @@
     </div>
 </header>
 
-<section class="bg-alpine-bg px-6 py-24">
+<section class="bg-alpine-bg px-6 py-20 lg:py-32">
     <div class="fade-up-element mx-auto max-w-3xl text-center">
         <Baby class="w-10 h-10 text-alpine-gold mx-auto mb-10" />
         <h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-4xl">
@@ -35,7 +35,7 @@
     </div>
 </section>
 
-<section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<section class="bg-alpine-bg pb-20 lg:pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
     <div class="fade-up-element p-8 bg-white border border-alpine-border shadow-sm">
         <Palette class="w-8 h-8 text-alpine-gold mx-auto mb-6" />
         <h4 class="font-serif text-2xl text-alpine-text mb-4">Laboratori Creativi</h4>

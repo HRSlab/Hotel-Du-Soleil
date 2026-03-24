@@ -47,7 +47,7 @@
 </div>
 
 <!-- FILOSOFIA -->
-<section class="bg-alpine-bg px-6 py-32">
+<section class="bg-alpine-bg px-6 py-20 lg:py-32">
 	<div class="fade-up-element mx-auto max-w-3xl text-center">
 		<div class="deco-line mb-12"></div>
 		<h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-5xl">
@@ -177,7 +177,7 @@
 </section>
 
 <!-- ESPERIENZA ALPINA -->
-<section class="mt-10 border-t border-alpine-border bg-white py-32">
+<section class="mt-10 border-t border-alpine-border bg-white py-20 lg:py-32">
 	<div class="mx-auto max-w-7xl px-6">
 		<div class="fade-up-element mb-24 text-center">
 			<h2 class="mb-6 font-serif text-4xl text-alpine-text">{$t('home.experience_title')}</h2>
