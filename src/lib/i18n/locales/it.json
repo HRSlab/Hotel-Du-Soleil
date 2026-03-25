@@ -267,7 +267,8 @@
       "rooms": "Le Camere",
       "restaurant": "Il Ristorante",
       "terms": "Termini e Condizioni",
-      "policy": "Policy di Soggiorno"
+      "policy": "Policy di Soggiorno",
+      "cookies": "Politica sui Cookie"
     },
     "rights": "© 2026 Futuro srl - Hotel du Soleil. Tutti i diritti riservati.",
     "made_by": "made with ❤️ by CB"
@@ -320,5 +321,26 @@
     "parking_text": "L'Hotel du Soleil dispone di un garage coperto riscaldato. Per ragioni di sicurezza e ottimizzazione degli spazi, ai signori ospiti che usufruiscono del garage viene richiesto di lasciare le chiavi del veicolo presso la Reception per tutta la durata del soggiorno. In alternativa, è disponibile un parcheggio pubblico gratuito a circa 100 metri dalla struttura.",
     "images_title": "Nota sulle immagini",
     "images_text": "Le immagini delle camere presenti sul sito sono a scopo illustrativo. Alcuni elementi di design, finiture in legno e disposizione degli arredi possono variare all'interno della stessa categoria di camera, pur mantenendo lo standard e i servizi promessi."
+  },
+  "cookie_policy": {
+    "title": "Politica sui Cookie",
+    "intro_title": "Introduzione",
+    "intro_text": "Questa Politica sui Cookie spiega come l'Hotel du Soleil utilizza i cookie e tecnologie simili sul nostro sito web. Utilizzando il nostro sito web, acconsenti all'uso dei cookie in conformità con questa politica.",
+    "what_title": "Cosa sono i Cookie?",
+    "what_text": "I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti il nostro sito web. Ci aiutano a fornirti una migliore esperienza di navigazione ricordando le tue preferenze e comprendendo come utilizzi il nostro sito.",
+    "types_title": "Tipi di Cookie che Utilizziamo",
+    "essential_title": "Cookie Essenziali",
+    "essential_text": "Questi cookie sono necessari per il corretto funzionamento del sito web. Consentono funzionalità di base come la navigazione delle pagine, l'accesso ad aree sicure e le caratteristiche fondamentali del sito.",
+    "analytics_title": "Cookie Analitici",
+    "analytics_text": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il nostro sito web raccogliendo e segnalando informazioni in modo anonimo. Questo ci aiuta a migliorare le prestazioni e l'esperienza utente del nostro sito web.",
+    "functional_title": "Cookie Funzionali",
+    "functional_text": "Questi cookie consentono al sito web di fornire funzionalità avanzate e personalizzazione. Possono essere impostati da noi o da fornitori terzi i cui servizi abbiamo aggiunto alle nostre pagine.",
+    "manage_title": "Come Gestire i Cookie",
+    "manage_text": "Puoi controllare e gestire i cookie in vari modi. La maggior parte dei browser web consente di controllare i cookie attraverso le preferenze delle impostazioni.",
+    "browser_title": "Impostazioni del Browser",
+    "browser_text": "Puoi impostare il tuo browser per rifiutare tutti o alcuni cookie del browser, oppure per avvisarti quando i siti web impostano o accedono ai cookie. Se disabiliti o rifiuti i cookie, tieni presente che alcune parti di questo sito web potrebbero diventare inaccessibili o non funzionare correttamente.",
+    "contact_title": "Contattaci",
+    "contact_text": "Se hai domande sull'uso dei cookie o su questa Politica sui Cookie, contattaci:",
+    "last_updated": "Ultimo aggiornamento: Marzo 2026"
   }
 }

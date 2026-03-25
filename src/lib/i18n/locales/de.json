@@ -20,5 +20,26 @@
     "check": "Check",
     "adults": "Adults",
     "children": "Children"
+  },
+  "cookie_policy": {
+    "title": "Cookie-Richtlinie",
+    "intro_title": "Einführung",
+    "intro_text": "Diese Cookie-Richtlinie erklärt, wie Hotel du Soleil Cookies und ähnliche Technologien auf unserer Website verwendet. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß dieser Richtlinie zu.",
+    "what_title": "Was sind Cookies?",
+    "what_text": "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, Ihnen eine bessere Browsererfahrung zu bieten, indem sie Ihre Präferenzen speichern und verstehen, wie Sie unsere Site nutzen.",
+    "types_title": "Arten von Cookies, die wir verwenden",
+    "essential_title": "Essentielle Cookies",
+    "essential_text": "Diese Cookies sind notwendig, damit die Website ordnungsgemäß funktioniert. Sie ermöglichen Kernfunktionen wie Seitennavigation, Zugriff auf sichere Bereiche und grundlegende Site-Funktionen.",
+    "analytics_title": "Analyse-Cookies",
+    "analytics_text": "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und berichten. Dies hilft uns, die Leistung und Benutzererfahrung unserer Website zu verbessern.",
+    "functional_title": "Funktionale Cookies",
+    "functional_text": "Diese Cookies ermöglichen es der Website, erweiterte Funktionalität und Personalisierung bereitzustellen. Sie können von uns oder von Drittanbietern gesetzt werden, deren Dienste wir zu unseren Seiten hinzugefügt haben.",
+    "manage_title": "Wie man Cookies verwaltet",
+    "manage_text": "Sie können Cookies auf verschiedene Weise kontrollieren und verwalten. Die meisten Webbrowser ermöglichen es Ihnen, Cookies über ihre Einstellungspräferenzen zu kontrollieren.",
+    "browser_title": "Browser-Einstellungen",
+    "browser_text": "Sie können Ihren Browser so einstellen, dass er alle oder einige Browser-Cookies ablehnt oder Sie warnt, wenn Websites Cookies setzen oder darauf zugreifen. Wenn Sie Cookies deaktivieren oder ablehnen, beachten Sie bitte, dass einige Teile dieser Website möglicherweise unzugänglich werden oder nicht ordnungsgemäß funktionieren.",
+    "contact_title": "Kontaktieren Sie uns",
+    "contact_text": "Wenn Sie Fragen zu unserer Verwendung von Cookies oder dieser Cookie-Richtlinie haben, kontaktieren Sie uns bitte:",
+    "last_updated": "Zuletzt aktualisiert: März 2026"
   }
 }

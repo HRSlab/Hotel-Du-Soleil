@@ -20,5 +20,26 @@
     "check": "Check",
     "adults": "Adults",
     "children": "Children"
+  },
+  "cookie_policy": {
+    "title": "Política de Cookies",
+    "intro_title": "Introducción",
+    "intro_text": "Esta Política de Cookies explica cómo Hotel du Soleil utiliza las cookies y tecnologías similares en nuestro sitio web. Al utilizar nuestro sitio web, usted consiente el uso de cookies de acuerdo con esta política.",
+    "what_title": "¿Qué son las Cookies?",
+    "what_text": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio web. Nos ayudan a proporcionarle una mejor experiencia de navegación recordando sus preferencias y entendiendo cómo utiliza nuestro sitio.",
+    "types_title": "Tipos de Cookies que Utilizamos",
+    "essential_title": "Cookies Esenciales",
+    "essential_text": "Estas cookies son necesarias para que el sitio web funcione correctamente. Permiten funcionalidades básicas como la navegación de páginas, el acceso a áreas seguras y las características fundamentales del sitio.",
+    "analytics_title": "Cookies Analíticas",
+    "analytics_text": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima. Esto nos ayuda a mejorar el rendimiento y la experiencia del usuario de nuestro sitio web.",
+    "functional_title": "Cookies Funcionales",
+    "functional_text": "Estas cookies permiten que el sitio web proporcione funcionalidad mejorada y personalización. Pueden ser configuradas por nosotros o por proveedores terceros cuyos servicios hemos agregado a nuestras páginas.",
+    "manage_title": "Cómo Gestionar las Cookies",
+    "manage_text": "Puede controlar y gestionar las cookies de varias maneras. La mayoría de los navegadores web le permiten controlar las cookies a través de las preferencias de configuración.",
+    "browser_title": "Configuración del Navegador",
+    "browser_text": "Puede configurar su navegador para que rechace todas o algunas cookies del navegador, o para que le alerte cuando los sitios web configuren o accedan a las cookies. Si deshabilita o rechaza las cookies, tenga en cuenta que algunas partes de este sitio web pueden volverse inaccesibles o no funcionar correctamente.",
+    "contact_title": "Contáctenos",
+    "contact_text": "Si tiene alguna pregunta sobre nuestro uso de cookies o esta Política de Cookies, contáctenos:",
+    "last_updated": "Última actualización: Marzo 2026"
   }
 }

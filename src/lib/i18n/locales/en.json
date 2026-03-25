@@ -267,7 +267,8 @@
       "rooms": "The Rooms",
       "restaurant": "The Restaurant",
       "terms": "Terms and Conditions",
-      "policy": "Stay Policy"
+      "policy": "Stay Policy",
+      "cookies": "Cookie Policy"
     },
     "rights": "© 2026 Futuro srl - Hotel du Soleil. All rights reserved.",
     "made_by": "made with ❤️ by CB"
@@ -320,5 +321,26 @@
     "parking_text": "Hotel du Soleil has a heated covered garage. For safety and space optimization reasons, guests using the garage are asked to leave their vehicle keys at Reception for the entire duration of their stay. Alternatively, a free public parking lot is available approximately 100 meters from the property.",
     "images_title": "Note on images",
     "images_text": "Room images on the website are for illustrative purposes. Some design elements, wood finishes, and furniture arrangements may vary within the same room category, while maintaining the promised standard and services."
+  },
+  "cookie_policy": {
+    "title": "Cookie Policy",
+    "intro_title": "Introduction",
+    "intro_text": "This Cookie Policy explains how Hotel du Soleil uses cookies and similar technologies on our website. By using our website, you consent to the use of cookies in accordance with this policy.",
+    "what_title": "What are Cookies?",
+    "what_text": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better browsing experience by remembering your preferences and understanding how you use our site.",
+    "types_title": "Types of Cookies We Use",
+    "essential_title": "Essential Cookies",
+    "essential_text": "These cookies are necessary for the website to function properly. They enable core functionality such as page navigation, access to secure areas, and basic site features.",
+    "analytics_title": "Analytics Cookies",
+    "analytics_text": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website's performance and user experience.",
+    "functional_title": "Functional Cookies",
+    "functional_text": "These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.",
+    "manage_title": "How to Manage Cookies",
+    "manage_text": "You can control and manage cookies in various ways. Most web browsers allow you to control cookies through their settings preferences.",
+    "browser_title": "Browser Settings",
+    "browser_text": "You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly.",
+    "contact_title": "Contact Us",
+    "contact_text": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
+    "last_updated": "Last updated: March 2026"
   }
 }

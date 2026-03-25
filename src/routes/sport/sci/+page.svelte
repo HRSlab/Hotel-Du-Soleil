@@ -1,76 +1,310 @@
 <script lang="ts">
-    import { Snowflake, ShieldCheck, Sparkles } from 'lucide-svelte';
+    import { Snowflake, ShieldCheck, Sparkles, Camera, Mountain } from 'lucide-svelte';
+
+    // Svelte 5 reactivity for scroll-based animations
+    let scrollY = $state(0);
+    let heroRef: HTMLElement;
+    let observer: IntersectionObserver;
+
+    // Gallery state
+    let galleryRef: HTMLElement;
+    let currentScroll = $state(0);
+    let targetScroll = $state(0);
+    let isScrolling = $state(false);
+
+    // Gallery images with 3-image compositions per slide
+    const gallerySlides = [
+        {
+            detail: '/imgs/Skier_Torgnon.jpeg',
+            main: '/imgs/Skiers_Torgnon.jpeg',
+            landscape: '/imgs/Ski_Gondola_View.jpeg'
+        },
+        {
+            detail: '/imgs/Slope_Torgnon.jpeg',
+            main: '/imgs/ski_ome_activities.webp',
+            landscape: '/imgs/Ski_sport_hero.webp'
+        },
+        {
+            detail: '/imgs/sport_hero.png',
+            main: '/imgs/Torgnon_View.jpeg',
+            landscape: '/imgs/Skiers_Torgnon.jpeg'
+        }
+    ];
+
+    // Lerp function for smooth scrolling
+    function lerp(start: number, end: number, factor: number): number {
+        return start + (end - start) * factor;
+    }
+
+    // Animation loop for gallery parallax
+    function animate() {
+        if (galleryRef) {
+            currentScroll = lerp(currentScroll, targetScroll, 0.1);
+            const slides = galleryRef.querySelectorAll('.gallery-slide');
+            slides.forEach((slide, index) => {
+                const slideEl = slide as HTMLElement;
+                const progress = (currentScroll - index * window.innerWidth) / window.innerWidth;
+                const clampedProgress = Math.max(-1, Math.min(1, progress));
+
+                // Parallax transforms for 3 images
+                const detailImg = slideEl.querySelector('.detail-img') as HTMLElement;
+                const mainImg = slideEl.querySelector('.main-img') as HTMLElement;
+                const landscapeImg = slideEl.querySelector('.landscape-img') as HTMLElement;
+
+                if (detailImg) detailImg.style.transform = `translate3d(${clampedProgress * 50}px, 0, 0)`;
+                if (mainImg) mainImg.style.transform = `translate3d(${clampedProgress * 25}px, 0, 0)`;
+                if (landscapeImg) landscapeImg.style.transform = `translate3d(${clampedProgress * 10}px, 0, 0)`;
+            });
+        }
+        requestAnimationFrame(animate);
+    }
+
+    // Intersection Observer for fade-ups
+    $effect(() => {
+        observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-up');
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+        );
+
+        const fadeElements = document.querySelectorAll('.fade-up-element');
+        fadeElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            if (observer) {
+                observer.disconnect();
+            }
+        };
+    });
+
+    // Scroll handler for parallax
+    $effect(() => {
+        const handleScroll = () => {
+            scrollY = window.scrollY;
+            if (galleryRef) {
+                targetScroll = window.scrollY - galleryRef.offsetTop;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        animate(); // Start animation loop
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
 </script>
 
 <svelte:head>
-    <title>Sci & Snowboard | Hotel du Soleil</title>
+    <title>Ski & Snowboard | Hotel du Soleil</title>
 </svelte:head>
 
-<header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
+<!-- Hero Section with Parallax -->
+<header
+    bind:this={heroRef}
+    class="relative h-[80vh] w-full overflow-hidden bg-[#1a1a1a]"
+    style="transform: scale({1 + scrollY * 0.0002})"
+>
     <div class="absolute inset-0">
-        <img src="/imgs/Torgnon_View.jpeg" class="ken-burns h-full w-full object-cover opacity-80" alt="Sci a Torgnon" />
-        <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
+        <img
+            src="/imgs/Torgnon_View.jpeg"
+            class="h-full w-full object-cover"
+            alt="Ski in Torgnon"
+            style="transform: scale({1 + scrollY * 0.0001})"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-alpine-bg"></div>
     </div>
 
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-24 text-center">
-        <span class="mb-4 block text-[10px] font-medium tracking-[0.4em] text-white/80 uppercase md:text-xs fade-up-element">
-            Ski-in Ski-out
-        </span>
-        <h1 class="font-serif text-5xl md:text-7xl leading-tight font-light text-white fade-up-element">
-            Sci & Snowboard
-        </h1>
+    <div class="absolute inset-0 z-10 flex flex-col justify-end px-6 pb-32 md:pb-40">
+        <div class="max-w-4xl">
+            <span class="mb-6 block text-[10px] font-bold tracking-[0.4em] text-white/70 uppercase fade-up-element">
+                SKI-IN SKI-OUT
+            </span>
+            <h1 class="font-serif text-6xl md:text-8xl leading-none font-light text-white fade-up-element mb-8">
+                Ski &<br/>Snowboard
+            </h1>
+            <p class="text-white/80 text-lg font-light leading-relaxed max-w-lg fade-up-element">
+                Just 50 meters from the Torgnon ski lifts. Experience world-class slopes in the shadow of the Matterhorn.
+            </p>
+        </div>
     </div>
 </header>
 
-<section class="bg-alpine-bg px-6 py-24">
-    <div class="fade-up-element mx-auto max-w-3xl text-center">
-        <Snowflake class="w-10 h-10 text-alpine-gold mx-auto mb-10" strokeWidth={1.5} />
-        <h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-4xl">
-            Siamo a soli 50 metri dagli impianti del Comprensorio di Torgnon.
-        </h3>
-        <p class="text-alpine-muted leading-relaxed font-light text-sm md:text-base border-t border-alpine-border pt-12 mt-12 mx-auto max-w-xl">
-            Il comprensorio di Torgnon offre piste soleggiate e divertenti per ogni livello di abilità, circondate da un panorama mozzafiato che spazia dal Cervino al Monte Rosa.
-        </p>
+<!-- Asymmetrical Content Section -->
+<section class="bg-alpine-bg px-6 py-32 relative">
+    <div class="max-w-7xl mx-auto">
+        <!-- Overlapping layout -->
+        <div class="relative">
+            <div class="md:absolute md:right-0 md:top-0 md:w-2/5 fade-up-element">
+                <div class="bg-white p-12 border border-alpine-border shadow-2xl">
+                    <Snowflake class="w-8 h-8 text-alpine-gold mb-6" strokeWidth={1} />
+                    <h3 class="font-serif text-2xl text-alpine-text mb-4 italic">
+                        Sun-Kissed Slopes
+                    </h3>
+                    <p class="text-alpine-muted font-light leading-relaxed text-sm">
+                        Torgnon's ski area offers perfectly groomed pistes for all levels, surrounded by breathtaking views from the Matterhorn to Monte Rosa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="md:w-3/5 md:pr-24 fade-up-element md:mt-24">
+                <div class="mb-16">
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-8 block">
+                        THE EXPERIENCE
+                    </span>
+                    <h2 class="font-serif text-5xl md:text-6xl text-alpine-text font-light leading-tight mb-12">
+                        Pure Alpine<br/>Adventure
+                    </h2>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="border-l-2 border-alpine-gold pl-8">
+                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">Slopes for Every Level</h4>
+                        <p class="text-alpine-muted font-light leading-relaxed">
+                            From gentle beginner trails to challenging black runs, our ski area caters to all abilities with professional instruction available.
+                        </p>
+                    </div>
+
+                    <div class="border-l-2 border-alpine-gold pl-8">
+                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">Guided Off-Piste</h4>
+                        <p class="text-alpine-muted font-light leading-relaxed">
+                            Explore fresh powder with our certified guides for safe and unforgettable backcountry experiences.
+                        </p>
+                    </div>
+
+                    <div class="border-l-2 border-alpine-gold pl-8">
+                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">Snow Park Excellence</h4>
+                        <p class="text-alpine-muted font-light leading-relaxed">
+                            State-of-the-art snow park with jumps, rails, and halfpipe for freestyle skiing and snowboarding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto space-y-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-         <div class="fade-up-element">
-            <h4 class="font-serif text-4xl text-alpine-text mb-6 italic">Piste per Tutti i Livelli</h4>
-            <div class="space-y-10">
-                 <div class="flex items-start gap-4 border-b border-alpine-border pb-6">
-                    <div class="w-2 h-2 rounded-full bg-alpine-gold mt-2 shrink-0"></div>
-                    <div>
-                         <h5 class="text-lg font-serif italic text-alpine-text mb-2">Piste Soleggiate</h5>
-                         <p class="text-xs text-alpine-muted leading-relaxed font-light">Ampie piste perfettamente innevate, ideali per principianti e famiglie.</p>
-                    </div>
-                 </div>
-                 <div class="flex items-start gap-4 border-b border-alpine-border pb-6">
-                    <div class="w-2 h-2 rounded-full bg-alpine-gold mt-2 shrink-0"></div>
-                    <div>
-                         <h5 class="text-lg font-serif italic text-alpine-text mb-2">Fuoripista Guidato</h5>
-                         <p class="text-xs text-alpine-muted leading-relaxed font-light">Esplora la neve fresca con le nostre guide certificate per un'esperienza sicura e indimenticabile.</p>
-                    </div>
-                 </div>
-                 <div class="flex items-start gap-4 border-b border-alpine-border pb-6">
-                    <div class="w-2 h-2 rounded-full bg-alpine-gold mt-2 shrink-0"></div>
-                    <div>
-                         <h5 class="text-lg font-serif italic text-alpine-text mb-2">Snow Park</h5>
-                         <p class="text-xs text-alpine-muted leading-relaxed font-light">Modulo per snowboard e freestyle con salti, rails e halfpipe.</p>
-                    </div>
-                 </div>
+<!-- Services Section -->
+<section class="bg-[#050505] px-6 py-32">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20 fade-up-element">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-6 block">
+                PREMIUM SERVICES
+            </span>
+            <h2 class="font-serif text-4xl md:text-5xl text-white font-light">
+                Ski Club Amenities
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 fade-up-element">
+                <ShieldCheck class="w-6 h-6 text-alpine-gold mb-6" />
+                <h4 class="text-white text-lg font-serif mb-4">Secure Ski Storage</h4>
+                <p class="text-white/70 font-light text-sm leading-relaxed">
+                    CCTV-monitored ski room with individual lockers and boot warming area.
+                </p>
             </div>
-         </div>
-         <div class="fade-up-element bg-white p-12 border border-alpine-border">
-            <div class="flex items-center gap-4 mb-6"><ShieldCheck class="w-6 h-6 text-alpine-gold" /><h4 class="text-[12px] uppercase font-bold tracking-[0.2em] text-alpine-text">Servizi Sci Club</h4></div>
-            <ul class="space-y-4 text-sm font-light text-alpine-muted">
-                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Deposito sci sicuro e videosorvegliato</li>
-                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Zona riscaldamento scarponi</li>
-                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Servizio di preparazione sci</li>
-                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Scuola sci convenzionata</li>
-                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Noleggio attrezzatura in hotel</li>
-            </ul>
-         </div>
+
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 fade-up-element md:mt-12">
+                <Sparkles class="w-6 h-6 text-alpine-gold mb-6" />
+                <h4 class="text-white text-lg font-serif mb-4">Equipment Services</h4>
+                <p class="text-white/70 font-light text-sm leading-relaxed">
+                    Professional ski tuning, waxing, and on-site rental equipment.
+                </p>
+            </div>
+
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 fade-up-element md:mt-24">
+                <Mountain class="w-6 h-6 text-alpine-gold mb-6" />
+                <h4 class="text-white text-lg font-serif mb-4">Certified Instruction</h4>
+                <p class="text-white/70 font-light text-sm leading-relaxed">
+                    Partnered with certified ski schools for private and group lessons.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- Custom Horizontal Scroll-Jacking Gallery -->
+<section class="bg-alpine-bg px-6 py-32 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20 fade-up-element">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-6 block">
+                VISUAL JOURNEY
+            </span>
+            <h2 class="font-serif text-5xl md:text-6xl text-alpine-text font-light leading-tight">
+                Live the<br/>Snow
+            </h2>
+        </div>
+
+        <div
+            bind:this={galleryRef}
+            class="relative h-[80vh] overflow-hidden"
+        >
+            {#each gallerySlides as slide, index}
+                <div
+                    class="gallery-slide absolute inset-0 flex items-center justify-center"
+                    style="left: {index * 100}vw"
+                >
+                    <!-- Landscape background -->
+                    <div class="absolute inset-0">
+                        <img
+                            src={slide.landscape}
+                            alt="Landscape view"
+                            class="landscape-img w-full h-full object-cover"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
+                    </div>
+
+                    <!-- Main image -->
+                    <div class="relative z-10 w-3/5 aspect-[4/5] overflow-hidden">
+                        <img
+                            src={slide.main}
+                            alt="Main ski scene"
+                            class="main-img w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    </div>
+
+                    <!-- Detail overlay -->
+                    <div class="absolute top-20 right-20 z-20 w-1/4 aspect-square overflow-hidden">
+                        <img
+                            src={slide.detail}
+                            alt="Detail shot"
+                            class="detail-img w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-black/40"></div>
+                    </div>
+                </div>
+            {/each}
+        </div>
+
+        <div class="text-center mt-12 fade-up-element">
+            <p class="text-alpine-muted font-light text-sm max-w-md mx-auto">
+                Scroll to explore our winter wonderland through stunning alpine photography
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .animate-fade-up {
+        animation: fadeUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+

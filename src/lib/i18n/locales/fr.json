@@ -20,5 +20,26 @@
     "check": "Check",
     "adults": "Adults",
     "children": "Children"
+  },
+  "cookie_policy": {
+    "title": "Politique des Cookies",
+    "intro_title": "Introduction",
+    "intro_text": "Cette Politique des Cookies explique comment l'Hotel du Soleil utilise les cookies et technologies similaires sur notre site web. En utilisant notre site web, vous consentez à l'utilisation des cookies conformément à cette politique.",
+    "what_title": "Qu'est-ce qu'un Cookie ?",
+    "what_text": "Les cookies sont de petits fichiers texte qui sont stockés sur votre appareil lorsque vous visitez notre site web. Ils nous aident à vous fournir une meilleure expérience de navigation en mémorisant vos préférences et en comprenant comment vous utilisez notre site.",
+    "types_title": "Types de Cookies que Nous Utilisons",
+    "essential_title": "Cookies Essentiels",
+    "essential_text": "Ces cookies sont nécessaires au bon fonctionnement du site web. Ils permettent des fonctionnalités de base telles que la navigation des pages, l'accès aux zones sécurisées et les caractéristiques fondamentales du site.",
+    "analytics_title": "Cookies Analytiques",
+    "analytics_text": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant et rapportant des informations de manière anonyme. Cela nous aide à améliorer les performances et l'expérience utilisateur de notre site web.",
+    "functional_title": "Cookies Fonctionnels",
+    "functional_text": "Ces cookies permettent au site web de fournir des fonctionnalités améliorées et une personnalisation. Ils peuvent être définis par nous ou par des fournisseurs tiers dont nous avons ajouté les services à nos pages.",
+    "manage_title": "Comment Gérer les Cookies",
+    "manage_text": "Vous pouvez contrôler et gérer les cookies de différentes manières. La plupart des navigateurs web vous permettent de contrôler les cookies via leurs préférences de paramètres.",
+    "browser_title": "Paramètres du Navigateur",
+    "browser_text": "Vous pouvez configurer votre navigateur pour qu'il refuse tous ou certains cookies de navigateur, ou pour qu'il vous alerte lorsque les sites web définissent ou accèdent aux cookies. Si vous désactivez ou refusez les cookies, veuillez noter que certaines parties de ce site web peuvent devenir inaccessibles ou ne pas fonctionner correctement.",
+    "contact_title": "Contactez-nous",
+    "contact_text": "Si vous avez des questions sur notre utilisation des cookies ou cette Politique des Cookies, veuillez nous contacter :",
+    "last_updated": "Dernière mise à jour : Mars 2026"
   }
 }
