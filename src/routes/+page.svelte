@@ -15,7 +15,7 @@
 <header class="relative h-screen w-full overflow-hidden bg-[#1a1a1a]">
 	<div class="absolute inset-0">
 		<video autoplay loop muted playsinline class="h-full w-full object-cover opacity-100">
-			<source src="/imgs/bg_video_hero.webm" type="video/webm" />
+			<source src="/imgs/bg-video-hero.webm" type="video/webm" />
 		</video>
 		<div class="absolute inset-0 bg-black/40"></div>
 		<div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
@@ -89,7 +89,7 @@
 			<div class="fade-up-element order-2 lg:order-1">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home_restaurant.webp" 
+						src="/imgs/home-restaurant.webp" 
 						alt="Ristorante Hotel du Soleil" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
@@ -136,7 +136,7 @@
 			<div class="fade-up-element">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home_wellness.webp" 
+						src="/imgs/home-wellness.webp" 
 						alt="Wellness & Spa" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
@@ -149,7 +149,7 @@
 			<div class="fade-up-element order-2 lg:order-1">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home_activities.webp" 
+						src="/imgs/home-activities.png" 
 						alt="Attività Outdoor" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>

@@ -8,7 +8,7 @@
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
 	<img
-		src="/imgs/Bar & Lounge/fireplace_bar.jpg"
+		src="/imgs/bar-and-lounge/fireplace-bar.jpg"
 		class="ken-burns h-full w-full object-cover opacity-80"
 		alt="Il grande camino centrale"
 	/>
@@ -41,7 +41,7 @@
 	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row lg:gap-20">
 		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
 			<img
-				src="/imgs/Bar & Lounge/783440998.jpg"
+				src="/imgs/bar-and-lounge/bar-pooltable.webp"
 				alt="Sala Biliardo"
 				class="img-elegant aspect-4/3 h-full w-full object-cover"
 			/>
@@ -63,7 +63,7 @@
 	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row-reverse lg:gap-20">
 		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
 			<img
-				src="/imgs/Bar & Lounge/aperitivo_garden.webp"
+				src="/imgs/bar-and-lounge/aperitivo-garden.webp"
 				alt="Aperitivo all'aperto"
 				class="img-elegant aspect-4/3 h-full w-full object-cover"
 			/>
@@ -85,7 +85,7 @@
 	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row lg:gap-20">
 		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
 			<img
-				src="/imgs/Bar & Lounge/fireplace_bar.jpg"
+				src="/imgs/bar-and-lounge/fireplace-bar.jpg"
 				alt="Tavoli per colazione"
 				class="img-elegant aspect-4/3 h-full w-full object-cover"
 			/>

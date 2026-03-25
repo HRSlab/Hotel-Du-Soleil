@@ -11,7 +11,7 @@
 <div class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
   <div class="absolute inset-0">
     <img 
-      src="/imgs/Rooms/matrimoniale-superior-hero.webp" 
+      src="/imgs/Rooms/matrimoniale-superior-hero-1.webp" 
       alt="Sistemazioni Hero" 
       class="w-full h-full object-cover ken-burns opacity-70"
     >

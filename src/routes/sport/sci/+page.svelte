@@ -6,58 +6,26 @@
     let heroRef: HTMLElement;
     let observer: IntersectionObserver;
 
-    // Gallery state
-    let galleryRef: HTMLElement;
-    let currentScroll = $state(0);
-    let targetScroll = $state(0);
-    let isScrolling = $state(false);
+    // Remove complex gallery state and animation code
+    // Keeping only essential scroll and observer
 
-    // Gallery images with 3-image compositions per slide
-    const gallerySlides = [
-        {
-            detail: '/imgs/Skier_Torgnon.jpeg',
-            main: '/imgs/Skiers_Torgnon.jpeg',
-            landscape: '/imgs/Ski_Gondola_View.jpeg'
-        },
-        {
-            detail: '/imgs/Slope_Torgnon.jpeg',
-            main: '/imgs/ski_ome_activities.webp',
-            landscape: '/imgs/Ski_sport_hero.webp'
-        },
-        {
-            detail: '/imgs/sport_hero.png',
-            main: '/imgs/Torgnon_View.jpeg',
-            landscape: '/imgs/Skiers_Torgnon.jpeg'
-        }
-    ];
+    // Gallery images - simplified premium horizontal scroll
+    let galleryImages = $state([
+        { src: '/imgs/skier-torgnon.jpeg', alt: 'Skier in Torgnon' },
+        { src: '/imgs/torgnon-view.jpeg', alt: 'Slopes From Torgnon' },
+        { src: '/imgs/ski-gondola-view.jpeg', alt: 'View from the gondola' },
+        { src: '/imgs/slope-torgnon.jpeg', alt: 'Torgnon slope' },
+        { src: '/imgs/ski-ome-activities.webp', alt: 'Winter activities' },
+        { src: '/imgs/ski-sport-hero.webp', alt: 'Winter sports' },
+        { src: '/imgs/torgnon-view.jpeg', alt: 'Torgnon view' }
+    ]);
 
-    // Lerp function for smooth scrolling
-    function lerp(start: number, end: number, factor: number): number {
-        return start + (end - start) * factor;
+    // Guaranteed gallery reactive update helper
+    function setGalleryImages(newImages: { src: string; alt: string }[]) {
+        galleryImages = [...newImages];
     }
 
-    // Animation loop for gallery parallax
-    function animate() {
-        if (galleryRef) {
-            currentScroll = lerp(currentScroll, targetScroll, 0.1);
-            const slides = galleryRef.querySelectorAll('.gallery-slide');
-            slides.forEach((slide, index) => {
-                const slideEl = slide as HTMLElement;
-                const progress = (currentScroll - index * window.innerWidth) / window.innerWidth;
-                const clampedProgress = Math.max(-1, Math.min(1, progress));
-
-                // Parallax transforms for 3 images
-                const detailImg = slideEl.querySelector('.detail-img') as HTMLElement;
-                const mainImg = slideEl.querySelector('.main-img') as HTMLElement;
-                const landscapeImg = slideEl.querySelector('.landscape-img') as HTMLElement;
-
-                if (detailImg) detailImg.style.transform = `translate3d(${clampedProgress * 50}px, 0, 0)`;
-                if (mainImg) mainImg.style.transform = `translate3d(${clampedProgress * 25}px, 0, 0)`;
-                if (landscapeImg) landscapeImg.style.transform = `translate3d(${clampedProgress * 10}px, 0, 0)`;
-            });
-        }
-        requestAnimationFrame(animate);
-    }
+    // Remove lerp and animate functions - using simple scroll
 
     // Intersection Observer for fade-ups
     $effect(() => {
@@ -86,13 +54,9 @@
     $effect(() => {
         const handleScroll = () => {
             scrollY = window.scrollY;
-            if (galleryRef) {
-                targetScroll = window.scrollY - galleryRef.offsetTop;
-            }
         };
 
         window.addEventListener('scroll', handleScroll);
-        animate(); // Start animation loop
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -112,7 +76,7 @@
 >
     <div class="absolute inset-0">
         <img
-            src="/imgs/Torgnon_View.jpeg"
+            src="/imgs/torgnon-view.jpeg"
             class="h-full w-full object-cover"
             alt="Ski in Torgnon"
             style="transform: scale({1 + scrollY * 0.0001})"
@@ -229,7 +193,7 @@
     </div>
 </section>
 
-<!-- Custom Horizontal Scroll-Jacking Gallery -->
+<!-- Premium Horizontal Scroll Gallery -->
 <section class="bg-alpine-bg px-6 py-32 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
         <div class="mb-20 fade-up-element">
@@ -241,58 +205,45 @@
             </h2>
         </div>
 
-        <div
-            bind:this={galleryRef}
-            class="relative h-[80vh] overflow-hidden"
-        >
-            {#each gallerySlides as slide, index}
-                <div
-                    class="gallery-slide absolute inset-0 flex items-center justify-center"
-                    style="left: {index * 100}vw"
-                >
-                    <!-- Landscape background -->
-                    <div class="absolute inset-0">
-                        <img
-                            src={slide.landscape}
-                            alt="Landscape view"
-                            class="landscape-img w-full h-full object-cover"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
+        <!-- Horizontal scroll container with smooth scrolling -->
+        <div class="overflow-x-auto scrollbar-hide pb-8 -mx-6 px-6">
+            <div class="inline-flex items-stretch gap-8 w-max">
+                {#each galleryImages as image, index}
+                    <div class="flex-shrink-0 w-80 h-[30rem] md:h-[36rem] overflow-hidden rounded-xl border border-alpine-border bg-black/20 group cursor-pointer fade-up-element">
+                        <div class="relative w-full h-full transform transition-all duration-700 group-hover:scale-105">
+                            <img
+                                src={image.src}
+                                alt={image.alt}
+                                class="w-full h-full object-cover"
+                            />
+                            <!-- Premium overlay with gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <!-- Subtle border accent -->
+                            <div class="absolute inset-0 border-2 border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
                     </div>
-
-                    <!-- Main image -->
-                    <div class="relative z-10 w-3/5 aspect-[4/5] overflow-hidden">
-                        <img
-                            src={slide.main}
-                            alt="Main ski scene"
-                            class="main-img w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    </div>
-
-                    <!-- Detail overlay -->
-                    <div class="absolute top-20 right-20 z-20 w-1/4 aspect-square overflow-hidden">
-                        <img
-                            src={slide.detail}
-                            alt="Detail shot"
-                            class="detail-img w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-black/40"></div>
-                    </div>
-                </div>
-            {/each}
+                {/each}
+            </div>
         </div>
 
         <div class="text-center mt-12 fade-up-element">
             <p class="text-alpine-muted font-light text-sm max-w-md mx-auto">
-                Scroll to explore our winter wonderland through stunning alpine photography
+                Scroll horizontally to explore our winter wonderland through stunning alpine photography
             </p>
+            <!-- Scroll indicator -->
+            <div class="flex justify-center mt-6">
+                <div class="flex space-x-2">
+                    <div class="w-2 h-2 bg-alpine-gold rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-alpine-gold/50 rounded-full"></div>
+                    <div class="w-2 h-2 bg-alpine-gold/30 rounded-full"></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
-    .animate-fade-up {
+    :global(.animate-fade-up) {
         animation: fadeUp 1s ease-out forwards;
     }
 
@@ -305,6 +256,15 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+
+    /* Hide scrollbar for horizontal scroll gallery */
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
     }
 </style>
 

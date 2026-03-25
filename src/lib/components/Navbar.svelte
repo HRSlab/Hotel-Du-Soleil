@@ -27,13 +27,11 @@
     );
 
     const images: Record<string, string> = {
-        overview: '/imgs/Winter_entrance_hero.webp',
-        rooms: '/imgs/room_view_menu.webp',
-        restaurant: '/imgs/deer_dish_hero.webp',
-        wellness:
-            '/imgs/jacuzzi_spa_hds_2026.webp',
-        sport:
-            '/imgs/piscina.webp',
+        overview: '/imgs/winter-entrance-hero.webp',
+        rooms: '/imgs/room-view-menu.webp',
+        restaurant: '/imgs/deer-dish-hero.webp',
+        wellness: '/imgs/jacuzzi-spa-hds-2026.webp',
+        sport: '/imgs/piscina.webp',
         experiences: '/imgs/yoga-in-the-snow.webp'
     };
 

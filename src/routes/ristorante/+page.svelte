@@ -11,7 +11,7 @@
 <header class="relative h-screen w-full overflow-hidden bg-[#1a1a1a]">
 	<div class="absolute inset-0">
 		<img
-			src="/imgs/deer_dish_hero.webp"
+			src="/imgs/deer-dish-hero.webp"
 			alt="Ristorante Hotel du Soleil"
 			class="ken-burns h-full w-full object-cover opacity-80"
 		/>

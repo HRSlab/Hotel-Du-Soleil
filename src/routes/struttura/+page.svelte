@@ -1,6 +1,52 @@
 <script lang="ts">
     import { t } from '$lib/i18n';
-    import { Building2, Maximize, Sparkles } from 'lucide-svelte';
+    import { Building2, Maximize, Sparkles, ChevronLeft, ChevronRight } from 'lucide-svelte';
+    import { onMount } from 'svelte';
+
+    let currentSlide = $state(0);
+    let autoplayInterval: number;
+
+    const sliderImages = [
+        { src: '/imgs/lobby.webp', alt: 'Hotel Lobby' },
+        { src: '/imgs/esterno-hotel-pista.webp', alt: 'Hotel Exterior & Slopes' },
+        { src: '/imgs/reception.webp', alt: 'Reception Area' },
+        { src: '/imgs/esterno-terrazza.webp', alt: 'Hotel Terrace' },
+        { src: '/imgs/exterior-snow-back-2026.webp', alt: 'Exterior Winter View' },
+        { src: '/imgs/terrace-poolfront.webp', alt: 'Terrace Pool' },
+        { src: '/imgs/jacuzzi-spa-hds-2026.webp', alt: 'Spa & Jacuzzi' },
+        { src: '/imgs/sauna-hds.webp', alt: 'Sauna Area' }
+    ];
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % sliderImages.length;
+        resetAutoplay();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + sliderImages.length) % sliderImages.length;
+        resetAutoplay();
+    }
+
+    function goToSlide(index: number) {
+        currentSlide = index;
+        resetAutoplay();
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % sliderImages.length;
+        }, 5000);
+    }
+
+    onMount(() => {
+        startAutoplay();
+        return () => clearInterval(autoplayInterval);
+    });
 </script>
 
 <svelte:head>
@@ -9,7 +55,7 @@
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
     <div class="absolute inset-0">
-        <img src="/imgs/Winter_entrance_hero.webp" class="ken-burns h-full w-full object-cover opacity-80" alt="Hotel du Soleil Exterior" />
+        <img src="/imgs/winter-entrance-hero.webp" class="ken-burns h-full w-full object-cover opacity-80" alt="Hotel du Soleil Exterior" />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
     </div>
 
@@ -48,7 +94,49 @@
             {/each}
         </ul>
     </div>
-    <div class="fade-up-element order-1 md:order-2 overflow-hidden bg-alpine-border">
-        <img src="/imgs/lobby.webp" alt="Hotel Interior" class="w-full h-full object-cover img-elegant aspect-4/3">
+    <div class="fade-up-element order-1 md:order-2 overflow-hidden bg-alpine-border relative group">
+        <!-- Slider Container -->
+        <div class="relative h-full w-full aspect-4/3">
+            {#each sliderImages as image, i (i)}
+                <div
+                    class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+                    style="opacity: {currentSlide === i ? 1 : 0}"
+                >
+                    <img
+                        src={image.src}
+                        alt={image.alt}
+                        class="h-full w-full object-cover"
+                    />
+                </div>
+            {/each}
+
+            <!-- Navigation Buttons -->
+            <button
+                on:click={prevSlide}
+                class="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/40 p-2 opacity-0 transition-all group-hover:opacity-100 hover:bg-black/60"
+                aria-label="Previous slide"
+            >
+                <ChevronLeft class="h-5 w-5 text-white" />
+            </button>
+
+            <button
+                on:click={nextSlide}
+                class="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/40 p-2 opacity-0 transition-all group-hover:opacity-100 hover:bg-black/60"
+                aria-label="Next slide"
+            >
+                <ChevronRight class="h-5 w-5 text-white" />
+            </button>
+
+            <!-- Slide Indicators -->
+            <div class="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-1.5">
+                {#each sliderImages as _, i (i)}
+                    <button
+                        on:click={() => goToSlide(i)}
+                        class="h-1.5 rounded-full transition-all duration-300 {currentSlide === i ? 'w-6 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/75'}"
+                        aria-label="Go to slide {i + 1}"
+                    />
+                {/each}
+            </div>
+        </div>
     </div>
 </section>
