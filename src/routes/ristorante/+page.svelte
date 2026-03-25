@@ -113,7 +113,7 @@
 	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
 		<div class="group aspect-4/5 overflow-hidden">
 			<img
-				src="imgs/deer_dish_hds.png"
+				src="imgs/deer_dish_hds.webp"
 				alt="Cucina Alpina"
 				class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
 			/>
@@ -121,7 +121,7 @@
 		<div class="flex flex-col gap-8">
 			<div class="group aspect-video overflow-hidden">
 				<img
-					src="imgs/amuse_hds_bouche.png"
+					src="imgs/amuse_hds_bouche.webp"
 					alt="Vini Valdostani"
 					class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
 				/>

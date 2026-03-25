@@ -69,7 +69,7 @@
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-6">
         
         <a href="/" class="z-20 flex shrink-0 cursor-pointer items-center gap-3 text-left transition-transform duration-300 hover:scale-105">
-            <img src="/imgs/logo.png" alt="Logo Hotel du Soleil" class="h-10 w-auto object-contain drop-shadow-md md:h-12" />
+            <img src="/imgs/logo.webp" alt="Logo Hotel du Soleil" class="h-10 w-auto object-contain drop-shadow-md md:h-12" />
             
             <div class="flex flex-col items-start justify-center pt-1">
                 <h1 class="font-serif text-lg leading-none uppercase tracking-widest md:text-xl lg:text-2xl">Hotel du Soleil</h1>

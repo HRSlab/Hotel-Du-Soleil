@@ -266,7 +266,8 @@
       "structure": "La Struttura",
       "rooms": "Le Camere",
       "restaurant": "Il Ristorante",
-      "terms": "Termini e Condizioni"
+      "terms": "Termini e Condizioni",
+      "policy": "Policy di Soggiorno"
     },
     "rights": "© 2026 Futuro srl - Hotel du Soleil. Tutti i diritti riservati.",
     "made_by": "made with ❤️ by CB"
@@ -280,5 +281,44 @@
     "title": "Meeting & Eventi",
     "subtitle": "Spazi Versatili",
     "description": "L'ambiente ideale per i vostri incontri di lavoro o eventi privati. Sale attrezzate, vista panoramica e un servizio catering d'eccellenza curato dal nostro ristorante."
+  },
+  "policy": {
+    "title": "Policy e Condizioni di Soggiorno",
+    "updated": "Ultimo aggiornamento: Marzo 2026",
+    "rooms_title": "Camere e Suite",
+    "rooms_intro": "I prezzi sono espressi in Euro e si applica la tassa di soggiorno comunale. Si prega di notare che le tariffe e la tassa di soggiorno possono variare senza preavviso in base alle disposizioni locali. La tassa di soggiorno non si applica ai minori di 14 anni.",
+    "included_title": "I prezzi giornalieri si intendono per camera e sono comprensivi di",
+    "included_items": [
+      "Wi-Fi Fibra ad alta velocità in tutta la struttura.",
+      "TV Satellitare a schermo piatto.",
+      "Ski-box dedicato per il deposito dell'attrezzatura da sci (situato a 20mt dagli impianti).",
+      "IVA 10%."
+    ],
+    "tariffe_note": "Le tariffe includono inoltre: accesso all'area lounge con camino e prossimità immediata agli impianti di risalita e ai sentieri escursionistici di Torgnon.",
+    "colazione": "Colazione: Se acquistata in loco, il costo della colazione per le tariffe con solo pernottamento è di € 15,00 p.p.",
+    "mezza_pensione": "Mezza Pensione: Include la cena tipica valdostana (bevande escluse, salvo dove diversamente specificato nei pacchetti gruppi).",
+    "checkin_checkout": "Orario di check-in: dalle 15:30; orario di check-out: entro le 10:30.",
+    "cancel_title": "Politica di Cancellazione e Caparra",
+    "cancel_intro": "Per confermare definitivamente la prenotazione, è richiesto il versamento di una caparra confirmatoria pari al 30% del totale del soggiorno (o della prima notte per soggiorni brevi).",
+    "cancel_rules": [
+      { "label": "Cancellazione gratuita", "text": "Fino a 14 giorni prima della data di arrivo prevista, la caparra verrà rimborsata integralmente (al netto di eventuali spese bancarie di gestione)." },
+      { "label": "Cancellazione tardiva (da 14 a 7 giorni prima)", "text": "La caparra non verrà rimborsata, ma potrà essere trasformata in un voucher di pari valore, utilizzabile per un futuro soggiorno entro 6 mesi (previa disponibilità)." },
+      { "label": "Cancellazione sotto i 7 giorni o No-Show", "text": "La caparra verrà trattenuta interamente a titolo di indennizzo." },
+      { "label": "Partenza anticipata", "text": "In caso di partenza anticipata durante il soggiorno, verrà addebitato l'importo totale delle notti rimanenti (solo pernottamento)." }
+    ],
+    "family_title": "Quadruple Familiari (Appartamenti)",
+    "family_items": [
+      "Sistemazione in due ambienti distinti.",
+      "Servizio giornaliero di housekeeping effettuato tra le 08:30 e le 12:30.",
+      "Accesso prioritario al Garage Coperto interno (su prenotazione, potrebbe essere previsto un supplemento).",
+      "Ski-box riservato a pochi passi dalla partenza della funivia.",
+      "IVA 10%."
+    ],
+    "groups_title": "Prenotazioni Multiple e Gruppi",
+    "groups_text": "Per prenotazioni di 4 o più camere (Gruppi organizzati, Club o prenotazioni multiple che viaggiano insieme), l'hotel applicherà condizioni di deposito e cancellazione personalizzate che verranno inviate via email in fase di preventivo. In genere, per i gruppi la cancellazione gratuita è prevista fino a 30 giorni prima dell'arrivo.",
+    "parking_title": "Logistica e Parcheggio",
+    "parking_text": "L'Hotel du Soleil dispone di un garage coperto riscaldato. Per ragioni di sicurezza e ottimizzazione degli spazi, ai signori ospiti che usufruiscono del garage viene richiesto di lasciare le chiavi del veicolo presso la Reception per tutta la durata del soggiorno. In alternativa, è disponibile un parcheggio pubblico gratuito a circa 100 metri dalla struttura.",
+    "images_title": "Nota sulle immagini",
+    "images_text": "Le immagini delle camere presenti sul sito sono a scopo illustrativo. Alcuni elementi di design, finiture in legno e disposizione degli arredi possono variare all'interno della stessa categoria di camera, pur mantenendo lo standard e i servizi promessi."
   }
 }

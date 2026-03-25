@@ -89,7 +89,7 @@
 			<div class="fade-up-element order-2 lg:order-1">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home_restaurant.png" 
+						src="/imgs/home_restaurant.webp" 
 						alt="Ristorante Hotel du Soleil" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
@@ -136,7 +136,7 @@
 			<div class="fade-up-element">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home_wellness.png" 
+						src="/imgs/home_wellness.webp" 
 						alt="Wellness & Spa" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
@@ -149,7 +149,7 @@
 			<div class="fade-up-element order-2 lg:order-1">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home_activities.png" 
+						src="/imgs/home_activities.webp" 
 						alt="Attività Outdoor" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>

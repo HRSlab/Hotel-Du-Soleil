@@ -266,7 +266,8 @@
       "structure": "The Structure",
       "rooms": "The Rooms",
       "restaurant": "The Restaurant",
-      "terms": "Terms and Conditions"
+      "terms": "Terms and Conditions",
+      "policy": "Stay Policy"
     },
     "rights": "© 2026 Futuro srl - Hotel du Soleil. All rights reserved.",
     "made_by": "made with ❤️ by CB"
@@ -280,5 +281,44 @@
     "title": "Meetings & Events",
     "subtitle": "Versatile Spaces",
     "description": "The ideal environment for your business meetings or private events. Equipped rooms, panoramic views, and an excellent catering service curated by our restaurant."
+  },
+  "policy": {
+    "title": "Stay Policy & Conditions",
+    "updated": "Last update: March 2026",
+    "rooms_title": "Rooms & Suites",
+    "rooms_intro": "Prices are expressed in Euros and the municipal tourist tax applies. Please note that rates and tourist tax may vary without notice based on local regulations. Tourist tax does not apply to children under 14.",
+    "included_title": "Daily prices are per room and include",
+    "included_items": [
+      "High-speed Fiber Wi-Fi throughout the property.",
+      "Flat-screen Satellite TV.",
+      "Dedicated ski-box for equipment storage (located 20m from the lifts).",
+      "VAT 10%."
+    ],
+    "tariffe_note": "Rates also include: access to the lounge area with fireplace and immediate proximity to ski lifts and hiking trails of Torgnon.",
+    "colazione": "Breakfast: If purchased on-site, the breakfast cost for room-only rates is € 15.00 p.p.",
+    "mezza_pensione": "Half Board: Includes typical Aosta Valley dinner (beverages excluded, unless otherwise specified in group packages).",
+    "checkin_checkout": "Check-in time: from 3:30 PM; check-out time: by 10:30 AM.",
+    "cancel_title": "Cancellation Policy & Deposit",
+    "cancel_intro": "To definitively confirm the booking, a deposit of 30% of the total stay (or the first night for short stays) is required.",
+    "cancel_rules": [
+      { "label": "Free cancellation", "text": "Up to 14 days before the expected arrival date, the deposit will be fully refunded (net of any bank processing fees)." },
+      { "label": "Late cancellation (14 to 7 days before)", "text": "The deposit will not be refunded, but can be converted into a voucher of equal value, usable for a future stay within 6 months (subject to availability)." },
+      { "label": "Cancellation under 7 days or No-Show", "text": "The deposit will be retained in full as compensation." },
+      { "label": "Early departure", "text": "In case of early departure during the stay, the total amount for the remaining nights will be charged (room only)." }
+    ],
+    "family_title": "Family Quadruples (Apartments)",
+    "family_items": [
+      "Accommodation in two separate rooms.",
+      "Daily housekeeping service between 8:30 AM and 12:30 PM.",
+      "Priority access to the indoor Covered Garage (by reservation, a supplement may apply).",
+      "Reserved ski-box just steps from the gondola lift departure.",
+      "VAT 10%."
+    ],
+    "groups_title": "Multiple Bookings & Groups",
+    "groups_text": "For bookings of 4 or more rooms (organized groups, clubs, or multiple bookings traveling together), the hotel will apply customized deposit and cancellation conditions that will be sent by email during the quotation phase. Generally, for groups, free cancellation is available up to 30 days before arrival.",
+    "parking_title": "Logistics & Parking",
+    "parking_text": "Hotel du Soleil has a heated covered garage. For safety and space optimization reasons, guests using the garage are asked to leave their vehicle keys at Reception for the entire duration of their stay. Alternatively, a free public parking lot is available approximately 100 meters from the property.",
+    "images_title": "Note on images",
+    "images_text": "Room images on the website are for illustrative purposes. Some design elements, wood finishes, and furniture arrangements may vary within the same room category, while maintaining the promised standard and services."
   }
 }

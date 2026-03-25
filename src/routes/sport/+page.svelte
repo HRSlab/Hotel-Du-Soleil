@@ -43,7 +43,7 @@
         style="transform: translateY({scrollY * 0.3}px) scale(1.1);"
     >
         <img 
-            src="/imgs/sport_hero.png" 
+            src="/imgs/sport_hero.webp" 
             alt="Alpine Sport" 
             class="w-full h-full object-cover ken-burns opacity-70"
         >
@@ -127,7 +127,7 @@
     <Motion initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={itemVariants}>
         <div class="flex flex-col md:flex-row-reverse gap-16 lg:gap-24 items-center">
             <div class="w-full md:w-3/5 overflow-hidden bg-alpine-border relative group cursor-default shadow-xl">
-                <img src="/imgs/MTB-Torgnon.png" alt="Mountain Bike" class="w-full h-full object-cover img-elegant aspect-16/10">
+                <img src="/imgs/MTB-Torgnon.webp" alt="Mountain Bike" class="w-full h-full object-cover img-elegant aspect-16/10">
                 <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <div class="w-full md:w-2/5 p-4 lg:p-10">
