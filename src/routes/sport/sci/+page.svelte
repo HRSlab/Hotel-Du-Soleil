@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Snowflake, MapPin, Wind, Thermometer } from 'lucide-svelte';
+    import { Snowflake, ShieldCheck, Sparkles } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -8,7 +8,7 @@
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
     <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1551698618-1fed5d97530d?q=80&w=2000&auto=format&fit=crop" class="ken-burns h-full w-full object-cover opacity-80" alt="Sci & Snowboard a Torgnon" />
+        <img src="/imgs/Torgnon_View.jpeg" class="ken-burns h-full w-full object-cover opacity-80" alt="Sci a Torgnon" />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
     </div>
 
@@ -24,7 +24,7 @@
 
 <section class="bg-alpine-bg px-6 py-24">
     <div class="fade-up-element mx-auto max-w-3xl text-center">
-        <Snowflake class="w-10 h-10 text-alpine-gold mx-auto mb-10" />
+        <Snowflake class="w-10 h-10 text-alpine-gold mx-auto mb-10" strokeWidth={1.5} />
         <h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-4xl">
             Siamo a soli 50 metri dagli impianti del Comprensorio di Torgnon.
         </h3>
@@ -34,41 +34,43 @@
     </div>
 </section>
 
-<section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-    <div class="fade-up-element overflow-hidden bg-white/5 border border-alpine-border p-12">
-        <h4 class="font-serif text-2xl text-alpine-text mb-6">Dettagli Comprensorio</h4>
-        <div class="space-y-8">
-            <div class="flex items-center gap-4">
-                <MapPin class="w-6 h-6 text-alpine-gold" />
-                <div>
-                     <p class="text-[10px] uppercase font-bold tracking-widest text-alpine-muted mb-1">Chilometri di Piste</p>
-                     <h5 class="text-lg font-serif italic text-alpine-text">25 km di puro divertimento</h5>
-                </div>
+<section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto space-y-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+         <div class="fade-up-element">
+            <h4 class="font-serif text-4xl text-alpine-text mb-6 italic">Piste per Tutti i Livelli</h4>
+            <div class="space-y-10">
+                 <div class="flex items-start gap-4 border-b border-alpine-border pb-6">
+                    <div class="w-2 h-2 rounded-full bg-alpine-gold mt-2 shrink-0"></div>
+                    <div>
+                         <h5 class="text-lg font-serif italic text-alpine-text mb-2">Piste Soleggiate</h5>
+                         <p class="text-xs text-alpine-muted leading-relaxed font-light">Ampie piste perfettamente innevate, ideali per principianti e famiglie.</p>
+                    </div>
+                 </div>
+                 <div class="flex items-start gap-4 border-b border-alpine-border pb-6">
+                    <div class="w-2 h-2 rounded-full bg-alpine-gold mt-2 shrink-0"></div>
+                    <div>
+                         <h5 class="text-lg font-serif italic text-alpine-text mb-2">Fuoripista Guidato</h5>
+                         <p class="text-xs text-alpine-muted leading-relaxed font-light">Esplora la neve fresca con le nostre guide certificate per un'esperienza sicura e indimenticabile.</p>
+                    </div>
+                 </div>
+                 <div class="flex items-start gap-4 border-b border-alpine-border pb-6">
+                    <div class="w-2 h-2 rounded-full bg-alpine-gold mt-2 shrink-0"></div>
+                    <div>
+                         <h5 class="text-lg font-serif italic text-alpine-text mb-2">Snow Park</h5>
+                         <p class="text-xs text-alpine-muted leading-relaxed font-light">Modulo per snowboard e freestyle con salti, rails e halfpipe.</p>
+                    </div>
+                 </div>
             </div>
-            <div class="flex items-center gap-4 border-t border-alpine-border pt-8">
-                <Wind class="w-6 h-6 text-alpine-gold" />
-                <div>
-                     <p class="text-[10px] uppercase font-bold tracking-widest text-alpine-muted mb-1">Quota Massima</p>
-                     <h5 class="text-lg font-serif italic text-alpine-text">2.250 metri d’altitudine</h5>
-                </div>
-            </div>
-            <div class="flex items-center gap-4 border-t border-alpine-border pt-8">
-                <Thermometer class="w-6 h-6 text-alpine-gold" />
-                <div>
-                     <p class="text-[10px] uppercase font-bold tracking-widest text-alpine-muted mb-1">Esposizione</p>
-                     <h5 class="text-lg font-serif italic text-alpine-text">Sud — Sole tutto il giorno</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fade-up-element">
-        <h4 class="font-serif text-4xl text-alpine-text mb-6">Winter Park Torgnon</h4>
-        <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-            Uno dei parchi gioco sulla neve più grandi d'Europa, situato proprio all'arrivo della telecabina. 
-            Perfetto per i bambini che iniziano a sciare o per chi cerca divertimento extra tra ciambelle e bob.
-        </p>
-        <button class="flex items-center gap-3 text-xs tracking-widest uppercase font-bold text-alpine-gold">
-            Acquista Skipass Online <Wind class="w-4 h-4 ml-2" />
-        </button>
+         </div>
+         <div class="fade-up-element bg-white p-12 border border-alpine-border">
+            <div class="flex items-center gap-4 mb-6"><ShieldCheck class="w-6 h-6 text-alpine-gold" /><h4 class="text-[12px] uppercase font-bold tracking-[0.2em] text-alpine-text">Servizi Sci Club</h4></div>
+            <ul class="space-y-4 text-sm font-light text-alpine-muted">
+                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Deposito sci sicuro e videosorvegliato</li>
+                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Zona riscaldamento scarponi</li>
+                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Servizio di preparazione sci</li>
+                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Scuola sci convenzionata</li>
+                <li class="flex items-center gap-3"><Sparkles class="w-4 h-4 text-alpine-gold/50 shrink-0" /> Noleggio attrezzatura in hotel</li>
+            </ul>
+         </div>
     </div>
 </section>
