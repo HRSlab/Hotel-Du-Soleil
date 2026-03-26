@@ -9,7 +9,7 @@
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
     <div class="absolute inset-0">
-        <img src="/imgs/Winter_Park.jpeg" class="ken-burns h-full w-full object-cover opacity-80" alt="Kids Club" />
+        <img src="/imgs/winter-park.webp" class="ken-burns h-full w-full object-cover opacity-80" alt="Kids Club" />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
     </div>
 

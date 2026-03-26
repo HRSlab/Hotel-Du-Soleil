@@ -9,7 +9,7 @@
     const sliderImages = [
         { src: '/imgs/lobby.webp', alt: 'Hotel Lobby' },
         { src: '/imgs/kids_club.png', alt: 'Hotel Exterior & Slopes' },
-        { src: '/imgs/meeting_room', alt: 'Reception Area' },
+        { src: '/imgs/Meeting_Room.webp', alt: 'Reception Area' },
         { src: '/imgs/esterno-terrazza.webp', alt: 'Hotel Terrace' },
         { src: '/imgs/piscina.webp', alt: 'Exterior Winter View' },
         { src: '/imgs/terrace-poolfront.webp', alt: 'Terrace Pool' },

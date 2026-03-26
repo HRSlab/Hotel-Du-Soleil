@@ -149,7 +149,7 @@
 			<div class="fade-up-element order-2 lg:order-1">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home-activities.png" 
+						src="/imgs/ski-ome-activities.webp" 
 						alt="Attività Outdoor" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
