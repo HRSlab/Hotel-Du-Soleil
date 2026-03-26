@@ -1,25 +1,324 @@
 {
+  "common": {
+    "prev": "Précédent",
+    "next": "Suivant",
+    "back": "Retour",
+    "close": "Fermer",
+    "loading": "Chargement..."
+  },
   "nav": {
-    "overview": "Overview",
-    "rooms": "Accommodations",
-    "restaurant": "Restaurant & Bar",
-    "wellness": "Wellness Area",
-    "sport": "Sport",
-    "events": "Events",
-    "experiences": "Experiences",
-    "book": "Book Now"
+    "overview": "Aperçu",
+    "rooms": "Hébergements",
+    "restaurant": "Saveurs Alpines",
+    "wellness": "Wellness",
+    "sport": "Sport & Plein air",
+    "experiences": "Territoire",
+    "book": "Réserver"
+  },
+  "megamenu": {
+    "overview": {
+      "title": "Aperçu",
+      "links": [
+        { "name": "L'Hôtel", "href": "/struttura" },
+        { "name": "Emplacement & Environs", "href": "/posizione" },
+        { "name": "Kids Club", "href": "/kids-club" },
+        { "name": "Réunions & Événements", "href": "/eventi" },
+        { "name": "Durabilité", "href": "/sostenibilita" }
+      ],
+      "featured_label": "En Vedette",
+      "featured_text": "Découvrez le charme authentique d'un refuge à 1 500 mètres. L'élégance de la simplicité et la chaleur d'un hôtel familial depuis 1980.",
+      "featured_cta": "Découvrir l'Hôtel"
+    },
+    "rooms": {
+      "title": "Hébergements",
+      "links": [
+        { "name": "Chambre Double", "href": "/camere/matrimoniale" },
+        { "name": "Chambre Triple", "href": "/camere/tripla" },
+        { "name": "Quadruple Standard", "href": "/camere/quadrupla_standard" },
+        { "name": "Quadruple Familiale", "href": "/camere/familiare" }
+      ],
+      "featured_label": "En Vedette",
+      "featured_text": "Des espaces conçus pour votre repos. Bois naturel, lumière alpine et un confort essentiel pour se ressourcer après une journée en altitude.",
+      "featured_cta": "Toutes les chambres"
+    },
+    "restaurant": {
+      "title": "Saveurs Alpines",
+      "links": [
+        { "name": "Restaurant", "href": "/ristorante" },
+        { "name": "Lounge Bar & Cheminée", "href": "/ristorante/lounge-bar" }
+      ],
+      "featured_label": "En Vedette",
+      "featured_text": "Les saveurs authentiques du Val d'Aoste. Matières premières à km 0, recettes familiales transmises avec soin et une atmosphère conviviale.",
+      "featured_cta": "Découvrir le menu"
+    },
+    "wellness": {
+      "title": "Wellness",
+      "links": [
+        { "name": "Massages Sportifs", "href": "/wellness/massaggi" },
+        { "name": "Soins du Corps", "href": "/wellness/trattamenti" },
+        { "name": "SPA Privé (Nocturne)", "href": "/wellness/private-spa" }
+      ],
+      "featured_label": "En Vedette",
+      "featured_text": "Le luxe du silence. Retrouvez votre équilibre avec nos parcours bien-être et laissez-vous choyer par les mains expertes de nos thérapeutes.",
+      "featured_cta": "Se Détendre"
+    },
+    "sport": {
+      "title": "Activités",
+      "links": [
+        { "name": "Ski & Snowboard (Ski-in)", "href": "/sport/sci" },
+        { "name": "VTT & Vélo électrique", "href": "/sport/bike" },
+        { "name": "Trekking en Alpage", "href": "/sport/trekking" },
+        { "name": "Ski Box & Location", "href": "/sport/noleggio" }
+      ],
+      "featured_label": "En Vedette",
+      "featured_text": "L'adrénaline commence à 20 mètres de notre porte. Accès direct aux remontées en hiver et sentiers panoramiques infinis en été.",
+      "featured_cta": "Plein Air"
+    },
+    "experiences": {
+      "title": "Le Territoire",
+      "links": [
+        { "name": "Dégustation Fontina DOP", "href": "/esperienze/degustazione" },
+        { "name": "Randonnée Nocturne en Raquettes", "href": "/esperienze/ciaspolate" },
+        { "name": "Yoga en Altitude", "href": "/esperienze/yoga" },
+        { "name": "Guides Alpins Partenaires", "href": "/esperienze/guide" }
+      ],
+      "featured_label": "En Vedette",
+      "featured_text": "Pas de simples vacances, mais une collection de souvenirs. Explorez le territoire à travers des activités authentiques, en harmonie avec les rythmes de la montagne.",
+      "featured_cta": "Laissez-vous Inspirer"
+    }
+  },
+  "home": {
+    "philosophy_title": "Nous croyons au luxe de l'essentiel, à la chaleur humaine et à la valeur du temps ralenti.",
+    "philosophy_text": "L'Hotel du Soleil est votre camp de base à 1 500 mètres d'altitude. Nous avons éliminé le superflu pour laisser place à ce qui compte vraiment : le bois naturel, la saveur authentique de la cuisine alpine et la majesté de la nature juste derrière la porte.",
+    "philosophy_cta": "Explorer l'Hôtel",
+    "rooms_title": "Espaces de Repos",
+    "rooms_subtitle": "Substance & Confort",
+    "experience_title": "L'Expérience Alpine",
+    "experience_text": "Notre promesse est une hospitalité pratique et chaleureuse. Oubliez le stress logistique et laissez-vous séduire par les vraies saveurs de notre vallée.",
+    "feature_access_title": "Accès Direct",
+    "feature_access_text": "À seulement 20 mètres des remontées mécaniques et des principaux sentiers. La montagne commence littéralement depuis notre porte.",
+    "feature_food_title": "Restauration Authentique",
+    "feature_food_text": "La demi-pension propose des menus respectueux de la tradition valdôtaine. Matières premières excellentes, recettes transmises avec soin.",
+    "feature_comfort_title": "Confort Logistique",
+    "feature_comfort_text": "Garage couvert réservé, Wi-Fi dans les espaces communs et un salon chaleureux avec cheminée pour se détendre en fin de journée.",
+    "rooms_cta": "Explorer les Détails",
+    "restaurant_section_title": "Saveurs Alpines",
+    "restaurant_section_text": "Les saveurs authentiques du Val d'Aoste. Matières premières à km 0, recettes familiales transmises avec soin et une atmosphère conviviale qui sent bon la maison.",
+    "wellness_section_title": "Wellness & Régénération",
+    "wellness_section_text": "Le luxe du silence à 1 500 mètres. Retrouvez votre équilibre entre sauna, hammam et notre espace détente face aux sommets.",
+    "sport_section_title": "Activités & Plein Air",
+    "sport_section_text": "L'adrénaline commence à 20 mètres de la porte. Accès direct aux remontées en hiver et sentiers panoramiques à couper le souffle en été."
+  },
+  "struttura": {
+    "subtitle": "Élégance Alpine",
+    "title": "L'Hôtel",
+    "philosophy_title": "La chaleur du bois, la force de la pierre.",
+    "philosophy_text": "L'Hotel du Soleil a été conçu pour s'intégrer harmonieusement dans le paysage de Torgnon. Chaque détail reflète la tradition valdôtaine, réinterprétée avec un goût moderne et fonctionnel.",
+    "common_spaces_title": "Espaces Communs",
+    "common_spaces_text": "De notre hall accueillant à la salle cheminée, chaque espace est pensé pour favoriser la détente et la convivialité. De grandes baies vitrées s'ouvrent sur le panorama environnant, invitant la majesté des Alpes à l'intérieur de l'hôtel.",
+    "amenities": ["Salle Cheminée & Bibliothèque", "Terrasse Solarium Panoramique", "Jardin d'Hiver"]
+  },
+  "posizione": {
+    "subtitle": "Au Cœur de Torgnon",
+    "title": "Emplacement",
+    "philosophy_title": "Là où la route s'arrête, la montagne commence.",
+    "philosophy_text": "Situé à 1 500 mètres d'altitude, l'Hotel du Soleil domine la vallée du Cervin. Un refuge facilement accessible mais merveilleusement isolé du chaos quotidien.",
+    "arrival_title": "Votre Camp de Base",
+    "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Situé au centre du village, nous offrons un garage couvert réservé à nos hôtes et la commodité incroyable d'avoir les remontées mécaniques à quelques pas du hall.",
+    "maps_cta": "Ouvrir sur Google Maps",
+    "directions_title": "Comment Nous Rejoindre",
+    "by_car_title": "En Voiture",
+    "by_car_text": "Autoroute A5 Turin-Aoste, sortie Châtillon-Saint-Vincent. Poursuivre sur la SR 9 direction Valtournenche, puis bifurquer vers Torgnon (environ 20 min depuis le péage).",
+    "by_train_title": "En Train",
+    "by_train_text": "Gare de Châtillon-Saint-Vincent. De là, service de bus direct SAVDA vers Torgnon ou service de taxi conventionné avec l'hôtel.",
+    "by_plane_title": "En Avion",
+    "by_plane_text": "Les aéroports les plus proches sont Turin Caselle (110 km), Milan Malpensa (170 km) et Genève (180 km). Nous organisons des transferts privés sur demande.",
+    "distances_title": "Points d'Intérêt",
+    "dist_ski": "Remontées Mécaniques (Ski-in/Ski-out)",
+    "dist_cervinia": "Breuil-Cervinia",
+    "dist_aosta": "Aoste (Centre Historique)",
+    "dist_milano": "Milan"
+  },
+  "sostenibilita": {
+    "subtitle": "En Harmonie avec l'Environnement",
+    "title": "Durabilité",
+    "philosophy_title": "Nous respectons la montagne, nous prenons soin de l'avenir.",
+    "philosophy_text": "Nous sommes les gardiens d'un territoire précieux et fragile. C'est pourquoi nous adoptons quotidiennement des pratiques durables qui réduisent notre impact environnemental et promeuvent l'économie locale.",
+    "features": {
+      "energy": { "title": "Énergie Propre", "text": "Panneaux solaires pour la production d'eau chaude et éclairage LED à faible consommation." },
+      "plastic": { "title": "Zéro Plastique", "text": "Nous avons éliminé les mono-portions plastiques au profit de distributeurs et de bouteilles en verre." },
+      "water": { "title": "Eau de Source", "text": "Nous valorisons l'eau pure des sources de Torgnon, filtrée et servie à table." }
+    }
+  },
+  "wellness": {
+    "main_title": "Bien-être Alpin",
+    "main_subtitle": "Régénération en Altitude",
+    "spa": { "title": "Le SPA en Altitude", "subtitle": "Régénération Profonde", "cta": "Découvrir le SPA" },
+    "massaggi": { "title": "Massages Sportifs", "subtitle": "Récupération Musculaire", "cta": "Les Massages" },
+    "trattamenti": { "title": "Soins du Corps", "subtitle": "Rituels Alpins", "cta": "Voir les Soins" },
+    "private_spa": { "title": "SPA Privé Nocturne", "subtitle": "Exclusivité & Romantisme", "cta": "Expérience Privée" }
+  },
+  "sport": {
+    "main_title": "Sport & Plein Air",
+    "main_subtitle": "Vivre la Montagne",
+    "philosophy_title": "L'adrénaline commence à 20 mètres du hall.",
+    "philosophy_text": "Oubliez la voiture. À Torgnon, à 1 500 mètres, la nature n'est pas une destination, c'est votre point de départ. Que ce soit le ski-in/ski-out ou le trekking héroïque, nous vous offrons le confort parfait avant et après l'aventure.",
+    "sci": {
+      "title": "Ski & Snowboard",
+      "subtitle": "Accès direct au domaine de Torgnon. Pistes parfaitement damées, panoramas à couper le souffle sur le Cervin et la commodité de rentrer à l'hôtel skis aux pieds.",
+      "cta": "Skier à Torgnon"
+    },
+    "bike": {
+      "title": "VTT & Vélo Électrique",
+      "subtitle": "Explorez les sentiers du Val d'Aoste sur deux roues. Des parcours d'adrénaline pour les experts aux douces promenades panoramiques pour les familles, Torgnon est un paradis pour les cyclistes.",
+      "cta": "En Vélo"
+    },
+    "trekking": { "title": "Trekking en Alpage", "subtitle": "Exploration Lente", "cta": "Sentiers de Trekking" },
+    "noleggio": { "title": "Ski Box & Location", "subtitle": "Services Pratiques & Sûrs", "cta": "Services Ski" }
+  },
+  "experiences": {
+    "main_title": "Expériences Alpines",
+    "main_subtitle": "Souvenirs Authentiques",
+    "degustazione": { "title": "Fontina DOP", "subtitle": "Expérience Gastronomique", "cta": "La Dégustation" },
+    "ciaspolate": { "title": "Randonnées Nocturnes en Raquettes", "subtitle": "La Magie de la Nuit", "cta": "Excursions Nocturnes" },
+    "yoga": { "title": "Yoga en Altitude", "subtitle": "Équilibre Intérieur", "cta": "Cours de Yoga" },
+    "guide": { "title": "Guides Alpins Partenaires", "subtitle": "Experts de la Montagne", "cta": "Contacter les Guides" }
+  },
+  "meteo": {
+    "title": "Météo & Bulletin Neige",
+    "subtitle": "Torgnon — Val d'Aoste",
+    "status_open": "Remontées Ouvertes",
+    "current_conditions": "Conditions Actuelles",
+    "feels_like": "Ressentie",
+    "wind": "Vent",
+    "visibility": "Visibilité",
+    "uv_index": "Indice UV",
+    "snow_report": "Bulletin Neige",
+    "snow_depth_base": "Hauteur de Neige (Base)",
+    "snow_depth_top": "Hauteur de Neige (Sommet)",
+    "snow_quality": "Qualité",
+    "last_snowfall": "Dernière Chute de Neige",
+    "slopes_lifts": "Pistes & Remontées",
+    "slopes_open": "Pistes Ouvertes",
+    "lifts_running": "Remontées en Service",
+    "webcam_title": "Webcam Panoramique 360° en Direct",
+    "fullscreen": "Plein Écran",
+    "activate_stream": "Activer le Streaming en Direct"
+  },
+  "termini": {
+    "title": "Conditions Générales",
+    "updated": "Dernière mise à jour : Mars 2026",
+    "section1_title": "1. Réservations et Paiements",
+    "section1_text": "Les réservations effectuées via le site web ou les canaux directs sont confirmées à la réception d'un acompte de 30% du total du séjour. Le solde sera réglé sur place lors du check-out.",
+    "section2_title": "2. Politique d'Annulation",
+    "section2_text": "Annulation gratuite jusqu'à 14 jours avant l'arrivée. En cas d'annulation tardive ou de non-présentation (no-show), l'acompte ne sera pas remboursé.",
+    "section3_title": "3. Horaires de Check-in et Check-out",
+    "section3_text": "Les chambres sont disponibles à partir de 14h00 le jour d'arrivée. Le check-out doit être effectué avant 10h30 le jour du départ."
+  },
+  "rooms_data": {
+    "matrimoniale": {
+      "name": "Chambre Double",
+      "description": "Notre chambre double à Torgnon offre un refuge simple, chaleureux et fonctionnel, parfait pour les couples ou les skieurs souhaitant un séjour pratique dans le Val d'Aoste. Caractérisées par un mobilier traditionnel en bois massif, ces chambres allient la chaleur du design classique à une vue extraordinaire sur les sommets environnants."
+    },
+    "tripla": {
+      "name": "Chambre Triple",
+      "description": "Notre chambre triple à Torgnon est la solution idéale pour ceux qui recherchent des vacances en montagne dans le Val d'Aoste sans renoncer à l'espace. Avec une surface allant jusqu'à 20 m², ces chambres offrent une atmosphère de tranquillité."
+    },
+    "quadrupla_standard": {
+      "name": "Quadruple Standard",
+      "description": "Chambre Quadruple à Torgnon : l'espace idéal pour votre famille. Si vous planifiez des vacances en famille dans le Val d'Aoste, nos chambres quadruples à Torgnon offrent le refuge parfait."
+    },
+    "familiare": {
+      "name": "Quadruple Familiale",
+      "description": "L'hébergement le plus exclusif, conçu pour le confort maximal de la famille en montagne. Espaces généreux et finitions haut de gamme."
+    }
   },
   "hero": {
-    "title": "Your Refuge <br/> in Silence.",
-    "subtitle": "Torgnon, Aosta Valley"
+    "title": "Votre Refuge <br/> dans le Silence.",
+    "subtitle": "Torgnon, Val d'Aoste"
   },
   "booking": {
-    "arrival": "Arrival",
-    "departure": "Departure",
-    "guests": "Guests",
-    "check": "Check",
-    "adults": "Adults",
-    "children": "Children"
+    "arrival": "Arrivée",
+    "departure": "Départ",
+    "guests": "Voyageurs",
+    "check": "Vérifier",
+    "adults": "Adultes",
+    "children": "Enfants",
+    "title": "Réservez votre séjour",
+    "best_rate": "Meilleur Tarif Garanti",
+    "select_dates": "Sélectionner les Dates",
+    "guests_label": "Voyageurs"
+  },
+  "rooms": {
+    "title": "Hébergements",
+    "main_title": "Nos Chambres",
+    "back_link": "Tous les hébergements",
+    "description_label": "Description",
+    "amenities_label": "Services inclus"
+  },
+  "footer": {
+    "description": "Un refuge silencieux au cœur de Torgnon. Substance, élégance et la chaleur du Val d'Aoste depuis 1980.",
+    "contacts_title": "Contacts",
+    "explore_title": "Explorer",
+    "links": {
+      "structure": "L'Hôtel",
+      "rooms": "Les Chambres",
+      "restaurant": "Le Restaurant",
+      "terms": "Conditions Générales",
+      "policy": "Conditions de Séjour",
+      "cookies": "Politique des Cookies"
+    },
+    "rights": "© 2026 Futuro srl - Hotel du Soleil. Tous droits réservés.",
+    "made_by": "fait avec ❤️ par CB"
+  },
+  "kids_club": {
+    "title": "Kids Club",
+    "subtitle": "S'amuser en Altitude",
+    "description": "Un espace dédié à nos plus jeunes hôtes, où l'imagination n'a pas de limites. Jeux, activités créatives et assistance qualifiée pour permettre aux parents de se détendre en sachant que leurs enfants sont entre de bonnes mains."
+  },
+  "eventi": {
+    "title": "Réunions & Événements",
+    "subtitle": "Espaces Polyvalents",
+    "description": "L'environnement idéal pour vos réunions de travail ou événements privés. Salles équipées, vue panoramique et un service traiteur d'excellence assuré par notre restaurant."
+  },
+  "policy": {
+    "title": "Conditions de Séjour",
+    "updated": "Dernière mise à jour : Mars 2026",
+    "rooms_title": "Chambres & Suites",
+    "rooms_intro": "Les prix sont exprimés en euros et la taxe de séjour communale s'applique. Veuillez noter que les tarifs et la taxe de séjour peuvent varier sans préavis selon les dispositions locales. La taxe de séjour ne s'applique pas aux mineurs de moins de 14 ans.",
+    "included_title": "Les prix journaliers s'entendent par chambre et comprennent",
+    "included_items": [
+      "Wi-Fi Fibre haut débit dans tout l'établissement.",
+      "TV satellite à écran plat.",
+      "Ski-box dédié pour le rangement du matériel de ski (situé à 20 m des remontées).",
+      "TVA 10%."
+    ],
+    "tariffe_note": "Les tarifs incluent également : accès à l'espace lounge avec cheminée et proximité immédiate des remontées mécaniques et des sentiers de randonnée de Torgnon.",
+    "colazione": "Petit-déjeuner : S'il est acheté sur place, le coût du petit-déjeuner pour les tarifs nuitée seule est de 15,00 € par personne.",
+    "mezza_pensione": "Demi-pension : Comprend le dîner typique valdôtain (boissons non incluses, sauf indication contraire dans les forfaits groupes).",
+    "checkin_checkout": "Heure de check-in : à partir de 15h30 ; heure de check-out : avant 10h30.",
+    "cancel_title": "Politique d'Annulation & Acompte",
+    "cancel_intro": "Pour confirmer définitivement la réservation, un acompte de 30% du montant total du séjour (ou de la première nuit pour les courts séjours) est requis.",
+    "cancel_rules": [
+      { "label": "Annulation gratuite", "text": "Jusqu'à 14 jours avant la date d'arrivée prévue, l'acompte sera intégralement remboursé (net des frais bancaires éventuels)." },
+      { "label": "Annulation tardive (de 14 à 7 jours avant)", "text": "L'acompte ne sera pas remboursé, mais pourra être converti en un bon de valeur égale, utilisable pour un futur séjour dans les 6 mois (sous réserve de disponibilité)." },
+      { "label": "Annulation sous 7 jours ou No-Show", "text": "L'acompte sera intégralement retenu à titre d'indemnisation." },
+      { "label": "Départ anticipé", "text": "En cas de départ anticipé en cours de séjour, le montant total des nuits restantes sera facturé (nuitée seule)." }
+    ],
+    "family_title": "Quadruples Familiales (Appartements)",
+    "family_items": [
+      "Hébergement en deux espaces distincts.",
+      "Service de ménage quotidien entre 08h30 et 12h30.",
+      "Accès prioritaire au Garage Couvert intérieur (sur réservation, un supplément peut s'appliquer).",
+      "Ski-box réservé à quelques pas du départ de la télécabine.",
+      "TVA 10%."
+    ],
+    "groups_title": "Réservations Multiples & Groupes",
+    "groups_text": "Pour les réservations de 4 chambres ou plus (groupes organisés, clubs ou réservations multiples voyageant ensemble), l'hôtel appliquera des conditions d'acompte et d'annulation personnalisées qui seront envoyées par e-mail lors de l'établissement du devis. En général, pour les groupes, l'annulation gratuite est possible jusqu'à 30 jours avant l'arrivée.",
+    "parking_title": "Logistique & Parking",
+    "parking_text": "L'Hotel du Soleil dispose d'un garage couvert chauffé. Pour des raisons de sécurité et d'optimisation de l'espace, les hôtes utilisant le garage sont priés de laisser les clés de leur véhicule à la réception pendant toute la durée de leur séjour. Un parking public gratuit est également disponible à environ 100 mètres de l'établissement.",
+    "images_title": "Note sur les images",
+    "images_text": "Les images des chambres présentes sur le site sont à titre illustratif. Certains éléments de design, finitions en bois et disposition du mobilier peuvent varier au sein d'une même catégorie de chambre, tout en maintenant le standard et les services annoncés."
   },
   "cookie_policy": {
     "title": "Politique des Cookies",
