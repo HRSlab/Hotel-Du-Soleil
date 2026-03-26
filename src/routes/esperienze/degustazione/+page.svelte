@@ -1,25 +1,44 @@
 <script lang="ts">
-    import { Utensils, GlassWater, MapPin, Heart, Mountain, Users, Award, MilkOff, ExternalLink } from 'lucide-svelte';
+    import { Utensils, GlassWater, MapPin, Heart, Mountain, Users, Award, MilkOff, ExternalLink, Milk, Timer, Thermometer, FlaskConical } from 'lucide-svelte';
+
+    let scrollY = $state(0);
 </script>
+
+<svelte:window bind:scrollY />
 
 <svelte:head>
     <title>Degustazione Fontina DOP | Hotel du Soleil</title>
     <meta name="description" content="Degustazione di Fontina DOP e formaggi d'alpeggio in collaborazione con l'Azienda Agricola Lo Copafen, famiglia Perraillon." />
 </svelte:head>
 
-<header class="relative h-[70vh] w-full overflow-hidden bg-[#1a1a1a]">
-    <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b7ec50?q=80&w=2000&auto=format&fit=crop" class="ken-burns h-full w-full object-cover opacity-70" alt="Fontina DOP d'alpeggio" />
-        <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-alpine-bg"></div>
+<header class="relative h-[85vh] w-full overflow-hidden bg-[#1a1a1a]">
+    <div
+        class="absolute inset-0 scale-110"
+        style="transform: translateY({scrollY * 0.25}px) scale(1.1);"
+    >
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="h-full w-full object-cover opacity-70"
+            poster="https://www.fontina-dop.it/wp-content/uploads/2025/07/fontina-dop-forma.jpg"
+        >
+            <source src="/imgs/fontina-dop-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/20 to-alpine-bg"></div>
     </div>
 
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-24 text-center">
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-28 text-center">
         <span class="mb-4 block text-[10px] font-medium tracking-[0.4em] text-white/80 uppercase md:text-xs fade-up-element">
             Esperienza Gastronomica &middot; In Collaborazione con Lo Copafen
         </span>
-        <h1 class="font-serif text-5xl md:text-7xl leading-tight font-light text-white fade-up-element">
+        <h1 class="font-serif text-5xl md:text-8xl leading-tight font-light text-white fade-up-element">
             Fontina DOP
         </h1>
+        <p class="mt-6 text-white/60 text-sm font-light max-w-md fade-up-element">
+            Denominazione d'Origine Protetta della Valle d'Aosta
+        </p>
     </div>
 </header>
 
@@ -101,8 +120,72 @@
     </div>
 </section>
 
+<!-- ═══════════════════ LA DENOMINAZIONE DOP ═══════════════════ -->
 <section class="bg-alpine-bg py-32 px-6">
-    <div class="max-w-screen-xl mx-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div class="fade-up-element">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Denominazione d'Origine Protetta</span>
+            <h2 class="font-serif text-4xl text-alpine-text mb-6">La Fontina &egrave; <br/>la Valle d'Aosta</h2>
+            <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
+                La Fontina DOP si colloca tra le punte di diamante dei formaggi di montagna. Con la sua pasta morbida ed elastica, fondente, dal profumo intenso e con un'occhiatura caratteristica, &egrave; un formaggio da gustare in tutte le occasioni.
+            </p>
+            <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
+                Tutto si svolge esclusivamente in Valle d'Aosta, l'unica area geografica dove pu&ograve; avvenire la produzione della Fontina DOP. Il latte deve essere crudo, intero, proveniente da una sola mungitura, di bovina appartenente alla razza valdostana &mdash; Pezzata Rossa, Pezzata Nera o Castana.
+            </p>
+            <p class="text-alpine-muted text-sm font-light leading-relaxed">
+                Il Consorzio Produttori e Tutela della DOP Fontina conta su 169 soci e marchia circa 400.000 forme all'anno, difendendo un'eccellenza che si tramanda di padre in figlio da generazioni.
+            </p>
+        </div>
+        <div class="fade-up-element overflow-hidden bg-alpine-border shadow-xl">
+            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=1500&auto=format&fit=crop" alt="Forme di Fontina DOP in stagionatura" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90">
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ LA LAVORAZIONE ═══════════════════ -->
+<section class="border-y border-alpine-border bg-white py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">La Lavorazione Artigianale</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Un processo tramandato da generazioni</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="fade-up-element text-center p-10 border border-alpine-border bg-alpine-bg">
+                <Milk class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
+                <h4 class="font-serif text-lg text-alpine-text mb-3">Il Latte</h4>
+                <p class="text-xs text-alpine-muted font-light leading-relaxed">
+                    Latte crudo, intero, da una sola mungitura di bovine di razza valdostana. Almeno il 60% dell'alimentazione &egrave; prodotta in Valle d'Aosta.
+                </p>
+            </div>
+            <div class="fade-up-element text-center p-10 border border-alpine-border bg-alpine-bg">
+                <FlaskConical class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
+                <h4 class="font-serif text-lg text-alpine-text mb-3">La Cagliatura</h4>
+                <p class="text-xs text-alpine-muted font-light leading-relaxed">
+                    Il latte viene portato a max 36&deg;C, il coagulo rotto in granuli omogenei, poi cotto su fuoco fino alla spinatura. Il casaro decide quando lo spurgo &egrave; ottimale.
+                </p>
+            </div>
+            <div class="fade-up-element text-center p-10 border border-alpine-border bg-alpine-bg">
+                <Thermometer class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
+                <h4 class="font-serif text-lg text-alpine-text mb-3">La Salamoia</h4>
+                <p class="text-xs text-alpine-muted font-light leading-relaxed">
+                    La massa caseosa viene avvolta in tele, posta in fascere a scalzo concavo e pressata. Ogni forma riceve una placchetta di caseina che la identifica. Poi salamoia per max 12 ore.
+                </p>
+            </div>
+            <div class="fade-up-element text-center p-10 border border-alpine-border bg-alpine-bg">
+                <Timer class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
+                <h4 class="font-serif text-lg text-alpine-text mb-3">La Stagionatura</h4>
+                <p class="text-xs text-alpine-muted font-light leading-relaxed">
+                    Minimo 80 giorni in magazzini con umidit&agrave; al 90% e temperatura 4&ndash;12&deg;C. Salatura, rivoltamento e strofinatura a mano, come da tradizione secolare.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ I FORMAGGI (Lo Copafen) ═══════════════════ -->
+<section class="bg-alpine-bg py-32 px-6">
+    <div class="max-w-7xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
             <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">I Formaggi</h2>
             <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Latte crudo &middot; Lavorazione artigianale &middot; Tradizione DOP</p>
