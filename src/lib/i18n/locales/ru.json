@@ -45,8 +45,7 @@
       "title": "Вкус Альп",
       "links": [
         { "name": "Основной ресторан", "href": "/ristorante" },
-        { "name": "Lounge Bar и Камин", "href": "/ristorante/lounge-bar" },
-        { "name": "Винный погреб", "href": "/ristorante/cantina" }
+        { "name": "Lounge Bar и Камин", "href": "/ristorante/lounge-bar" }
       ],
       "featured_label": "Рекомендуем",
       "featured_text": "Подлинные вкусы Валле-д’Аоста. Местные продукты, бережно передаваемые семейные рецепты и уютная атмосфера.",

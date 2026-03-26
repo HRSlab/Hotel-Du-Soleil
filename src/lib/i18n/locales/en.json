@@ -45,8 +45,7 @@
       "title": "Alpine Taste",
       "links": [
         { "name": "Central Restaurant", "href": "/ristorante" },
-        { "name": "Lounge Bar & Fireplace", "href": "/ristorante/lounge-bar" },
-        { "name": "The Cellar", "href": "/ristorante/cantina" }
+        { "name": "Lounge Bar & Fireplace", "href": "/ristorante/lounge-bar" }
       ],
       "featured_label": "Highlighted",
       "featured_text": "Authentic flavors of Aosta Valley. Zero-mile raw materials, family recipes passed down with care, and a convivial atmosphere.",

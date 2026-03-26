@@ -8,7 +8,7 @@
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
 	<img
-		src="/imgs/bar-and-lounge/fireplace-bar.jpg"
+		src="/imgs/bar-and-lounge/fireplace-bar.webp"
 		class="ken-burns h-full w-full object-cover opacity-80"
 		alt="Il grande camino centrale"
 	/>
@@ -85,7 +85,7 @@
 	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row lg:gap-20">
 		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
 			<img
-				src="/imgs/bar-and-lounge/fireplace-bar.jpg"
+				src="/imgs/bar-and-lounge/fireplace-bar.webp"
 				alt="Tavoli per colazione"
 				class="img-elegant aspect-4/3 h-full w-full object-cover"
 			/>

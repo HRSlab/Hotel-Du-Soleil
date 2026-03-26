@@ -88,23 +88,7 @@
 			</p>
 		</div>
 
-		<!-- Cantina -->
-		<div class="fade-up-element group mt-12 flex flex-col items-center text-center md:mt-0">
-			<div
-				class="relative mb-8 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-alpine-border bg-white"
-			>
-				<Wine
-					class="z-10 h-8 w-8 text-alpine-gold transition-transform duration-500 group-hover:scale-110"
-					strokeWidth="1.5"
-				/>
-			</div>
-			<h4 class="mb-4 font-serif text-2xl text-alpine-text">La Cantina</h4>
-			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Una selezione attenta delle migliori etichette valdostane per esaltare ogni piatto. I nostri
-				maîtres saranno felici di consigliarvi gli abbinamenti perfetti per esplorare l'eccellenza
-				vitivinicola eroica della nostra regione.
-			</p>
-		</div>
+
 	</div>
 </section>
 

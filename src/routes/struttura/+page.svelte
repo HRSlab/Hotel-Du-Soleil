@@ -8,13 +8,14 @@
 
     const sliderImages = [
         { src: '/imgs/lobby.webp', alt: 'Hotel Lobby' },
-        { src: '/imgs/esterno-hotel-pista.webp', alt: 'Hotel Exterior & Slopes' },
-        { src: '/imgs/reception.webp', alt: 'Reception Area' },
+        { src: '/imgs/kids_club.png', alt: 'Hotel Exterior & Slopes' },
+        { src: '/imgs/meeting_room', alt: 'Reception Area' },
         { src: '/imgs/esterno-terrazza.webp', alt: 'Hotel Terrace' },
-        { src: '/imgs/exterior-snow-back-2026.webp', alt: 'Exterior Winter View' },
+        { src: '/imgs/piscina.webp', alt: 'Exterior Winter View' },
         { src: '/imgs/terrace-poolfront.webp', alt: 'Terrace Pool' },
         { src: '/imgs/jacuzzi-spa-hds-2026.webp', alt: 'Spa & Jacuzzi' },
-        { src: '/imgs/sauna-hds.webp', alt: 'Sauna Area' }
+        { src: '/imgs/sauna-hds.webp', alt: 'Sauna Area' },
+        { src: '/imgs/massaggi-ingresso.webp', alt: 'Massage Area' }
     ];
 
     function nextSlide() {
@@ -134,7 +135,7 @@
                         on:click={() => goToSlide(i)}
                         class="h-1.5 rounded-full transition-all duration-300 {currentSlide === i ? 'w-6 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/75'}"
                         aria-label="Go to slide {i + 1}"
-                    />
+                    ></button>
                 {/each}
             </div>
         </div>

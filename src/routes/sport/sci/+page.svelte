@@ -1,5 +1,7 @@
+/* eslint-disable svelte/require-each-key */
+/* eslint-disable svelte/require-each-key */
 <script lang="ts">
-    import { Snowflake, ShieldCheck, Sparkles, Camera, Mountain } from 'lucide-svelte';
+    import { Snowflake, ShieldCheck, Sparkles, Mountain } from 'lucide-svelte';
 
     // Svelte 5 reactivity for scroll-based animations
     let scrollY = $state(0);
@@ -11,19 +13,14 @@
 
     // Gallery images - simplified premium horizontal scroll
     let galleryImages = $state([
-        { src: '/imgs/skier-torgnon.jpeg', alt: 'Skier in Torgnon' },
-        { src: '/imgs/torgnon-view.jpeg', alt: 'Slopes From Torgnon' },
-        { src: '/imgs/ski-gondola-view.jpeg', alt: 'View from the gondola' },
-        { src: '/imgs/slope-torgnon.jpeg', alt: 'Torgnon slope' },
+        { src: '/imgs/skier-torgnon.webp', alt: 'Skier in Torgnon' },
+        { src: '/imgs/Ski_slope.webp', alt: 'Slopes From Torgnon' },
+        { src: '/imgs/ski-gondola-view.webp', alt: 'View from the gondola' },
+        { src: '/imgs/slope-torgnon.webp', alt: 'Torgnon slope' },
         { src: '/imgs/ski-ome-activities.webp', alt: 'Winter activities' },
         { src: '/imgs/ski-sport-hero.webp', alt: 'Winter sports' },
-        { src: '/imgs/torgnon-view.jpeg', alt: 'Torgnon view' }
+        { src: '/imgs/torgnon-view.webp', alt: 'Torgnon view' }
     ]);
-
-    // Guaranteed gallery reactive update helper
-    function setGalleryImages(newImages: { src: string; alt: string }[]) {
-        galleryImages = [...newImages];
-    }
 
     // Remove lerp and animate functions - using simple scroll
 
@@ -47,6 +44,19 @@
             if (observer) {
                 observer.disconnect();
             }
+        };
+    });
+
+    // Enforce no vertical/horizontal overflow while this page is mounted
+    $effect(() => {
+        const previousOverflowY = document.body.style.overflowY;
+        const previousOverflowX = document.body.style.overflowX;
+        document.body.style.overflowY = 'hidden';
+        document.body.style.overflowX = 'hidden';
+
+        return () => {
+            document.body.style.overflowY = previousOverflowY || '';
+            document.body.style.overflowX = previousOverflowX || '';
         };
     });
 
@@ -76,12 +86,12 @@
 >
     <div class="absolute inset-0">
         <img
-            src="/imgs/torgnon-view.jpeg"
+            src="/imgs/torgnon-view.webp"
             class="h-full w-full object-cover"
             alt="Ski in Torgnon"
             style="transform: scale({1 + scrollY * 0.0001})"
         />
-        <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-alpine-bg"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-black/90 via-black/50 to-alpine-bg"></div>
     </div>
 
     <div class="absolute inset-0 z-10 flex flex-col justify-end px-6 pb-32 md:pb-40">
@@ -206,21 +216,18 @@
         </div>
 
         <!-- Horizontal scroll container with smooth scrolling -->
-        <div class="overflow-x-auto scrollbar-hide pb-8 -mx-6 px-6">
-            <div class="inline-flex items-stretch gap-8 w-max">
-                {#each galleryImages as image, index}
-                    <div class="flex-shrink-0 w-80 h-[30rem] md:h-[36rem] overflow-hidden rounded-xl border border-alpine-border bg-black/20 group cursor-pointer fade-up-element">
-                        <div class="relative w-full h-full transform transition-all duration-700 group-hover:scale-105">
-                            <img
-                                src={image.src}
-                                alt={image.alt}
-                                class="w-full h-full object-cover"
-                            />
-                            <!-- Premium overlay with gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <!-- Subtle border accent -->
-                            <div class="absolute inset-0 border-2 border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        </div>
+        <div class="overflow-x-auto scrollbar-hide pb-8 px-2">
+            <div class="inline-flex items-stretch gap-8 w-max py-4">
+                {#each galleryImages as item (item.src)}
+                    <div
+                        class="min-w-[70vw] md:min-w-[42vw] lg:min-w-[34vw] xl:min-w-[28vw] h-[55vh] rounded-3xl overflow-hidden border border-alpine-border bg-[#0b0b0b] shadow-2xl"
+                    >
+                        <img
+                            src={item.src}
+                            alt={item.alt}
+                            class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                            loading="lazy"
+                        />
                     </div>
                 {/each}
             </div>
