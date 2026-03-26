@@ -22,7 +22,7 @@
             muted
             playsinline
             class="h-full w-full object-cover opacity-70"
-            poster="https://www.fontina-dop.it/wp-content/uploads/2025/07/fontina-dop-forma.jpg"
+            poster="https://images.unsplash.com/photo-1486297678162-eb2a19b7ec50?q=80&w=2000&auto=format&fit=crop"
         >
             <source src="/imgs/fontina-dop-hero.mp4" type="video/mp4" />
         </video>
