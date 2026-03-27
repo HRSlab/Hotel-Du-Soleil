@@ -47,18 +47,7 @@
         };
     });
 
-    // Enforce no vertical/horizontal overflow while this page is mounted
-    $effect(() => {
-        const previousOverflowY = document.body.style.overflowY;
-        const previousOverflowX = document.body.style.overflowX;
-        document.body.style.overflowY = 'hidden';
-        document.body.style.overflowX = 'hidden';
 
-        return () => {
-            document.body.style.overflowY = previousOverflowY || '';
-            document.body.style.overflowX = previousOverflowX || '';
-        };
-    });
 
     // Scroll handler for parallax
     $effect(() => {
@@ -216,7 +205,7 @@
         </div>
 
         <!-- Horizontal scroll container with smooth scrolling -->
-        <div class="overflow-x-auto scrollbar-hide pb-8 px-2">
+        <div class="overflow-x-auto scrollbar-hide pb-8 px-2 w-full max-w-full">
             <div class="inline-flex items-stretch gap-8 w-max py-4">
                 {#each galleryImages as item (item.src)}
                     <div

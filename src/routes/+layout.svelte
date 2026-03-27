@@ -47,7 +47,7 @@
 <SecurityGuard />
 <Navbar />
 
-<main class="min-h-screen">
+<main class="min-h-screen overflow-x-clip">
   {@render children()}
 </main>
 
