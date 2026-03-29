@@ -1,25 +1,455 @@
 {
+  "common": {
+    "prev": "Zurück",
+    "next": "Weiter",
+    "back": "Zurück",
+    "close": "Schließen",
+    "loading": "Laden..."
+  },
   "nav": {
-    "overview": "Overview",
-    "rooms": "Accommodations",
-    "restaurant": "Restaurant & Bar",
-    "wellness": "Wellness Area",
-    "sport": "Sport",
-    "events": "Events",
-    "experiences": "Experiences",
-    "book": "Book Now"
+    "overview": "Überblick",
+    "rooms": "Unterkünfte",
+    "restaurant": "Alpiner Genuss",
+    "wellness": "Wellness",
+    "sport": "Sport & Outdoor",
+    "experiences": "Gebiet",
+    "book": "Buchen"
+  },
+  "megamenu": {
+    "overview": {
+      "title": "Überblick",
+      "links": [
+        {
+          "name": "Das Hotel",
+          "href": "/struttura"
+        },
+        {
+          "name": "Lage & Umgebung",
+          "href": "/posizione"
+        },
+        {
+          "name": "Kids Club",
+          "href": "/kids-club"
+        },
+        {
+          "name": "Meetings & Events",
+          "href": "/eventi"
+        },
+        {
+          "name": "Nachhaltigkeit",
+          "href": "/sostenibilita"
+        }
+      ],
+      "featured_label": "Im Fokus",
+      "featured_text": "Entdecken Sie den authentischen Charme eines Refugiums auf 1.500 Metern. Eleganz der Einfachheit und Wärme eines familiengeführten Hotels seit 1980.",
+      "featured_cta": "Hotel entdecken"
+    },
+    "rooms": {
+      "title": "Unterkünfte",
+      "links": [
+        {
+          "name": "Doppelzimmer",
+          "href": "/camere/matrimoniale"
+        },
+        {
+          "name": "Dreibettzimmer",
+          "href": "/camere/tripla"
+        },
+        {
+          "name": "Vierbettzimmer Standard",
+          "href": "/camere/quadrupla_standard"
+        },
+        {
+          "name": "Familien-Vierbettzimmer",
+          "href": "/camere/familiare"
+        }
+      ],
+      "featured_label": "Im Fokus",
+      "featured_text": "Räume für Ihre Erholung. Naturholz, alpines Licht und wesentlicher Komfort zur Regeneration nach einem Tag in der Höhe.",
+      "featured_cta": "Alle Zimmer"
+    },
+    "restaurant": {
+      "title": "Alpiner Genuss",
+      "links": [
+        {
+          "name": "Restaurant",
+          "href": "/ristorante"
+        },
+        {
+          "name": "Lounge Bar & Kamin",
+          "href": "/ristorante/lounge-bar"
+        }
+      ],
+      "featured_label": "Im Fokus",
+      "featured_text": "Authentische Aromen des Aostatals. Regionale Rohstoffe, überlieferte Familienrezepte und eine gesellige Atmosphäre.",
+      "featured_cta": "Menü entdecken"
+    },
+    "wellness": {
+      "title": "Wellness",
+      "links": [
+        {
+          "name": "Sportmassagen",
+          "href": "/wellness/massaggi"
+        },
+        {
+          "name": "Körperbehandlungen",
+          "href": "/wellness/trattamenti"
+        },
+        {
+          "name": "Private SPA (Nächtlich)",
+          "href": "/wellness/private-spa"
+        }
+      ],
+      "featured_label": "Im Fokus",
+      "featured_text": "Der Luxus der Stille. Finden Sie Ihr Gleichgewicht mit unseren Wellness-Angeboten und lassen Sie sich von den erfahrenen Händen unserer Therapeuten verwöhnen.",
+      "featured_cta": "Entspannen"
+    },
+    "sport": {
+      "title": "Aktivitäten",
+      "links": [
+        {
+          "name": "Ski & Snowboard (Ski-in)",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "Mountainbike & E-Bike",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "Alm-Trekking",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "Skibox & Verleih",
+          "href": "/sport/noleggio"
+        }
+      ],
+      "featured_label": "Im Fokus",
+      "featured_text": "Das Adrenalin beginnt 20 Meter vor unserer Tür. Direkter Zugang zu den Liften im Winter und endlose Panoramawege im Sommer.",
+      "featured_cta": "Ab nach draußen"
+    },
+    "experiences": {
+      "title": "Das Gebiet",
+      "links": [
+        {
+          "name": "Fontina DOP Verkostung",
+          "href": "/esperienze/degustazione"
+        },
+        {
+          "name": "Nacht-Schneeschuhwandern",
+          "href": "/esperienze/ciaspolate"
+        },
+        {
+          "name": "Yoga in der Höhe",
+          "href": "/esperienze/yoga"
+        },
+        {
+          "name": "Partner-Bergführer",
+          "href": "/esperienze/guide"
+        }
+      ],
+      "featured_label": "Im Fokus",
+      "featured_text": "Kein einfacher Urlaub, sondern eine Sammlung von Erinnerungen. Erkunden Sie die Region durch authentische Aktivitäten im Einklang mit den Rhythmen der Berge.",
+      "featured_cta": "Lassen Sie sich inspirieren"
+    }
+  },
+  "home": {
+    "philosophy_title": "Wir glauben an den Luxus des Wesentlichen, an menschliche Wärme und den Wert entschleunigter Zeit.",
+    "philosophy_text": "Das Hotel du Soleil ist Ihr Basislager auf 1.500 Metern Höhe. Wir haben das Überflüssige eliminiert, um Raum für das Wesentliche zu lassen: Naturholz, authentischer Geschmack alpiner Küche und die Majestät der Natur direkt vor der Tür.",
+    "philosophy_cta": "Hotel entdecken",
+    "rooms_title": "Ruheräume",
+    "rooms_subtitle": "Substanz & Komfort",
+    "experience_title": "Das Alpine Erlebnis",
+    "experience_text": "Unser Versprechen ist eine praktische und herzliche Gastfreundschaft. Vergessen Sie den logistischen Stress und lassen Sie sich von den wahren Aromen unseres Tals verwöhnen.",
+    "feature_access_title": "Direkter Zugang",
+    "feature_access_text": "Nur 20 Meter von den Skiliften und Hauptwanderwegen entfernt. Der Berg beginnt buchstäblich an unserer Tür.",
+    "feature_food_title": "Echte Küche",
+    "feature_food_text": "Halbpension mit Menüs, die die Tradition des Aostatals respektieren. Erstklassige Rohstoffe, mit Sorgfalt überlieferte Rezepte.",
+    "feature_comfort_title": "Logistischer Komfort",
+    "feature_comfort_text": "Hauseigene Tiefgarage, WLAN in Gemeinschaftsbereichen und eine warme Lounge mit Kamin zum Entspannen am Abend.",
+    "rooms_cta": "Details erkunden",
+    "restaurant_section_title": "Alpiner Genuss",
+    "restaurant_section_text": "Authentische Aromen des Aostatals. Regionale Rohstoffe, überlieferte Familienrezepte und eine gesellige Atmosphäre, die nach Zuhause duftet.",
+    "wellness_section_title": "Wellness & Regeneration",
+    "wellness_section_text": "Der Luxus der Stille auf 1.500 Metern. Finden Sie Ihr Gleichgewicht zwischen Sauna, Dampfbad und unserem Ruhebereich mit Blick auf die Gipfel.",
+    "sport_section_title": "Aktivitäten & Outdoor",
+    "sport_section_text": "Das Adrenalin beginnt 20 Meter vor der Tür. Direkter Zugang zu den Liften im Winter und atemberaubende Panoramawege im Sommer."
+  },
+  "struttura": {
+    "subtitle": "Alpine Eleganz",
+    "title": "Das Hotel",
+    "philosophy_title": "Die Wärme des Holzes, die Stärke des Steins.",
+    "philosophy_text": "Das Hotel du Soleil wurde konzipiert, um sich harmonisch in die Landschaft von Torgnon einzufügen. Jedes Detail spiegelt die Tradition des Aostatals wider, modern und funktional neu interpretiert.",
+    "common_spaces_title": "Gemeinschaftsräume",
+    "common_spaces_text": "Von unserer gemütlichen Lobby bis zum Kaminzimmer — jeder Raum ist auf Entspannung und Geselligkeit ausgelegt. Große Fenster öffnen sich zur Bergkulisse und bringen die Majestät der Alpen ins Innere des Hotels.",
+    "amenities": [
+      "Kaminzimmer & Bibliothek",
+      "Panorama-Sonnenterrasse",
+      "Wintergarten"
+    ]
+  },
+  "sostenibilita": {
+    "subtitle": "Im Einklang mit der Natur",
+    "title": "Nachhaltigkeit",
+    "philosophy_title": "Wir respektieren die Berge, wir kümmern uns um die Zukunft.",
+    "philosophy_text": "Wir sind Hüter eines wertvollen und empfindlichen Gebiets. Deshalb setzen wir täglich nachhaltige Praktiken um, die unsere Umweltbelastung reduzieren und die lokale Wirtschaft fördern.",
+    "features": {
+      "energy": {
+        "title": "Saubere Energie",
+        "text": "Solarpanele zur Warmwasserproduktion und energiesparende LED-Beleuchtung."
+      },
+      "plastic": {
+        "title": "Null Plastik",
+        "text": "Wir haben Einweg-Plastikverpackungen zugunsten von Spendern und Glasflaschen abgeschafft."
+      },
+      "water": {
+        "title": "Quellwasser",
+        "text": "Wir schätzen das reine Wasser der Quellen von Torgnon, gefiltert und am Tisch serviert."
+      }
+    }
+  },
+  "wellness": {
+    "main_title": "Alpines Wellness",
+    "main_subtitle": "Regeneration in der Höhe",
+    "spa": {
+      "title": "SPA in der Höhe",
+      "subtitle": "Tiefe Regeneration",
+      "cta": "SPA entdecken"
+    },
+    "massaggi": {
+      "title": "Sportmassagen",
+      "subtitle": "Muskelregeneration",
+      "cta": "Massagen"
+    },
+    "trattamenti": {
+      "title": "Körperbehandlungen",
+      "subtitle": "Alpine Rituale",
+      "cta": "Behandlungen ansehen"
+    },
+    "private_spa": {
+      "title": "Private Nacht-SPA",
+      "subtitle": "Exklusivität & Romantik",
+      "cta": "Privates Erlebnis"
+    }
+  },
+  "sport": {
+    "main_title": "Sport & Outdoor",
+    "main_subtitle": "Den Berg leben",
+    "philosophy_title": "Das Adrenalin beginnt 20 Meter von der Lobby.",
+    "philosophy_text": "Vergessen Sie das Auto. In Torgnon auf 1.500 Metern ist die Natur kein Ziel, sie ist Ihr Ausgangspunkt. Ob Ski-in/Ski-out oder heldenhaftes Trekking — wir bieten Ihnen perfekten Komfort vor und nach dem Abenteuer.",
+    "sci": {
+      "title": "Ski & Snowboard",
+      "subtitle": "Direkter Zugang zum Skigebiet Torgnon. Perfekt präparierte Pisten, atemberaubende Blicke auf das Matterhorn und der Komfort, mit Skiern am Fuß zum Hotel zurückzukehren.",
+      "cta": "Skifahren in Torgnon"
+    },
+    "bike": {
+      "title": "MTB & E-Bike",
+      "subtitle": "Erkunden Sie die Trails des Aostatals auf zwei Rädern. Von adrenalinreichen Strecken für Experten bis zu sanften Panoramawanderungen für Familien.",
+      "cta": "Auf dem Rad"
+    },
+    "trekking": {
+      "title": "Alm-Trekking",
+      "subtitle": "Langsame Erkundung",
+      "cta": "Wanderwege"
+    },
+    "noleggio": {
+      "title": "Skibox & Verleih",
+      "subtitle": "Praktische & sichere Services",
+      "cta": "Ski-Services"
+    }
+  },
+  "experiences": {
+    "main_title": "Alpine Erlebnisse",
+    "main_subtitle": "Authentische Erinnerungen",
+    "degustazione": {
+      "title": "Fontina DOP",
+      "subtitle": "Gastronomisches Erlebnis",
+      "cta": "Verkostung"
+    },
+    "ciaspolate": {
+      "title": "Nacht-Schneeschuhwandern",
+      "subtitle": "Die Magie der Nacht",
+      "cta": "Nachtausflüge"
+    },
+    "yoga": {
+      "title": "Yoga in der Höhe",
+      "subtitle": "Innere Balance",
+      "cta": "Yoga-Stunden"
+    },
+    "guide": {
+      "title": "Partner-Bergführer",
+      "subtitle": "Bergexperten",
+      "cta": "Guides kontaktieren"
+    }
+  },
+  "meteo": {
+    "title": "Wetter & Schneebericht",
+    "subtitle": "Torgnon — Aostatal",
+    "status_open": "Lifte geöffnet",
+    "current_conditions": "Aktuelle Bedingungen",
+    "feels_like": "Gefühlt",
+    "wind": "Wind",
+    "visibility": "Sichtweite",
+    "uv_index": "UV-Index",
+    "snow_report": "Schneebericht",
+    "snow_depth_base": "Schneehöhe (Tal)",
+    "snow_depth_top": "Schneehöhe (Berg)",
+    "snow_quality": "Qualität",
+    "last_snowfall": "Letzter Schneefall",
+    "slopes_lifts": "Pisten & Lifte",
+    "slopes_open": "Pisten geöffnet",
+    "lifts_running": "Lifte in Betrieb",
+    "webcam_title": "360°-Panorama-Webcam Live",
+    "fullscreen": "Vollbild",
+    "activate_stream": "Live-Stream aktivieren"
+  },
+  "termini": {
+    "title": "Geschäftsbedingungen",
+    "updated": "Letzte Aktualisierung: März 2026",
+    "section1_title": "1. Buchungen und Zahlungen",
+    "section1_text": "Buchungen über die Website oder direkte Kanäle werden nach Erhalt einer Anzahlung von 30% des Gesamtaufenthalts bestätigt. Der Restbetrag wird im Hotel beim Check-out bezahlt.",
+    "section2_title": "2. Stornierungsbedingungen",
+    "section2_text": "Kostenlose Stornierung bis 14 Tage vor Anreise. Bei verspäteter Stornierung oder Nichterscheinen wird die Anzahlung nicht erstattet.",
+    "section3_title": "3. Check-in und Check-out Zeiten",
+    "section3_text": "Die Zimmer stehen ab 14:00 Uhr am Anreisetag zur Verfügung. Der Check-out muss bis 10:30 Uhr am Abreisetag erfolgen."
+  },
+  "rooms_data": {
+    "matrimoniale": {
+      "name": "Doppelzimmer",
+      "description": "Unser Doppelzimmer in Torgnon bietet ein schlichtes, warmes und funktionales Refugium, perfekt für Paare oder Skifahrer. Die traditionelle Massivholzmöblierung verbindet die Wärme klassischen Designs mit einem außergewöhnlichen Blick auf die umliegenden Gipfel."
+    },
+    "tripla": {
+      "name": "Dreibettzimmer",
+      "description": "Unser Dreibettzimmer in Torgnon ist die ideale Lösung für alle, die einen Bergurlaub im Aostatal suchen, ohne auf Platz zu verzichten. Mit einer Fläche von bis zu 20 m² bieten diese Zimmer eine Atmosphäre der Ruhe."
+    },
+    "quadrupla_standard": {
+      "name": "Vierbettzimmer Standard",
+      "description": "Vierbettzimmer in Torgnon: Der ideale Raum für Ihre Familie. Wenn Sie einen Familienurlaub im Aostatal planen, bieten unsere Vierbettzimmer das perfekte Refugium."
+    },
+    "familiare": {
+      "name": "Familien-Vierbettzimmer",
+      "description": "Die exklusivste Unterkunft für maximalen Familienkomfort in den Bergen. Großzügige Räume und Premium-Ausstattung."
+    }
   },
   "hero": {
-    "title": "Your Refuge <br/> in Silence.",
-    "subtitle": "Torgnon, Aosta Valley"
+    "title": "Ihr Refugium <br/> in der Stille.",
+    "subtitle": "Torgnon, Aostatal"
   },
   "booking": {
-    "arrival": "Arrival",
-    "departure": "Departure",
-    "guests": "Guests",
-    "check": "Check",
-    "adults": "Adults",
-    "children": "Children"
+    "arrival": "Anreise",
+    "departure": "Abreise",
+    "guests": "Gäste",
+    "check": "Prüfen",
+    "adults": "Erwachsene",
+    "children": "Kinder",
+    "title": "Buchen Sie Ihren Aufenthalt",
+    "best_rate": "Bestpreisgarantie",
+    "select_dates": "Daten auswählen",
+    "guests_label": "Gäste"
+  },
+  "rooms": {
+    "title": "Unterkünfte",
+    "main_title": "Unsere Zimmer",
+    "back_link": "Alle Unterkünfte",
+    "description_label": "Beschreibung",
+    "amenities_label": "Inklusivleistungen"
+  },
+  "posizione": {
+    "subtitle": "Im Herzen von Torgnon",
+    "title": "Lage",
+    "philosophy_title": "Wo die Straße endet, beginnt der Berg.",
+    "philosophy_text": "Auf 1.500 Metern Höhe gelegen, überblickt das Hotel du Soleil das Matterhorn-Tal. Ein leicht erreichbares, doch wunderbar abgeschiedenes Refugium vom Alltag.",
+    "arrival_title": "Ihr Basislager",
+    "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Im Ortszentrum gelegen, bieten wir eine hauseigene Tiefgarage und die unglaubliche Bequemlichkeit der Skilifte direkt vor der Tür.",
+    "maps_cta": "Auf Google Maps öffnen",
+    "directions_title": "Anreise",
+    "by_car_title": "Mit dem Auto",
+    "by_car_text": "Autobahn A5 Turin-Aosta, Ausfahrt Châtillon-Saint-Vincent. Weiter auf der SR 9 Richtung Valtournenche, dann Abzweigung nach Torgnon (ca. 20 Min. ab Ausfahrt).",
+    "by_train_title": "Mit dem Zug",
+    "by_train_text": "Bahnhof Châtillon-Saint-Vincent. Von dort direkter SAVDA-Busservice nach Torgnon oder mit dem Hotel vereinbarter Taxiservice.",
+    "by_plane_title": "Mit dem Flugzeug",
+    "by_plane_text": "Die nächsten Flughäfen sind Turin Caselle (110 km), Mailand Malpensa (170 km) und Genf (180 km). Privattransfers auf Anfrage.",
+    "distances_title": "Sehenswürdigkeiten",
+    "dist_ski": "Skilifte (Ski-in/Ski-out)",
+    "dist_cervinia": "Breuil-Cervinia",
+    "dist_aosta": "Aosta (Altstadt)",
+    "dist_milano": "Mailand"
+  },
+  "footer": {
+    "description": "Ein stilles Refugium im Herzen von Torgnon. Substanz, Eleganz und die Wärme des Aostatals seit 1980.",
+    "contacts_title": "Kontakt",
+    "explore_title": "Entdecken",
+    "links": {
+      "structure": "Das Hotel",
+      "rooms": "Die Zimmer",
+      "restaurant": "Das Restaurant",
+      "terms": "Geschäftsbedingungen",
+      "policy": "Aufenthaltsbedingungen",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "rights": "© 2026 Futuro srl - Hotel du Soleil. Alle Rechte vorbehalten.",
+    "made_by": "mit ❤️ gemacht von CB"
+  },
+  "kids_club": {
+    "title": "Kids Club",
+    "subtitle": "Spaß in der Höhe",
+    "description": "Ein Bereich für unsere jüngsten Gäste, wo der Fantasie keine Grenzen gesetzt sind. Spiele, kreative Aktivitäten und qualifizierte Betreuung, damit sich die Eltern entspannen können."
+  },
+  "eventi": {
+    "title": "Meetings & Events",
+    "subtitle": "Vielseitige Räume",
+    "description": "Die ideale Umgebung für Ihre Geschäftstreffen oder privaten Veranstaltungen. Ausgestattete Räume, Panoramablick und ein exzellenter Catering-Service unseres Restaurants."
+  },
+  "policy": {
+    "title": "Aufenthaltsbedingungen",
+    "updated": "Letzte Aktualisierung: März 2026",
+    "rooms_title": "Zimmer & Suiten",
+    "rooms_intro": "Die Preise sind in Euro angegeben, zuzüglich kommunaler Kurtaxe. Preise und Kurtaxe können sich ohne Vorankündigung gemäß lokaler Vorschriften ändern. Die Kurtaxe gilt nicht für Kinder unter 14 Jahren.",
+    "included_title": "Die Tagespreise verstehen sich pro Zimmer und beinhalten",
+    "included_items": [
+      "Highspeed-Glasfaser-WLAN in der gesamten Anlage.",
+      "Satelliten-Flachbild-TV.",
+      "Eigene Skibox zur Aufbewahrung der Skiausrüstung (20 m von den Liften).",
+      "MwSt. 10%."
+    ],
+    "tariffe_note": "Die Tarife beinhalten außerdem: Zugang zum Lounge-Bereich mit Kamin und unmittelbare Nähe zu Skiliften und Wanderwegen von Torgnon.",
+    "colazione": "Frühstück: Bei Buchung vor Ort beträgt der Frühstückspreis für Übernachtungstarife € 15,00 p.P.",
+    "mezza_pensione": "Halbpension: Beinhaltet ein typisches Aostatal-Abendessen (Getränke ausgenommen, sofern in Gruppenpaketen nicht anders angegeben).",
+    "checkin_checkout": "Check-in: ab 15:30 Uhr; Check-out: bis 10:30 Uhr.",
+    "cancel_title": "Stornierungsbedingungen & Anzahlung",
+    "cancel_intro": "Zur endgültigen Bestätigung der Buchung ist eine Anzahlung von 30% des Gesamtaufenthalts (oder der ersten Nacht bei Kurzaufenthalten) erforderlich.",
+    "cancel_rules": [
+      {
+        "label": "Kostenlose Stornierung",
+        "text": "Bis 14 Tage vor dem geplanten Anreisedatum wird die Anzahlung vollständig erstattet (abzüglich eventueller Bankgebühren)."
+      },
+      {
+        "label": "Späte Stornierung (14 bis 7 Tage vorher)",
+        "text": "Die Anzahlung wird nicht erstattet, kann aber in einen gleichwertigen Gutschein umgewandelt werden, einlösbar innerhalb von 6 Monaten (vorbehaltlich Verfügbarkeit)."
+      },
+      {
+        "label": "Stornierung unter 7 Tagen oder Nichterscheinen",
+        "text": "Die Anzahlung wird vollständig als Entschädigung einbehalten."
+      },
+      {
+        "label": "Vorzeitige Abreise",
+        "text": "Bei vorzeitiger Abreise wird der Gesamtbetrag der verbleibenden Nächte berechnet (nur Übernachtung)."
+      }
+    ],
+    "family_title": "Familien-Vierbettzimmer (Apartments)",
+    "family_items": [
+      "Unterkunft in zwei getrennten Bereichen.",
+      "Täglicher Zimmerservice zwischen 08:30 und 12:30 Uhr.",
+      "Prioritärer Zugang zur hauseigenen Tiefgarage (auf Reservierung, Aufpreis möglich).",
+      "Reservierte Skibox wenige Schritte von der Gondel-Talstation.",
+      "MwSt. 10%."
+    ],
+    "groups_title": "Mehrfachbuchungen & Gruppen",
+    "groups_text": "Bei Buchungen ab 4 Zimmern (organisierte Gruppen, Vereine oder gemeinsam reisende Buchungen) gelten individuelle Anzahlungs- und Stornierungsbedingungen, die per E-Mail zusammen mit dem Angebot versendet werden. Für Gruppen ist in der Regel eine kostenlose Stornierung bis 30 Tage vor Anreise möglich.",
+    "parking_title": "Logistik & Parken",
+    "parking_text": "Das Hotel du Soleil verfügt über eine beheizte Tiefgarage. Aus Sicherheitsgründen und zur Platzoptimierung werden Gäste gebeten, ihre Fahrzeugschlüssel für die Dauer des Aufenthalts an der Rezeption zu hinterlegen. Alternativ steht ca. 100 Meter entfernt ein kostenloser öffentlicher Parkplatz zur Verfügung.",
+    "images_title": "Hinweis zu den Bildern",
+    "images_text": "Die Zimmerbilder auf der Website dienen der Illustration. Einige Designelemente, Holzverarbeitungen und Möbelanordnungen können innerhalb derselben Zimmerkategorie variieren, wobei der versprochene Standard und die Leistungen gewährleistet bleiben."
   },
   "cookie_policy": {
     "title": "Cookie-Richtlinie",

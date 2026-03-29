@@ -1,25 +1,455 @@
 {
+  "common": {
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "close": "Cerrar",
+    "loading": "Cargando..."
+  },
   "nav": {
-    "overview": "Overview",
-    "rooms": "Accommodations",
-    "restaurant": "Restaurant & Bar",
-    "wellness": "Wellness Area",
-    "sport": "Sport",
-    "events": "Events",
-    "experiences": "Experiences",
-    "book": "Book Now"
+    "overview": "Panorámica",
+    "rooms": "Alojamientos",
+    "restaurant": "Sabor Alpino",
+    "wellness": "Wellness",
+    "sport": "Deporte y Outdoor",
+    "experiences": "Territorio",
+    "book": "Reservar"
+  },
+  "megamenu": {
+    "overview": {
+      "title": "Panorámica",
+      "links": [
+        {
+          "name": "El Hotel",
+          "href": "/struttura"
+        },
+        {
+          "name": "Ubicación y Alrededores",
+          "href": "/posizione"
+        },
+        {
+          "name": "Kids Club",
+          "href": "/kids-club"
+        },
+        {
+          "name": "Reuniones y Eventos",
+          "href": "/eventi"
+        },
+        {
+          "name": "Sostenibilidad",
+          "href": "/sostenibilita"
+        }
+      ],
+      "featured_label": "Destacado",
+      "featured_text": "Descubra el encanto auténtico de un refugio a 1.500 metros. La elegancia de la simplicidad y la calidez de un hotel familiar desde 1980.",
+      "featured_cta": "Descubrir el Hotel"
+    },
+    "rooms": {
+      "title": "Alojamientos",
+      "links": [
+        {
+          "name": "Habitación Doble",
+          "href": "/camere/matrimoniale"
+        },
+        {
+          "name": "Habitación Triple",
+          "href": "/camere/tripla"
+        },
+        {
+          "name": "Cuádruple Estándar",
+          "href": "/camere/quadrupla_standard"
+        },
+        {
+          "name": "Cuádruple Familiar",
+          "href": "/camere/familiare"
+        }
+      ],
+      "featured_label": "Destacado",
+      "featured_text": "Espacios diseñados para su descanso. Madera natural, luz alpina y confort esencial para regenerarse tras un día en las alturas.",
+      "featured_cta": "Todas las habitaciones"
+    },
+    "restaurant": {
+      "title": "Sabor Alpino",
+      "links": [
+        {
+          "name": "Restaurante",
+          "href": "/ristorante"
+        },
+        {
+          "name": "Lounge Bar y Chimenea",
+          "href": "/ristorante/lounge-bar"
+        }
+      ],
+      "featured_label": "Destacado",
+      "featured_text": "Sabores auténticos del Valle de Aosta. Materias primas de km 0, recetas familiares transmitidas con esmero y una atmósfera acogedora.",
+      "featured_cta": "Descubrir el menú"
+    },
+    "wellness": {
+      "title": "Wellness",
+      "links": [
+        {
+          "name": "Masajes Deportivos",
+          "href": "/wellness/massaggi"
+        },
+        {
+          "name": "Tratamientos Corporales",
+          "href": "/wellness/trattamenti"
+        },
+        {
+          "name": "SPA Privado (Nocturno)",
+          "href": "/wellness/private-spa"
+        }
+      ],
+      "featured_label": "Destacado",
+      "featured_text": "El lujo del silencio. Encuentre su equilibrio con nuestros recorridos de bienestar y déjese mimar por las manos expertas de nuestros terapeutas.",
+      "featured_cta": "Relajarse"
+    },
+    "sport": {
+      "title": "Actividades",
+      "links": [
+        {
+          "name": "Esquí y Snowboard (Ski-in)",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "Bicicleta de Montaña y E-Bike",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "Trekking en los Alpes",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "Ski Box y Alquiler",
+          "href": "/sport/noleggio"
+        }
+      ],
+      "featured_label": "Destacado",
+      "featured_text": "La adrenalina comienza a 20 metros de nuestra puerta. Acceso directo a los remontes en invierno y senderos panorámicos infinitos en verano.",
+      "featured_cta": "Al aire libre"
+    },
+    "experiences": {
+      "title": "El Territorio",
+      "links": [
+        {
+          "name": "Degustación Fontina DOP",
+          "href": "/esperienze/degustazione"
+        },
+        {
+          "name": "Raquetas de Nieve Nocturnas",
+          "href": "/esperienze/ciaspolate"
+        },
+        {
+          "name": "Yoga en Altura",
+          "href": "/esperienze/yoga"
+        },
+        {
+          "name": "Guías Alpinos Asociados",
+          "href": "/esperienze/guide"
+        }
+      ],
+      "featured_label": "Destacado",
+      "featured_text": "No unas simples vacaciones, sino una colección de recuerdos. Explore el territorio a través de actividades auténticas, en armonía con los ritmos de la montaña.",
+      "featured_cta": "Déjese inspirar"
+    }
+  },
+  "home": {
+    "philosophy_title": "Creemos en el lujo de lo esencial, en la calidez humana y en el valor del tiempo pausado.",
+    "philosophy_text": "El Hotel du Soleil es su campamento base a 1.500 metros de altitud. Hemos eliminado lo superfluo para dejar espacio a lo que realmente importa: la madera natural, el sabor auténtico de la cocina alpina y la majestuosidad de la naturaleza al otro lado de la puerta.",
+    "philosophy_cta": "Explorar el Hotel",
+    "rooms_title": "Espacios de Descanso",
+    "rooms_subtitle": "Sustancia y Confort",
+    "experience_title": "La Experiencia Alpina",
+    "experience_text": "Nuestra promesa es una hospitalidad práctica y cálida. Olvide el estrés logístico y déjese conquistar por los verdaderos sabores de nuestro valle.",
+    "feature_access_title": "Acceso Directo",
+    "feature_access_text": "A solo 20 metros de los remontes y senderos principales. La montaña comienza literalmente en nuestra puerta.",
+    "feature_food_title": "Gastronomía Auténtica",
+    "feature_food_text": "La media pensión ofrece menús que respetan la tradición del Valle de Aosta. Materias primas excelentes, recetas transmitidas con esmero.",
+    "feature_comfort_title": "Confort Logístico",
+    "feature_comfort_text": "Garaje cubierto propio, Wi-Fi en zonas comunes y un cálido salón con chimenea para relajarse al final del día.",
+    "rooms_cta": "Explorar Detalles",
+    "restaurant_section_title": "Sabor Alpino",
+    "restaurant_section_text": "Sabores auténticos del Valle de Aosta. Materias primas de km 0, recetas familiares transmitidas con esmero y una atmósfera acogedora que huele a hogar.",
+    "wellness_section_title": "Wellness y Regeneración",
+    "wellness_section_text": "El lujo del silencio a 1.500 metros. Encuentre su equilibrio entre sauna, baño turco y nuestra zona de relax con vistas a las cumbres.",
+    "sport_section_title": "Actividades y Outdoor",
+    "sport_section_text": "La adrenalina comienza a 20 metros de la puerta. Acceso directo a los remontes en invierno y senderos panorámicos impresionantes en verano."
+  },
+  "struttura": {
+    "subtitle": "Elegancia Alpina",
+    "title": "El Hotel",
+    "philosophy_title": "La calidez de la madera, la fuerza de la piedra.",
+    "philosophy_text": "El Hotel du Soleil fue concebido para integrarse armoniosamente en el paisaje de Torgnon. Cada detalle refleja la tradición del Valle de Aosta, reinterpretada con un gusto moderno y funcional.",
+    "common_spaces_title": "Espacios Comunes",
+    "common_spaces_text": "Desde nuestro acogedor vestíbulo hasta la sala de la chimenea, cada espacio está diseñado para fomentar la relajación y la convivencia. Grandes ventanales se abren al panorama circundante, trayendo la majestuosidad de los Alpes al interior del hotel.",
+    "amenities": [
+      "Sala de Chimenea y Biblioteca",
+      "Terraza Solárium Panorámica",
+      "Jardín de Invierno"
+    ]
+  },
+  "sostenibilita": {
+    "subtitle": "En Armonía con el Medio Ambiente",
+    "title": "Sostenibilidad",
+    "philosophy_title": "Respetamos la montaña, cuidamos el futuro.",
+    "philosophy_text": "Somos guardianes de un territorio precioso y frágil. Por ello, adoptamos diariamente prácticas sostenibles que reducen nuestro impacto ambiental y promueven la economía local.",
+    "features": {
+      "energy": {
+        "title": "Energía Limpia",
+        "text": "Paneles solares para la producción de agua caliente e iluminación LED de bajo consumo."
+      },
+      "plastic": {
+        "title": "Cero Plástico",
+        "text": "Hemos eliminado los envases plásticos de un solo uso en favor de dispensadores y botellas de vidrio."
+      },
+      "water": {
+        "title": "Agua de Manantial",
+        "text": "Valoramos el agua pura de los manantiales de Torgnon, filtrada y servida en mesa."
+      }
+    }
+  },
+  "wellness": {
+    "main_title": "Bienestar Alpino",
+    "main_subtitle": "Regeneración en Altura",
+    "spa": {
+      "title": "SPA en Altura",
+      "subtitle": "Regeneración Profunda",
+      "cta": "Descubrir el SPA"
+    },
+    "massaggi": {
+      "title": "Masajes Deportivos",
+      "subtitle": "Recuperación Muscular",
+      "cta": "Masajes"
+    },
+    "trattamenti": {
+      "title": "Tratamientos Corporales",
+      "subtitle": "Rituales Alpinos",
+      "cta": "Ver Tratamientos"
+    },
+    "private_spa": {
+      "title": "SPA Privado Nocturno",
+      "subtitle": "Exclusividad y Romanticismo",
+      "cta": "Experiencia Privada"
+    }
+  },
+  "sport": {
+    "main_title": "Deporte y Outdoor",
+    "main_subtitle": "Vive la Montaña",
+    "philosophy_title": "La adrenalina comienza a 20 metros del vestíbulo.",
+    "philosophy_text": "Olvide el coche. En Torgnon, a 1.500 metros, la naturaleza no es un destino, es su punto de partida. Ya sea esquí-in/esquí-out o trekking heroico, le ofrecemos el confort perfecto antes y después de la aventura.",
+    "sci": {
+      "title": "Esquí y Snowboard",
+      "subtitle": "Acceso directo al dominio esquiable de Torgnon. Pistas perfectamente preparadas, vistas impresionantes del Cervino y la comodidad de volver al hotel con los esquís puestos.",
+      "cta": "Esquiar en Torgnon"
+    },
+    "bike": {
+      "title": "MTB y E-Bike",
+      "subtitle": "Explore los senderos del Valle de Aosta sobre dos ruedas. Desde rutas de adrenalina para expertos hasta suaves paseos panorámicos para familias.",
+      "cta": "En Bicicleta"
+    },
+    "trekking": {
+      "title": "Trekking en los Alpes",
+      "subtitle": "Exploración Pausada",
+      "cta": "Rutas de Trekking"
+    },
+    "noleggio": {
+      "title": "Ski Box y Alquiler",
+      "subtitle": "Servicios Prácticos y Seguros",
+      "cta": "Servicios de Esquí"
+    }
+  },
+  "experiences": {
+    "main_title": "Experiencias Alpinas",
+    "main_subtitle": "Recuerdos Auténticos",
+    "degustazione": {
+      "title": "Fontina DOP",
+      "subtitle": "Experiencia Gastronómica",
+      "cta": "Degustación"
+    },
+    "ciaspolate": {
+      "title": "Raquetas de Nieve Nocturnas",
+      "subtitle": "La Magia de la Noche",
+      "cta": "Excursiones Nocturnas"
+    },
+    "yoga": {
+      "title": "Yoga en Altura",
+      "subtitle": "Equilibrio Interior",
+      "cta": "Clases de Yoga"
+    },
+    "guide": {
+      "title": "Guías Alpinos Asociados",
+      "subtitle": "Expertos de Montaña",
+      "cta": "Contactar Guías"
+    }
+  },
+  "meteo": {
+    "title": "Tiempo y Parte de Nieve",
+    "subtitle": "Torgnon — Valle de Aosta",
+    "status_open": "Remontes Abiertos",
+    "current_conditions": "Condiciones Actuales",
+    "feels_like": "Sensación Térmica",
+    "wind": "Viento",
+    "visibility": "Visibilidad",
+    "uv_index": "Índice UV",
+    "snow_report": "Parte de Nieve",
+    "snow_depth_base": "Espesor de Nieve (Base)",
+    "snow_depth_top": "Espesor de Nieve (Cima)",
+    "snow_quality": "Calidad",
+    "last_snowfall": "Última Nevada",
+    "slopes_lifts": "Pistas y Remontes",
+    "slopes_open": "Pistas Abiertas",
+    "lifts_running": "Remontes en Funcionamiento",
+    "webcam_title": "Webcam Panorámica 360° en Directo",
+    "fullscreen": "Pantalla Completa",
+    "activate_stream": "Activar Streaming en Directo"
+  },
+  "termini": {
+    "title": "Términos y Condiciones",
+    "updated": "Última actualización: Marzo 2026",
+    "section1_title": "1. Reservas y Pagos",
+    "section1_text": "Las reservas realizadas a través del sitio web o canales directos se confirman tras recibir un depósito del 30% del total de la estancia. El saldo se abonará en el hotel en el momento del check-out.",
+    "section2_title": "2. Política de Cancelación",
+    "section2_text": "Cancelación gratuita hasta 14 días antes de la llegada. En caso de cancelación tardía o no presentación, el depósito no será reembolsado.",
+    "section3_title": "3. Horarios de Check-in y Check-out",
+    "section3_text": "Las habitaciones están disponibles a partir de las 14:00 del día de llegada. El check-out debe realizarse antes de las 10:30 del día de salida."
+  },
+  "rooms_data": {
+    "matrimoniale": {
+      "name": "Habitación Doble",
+      "description": "Nuestra habitación doble en Torgnon ofrece un refugio sencillo, cálido y funcional, perfecto para parejas o esquiadores. Con mobiliario tradicional de madera maciza, fusiona la calidez del diseño clásico con unas vistas extraordinarias a las cumbres circundantes."
+    },
+    "tripla": {
+      "name": "Habitación Triple",
+      "description": "Nuestra habitación triple en Torgnon es la solución ideal para quienes buscan vacaciones en montaña en el Valle de Aosta sin renunciar al espacio. Con hasta 20 m², ofrece una atmósfera de tranquilidad."
+    },
+    "quadrupla_standard": {
+      "name": "Cuádruple Estándar",
+      "description": "Habitación cuádruple en Torgnon: el espacio ideal para su familia. Si planea unas vacaciones familiares en el Valle de Aosta, nuestras habitaciones cuádruples ofrecen el refugio perfecto."
+    },
+    "familiare": {
+      "name": "Cuádruple Familiar",
+      "description": "El alojamiento más exclusivo, diseñado para el máximo confort familiar en la montaña. Espacios amplios y acabados premium."
+    }
   },
   "hero": {
-    "title": "Your Refuge <br/> in Silence.",
-    "subtitle": "Torgnon, Aosta Valley"
+    "title": "Su Refugio <br/> en el Silencio.",
+    "subtitle": "Torgnon, Valle de Aosta"
   },
   "booking": {
-    "arrival": "Arrival",
-    "departure": "Departure",
-    "guests": "Guests",
-    "check": "Check",
-    "adults": "Adults",
-    "children": "Children"
+    "arrival": "Llegada",
+    "departure": "Salida",
+    "guests": "Huéspedes",
+    "check": "Comprobar",
+    "adults": "Adultos",
+    "children": "Niños",
+    "title": "Reserve su estancia",
+    "best_rate": "Mejor Tarifa Garantizada",
+    "select_dates": "Seleccionar Fechas",
+    "guests_label": "Huéspedes"
+  },
+  "rooms": {
+    "title": "Alojamientos",
+    "main_title": "Nuestras Habitaciones",
+    "back_link": "Todos los alojamientos",
+    "description_label": "Descripción",
+    "amenities_label": "Servicios incluidos"
+  },
+  "posizione": {
+    "subtitle": "En el Corazón de Torgnon",
+    "title": "Ubicación",
+    "philosophy_title": "Donde la carretera termina, comienza la montaña.",
+    "philosophy_text": "Situado a 1.500 metros de altitud, el Hotel du Soleil domina el valle del Cervino. Un refugio fácilmente accesible pero maravillosamente aislado del caos cotidiano.",
+    "arrival_title": "Su Campamento Base",
+    "arrival_text": "Piazza Frutaz 30, Torgnon (AO). En el centro del pueblo, ofrecemos garaje cubierto propio y la increíble comodidad de tener los remontes a pasos del vestíbulo.",
+    "maps_cta": "Abrir en Google Maps",
+    "directions_title": "Cómo Llegar",
+    "by_car_title": "En Coche",
+    "by_car_text": "Autopista A5 Turín-Aosta, salida Châtillon-Saint-Vincent. Continuar por la SR 9 dirección Valtournenche, luego girar hacia Torgnon (unos 20 min desde la salida).",
+    "by_train_title": "En Tren",
+    "by_train_text": "Estación de Châtillon-Saint-Vincent. Desde allí, servicio de autobús directo SAVDA a Torgnon o taxi concertado con el hotel.",
+    "by_plane_title": "En Avión",
+    "by_plane_text": "Los aeropuertos más cercanos son Turín Caselle (110 km), Milán Malpensa (170 km) y Ginebra (180 km). Organizamos traslados privados bajo petición.",
+    "distances_title": "Puntos de Interés",
+    "dist_ski": "Remontes (Ski-in/Ski-out)",
+    "dist_cervinia": "Breuil-Cervinia",
+    "dist_aosta": "Aosta (Centro Histórico)",
+    "dist_milano": "Milán"
+  },
+  "footer": {
+    "description": "Un refugio silencioso en el corazón de Torgnon. Sustancia, elegancia y la calidez del Valle de Aosta desde 1980.",
+    "contacts_title": "Contacto",
+    "explore_title": "Explorar",
+    "links": {
+      "structure": "El Hotel",
+      "rooms": "Las Habitaciones",
+      "restaurant": "El Restaurante",
+      "terms": "Términos y Condiciones",
+      "policy": "Política de Estancia",
+      "cookies": "Política de Cookies"
+    },
+    "rights": "© 2026 Futuro srl - Hotel du Soleil. Todos los derechos reservados.",
+    "made_by": "hecho con ❤️ por CB"
+  },
+  "kids_club": {
+    "title": "Kids Club",
+    "subtitle": "Diversión en las Alturas",
+    "description": "Un espacio dedicado a nuestros huéspedes más jóvenes, donde la imaginación no tiene límites. Juegos, actividades creativas y asistencia cualificada para que los padres se relajen."
+  },
+  "eventi": {
+    "title": "Reuniones y Eventos",
+    "subtitle": "Espacios Versátiles",
+    "description": "El entorno ideal para sus reuniones de trabajo o eventos privados. Salas equipadas, vistas panorámicas y un servicio de catering de excelencia a cargo de nuestro restaurante."
+  },
+  "policy": {
+    "title": "Política de Estancia y Condiciones",
+    "updated": "Última actualización: Marzo 2026",
+    "rooms_title": "Habitaciones y Suites",
+    "rooms_intro": "Los precios están expresados en euros y se aplica la tasa turística municipal. Tenga en cuenta que las tarifas y la tasa turística pueden variar sin previo aviso según las disposiciones locales. La tasa turística no se aplica a menores de 14 años.",
+    "included_title": "Los precios diarios son por habitación e incluyen",
+    "included_items": [
+      "Wi-Fi de fibra óptica de alta velocidad en toda la propiedad.",
+      "TV por satélite de pantalla plana.",
+      "Ski-box dedicado para el almacenamiento de equipos (situado a 20 m de los remontes).",
+      "IVA 10%."
+    ],
+    "tariffe_note": "Las tarifas también incluyen: acceso a la zona lounge con chimenea y proximidad inmediata a remontes y rutas de senderismo de Torgnon.",
+    "colazione": "Desayuno: Si se adquiere in situ, el coste del desayuno para tarifas de solo alojamiento es de 15,00 € por persona.",
+    "mezza_pensione": "Media Pensión: Incluye cena típica del Valle de Aosta (bebidas no incluidas, salvo indicación contraria en paquetes de grupo).",
+    "checkin_checkout": "Hora de check-in: a partir de las 15:30; hora de check-out: hasta las 10:30.",
+    "cancel_title": "Política de Cancelación y Depósito",
+    "cancel_intro": "Para confirmar definitivamente la reserva, se requiere un depósito del 30% del total de la estancia (o de la primera noche para estancias cortas).",
+    "cancel_rules": [
+      {
+        "label": "Cancelación gratuita",
+        "text": "Hasta 14 días antes de la fecha prevista de llegada, el depósito se devuelve íntegramente (descontando posibles gastos bancarios)."
+      },
+      {
+        "label": "Cancelación tardía (de 14 a 7 días antes)",
+        "text": "El depósito no se devuelve, pero puede convertirse en un vale de igual valor, utilizable para una futura estancia en un plazo de 6 meses (sujeto a disponibilidad)."
+      },
+      {
+        "label": "Cancelación con menos de 7 días o No-Show",
+        "text": "El depósito se retiene íntegramente como indemnización."
+      },
+      {
+        "label": "Salida anticipada",
+        "text": "En caso de salida anticipada, se cobrará el importe total de las noches restantes (solo alojamiento)."
+      }
+    ],
+    "family_title": "Cuádruples Familiares (Apartamentos)",
+    "family_items": [
+      "Alojamiento en dos estancias separadas.",
+      "Servicio diario de limpieza entre las 08:30 y las 12:30.",
+      "Acceso prioritario al garaje cubierto interior (con reserva, posible suplemento).",
+      "Ski-box reservado a pocos pasos de la telecabina.",
+      "IVA 10%."
+    ],
+    "groups_title": "Reservas Múltiples y Grupos",
+    "groups_text": "Para reservas de 4 o más habitaciones (grupos organizados, clubs o reservas conjuntas), el hotel aplicará condiciones de depósito y cancelación personalizadas que se enviarán por correo electrónico. Generalmente, para grupos la cancelación gratuita es posible hasta 30 días antes de la llegada.",
+    "parking_title": "Logística y Aparcamiento",
+    "parking_text": "El Hotel du Soleil dispone de un garaje cubierto climatizado. Por razones de seguridad, se solicita a los huéspedes que dejen las llaves del vehículo en recepción durante toda la estancia. Alternativamente, hay un aparcamiento público gratuito a unos 100 metros.",
+    "images_title": "Nota sobre las imágenes",
+    "images_text": "Las imágenes de las habitaciones en el sitio web son orientativas. Algunos elementos de diseño, acabados de madera y disposición del mobiliario pueden variar dentro de la misma categoría de habitación, manteniendo el estándar y los servicios prometidos."
   },
   "cookie_policy": {
     "title": "Política de Cookies",
@@ -31,13 +461,13 @@
     "essential_title": "Cookies Esenciales",
     "essential_text": "Estas cookies son necesarias para que el sitio web funcione correctamente. Permiten funcionalidades básicas como la navegación de páginas, el acceso a áreas seguras y las características fundamentales del sitio.",
     "analytics_title": "Cookies Analíticas",
-    "analytics_text": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima. Esto nos ayuda a mejorar el rendimiento y la experiencia del usuario de nuestro sitio web.",
+    "analytics_text": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima. Esto nos ayuda a mejorar el rendimiento y la experiencia del usuario.",
     "functional_title": "Cookies Funcionales",
     "functional_text": "Estas cookies permiten que el sitio web proporcione funcionalidad mejorada y personalización. Pueden ser configuradas por nosotros o por proveedores terceros cuyos servicios hemos agregado a nuestras páginas.",
     "manage_title": "Cómo Gestionar las Cookies",
     "manage_text": "Puede controlar y gestionar las cookies de varias maneras. La mayoría de los navegadores web le permiten controlar las cookies a través de las preferencias de configuración.",
     "browser_title": "Configuración del Navegador",
-    "browser_text": "Puede configurar su navegador para que rechace todas o algunas cookies del navegador, o para que le alerte cuando los sitios web configuren o accedan a las cookies. Si deshabilita o rechaza las cookies, tenga en cuenta que algunas partes de este sitio web pueden volverse inaccesibles o no funcionar correctamente.",
+    "browser_text": "Puede configurar su navegador para que rechace todas o algunas cookies, o para que le alerte cuando los sitios web configuren o accedan a las cookies. Si deshabilita o rechaza las cookies, tenga en cuenta que algunas partes de este sitio web pueden volverse inaccesibles o no funcionar correctamente.",
     "contact_title": "Contáctenos",
     "contact_text": "Si tiene alguna pregunta sobre nuestro uso de cookies o esta Política de Cookies, contáctenos:",
     "last_updated": "Última actualización: Marzo 2026"

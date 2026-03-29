@@ -1,0 +1,475 @@
+{
+  "common": {
+    "prev": "上一页",
+    "next": "下一页",
+    "back": "返回",
+    "close": "关闭",
+    "loading": "加载中..."
+  },
+  "nav": {
+    "overview": "概览",
+    "rooms": "住宿",
+    "restaurant": "阿尔卑斯美食",
+    "wellness": "身心健康",
+    "sport": "运动与户外",
+    "experiences": "地区探索",
+    "book": "预订"
+  },
+  "megamenu": {
+    "overview": {
+      "title": "概览",
+      "links": [
+        {
+          "name": "酒店介绍",
+          "href": "/struttura"
+        },
+        {
+          "name": "位置与周边",
+          "href": "/posizione"
+        },
+        {
+          "name": "儿童俱乐部",
+          "href": "/kids-club"
+        },
+        {
+          "name": "会议与活动",
+          "href": "/eventi"
+        },
+        {
+          "name": "可持续发展",
+          "href": "/sostenibilita"
+        }
+      ],
+      "featured_label": "推荐",
+      "featured_text": "在海拔1,500米处发现一处真正的避风港。简约的优雅与自1980年以来家庭经营的温暖。",
+      "featured_cta": "探索酒店"
+    },
+    "rooms": {
+      "title": "住宿",
+      "links": [
+        {
+          "name": "双人房",
+          "href": "/camere/matrimoniale"
+        },
+        {
+          "name": "三人房",
+          "href": "/camere/tripla"
+        },
+        {
+          "name": "标准四人房",
+          "href": "/camere/quadrupla_standard"
+        },
+        {
+          "name": "家庭四人房",
+          "href": "/camere/familiare"
+        }
+      ],
+      "featured_label": "推荐",
+      "featured_text": "为您的休息而设计的空间。天然木材、阿尔卑斯光线和基本舒适设施，让您在高山一日后恢复活力。",
+      "featured_cta": "所有客房"
+    },
+    "restaurant": {
+      "title": "阿尔卑斯美食",
+      "links": [
+        {
+          "name": "餐厅",
+          "href": "/ristorante"
+        },
+        {
+          "name": "休息吧与壁炉",
+          "href": "/ristorante/lounge-bar"
+        }
+      ],
+      "featured_label": "推荐",
+      "featured_text": "奥斯塔山谷的地道风味。零公里原料、精心传承的家庭食谱和温馨的用餐氛围。",
+      "featured_cta": "探索菜单"
+    },
+    "wellness": {
+      "title": "身心健康",
+      "links": [
+        {
+          "name": "运动按摩",
+          "href": "/wellness/massaggi"
+        },
+        {
+          "name": "身体护理",
+          "href": "/wellness/trattamenti"
+        },
+        {
+          "name": "私人SPA（夜间）",
+          "href": "/wellness/private-spa"
+        }
+      ],
+      "featured_label": "推荐",
+      "featured_text": "宁静的奢华。通过我们的养生之旅找到您的平衡，让我们专业治疗师的巧手为您提供呵护。",
+      "featured_cta": "放松身心"
+    },
+    "sport": {
+      "title": "活动",
+      "links": [
+        {
+          "name": "滑雪与单板滑雪（Ski-in）",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "山地自行车与电动自行车",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "阿尔卑斯徒步",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "雪具存放与租赁",
+          "href": "/sport/noleggio"
+        }
+      ],
+      "featured_label": "推荐",
+      "featured_text": "肾上腺素从我们门口20米处开始。冬季直达缆车，夏季通往无尽的全景步道。",
+      "featured_cta": "户外活动"
+    },
+    "experiences": {
+      "title": "地区探索",
+      "links": [
+        {
+          "name": "Fontina DOP奶酪品鉴",
+          "href": "/esperienze/degustazione"
+        },
+        {
+          "name": "夜间雪鞋徒步",
+          "href": "/esperienze/ciaspolate"
+        },
+        {
+          "name": "高海拔瑜伽",
+          "href": "/esperienze/yoga"
+        },
+        {
+          "name": "合作高山向导",
+          "href": "/esperienze/guide"
+        }
+      ],
+      "featured_label": "推荐",
+      "featured_text": "不仅仅是一次假期，而是一段珍贵回忆的收藏。通过地道的活动探索这片土地，与山的节奏完全同步。",
+      "featured_cta": "获取灵感"
+    }
+  },
+  "home": {
+    "philosophy_title": "我们相信本质的奢华、人间的温暖和慢节奏时光的价值。",
+    "philosophy_text": "太阳酒店是您在海拔1,500米处的大本营。我们去除了多余的一切，为真正重要的东西留出空间：天然木材、阿尔卑斯美食的正宗风味，以及门外大自然的壮丽。",
+    "philosophy_cta": "探索酒店",
+    "rooms_title": "休憩空间",
+    "rooms_subtitle": "品质与舒适",
+    "experience_title": "阿尔卑斯体验",
+    "experience_text": "我们的承诺是务实而温暖的款待。忘却后勤压力，让我们山谷的真正风味宠爱您。",
+    "feature_access_title": "直达通道",
+    "feature_access_text": "距缆车和主要步道仅20米。山就从我们的门口开始。",
+    "feature_food_title": "地道美食",
+    "feature_food_text": "半膳提供尊重奥斯塔山谷传统的菜单。优质原料，精心传承的食谱。",
+    "feature_comfort_title": "便捷舒适",
+    "feature_comfort_text": "专用室内车库、公共区域Wi-Fi和温馨的壁炉休息室，让您在一天结束时放松身心。",
+    "rooms_cta": "探索详情",
+    "restaurant_section_title": "阿尔卑斯美食",
+    "restaurant_section_text": "奥斯塔山谷的地道风味。零公里原料、精心传承的家庭食谱和散发着家的温馨氛围。",
+    "wellness_section_title": "身心健康与再生",
+    "wellness_section_text": "海拔1,500米处宁静的奢华。在桑拿、土耳其浴和俯瞰山顶的休闲区中找到您的平衡。",
+    "sport_section_title": "活动与户外",
+    "sport_section_text": "肾上腺素从门口20米处开始。冬季直达缆车，夏季尽享令人惊叹的全景步道。"
+  },
+  "struttura": {
+    "subtitle": "阿尔卑斯优雅",
+    "title": "酒店介绍",
+    "philosophy_title": "木材的温暖，石头的力量。",
+    "philosophy_text": "太阳酒店的设计旨在与托尔尼翁的自然景观和谐融合。每一个细节都体现了奥斯塔山谷的传统，以现代和实用的品味重新诠释。",
+    "common_spaces_title": "公共空间",
+    "common_spaces_text": "从我们温馨的大堂到壁炉厅，每一个空间都旨在促进放松和社交。大落地窗向周围全景敞开，将阿尔卑斯山的壮丽引入酒店内部。",
+    "amenities": [
+      "壁炉厅与图书室",
+      "全景日光浴露台",
+      "冬季花园"
+    ]
+  },
+  "sostenibilita": {
+    "subtitle": "与自然和谐共处",
+    "title": "可持续发展",
+    "philosophy_title": "我们尊重山，我们呵护未来。",
+    "philosophy_text": "我们是这片珍贵而脆弱土地的守护者。因此，我们每天采取可持续实践，减少环境影响并促进当地经济。",
+    "features": {
+      "energy": {
+        "title": "清洁能源",
+        "text": "太阳能板用于热水生产，LED低能耗照明。"
+      },
+      "plastic": {
+        "title": "零塑料",
+        "text": "我们已用分配器和玻璃瓶取代了一次性塑料包装。"
+      },
+      "water": {
+        "title": "山泉水",
+        "text": "我们珍惜托尔尼翁泉水的纯净，经过过滤后供应餐桌。"
+      }
+    }
+  },
+  "wellness": {
+    "main_title": "阿尔卑斯养生",
+    "main_subtitle": "高海拔再生",
+    "spa": {
+      "title": "高山SPA",
+      "subtitle": "深层再生",
+      "cta": "探索SPA"
+    },
+    "massaggi": {
+      "title": "运动按摩",
+      "subtitle": "肌肉恢复",
+      "cta": "按摩项目"
+    },
+    "trattamenti": {
+      "title": "身体护理",
+      "subtitle": "阿尔卑斯仪式",
+      "cta": "查看护理"
+    },
+    "private_spa": {
+      "title": "夜间私人SPA",
+      "subtitle": "专属与浪漫",
+      "cta": "私人体验"
+    }
+  },
+  "sport": {
+    "main_title": "运动与户外",
+    "main_subtitle": "体验山的活力",
+    "philosophy_title": "肾上腺素从大堂20米处开始。",
+    "philosophy_text": "忘掉汽车吧。在海拔1,500米的托尔尼翁，大自然不是目的地，而是您的起点。无论是Ski-in/Ski-out还是英勇的徒步，我们为您提供冒险前后的完美舒适。",
+    "sci": {
+      "title": "滑雪与单板滑雪",
+      "subtitle": "直达托尔尼翁滑雪区。完美压雪的雪道、马特峰的壮丽全景，以及穿着雪板回到酒店的便利。",
+      "cta": "在托尔尼翁滑雪"
+    },
+    "bike": {
+      "title": "山地车与电动车",
+      "subtitle": "骑行探索奥斯塔山谷的步道。从专业级肾上腺素飙升路线到适合家庭的轻松全景骑行，应有尽有。",
+      "cta": "骑行出发"
+    },
+    "trekking": {
+      "title": "阿尔卑斯徒步",
+      "subtitle": "慢节奏探索",
+      "cta": "徒步路线"
+    },
+    "noleggio": {
+      "title": "雪具存放与租赁",
+      "subtitle": "便捷安全的服务",
+      "cta": "滑雪服务"
+    }
+  },
+  "experiences": {
+    "main_title": "阿尔卑斯体验",
+    "main_subtitle": "真实的回忆",
+    "degustazione": {
+      "title": "Fontina DOP奶酪",
+      "subtitle": "美食体验",
+      "cta": "品鉴"
+    },
+    "ciaspolate": {
+      "title": "夜间雪鞋徒步",
+      "subtitle": "夜晚的魔力",
+      "cta": "夜间远足"
+    },
+    "yoga": {
+      "title": "高海拔瑜伽",
+      "subtitle": "内在平衡",
+      "cta": "瑜伽课程"
+    },
+    "guide": {
+      "title": "合作高山向导",
+      "subtitle": "山地专家",
+      "cta": "联系向导"
+    }
+  },
+  "meteo": {
+    "title": "天气与雪情报告",
+    "subtitle": "托尔尼翁 — 奥斯塔山谷",
+    "status_open": "缆车开放",
+    "current_conditions": "当前天气",
+    "feels_like": "体感温度",
+    "wind": "风况",
+    "visibility": "能见度",
+    "uv_index": "紫外线指数",
+    "snow_report": "雪情公报",
+    "snow_depth_base": "积雪深度（山脚）",
+    "snow_depth_top": "积雪深度（山顶）",
+    "snow_quality": "雪质",
+    "last_snowfall": "最近降雪",
+    "slopes_lifts": "雪道与缆车",
+    "slopes_open": "开放雪道",
+    "lifts_running": "运营中缆车",
+    "webcam_title": "360°全景实时摄像头",
+    "fullscreen": "全屏",
+    "activate_stream": "启动实时直播"
+  },
+  "termini": {
+    "title": "条款与条件",
+    "updated": "最后更新：2026年3月",
+    "section1_title": "1. 预订与付款",
+    "section1_text": "通过网站或直接渠道提交的预订在收到住宿总额30%的订金后予以确认。余款将在退房时在酒店结算。",
+    "section2_title": "2. 取消政策",
+    "section2_text": "到达前14天可免费取消。如逾期取消或未入住（no-show），订金将不予退还。",
+    "section3_title": "3. 入住与退房时间",
+    "section3_text": "客房自到达日14:00起可供使用。退房须在离店日10:30前完成。"
+  },
+  "rooms_data": {
+    "matrimoniale": {
+      "name": "双人房",
+      "description": "我们在托尔尼翁的双人房提供简约、温暖且实用的避风港，非常适合情侣或滑雪爱好者。采用传统实木家具，融合经典设计的温暖与周围山峰的非凡景致。"
+    },
+    "tripla": {
+      "name": "三人房",
+      "description": "我们在托尔尼翁的三人房是在奥斯塔山谷享受山地假期又不牺牲空间的理想选择。面积可达20平方米，提供宁静的氛围。"
+    },
+    "quadrupla_standard": {
+      "name": "标准四人房",
+      "description": "托尔尼翁四人房：您家庭的理想空间。如果您正计划在奥斯塔山谷的家庭假期，我们的四人房将为您提供完美的避风港。"
+    },
+    "familiare": {
+      "name": "家庭四人房",
+      "description": "最尊享的住宿，专为山地家庭最高舒适度而设计。宽敞的空间和高端装修。"
+    }
+  },
+  "hero": {
+    "title": "您的避风港 <br/> 在宁静中。",
+    "subtitle": "托尔尼翁，奥斯塔山谷"
+  },
+  "booking": {
+    "arrival": "到达",
+    "departure": "离开",
+    "guests": "宾客",
+    "check": "查询",
+    "adults": "成人",
+    "children": "儿童",
+    "title": "预订您的住宿",
+    "best_rate": "最优价格保证",
+    "select_dates": "选择日期",
+    "guests_label": "宾客"
+  },
+  "rooms": {
+    "title": "住宿",
+    "main_title": "我们的客房",
+    "back_link": "所有住宿",
+    "description_label": "描述",
+    "amenities_label": "包含服务"
+  },
+  "posizione": {
+    "subtitle": "托尔尼翁的心脏",
+    "title": "位置",
+    "philosophy_title": "路的尽头，是山的开始。",
+    "philosophy_text": "太阳酒店坐落于海拔1,500米处，俯瞰马特峰山谷。一处交通便利却远离日常喧嚣的绝美避世之所。",
+    "arrival_title": "您的大本营",
+    "arrival_text": "Piazza Frutaz 30, Torgnon (AO)。位于村庄中心，我们提供专属室内车库，缆车近在咫尺。",
+    "maps_cta": "在谷歌地图中打开",
+    "directions_title": "如何到达",
+    "by_car_title": "自驾",
+    "by_car_text": "A5高速公路都灵-奥斯塔方向，Châtillon-Saint-Vincent出口。沿SR 9号公路往Valtournenche方向行驶，然后转向Torgnon（从出口约20分钟）。",
+    "by_train_title": "火车",
+    "by_train_text": "Châtillon-Saint-Vincent火车站。从那里可乘坐SAVDA直达巴士前往Torgnon，或酒店合作出租车。",
+    "by_plane_title": "飞机",
+    "by_plane_text": "最近的机场：都灵卡塞勒（110公里）、米兰马尔彭萨（170公里）和日内瓦（180公里）。可按需安排专车接送。",
+    "distances_title": "兴趣点",
+    "dist_ski": "缆车（Ski-in/Ski-out）",
+    "dist_cervinia": "布勒伊-切尔维尼亚",
+    "dist_aosta": "奥斯塔（历史中心）",
+    "dist_milano": "米兰"
+  },
+  "footer": {
+    "description": "托尔尼翁心脏的宁静避风港。品质、优雅和奥斯塔山谷的温暖，始于1980年。",
+    "contacts_title": "联系方式",
+    "explore_title": "探索",
+    "links": {
+      "structure": "酒店介绍",
+      "rooms": "客房",
+      "restaurant": "餐厅",
+      "terms": "条款与条件",
+      "policy": "住宿政策",
+      "cookies": "Cookie政策"
+    },
+    "rights": "© 2026 Futuro srl - Hotel du Soleil. 版权所有。",
+    "made_by": "用 ❤️ 制作 by CB"
+  },
+  "kids_club": {
+    "title": "儿童俱乐部",
+    "subtitle": "高山乐趣",
+    "description": "专为我们最小的宾客打造的空间，想象力在这里无限飞翔。游戏、创意活动和专业看护，让父母安心放松。"
+  },
+  "eventi": {
+    "title": "会议与活动",
+    "subtitle": "多功能空间",
+    "description": "商务会议或私人活动的理想场所。设备齐全的会议室、全景视野以及由我们餐厅精心策划的卓越餐饮服务。"
+  },
+  "policy": {
+    "title": "住宿政策与条件",
+    "updated": "最后更新：2026年3月",
+    "rooms_title": "客房与套房",
+    "rooms_intro": "价格以欧元表示，另加市政旅游税。请注意，价格和旅游税可能根据当地规定变更，恕不另行通知。14岁以下儿童免征旅游税。",
+    "included_title": "每日房价（每间客房）包含",
+    "included_items": [
+      "全酒店高速光纤Wi-Fi。",
+      "平板卫星电视。",
+      "专用雪具存放箱（距缆车20米）。",
+      "增值税10%。"
+    ],
+    "tariffe_note": "房费还包括：壁炉休息区使用权，以及毗邻托尔尼翁缆车和徒步步道的绝佳位置。",
+    "colazione": "早餐：如在酒店购买，仅住宿价格的早餐费用为每人15.00欧元。",
+    "mezza_pensione": "半膳：包含奥斯塔山谷传统晚餐（饮品不含，团体套餐另有说明的除外）。",
+    "checkin_checkout": "入住时间：15:30起；退房时间：10:30前。",
+    "cancel_title": "取消政策与订金",
+    "cancel_intro": "为最终确认预订，需支付住宿总额30%的确认订金（短住为首夜房费）。",
+    "cancel_rules": [
+      {
+        "label": "免费取消",
+        "text": "到达日前14天之前，订金将全额退还（扣除可能的银行手续费）。"
+      },
+      {
+        "label": "逾期取消（到达前14至7天）",
+        "text": "订金不予退还，但可转换为等值代金券，6个月内用于未来住宿（视房态而定）。"
+      },
+      {
+        "label": "7天内取消或未入住",
+        "text": "订金将作为赔偿全额扣留。"
+      },
+      {
+        "label": "提前离店",
+        "text": "如住宿期间提前离店，将收取剩余夜晚的全部费用（仅房费）。"
+      }
+    ],
+    "family_title": "家庭四人房（公寓式）",
+    "family_items": [
+      "两个独立房间住宿。",
+      "每日客房清洁服务，08:30至12:30。",
+      "优先使用室内车库（需预约，可能另收费用）。",
+      "缆车附近专属雪具存放箱。",
+      "增值税10%。"
+    ],
+    "groups_title": "多房间预订与团体",
+    "groups_text": "4间或以上客房的预订（旅行团、俱乐部或联合预订），酒店将通过电子邮件提供定制的订金和取消条件。通常，团体免费取消期限为到达前30天。",
+    "parking_title": "停车与后勤",
+    "parking_text": "太阳酒店设有温控室内车库。出于安全考虑，使用车库的宾客须将车钥匙交至前台保管。或者，约100米处有免费公共停车场。",
+    "images_title": "图片说明",
+    "images_text": "网站上的客房图片仅供参考。同一房型内的部分设计元素、木质装修和家具布局可能有所不同，但均保持所承诺的标准和服务。"
+  },
+  "cookie_policy": {
+    "title": "Cookie政策",
+    "intro_title": "简介",
+    "intro_text": "本Cookie政策说明了太阳酒店如何在我们的网站上使用Cookie和类似技术。使用我们的网站即表示您同意按照本政策使用Cookie。",
+    "what_title": "什么是Cookie？",
+    "what_text": "Cookie是您访问我们网站时存储在您设备上的小型文本文件。它们通过记住您的偏好和了解您如何使用我们的网站来帮助我们为您提供更好的浏览体验。",
+    "types_title": "我们使用的Cookie类型",
+    "essential_title": "必要Cookie",
+    "essential_text": "这些Cookie是网站正常运行所必需的。它们支持页面导航、安全区域访问和网站基本功能等基础功能。",
+    "analytics_title": "分析Cookie",
+    "analytics_text": "这些Cookie通过匿名收集和报告信息，帮助我们了解访客如何与网站互动。这有助于我们改善网站性能和用户体验。",
+    "functional_title": "功能Cookie",
+    "functional_text": "这些Cookie使网站能够提供增强功能和个性化服务。它们可能由我们或我们页面中添加的第三方服务提供商设置。",
+    "manage_title": "如何管理Cookie",
+    "manage_text": "您可以通过多种方式控制和管理Cookie。大多数网络浏览器允许您通过设置偏好来控制Cookie。",
+    "browser_title": "浏览器设置",
+    "browser_text": "您可以设置浏览器拒绝全部或部分Cookie，或在网站设置或访问Cookie时提醒您。如果您禁用或拒绝Cookie，请注意本网站的某些部分可能无法访问或无法正常运行。",
+    "contact_title": "联系我们",
+    "contact_text": "如果您对我们使用Cookie或本Cookie政策有任何疑问，请联系我们：",
+    "last_updated": "最后更新：2026年3月"
+  }
+}

@@ -3,9 +3,13 @@ import it from './locales/it.json';
 import en from './locales/en.json';
 import ru from './locales/ru.json';
 import fr from './locales/fr.json';
+import de from './locales/de.json';
+import es from './locales/es.json';
+import ar from './locales/ar.json';
+import zh from './locales/zh.json';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const translations: Record<string, any> = { it, en, ru, fr };
+const translations: Record<string, any> = { it, en, ru, fr, de, es, ar, zh };
 
 export const locale = writable('it');
 
@@ -31,8 +35,8 @@ export const t = derived(locale, ($locale) => {
   };
 });
 
-export const dir = derived(locale, () => {
-  return 'ltr';
+export const dir = derived(locale, ($locale) => {
+  return $locale === 'ar' ? 'rtl' : 'ltr';
 });
 
-export const locales = ['it', 'en', 'fr', 'ru'];
+export const locales = ['it', 'en', 'fr', 'ru', 'de', 'es', 'ar', 'zh'];
