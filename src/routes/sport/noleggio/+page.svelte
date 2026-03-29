@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { PackageCheck, ShieldCheck, Snowflake, ArrowRight, X, Thermometer, Lock, Eye, Boot, SkipForward, CalendarDays, User, Mail, Phone, ChevronDown } from 'lucide-svelte';
+    import { PackageCheck, ShieldCheck, Snowflake, ArrowRight, X, Thermometer, Lock, Eye, CalendarDays, User, Mail, Phone, ChevronDown } from 'lucide-svelte';
     import { fade, fly } from 'svelte/transition';
     import { clickOutside } from '$lib/utils/clickOutside';
 
@@ -56,13 +56,17 @@
         body += `Inviato tramite il sito Hotel du Soleil`;
 
         const mailtoUrl = `mailto:${PARTNER_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoUrl;
+        const link = document.createElement('a');
+        link.href = mailtoUrl;
+        link.click();
 
-        formSubmitted = true;
         setTimeout(() => {
-            formSubmitted = false;
-            showRentalForm = false;
-        }, 3000);
+            formSubmitted = true;
+            setTimeout(() => {
+                formSubmitted = false;
+                showRentalForm = false;
+            }, 3000);
+        }, 500);
     }
 </script>
 
@@ -317,7 +321,7 @@
         transition:fade={{ duration: 200 }}
     >
         <!-- Backdrop -->
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick={() => showRentalForm = false}></div>
+        <button type="button" class="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-default" onclick={() => showRentalForm = false} aria-label="Chiudi"></button>
 
         <!-- Modal -->
         <div
