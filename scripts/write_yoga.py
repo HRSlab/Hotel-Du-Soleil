@@ -1,4 +1,10 @@
-<script lang="ts">
+#!/usr/bin/env python3
+"""Write the fully translated yoga page."""
+import pathlib
+
+YOGA_PATH = pathlib.Path(__file__).resolve().parent.parent / "src" / "routes" / "esperienze" / "yoga" / "+page.svelte"
+
+content = r'''<script lang="ts">
     import { Flower, Wind, Sparkles, Sun, Moon, Mountain, Clock, Users, ShieldCheck, Star, Heart, ArrowRight, Sunrise, CloudSun, TreePine, Leaf } from 'lucide-svelte';
     import { t } from '$lib/i18n';
 
@@ -345,3 +351,7 @@
         </div>
     </div>
 </section>
+'''
+
+YOGA_PATH.write_text(content, encoding='utf-8')
+print(f"Yoga page written to {YOGA_PATH}")

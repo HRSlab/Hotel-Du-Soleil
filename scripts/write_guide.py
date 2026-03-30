@@ -1,4 +1,10 @@
-<script lang="ts">
+#!/usr/bin/env python3
+"""Write the fully translated guide page."""
+import pathlib
+
+GUIDE_PATH = pathlib.Path(__file__).resolve().parent.parent / "src" / "routes" / "esperienze" / "guide" / "+page.svelte"
+
+content = r'''<script lang="ts">
     import { ShieldCheck, Mountain, Users, Star, Clock, MapPin, Compass, ArrowRight, Snowflake, Sun, TreePine, Wind, Heart, Flag, Award, Binoculars } from 'lucide-svelte';
     import { t } from '$lib/i18n';
 
@@ -453,3 +459,7 @@
         </div>
     </div>
 </section>
+'''
+
+GUIDE_PATH.write_text(content, encoding='utf-8')
+print(f"Guide page written to {GUIDE_PATH}")

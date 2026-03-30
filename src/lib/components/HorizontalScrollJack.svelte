@@ -175,7 +175,7 @@
   <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30">
     <div class="bg-black/20 backdrop-blur-lg rounded-full px-6 py-3 border border-white/10">
       <div class="flex gap-3">
-        {#each images as _, i}
+        {#each images as _, i (i)}
           <div
             class="h-2 rounded-full transition-all duration-500 {Math.abs(scrollX - (i * sectionWidth)) < sectionWidth / 2 ? 'w-12 bg-white shadow-lg' : 'w-3 bg-white/40 hover:bg-white/60'}"
           ></div>

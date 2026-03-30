@@ -47,7 +47,7 @@
             alt="Alpine Sport" 
             class="w-full h-full object-cover ken-burns opacity-70"
         >
-        <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/20 to-alpine-bg"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-alpine-bg"></div>
     </div>
     
     <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-32 text-center">
@@ -175,10 +175,10 @@
                     { icon: Wind, title: 'Ski Room & Dry', text: 'Armadietti privati e sistema di asciugatura e riscaldamento per scarponi, sempre pronti.' },
                     { icon: Map, title: 'Guide Partner', text: 'Collaboriamo con le migliori guide locali per freeride invernale e scalate estive.' },
                     { icon: Mountain, title: 'Colazione Bio', text: 'Buffet mattutino rinforzato con proteine e carboidrati studiati per chi fa sport.' }
-                ] as { icon: Icon, title, text } (title)}
+                ] as { icon, title, text } (title)}
                     <Motion variants={itemVariants}>
                         <div class="text-center p-12 md:p-16 border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500 flex flex-col items-center">
-                            <Icon class="w-8 h-8 text-alpine-gold mb-8 stroke-1" />
+                            <svelte:component this={icon} class="w-8 h-8 text-alpine-gold mb-8 stroke-1" />
                             <h4 class="font-serif text-3xl text-alpine-text mb-6">{title}</h4>
                             <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed max-w-xs mx-auto">
                                 {text}

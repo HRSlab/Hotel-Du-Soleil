@@ -496,7 +496,7 @@
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="fade-up-element">
             <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('wellness.pkg_night_label')}</span>
-            <h2 class="font-serif text-4xl text-alpine-text mb-6">{@html $t('wellness.night_heading')}</h2>
+            <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('wellness.night_heading')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
                 {$t('wellness.night_p1')}
             </p>

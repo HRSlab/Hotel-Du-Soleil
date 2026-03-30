@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Moon, Snowflake, Sparkles, Map, Mountain, Clock, Users, ShieldCheck, TreePine, Utensils, Sun, Star, Footprints, Lamp } from 'lucide-svelte';
+    import { t } from '$lib/i18n';
 
     let scrollY = $state(0);
 </script>
@@ -7,8 +8,8 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>Ciaspolate Notturne | Hotel du Soleil</title>
-    <meta name="description" content="Ciaspolate notturne e diurne a Torgnon, Valle d'Aosta. Escursioni con racchette da neve tra boschi di larici con cena in rifugio e vista sul Cervino." />
+    <title>{$t('ciaspolate_page.meta_title')}</title>
+    <meta name="description" content={$t('ciaspolate_page.meta_description')} />
 </svelte:head>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
@@ -23,13 +24,13 @@
 
     <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-28 text-center">
         <span class="mb-4 block text-[10px] font-medium tracking-[0.4em] text-white/80 uppercase md:text-xs fade-up-element">
-            La Magia della Notte · Torgnon
+            {$t('ciaspolate_page.hero_label')}
         </span>
         <h1 class="font-serif text-5xl md:text-8xl leading-tight font-light text-white fade-up-element">
-            Ciaspolate Notturne
+            {$t('ciaspolate_page.hero_title')}
         </h1>
         <p class="mt-6 text-white/50 text-sm font-light max-w-md fade-up-element">
-            Tra boschi di larici e il silenzio della neve, fino alla cena in rifugio
+            {$t('ciaspolate_page.hero_subtitle')}
         </p>
     </div>
 </header>
@@ -39,13 +40,10 @@
     <div class="fade-up-element mx-auto max-w-3xl text-center">
         <Moon class="w-10 h-10 text-alpine-gold mx-auto mb-10" />
         <h3 class="mb-10 font-serif text-3xl leading-snug text-white md:text-4xl italic">
-            “Sotto il chiarore lunare, la neve sussurra i suoi segreti.”
+            "{$t('ciaspolate_page.intro_quote')}"
         </h3>
         <p class="text-white/60 leading-relaxed font-light text-sm md:text-base border-t border-white/10 pt-12 mt-12 mx-auto max-w-xl">
-            Un’escursione notturna con le racchette da neve è un’esperienza quasi mistica.
-            Accompagnati dalle nostre guide alpine, camminerete nel silenzio assoluto dei boschi innevati di Torgnon,
-            illuminati solo dalle lampade frontali e dal riflesso della luna sulla neve,
-            fino a raggiungere un rifugio dove vi attende una cena tipica valdostana davanti al fuoco.
+            {$t('ciaspolate_page.intro_text')}
         </p>
     </div>
 </section>
@@ -56,22 +54,22 @@
         <img src="/imgs/hotel_by_night.jpg" alt="Escursione con racchette da neve al tramonto" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-75">
     </div>
     <div class="fade-up-element">
-        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">L’Esperienza</span>
-        <h2 class="font-serif text-4xl text-white mb-6">Quando il Bosco <br/>si Addormenta</h2>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('ciaspolate_page.experience_label')}</span>
+        <h2 class="font-serif text-4xl text-white mb-6">{$t('ciaspolate_page.experience_title')}</h2>
         <p class="text-white/60 text-sm font-light leading-relaxed mb-6">
-            La partenza avviene al tramonto dall’hotel. Le guide vi equipaggiano con racchette da neve, bastoncini e lampade frontali, poi si parte lungo sentieri battuti che si inoltrano nei boschi di larici secolari sopra Torgnon.
+            {$t('ciaspolate_page.experience_text1')}
         </p>
         <p class="text-white/60 text-sm font-light leading-relaxed mb-8">
-            Man mano che la luce del giorno svanisce, il paesaggio si trasforma: il silenzio diventa totale, la neve brilla sotto le stelle e ogni passo scricchiola nel bianco. Niente telefoni, niente fretta — solo il respiro e la montagna.
+            {$t('ciaspolate_page.experience_text2')}
         </p>
         <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
             <div class="flex items-center gap-3">
                 <Lamp class="w-5 h-5 text-alpine-gold shrink-0" />
-                <span class="text-xs font-bold uppercase tracking-widest text-white/80">Lampade frontali</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-white/80">{$t('ciaspolate_page.experience_badge_lamps')}</span>
             </div>
             <div class="flex items-center gap-3">
                 <ShieldCheck class="w-5 h-5 text-alpine-gold shrink-0" />
-                <span class="text-xs font-bold uppercase tracking-widest text-white/80">Guide certificate</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-white/80">{$t('ciaspolate_page.experience_badge_guides')}</span>
             </div>
         </div>
     </div>
@@ -81,18 +79,18 @@
 <section class="bg-[#0a0a0a] pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
     <div class="bg-white/5 border border-white/10 p-12 fade-up-element">
         <Snowflake class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-        <h4 class="font-serif text-xl text-white mb-4">Percorso Magico</h4>
-        <p class="text-xs text-white/50 font-light leading-relaxed">Attraversiamo boschi di larici e radure silenziose, con la neve fresca che attutisce ogni suono e le stelle come unica compagnia.</p>
+        <h4 class="font-serif text-xl text-white mb-4">{$t('ciaspolate_page.highlight_trail_title')}</h4>
+        <p class="text-xs text-white/50 font-light leading-relaxed">{$t('ciaspolate_page.highlight_trail_text')}</p>
     </div>
     <div class="bg-white/5 border border-white/10 p-12 fade-up-element">
         <Utensils class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-        <h4 class="font-serif text-xl text-white mb-4">Cena in Rifugio</h4>
-        <p class="text-xs text-white/50 font-light leading-relaxed">Arrivo in baita per gustare polenta concia alla valdostana, carbonada, Fontina DOP fusa e dolci della tradizione, accanto al camino.</p>
+        <h4 class="font-serif text-xl text-white mb-4">{$t('ciaspolate_page.highlight_dinner_title')}</h4>
+        <p class="text-xs text-white/50 font-light leading-relaxed">{$t('ciaspolate_page.highlight_dinner_text')}</p>
     </div>
     <div class="bg-white/5 border border-white/10 p-12 fade-up-element">
         <Sparkles class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-        <h4 class="font-serif text-xl text-white mb-4">Rientro sotto le Stelle</h4>
-        <p class="text-xs text-white/50 font-light leading-relaxed">Dopo la cena, il ritorno a piedi attraverso il bosco innevato è il momento più magico: il cielo di Torgnon, lontano dalle luci, rivela migliaia di stelle.</p>
+        <h4 class="font-serif text-xl text-white mb-4">{$t('ciaspolate_page.highlight_return_title')}</h4>
+        <p class="text-xs text-white/50 font-light leading-relaxed">{$t('ciaspolate_page.highlight_return_text')}</p>
     </div>
 </section>
 
@@ -101,19 +99,19 @@
     <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-white mb-2">3h</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">Durata escursione</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">{$t('ciaspolate_page.stats_duration')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-white mb-2">300m</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">Dislivello massimo</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">{$t('ciaspolate_page.stats_elevation')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-white mb-2">Dic–Mar</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">Stagione</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">{$t('ciaspolate_page.stats_season')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-white mb-2">4–15</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">Partecipanti per gruppo</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-white/40 font-bold">{$t('ciaspolate_page.stats_group')}</p>
         </div>
     </div>
 </section>
@@ -122,33 +120,33 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">I Percorsi</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Tre itinerari per ogni livello di esperienza</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('ciaspolate_page.trails_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('ciaspolate_page.trails_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             <div class="fade-up-element text-center p-12 md:p-14 border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <TreePine class="w-8 h-8 text-alpine-gold mx-auto mb-8 stroke-1" />
-                <h4 class="font-serif text-2xl text-alpine-text mb-2">Bosco dei Larici</h4>
-                <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-6">Facile · 1,5h · 150m dislivello</p>
+                <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('ciaspolate_page.trail_easy_name')}</h4>
+                <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-6">{$t('ciaspolate_page.trail_easy_level')}</p>
                 <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed max-w-xs mx-auto">
-                    L’itinerario ideale per chi si avvicina per la prima volta alle ciaspolate. Un anello dolce attraverso il bosco di larici sopra Torgnon, con panorama finale sulla vallata. Adatto anche ai bambini dai 10 anni.
+                    {$t('ciaspolate_page.trail_easy_text')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-12 md:p-14 border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <Moon class="w-8 h-8 text-alpine-gold mx-auto mb-8 stroke-1" />
-                <h4 class="font-serif text-2xl text-alpine-text mb-2">Sentiero della Luna</h4>
-                <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-6">Medio · 3h · 300m dislivello</p>
+                <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('ciaspolate_page.trail_medium_name')}</h4>
+                <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-6">{$t('ciaspolate_page.trail_medium_level')}</p>
                 <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed max-w-xs mx-auto">
-                    Il percorso classico della ciaspolata notturna con cena in rifugio. Si sale attraverso radure e boschi fino alla baita, dove vi attende una cena completa. Il rientro sotto il cielo stellato è indimenticabile.
+                    {$t('ciaspolate_page.trail_medium_text')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-12 md:p-14 border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <Mountain class="w-8 h-8 text-alpine-gold mx-auto mb-8 stroke-1" />
-                <h4 class="font-serif text-2xl text-alpine-text mb-2">Cresta del Cervino</h4>
-                <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-6">Impegnativo · 4h · 500m dislivello</p>
+                <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('ciaspolate_page.trail_hard_name')}</h4>
+                <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-6">{$t('ciaspolate_page.trail_hard_level')}</p>
                 <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed max-w-xs mx-auto">
-                    Per escursionisti esperti. Un itinerario diurno che sale fino al belvedere con vista impareggiabile sul Cervino e la catena del Monte Rosa. Neve profonda, panorami sterminati, silenzio assoluto.
+                    {$t('ciaspolate_page.trail_hard_text')}
                 </p>
             </div>
         </div>
@@ -158,23 +156,22 @@
 <!-- ═══════════════════ LA CENA IN RIFUGIO ═══════════════════ -->
 <section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
     <div class="fade-up-element order-2 md:order-1">
-        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Il Cuore dell’Esperienza</span>
-        <h2 class="font-serif text-4xl text-alpine-text mb-6">La Cena <br/>in Rifugio</h2>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('ciaspolate_page.dinner_label')}</span>
+        <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('ciaspolate_page.dinner_title')}</h2>
         <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-            Dopo un’ora e mezza di cammino nella neve, arrivare in una baita calda e illuminata dal fuoco del camino è un’emozione che non si dimentica.
-            I rifugisti vi accolgono con un bombardino caldo — la tradizionale bevanda delle Alpi a base di zabaione e brandy — prima di servire una cena autentica.
+            {$t('ciaspolate_page.dinner_text1')}
         </p>
         <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-            Il menù cambia con le stagioni ma segue sempre la tradizione valdostana: zuppa alla valpellinentze con fontina e verza, polenta concia con Fontina DOP fusa, carbonada con polenta, e per finire tegole e dolci alle castagne. Il tutto accompagnato da vini rossi della Valle d’Aosta.
+            {$t('ciaspolate_page.dinner_text2')}
         </p>
         <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border">
             <div class="flex items-center gap-3">
                 <Utensils class="w-5 h-5 text-alpine-gold shrink-0" />
-                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Menù completo</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('ciaspolate_page.dinner_badge_menu')}</span>
             </div>
             <div class="flex items-center gap-3">
                 <Star class="w-5 h-5 text-alpine-gold shrink-0" />
-                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Vini valdostani</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('ciaspolate_page.dinner_badge_wine')}</span>
             </div>
         </div>
     </div>
@@ -190,23 +187,22 @@
             <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=1500&auto=format&fit=crop" alt="Ciaspolata diurna con vista sulle Alpi" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90">
         </div>
         <div class="fade-up-element">
-            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Anche di Giorno</span>
-            <h2 class="font-serif text-4xl text-alpine-text mb-6">Ciaspolate <br/>Diurne</h2>
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('ciaspolate_page.daytime_label')}</span>
+            <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('ciaspolate_page.daytime_title')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-                Per chi preferisce la luce del sole o viaggia con bambini, organizziamo ciaspolate mattutine e pomeridiane lungo gli stessi sentieri incantati sopra Torgnon.
-                La vista diurna sulle vette è spettacolare: il Cervino, il Gran Combin, la catena del Monte Rosa e tutta la valle che si apre ai vostri piedi.
+                {$t('ciaspolate_page.daytime_text1')}
             </p>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                Le escursioni diurne sono ideali anche per chi non ha mai provato le racchette da neve. I nostri accompagnatori adattano il ritmo e il percorso al gruppo, fermandosi per ammirare i panorami, osservare le tracce degli animali nel bosco e raccontare la storia del territorio.
+                {$t('ciaspolate_page.daytime_text2')}
             </p>
             <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border">
                 <div class="flex items-center gap-3">
                     <Sun class="w-5 h-5 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Partenza ore 10:00</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('ciaspolate_page.daytime_badge_departure')}</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <Users class="w-5 h-5 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Adatto a famiglie</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('ciaspolate_page.daytime_badge_families')}</span>
                 </div>
             </div>
         </div>
@@ -217,37 +213,37 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Cosa Include</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Tutto il necessario per un’esperienza senza pensieri</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('ciaspolate_page.includes_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('ciaspolate_page.includes_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="fade-up-element text-center p-10 border border-alpine-border bg-white">
                 <Footprints class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Attrezzatura</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('ciaspolate_page.includes_gear_title')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Racchette da neve, bastoncini telescopici e lampade frontali fornite dall’hotel. Voi portate solo scarponi caldi e voglia di avventura.
+                    {$t('ciaspolate_page.includes_gear_text')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-10 border border-alpine-border bg-white">
                 <ShieldCheck class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Guida Alpina</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('ciaspolate_page.includes_guide_title')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Accompagnatore di media montagna certificato, con conoscenza perfetta dei sentieri e delle condizioni meteo e nivologiche del territorio.
+                    {$t('ciaspolate_page.includes_guide_text')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-10 border border-alpine-border bg-white">
                 <Utensils class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Cena Completa</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('ciaspolate_page.includes_dinner_title')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Inclusa nell’escursione notturna: antipasto, primo, secondo, dolce e una bevanda. Piatti della tradizione valdostana preparati nel rifugio.
+                    {$t('ciaspolate_page.includes_dinner_text')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-10 border border-alpine-border bg-white">
                 <Clock class="w-8 h-8 text-alpine-gold mx-auto mb-6 stroke-1" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Flessibilità</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('ciaspolate_page.includes_flex_title')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Partenza direttamente dall’hotel. Escursioni programmate ogni mercoledì e sabato, o su richiesta per gruppi privati a partire da 4 persone.
+                    {$t('ciaspolate_page.includes_flex_text')}
                 </p>
             </div>
         </div>
@@ -258,42 +254,35 @@
 <section class="bg-[#0a0a0a] py-32 px-6">
     <div class="max-w-4xl mx-auto">
         <div class="fade-up-element text-center mb-16">
-            <h2 class="font-serif text-4xl text-white mb-5">Informazioni Pratiche</h2>
+            <h2 class="font-serif text-4xl text-white mb-5">{$t('ciaspolate_page.info_title')}</h2>
         </div>
 
         <div class="fade-up-element grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
                 <h4 class="font-serif text-lg text-white mb-4 flex items-center gap-3">
-                    <Moon class="w-5 h-5 text-alpine-gold" /> Ciaspolata Notturna + Cena
+                    <Moon class="w-5 h-5 text-alpine-gold" /> {$t('ciaspolate_page.info_night_title')}
                 </h4>
                 <ul class="space-y-3 text-white/50 text-sm font-light">
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Partenza alle 17:30 dall’hotel</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Durata circa 3 ore (cena inclusa)</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Difficoltà: facile/media</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Età minima: 12 anni</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Ogni mercoledì e sabato, Dic–Mar</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Min. 4 — Max. 15 partecipanti</li>
+                    {#each $t('ciaspolate_page.info_night_items') as item}
+                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> {item}</li>
+                    {/each}
                 </ul>
             </div>
             <div>
                 <h4 class="font-serif text-lg text-white mb-4 flex items-center gap-3">
-                    <Sun class="w-5 h-5 text-alpine-gold" /> Ciaspolata Diurna
+                    <Sun class="w-5 h-5 text-alpine-gold" /> {$t('ciaspolate_page.info_day_title')}
                 </h4>
                 <ul class="space-y-3 text-white/50 text-sm font-light">
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Partenza alle 10:00 dall’hotel</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Durata 2–4 ore (a scelta)</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Difficoltà: facile</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Età minima: 8 anni</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Su richiesta, tutti i giorni</li>
-                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> Ideale per famiglie con bambini</li>
+                    {#each $t('ciaspolate_page.info_day_items') as item}
+                    <li class="flex items-start gap-2"><span class="text-alpine-gold mt-1">•</span> {item}</li>
+                    {/each}
                 </ul>
             </div>
         </div>
 
         <div class="fade-up-element mt-16 pt-12 border-t border-white/10 text-center">
             <p class="text-white/40 text-xs font-light leading-relaxed max-w-xl mx-auto">
-                Tutte le escursioni sono soggette a condizioni meteo e nivologiche favorevoli.
-                La reception è a disposizione per informazioni, prenotazioni e per aiutarvi a scegliere il percorso più adatto a voi.
+                {$t('ciaspolate_page.info_disclaimer')}
             </p>
         </div>
     </div>
