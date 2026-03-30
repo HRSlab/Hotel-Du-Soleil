@@ -13,7 +13,7 @@ c = c.replace(
 
 replacements = [
     # Head
-    (">Yoga in Quota | Chalet Du Soleil<", ">{$t('yoga_page.meta_title')}<"),
+    (">Yoga in Quota | Chalet du Soleil<", ">{$t('yoga_page.meta_title')}<"),
     ('content="Yoga in quota a Torgnon, Valle d\u2019Aosta. Sessioni all\u2019alba e al tramonto a 1.500 metri, meditazione alpina, pranayama e retreats settimanali con vista sul Cervino."', "content={$t('yoga_page.meta_description')}"),
 
     # Hero

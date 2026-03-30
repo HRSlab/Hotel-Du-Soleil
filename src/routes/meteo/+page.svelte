@@ -73,7 +73,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('meteo.title')} | Chalet Du Soleil</title>
+  <title>{$t('meteo.title')} | Chalet du Soleil</title>
 </svelte:head>
 
 <main class="min-h-screen bg-alpine-bg pt-32 pb-24">

@@ -8,8 +8,8 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>{$t('wellness.private_spa.title')} | Chalet Du Soleil</title>
-    <meta name="description" content="Private SPA esclusiva all'Chalet Du Soleil di Torgnon. Idromassaggio, sauna finlandese e piscina in uso privato per coppie e piccoli gruppi. Bottiglia di vino e amenità incluse." />
+    <title>{$t('wellness.private_spa.title')} | Chalet du Soleil</title>
+    <meta name="description" content="Private SPA esclusiva all'Chalet du Soleil di Torgnon. Idromassaggio, sauna finlandese e piscina in uso privato per coppie e piccoli gruppi. Bottiglia di vino e amenità incluse." />
 </svelte:head>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->

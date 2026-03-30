@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>{$t('termini.title')} | Chalet Du Soleil</title>
+    <title>{$t('termini.title')} | Chalet du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[40vh] w-full overflow-hidden bg-[#1a1a1a]">

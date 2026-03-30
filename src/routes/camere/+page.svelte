@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('rooms.title')} | Chalet Du Soleil</title>
+  <title>{$t('rooms.title')} | Chalet du Soleil</title>
 </svelte:head>
 
 <div class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">

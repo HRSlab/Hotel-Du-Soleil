@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Ristorante | Chalet Du Soleil Torgnon</title>
+	<title>Ristorante | Chalet du Soleil Torgnon</title>
 </svelte:head>
 
 <!-- HERO SECTION -->
@@ -12,7 +12,7 @@
 	<div class="absolute inset-0">
 		<img
 			src="/imgs/deer-dish-hero.webp"
-			alt="Ristorante Chalet Du Soleil"
+			alt="Ristorante Chalet du Soleil"
 			class="ken-burns h-full w-full object-cover opacity-80"
 		/>
 		<div class="absolute inset-0 bg-black/40"></div>

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>{$t('posizione.title')} | Chalet Du Soleil</title>
+    <title>{$t('posizione.title')} | Chalet du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
@@ -38,7 +38,7 @@
 <section class="bg-alpine-bg pb-24 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center border-b border-alpine-border pb-24">
         <div class="fade-up-element overflow-hidden bg-alpine-border relative group">
-            <img src="/imgs/map-hds.webp" alt="Esterno Chalet Du Soleil" class="w-full h-full object-cover img-elegant aspect-4/3 grayscale group-hover:grayscale-0 transition-all duration-700">
+            <img src="/imgs/map-hds.webp" alt="Esterno Chalet du Soleil" class="w-full h-full object-cover img-elegant aspect-4/3 grayscale group-hover:grayscale-0 transition-all duration-700">
         </div>
         <div class="fade-up-element">
             <Mountain class="w-8 h-8 text-alpine-gold mb-6 stroke-[1.5px]" />

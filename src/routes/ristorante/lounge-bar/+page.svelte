@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Lounge Bar & Camino | Chalet Du Soleil</title>
+	<title>Lounge Bar & Camino | Chalet du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
@@ -29,7 +29,7 @@
 		<p
 			class="mt-12 border-t border-alpine-border pt-12 text-sm leading-relaxed font-light text-alpine-muted md:text-base"
 		>
-			Il cuore pulsante dell'Chalet Du Soleil. Il nostro grande camino centrale in mattoni e rame è
+			Il cuore pulsante dell'Chalet du Soleil. Il nostro grande camino centrale in mattoni e rame è
 			il luogo ideale dove fermare il tempo. Lasciatevi avvolgere dal crepitio del fuoco con una
 			cioccolata calda alpina o un distillato artigianale dopo una giornata trascorsa all'aria
 			aperta.

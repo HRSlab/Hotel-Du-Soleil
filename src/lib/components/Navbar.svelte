@@ -80,10 +80,10 @@
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-6">
         
         <a href="/" class="z-20 flex shrink-0 cursor-pointer items-center gap-3 text-left transition-transform duration-300 hover:scale-105">
-            <img src="/imgs/logo.webp" alt="Logo Chalet Du Soleil" class="h-10 w-auto object-contain drop-shadow-md md:h-12" />
+            <img src="/imgs/logo.webp" alt="Logo Chalet du Soleil" class="h-10 w-auto object-contain drop-shadow-md md:h-12" />
             
             <div class="flex flex-col items-start justify-center pt-1">
-                <h1 class="font-serif text-lg leading-none uppercase tracking-widest md:text-xl lg:text-2xl">Chalet Du Soleil</h1>
+                <h1 class="font-serif text-lg leading-none uppercase tracking-widest md:text-xl lg:text-2xl">Chalet du Soleil</h1>
                 <span class="mt-1 font-['Great_Vibes'] text-sm tracking-wide leading-none text-alpine-gold opacity-90 md:text-base" style="text-transform: none;">by Futuro</span>
             </div>
         </a>
@@ -224,7 +224,7 @@
     )}
 >
     <div class="absolute top-8 left-8">
-        <img src="/imgs/logo.webp" alt="Logo Chalet Du Soleil" class="h-10 w-auto object-contain" />
+        <img src="/imgs/logo.webp" alt="Logo Chalet du Soleil" class="h-10 w-auto object-contain" />
     </div>
 
     <nav class="mt-20 flex flex-col gap-8 text-center pb-20">

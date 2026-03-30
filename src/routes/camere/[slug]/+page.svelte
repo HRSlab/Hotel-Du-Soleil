@@ -7,7 +7,7 @@
 
   const slug = $derived(page.params.slug);
   const room = $derived(rooms[slug as keyof typeof rooms]);
-  const title = $derived(room ? `${$t(`rooms_data.${slug}.name`)} | Chalet Du Soleil` : $t('errors.not_found'));
+  const title = $derived(room ? `${$t(`rooms_data.${slug}.name`)} | Chalet du Soleil` : $t('errors.not_found'));
 </script>
 
 <svelte:head>

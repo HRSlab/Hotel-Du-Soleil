@@ -64,7 +64,7 @@
 </script>
 
 <svelte:head>
-    <title>Ski & Snowboard | Chalet Du Soleil</title>
+    <title>Ski & Snowboard | Chalet du Soleil</title>
 </svelte:head>
 
 <!-- Hero Section with Parallax -->

@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Menù Degustazione | Chalet Du Soleil</title>
+  <title>Menù Degustazione | Chalet du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[50vh] w-full overflow-hidden bg-[#1a1a1a]">

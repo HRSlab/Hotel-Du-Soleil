@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Chalet Du Soleil | Modern Alpine Retreat</title>
+	<title>Chalet du Soleil | Modern Alpine Retreat</title>
 </svelte:head>
 
 <!-- HERO SECTION -->
@@ -90,7 +90,7 @@
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
 						src="/imgs/deer-dish-hero.webp" 
-						alt="Ristorante Chalet Du Soleil" 
+						alt="Ristorante Chalet du Soleil" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
 				</div>
