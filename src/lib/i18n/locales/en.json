@@ -77,24 +77,7 @@
     },
     "sport": {
       "title": "Activities",
-      "links": [
-        {
-          "name": "Ski & Snowboard (Ski-in)",
-          "href": "/sport/sci"
-        },
-        {
-          "name": "Mountain Bike & E-Bike",
-          "href": "/sport/bike"
-        },
-        {
-          "name": "Alpine Trekking",
-          "href": "/sport/trekking"
-        },
-        {
-          "name": "Ski Box & Rental",
-          "href": "/sport/noleggio"
-        }
-      ],
+      "links": [],
       "featured_label": "Featured",
       "featured_text": "The adrenaline starts 20 metres from our door. Direct lift access in winter and endless panoramic trails in summer.",
       "featured_cta": "Go Outdoors"
@@ -454,7 +437,27 @@
       "title": "Ski Box & Rental",
       "subtitle": "Convenient & Safe Services",
       "cta": "Ski Services"
-    }
+    },
+    "sci_label": "Ski-in / Ski-out Resort",
+    "sci_services": [
+      "Direct access to the ski lifts",
+      "Ski Room & Heated Boot Storage",
+      "Skipass at Reception"
+    ],
+    "bike_label": "E-Bike & Trekking",
+    "bike_services": [
+      "Partnered E-Bike rental",
+      "Secure Bike Room with wash area",
+      "Maps and GPX trail routes"
+    ],
+    "services_title": "Services for Athletes",
+    "services_subtitle": "Everything you need, in one place",
+    "service_skiroom_title": "Ski Room & Dry",
+    "service_skiroom_text": "Private lockers and a heated drying system for boots — always ready for you.",
+    "service_guides_title": "Partner Guides",
+    "service_guides_text": "We work with the best local guides for winter freeride and summer climbing.",
+    "service_breakfast_title": "Bio Breakfast",
+    "service_breakfast_text": "A fortified morning buffet with proteins and carbohydrates designed for active guests."
   },
   "experiences": {
     "main_title": "Alpine Experiences",

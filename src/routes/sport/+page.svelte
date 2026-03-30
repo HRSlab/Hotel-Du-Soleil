@@ -100,14 +100,14 @@
             <div class="w-full md:w-2/5 p-4 lg:p-10">
                 <Snowflake class="w-10 h-10 text-alpine-gold mb-8 stroke-1" />
                 <h2 class="font-serif text-4xl lg:text-5xl text-alpine-text mb-6">{$t('sport.sci.title')}</h2>
-                <p class="text-[11px] uppercase tracking-widest text-alpine-muted mb-8 font-bold">Ski-in / Ski-out Resort</p>
+                <p class="text-[11px] uppercase tracking-widest text-alpine-muted mb-8 font-bold">{$t('sport.sci_label')}</p>
                 <p class="text-alpine-muted text-sm md:text-base font-light leading-relaxed mb-12 max-w-md">
                     {$t('sport.sci.subtitle')}
                 </p>
                 <!-- @ts-ignore -->
                 <Motion initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.8 }} variants={containerVariants}>
                     <ul class="space-y-5 text-sm font-medium text-alpine-text mb-12">
-                        {#each ['Accesso diretto agli impianti', 'Ski Room e Deposito Scarponi Riscaldato', 'Skipass in Reception'] as service (service)}
+                        {#each (Array.isArray($t('sport.sci_services')) ? $t('sport.sci_services') : []) as service (service)}
                             <Motion variants={itemVariants}>
                                 <li class="flex items-center gap-4 border-b border-alpine-border pb-4">
                                     <div class="w-6 h-6 rounded-full bg-alpine-gold/10 flex items-center justify-center">
@@ -133,14 +133,14 @@
             <div class="w-full md:w-2/5 p-4 lg:p-10">
                 <Bike class="w-10 h-10 text-alpine-gold mb-8 stroke-1" />
                 <h2 class="font-serif text-4xl lg:text-5xl text-alpine-text mb-6">{$t('sport.bike.title')}</h2>
-                <p class="text-[11px] uppercase tracking-widest text-alpine-muted mb-8 font-bold">E-Bike & Trekking</p>
+                <p class="text-[11px] uppercase tracking-widest text-alpine-muted mb-8 font-bold">{$t('sport.bike_label')}</p>
                 <p class="text-alpine-muted text-sm md:text-base font-light leading-relaxed mb-12 max-w-md">
                     {$t('sport.bike.subtitle')}
                 </p>
                 <!-- @ts-ignore -->
                 <Motion initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.8 }} variants={containerVariants}>
                     <ul class="space-y-5 text-sm font-medium text-alpine-text mb-12">
-                        {#each ['Noleggio E-Bike convenzionato', 'Bike Room sicura con area lavaggio', 'Mappe e sentieri GPX'] as service (service)}
+                        {#each (Array.isArray($t('sport.bike_services')) ? $t('sport.bike_services') : []) as service (service)}
                             <Motion variants={itemVariants}>
                                 <li class="flex items-center gap-4 border-b border-alpine-border pb-4">
                                     <div class="w-6 h-6 rounded-full bg-alpine-gold/10 flex items-center justify-center">
@@ -163,8 +163,8 @@
         <!-- @ts-ignore -->
         <Motion initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={itemVariants}>
             <div class="text-center mb-24 max-w-xl mx-auto">
-                <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Servizi per lo Sportivo</h2>
-                <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Tutto ciò che ti serve, in un solo posto</p>
+                <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('sport.services_title')}</h2>
+                <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('sport.services_subtitle')}</p>
             </div>
         </Motion>
 
@@ -172,9 +172,9 @@
         <Motion initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={containerVariants}>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                 {#each [
-                    { icon: Wind, title: 'Ski Room & Dry', text: 'Armadietti privati e sistema di asciugatura e riscaldamento per scarponi, sempre pronti.' },
-                    { icon: Map, title: 'Guide Partner', text: 'Collaboriamo con le migliori guide locali per freeride invernale e scalate estive.' },
-                    { icon: Mountain, title: 'Colazione Bio', text: 'Buffet mattutino rinforzato con proteine e carboidrati studiati per chi fa sport.' }
+                    { icon: Wind, title: $t('sport.service_skiroom_title'), text: $t('sport.service_skiroom_text') },
+                    { icon: Map, title: $t('sport.service_guides_title'), text: $t('sport.service_guides_text') },
+                    { icon: Mountain, title: $t('sport.service_breakfast_title'), text: $t('sport.service_breakfast_text') }
                 ] as { icon, title, text } (title)}
                     <Motion variants={itemVariants}>
                         <div class="text-center p-12 md:p-16 border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500 flex flex-col items-center">

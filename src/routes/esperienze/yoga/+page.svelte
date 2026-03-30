@@ -173,7 +173,7 @@
             {$t('yoga_page.retreat_text')}
         </p>
         <ul class="space-y-3 text-xs text-alpine-muted font-light mb-8">
-            {#each $t('yoga_page.retreat_items') as item}
+            {#each $t('yoga_page.retreat_items') as item (item)}
             <li class="flex items-start gap-3"><Star class="w-3.5 h-3.5 text-alpine-gold shrink-0 mt-0.5" /> {item}</li>
             {/each}
         </ul>
@@ -338,10 +338,7 @@
                 <a href="/wellness" class="inline-flex items-center justify-center gap-3 bg-white text-alpine-text px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-alpine-gold hover:text-white transition-all duration-300">
                     {$t('yoga_page.cta_wellness')} <ArrowRight class="w-4 h-4" />
                 </a>
-                <a href="/wellness/massaggi" class="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:border-white hover:bg-white/10 transition-all duration-300">
-                    {$t('yoga_page.cta_massage')} <ArrowRight class="w-4 h-4" />
-                </a>
-            </div>
+                        </div>
         </div>
     </div>
 </section>
