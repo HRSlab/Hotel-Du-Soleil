@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>{$t('eventi.title')} | Hotel du Soleil</title>
+    <title>{$t('eventi.title')} | Chalet do Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">

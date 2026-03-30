@@ -7,7 +7,7 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>Mountain Bike & E-Bike | Hotel du Soleil</title>
+    <title>Mountain Bike & E-Bike | Chalet do Soleil</title>
     <meta name="description" content="Mountain bike ed e-bike a Torgnon, Valle d'Aosta. Percorsi panoramici tra alpeggi, boschi e vette con vista sul Cervino. Hotel bike-friendly con deposito e officina." />
 </svelte:head>
 

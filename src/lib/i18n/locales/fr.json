@@ -126,7 +126,7 @@
   },
   "home": {
     "philosophy_title": "Nous croyons au luxe de l'essentiel, à la chaleur humaine et à la valeur du temps ralenti.",
-    "philosophy_text": "L'Hotel du Soleil est votre camp de base à 1 500 mètres d'altitude. Nous avons éliminé le superflu pour laisser place à ce qui compte vraiment : le bois naturel, la saveur authentique de la cuisine alpine et la majesté de la nature juste derrière la porte.",
+    "philosophy_text": "L'Chalet do Soleil est votre camp de base à 1 500 mètres d'altitude. Nous avons éliminé le superflu pour laisser place à ce qui compte vraiment : le bois naturel, la saveur authentique de la cuisine alpine et la majesté de la nature juste derrière la porte.",
     "philosophy_cta": "Explorer l'Hôtel",
     "rooms_title": "Espaces de Repos",
     "rooms_subtitle": "Substance & Confort",
@@ -150,7 +150,7 @@
     "subtitle": "Élégance Alpine",
     "title": "L'Hôtel",
     "philosophy_title": "La chaleur du bois, la force de la pierre.",
-    "philosophy_text": "L'Hotel du Soleil a été conçu pour s'intégrer harmonieusement dans le paysage de Torgnon. Chaque détail reflète la tradition valdôtaine, réinterprétée avec un goût moderne et fonctionnel.",
+    "philosophy_text": "L'Chalet do Soleil a été conçu pour s'intégrer harmonieusement dans le paysage de Torgnon. Chaque détail reflète la tradition valdôtaine, réinterprétée avec un goût moderne et fonctionnel.",
     "common_spaces_title": "Espaces Communs",
     "common_spaces_text": "De notre hall accueillant à la salle cheminée, chaque espace est pensé pour favoriser la détente et la convivialité. De grandes baies vitrées s'ouvrent sur le panorama environnant, invitant la majesté des Alpes à l'intérieur de l'hôtel.",
     "amenities": [
@@ -163,7 +163,7 @@
     "subtitle": "Au Cœur de Torgnon",
     "title": "Emplacement",
     "philosophy_title": "Là où la route s'arrête, la montagne commence.",
-    "philosophy_text": "Situé à 1 500 mètres d'altitude, l'Hotel du Soleil domine la vallée du Cervin. Un refuge facilement accessible mais merveilleusement isolé du chaos quotidien.",
+    "philosophy_text": "Situé à 1 500 mètres d'altitude, l'Chalet do Soleil domine la vallée du Cervin. Un refuge facilement accessible mais merveilleusement isolé du chaos quotidien.",
     "arrival_title": "Votre Camp de Base",
     "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Situé au centre du village, nous offrons un garage couvert réservé à nos hôtes et la commodité incroyable d'avoir les remontées mécaniques à quelques pas du hall.",
     "maps_cta": "Ouvrir sur Google Maps",
@@ -534,7 +534,7 @@
       "policy": "Conditions de Séjour",
       "cookies": "Politique des Cookies"
     },
-    "rights": "© 2026 Futuro srl - Hotel du Soleil. Tous droits réservés.",
+    "rights": "© 2026 Futuro srl - Chalet do Soleil. Tous droits réservés.",
     "made_by": "fait avec ❤️ par CB"
   },
   "kids_club": {
@@ -594,14 +594,14 @@
     "groups_title": "Réservations Multiples & Groupes",
     "groups_text": "Pour les réservations de 4 chambres ou plus (groupes organisés, clubs ou réservations multiples voyageant ensemble), l'hôtel appliquera des conditions d'acompte et d'annulation personnalisées qui seront envoyées par e-mail lors de l'établissement du devis. En général, pour les groupes, l'annulation gratuite est possible jusqu'à 30 jours avant l'arrivée.",
     "parking_title": "Logistique & Parking",
-    "parking_text": "L'Hotel du Soleil dispose d'un garage couvert chauffé. Pour des raisons de sécurité et d'optimisation de l'espace, les hôtes utilisant le garage sont priés de laisser les clés de leur véhicule à la réception pendant toute la durée de leur séjour. Un parking public gratuit est également disponible à environ 100 mètres de l'établissement.",
+    "parking_text": "L'Chalet do Soleil dispose d'un garage couvert chauffé. Pour des raisons de sécurité et d'optimisation de l'espace, les hôtes utilisant le garage sont priés de laisser les clés de leur véhicule à la réception pendant toute la durée de leur séjour. Un parking public gratuit est également disponible à environ 100 mètres de l'établissement.",
     "images_title": "Note sur les images",
     "images_text": "Les images des chambres présentes sur le site sont à titre illustratif. Certains éléments de design, finitions en bois et disposition du mobilier peuvent varier au sein d'une même catégorie de chambre, tout en maintenant le standard et les services annoncés."
   },
   "cookie_policy": {
     "title": "Politique des Cookies",
     "intro_title": "Introduction",
-    "intro_text": "Cette Politique des Cookies explique comment l'Hotel du Soleil utilise les cookies et technologies similaires sur notre site web. En utilisant notre site web, vous consentez à l'utilisation des cookies conformément à cette politique.",
+    "intro_text": "Cette Politique des Cookies explique comment l'Chalet do Soleil utilise les cookies et technologies similaires sur notre site web. En utilisant notre site web, vous consentez à l'utilisation des cookies conformément à cette politique.",
     "what_title": "Qu'est-ce qu'un Cookie ?",
     "what_text": "Les cookies sont de petits fichiers texte qui sont stockés sur votre appareil lorsque vous visitez notre site web. Ils nous aident à vous fournir une meilleure expérience de navigation en mémorisant vos préférences et en comprenant comment vous utilisez notre site.",
     "types_title": "Types de Cookies que Nous Utilisons",

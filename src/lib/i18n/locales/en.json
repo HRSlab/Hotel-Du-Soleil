@@ -77,7 +77,24 @@
     },
     "sport": {
       "title": "Activities",
-      "links": [],
+      "links": [
+        {
+          "name": "Ski & Snowboard (Ski-in)",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "Mountain Bike & E-Bike",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "Alpine Trekking",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "Ski Box & Rental",
+          "href": "/sport/noleggio"
+        }
+      ],
       "featured_label": "Featured",
       "featured_text": "The adrenaline starts 20 metres from our door. Direct lift access in winter and endless panoramic trails in summer.",
       "featured_cta": "Go Outdoors"
@@ -109,7 +126,7 @@
   },
   "home": {
     "philosophy_title": "We believe in the luxury of simplicity, in genuine warmth, and in the value of unhurried time.",
-    "philosophy_text": "Hotel du Soleil is your Base Camp at 1,500 metres altitude. We have stripped away the superfluous to make room for what truly matters: natural wood, the authentic flavours of alpine cuisine, and the majesty of nature right outside the door.",
+    "philosophy_text": "Chalet do Soleil is your Base Camp at 1,500 metres altitude. We have stripped away the superfluous to make room for what truly matters: natural wood, the authentic flavours of alpine cuisine, and the majesty of nature right outside the door.",
     "philosophy_cta": "Explore the Hotel",
     "rooms_title": "Our Rooms",
     "rooms_subtitle": "Warmth & Comfort",
@@ -133,7 +150,7 @@
     "subtitle": "Alpine Elegance",
     "title": "The Hotel",
     "philosophy_title": "The warmth of wood, the strength of stone.",
-    "philosophy_text": "Hotel du Soleil was designed to blend harmoniously into the Torgnon landscape. Every detail reflects Aosta Valley tradition, reinterpreted with a modern, functional sensibility.",
+    "philosophy_text": "Chalet do Soleil was designed to blend harmoniously into the Torgnon landscape. Every detail reflects Aosta Valley tradition, reinterpreted with a modern, functional sensibility.",
     "common_spaces_title": "Shared Spaces",
     "common_spaces_text": "From our welcoming lobby to the fireside lounge, every space is designed to encourage relaxation and togetherness. Floor-to-ceiling windows frame the surrounding panorama, bringing the majesty of the Alps indoors.",
     "amenities": [
@@ -146,7 +163,7 @@
     "subtitle": "In the Heart of Torgnon",
     "title": "Location & Surroundings",
     "philosophy_title": "Where the road ends, the mountain begins.",
-    "philosophy_text": "Situated at 1,500 meters altitude, Hotel du Soleil overlooks the Matterhorn valley. An easily accessible yet wonderfully secluded refuge from daily chaos.",
+    "philosophy_text": "Situated at 1,500 meters altitude, Chalet do Soleil overlooks the Matterhorn valley. An easily accessible yet wonderfully secluded refuge from daily chaos.",
     "arrival_title": "Your Base Camp",
     "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Located in the town center, we offer a dedicated covered garage for our guests and the incredible convenience of having the ski lifts just steps from the hall.",
     "maps_cta": "Open on Google Maps",
@@ -202,7 +219,7 @@
     "km0_title": "Locally Sourced",
     "km0_text": "Our Fontina comes straight from the surrounding alpine pastures, and many of our vegetables from the family garden. A commitment to quality and sustainability.",
     "warmth_title": "Find the warmth.",
-    "warmth_text": "The beating heart of Hotel du Soleil. Our grand central brick-and-copper fireplace is the perfect place to let time stand still. Sink into the crackle of the fire with a hot alpine chocolate or a craft spirit after a day in the open air.",
+    "warmth_text": "The beating heart of Chalet do Soleil. Our grand central brick-and-copper fireplace is the perfect place to let time stand still. Sink into the crackle of the fire with a hot alpine chocolate or a craft spirit after a day in the open air.",
     "games_title": "Fun & Togetherness",
     "games_subtitle": "Pool Table & Table Football",
     "games_text": "Our lounge area is designed for the whole family to unwind. Challenge each other to a game of pool or table football in a relaxed, spacious setting — always with the warmth of the fireplace in the background.",
@@ -239,7 +256,7 @@
       "subtitle": "Exclusivity & Romance",
       "cta": "Private Experience"
     },
-    "meta_description": "Wellness area at Hotel du Soleil in Torgnon. Massages, private SPA, Finnish sauna, hydromassage and heated pool in the heart of the Aosta Valley Alps.",
+    "meta_description": "Wellness area at Chalet do Soleil in Torgnon. Massages, private SPA, Finnish sauna, hydromassage and heated pool in the heart of the Aosta Valley Alps.",
     "philosophy_label": "Our Philosophy",
     "philosophy_heading": "Sport & Wellness,<br/>A Natural Bond",
     "philosophy_p1": "We don't offer a generic treatment menu. Every massage is designed for those who live the mountains actively: skiers, hikers, cyclists, climbers. Our therapists assess your specific needs before each session.",
@@ -616,7 +633,7 @@
       "policy": "Stay Policy",
       "cookies": "Cookie Policy"
     },
-    "rights": "© 2026 Futuro srl - Hotel du Soleil. All rights reserved.",
+    "rights": "© 2026 Futuro srl - Chalet do Soleil. All rights reserved.",
     "made_by": "made with ❤️ by CB"
   },
   "kids_club": {
@@ -676,14 +693,14 @@
     "groups_title": "Multiple Bookings & Groups",
     "groups_text": "For bookings of 4 or more rooms (organized groups, clubs, or multiple bookings traveling together), the hotel will apply customized deposit and cancellation conditions that will be sent by email during the quotation phase. Generally, for groups, free cancellation is available up to 30 days before arrival.",
     "parking_title": "Logistics & Parking",
-    "parking_text": "Hotel du Soleil has a heated covered garage. For safety and to optimise space, guests using the garage are asked to leave their vehicle keys at Reception for the duration of their stay. Alternatively, a free public car park is available approximately 100 metres from the hotel.",
+    "parking_text": "Chalet do Soleil has a heated covered garage. For safety and to optimise space, guests using the garage are asked to leave their vehicle keys at Reception for the duration of their stay. Alternatively, a free public car park is available approximately 100 metres from the hotel.",
     "images_title": "Note on images",
     "images_text": "Room images on the website are for illustrative purposes. Some design elements, wood finishes, and furniture arrangements may vary within the same room category, while maintaining the promised standard and services."
   },
   "cookie_policy": {
     "title": "Cookie Policy",
     "intro_title": "Introduction",
-    "intro_text": "This Cookie Policy explains how Hotel du Soleil uses cookies and similar technologies on our website. By using our website, you consent to the use of cookies in accordance with this policy.",
+    "intro_text": "This Cookie Policy explains how Chalet do Soleil uses cookies and similar technologies on our website. By using our website, you consent to the use of cookies in accordance with this policy.",
     "what_title": "What are Cookies?",
     "what_text": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better browsing experience by remembering your preferences and understanding how you use our site.",
     "types_title": "Types of Cookies We Use",
@@ -702,7 +719,7 @@
     "last_updated": "Last updated: March 2026"
   },
   "degustazione_page": {
-    "meta_title": "Fontina DOP Tasting | Hotel du Soleil",
+    "meta_title": "Fontina DOP Tasting | Chalet do Soleil",
     "meta_description": "Fontina DOP and alpine cheese tasting in partnership with the Lo Copafen Farm, Perraillon family.",
     "hero_label": "Gastronomic Experience · In Partnership with Lo Copafen",
     "hero_title": "Fontina DOP",
@@ -769,7 +786,7 @@
     "partner_link": "Visit website"
   },
   "ciaspolate_page": {
-    "meta_title": "Night Snowshoeing | Hotel du Soleil",
+    "meta_title": "Night Snowshoeing | Chalet do Soleil",
     "meta_description": "Night and daytime snowshoeing in Torgnon, Aosta Valley. Snowshoe excursions through larch forests with refuge dinner and Matterhorn views.",
     "hero_label": "The Magic of the Night · Torgnon",
     "hero_title": "Night Snowshoeing",
@@ -833,7 +850,7 @@
     "info_disclaimer": "All excursions are subject to favourable weather and snow conditions. The reception is at your disposal for information, bookings and to help you choose the route best suited to you."
   },
   "yoga_page": {
-    "meta_title": "High-Altitude Yoga | Hotel du Soleil",
+    "meta_title": "High-Altitude Yoga | Chalet do Soleil",
     "meta_description": "High-altitude yoga in Torgnon, Aosta Valley. Dawn and sunset sessions at 1,500 metres, alpine meditation, pranayama and weekly retreats with Matterhorn views.",
     "hero_label": "Inner Balance · 1,500m",
     "hero_title": "High-Altitude Yoga",
@@ -907,7 +924,7 @@
     "cta_massage": "Post-Yoga Massage"
   },
   "guide_page": {
-    "meta_title": "Partner Alpine Guides | Hotel du Soleil",
+    "meta_title": "Partner Alpine Guides | Chalet do Soleil",
     "meta_description": "Certified alpine guides in the Aosta Valley. Hikes, mountaineering, freeride, snowshoeing and trekking led by professionals who know every trail in Torgnon.",
     "hero_label": "Mountain Experts · Aosta Valley",
     "hero_title": "Alpine Guides",
@@ -1009,8 +1026,8 @@
     "cta_snowshoe": "Night Snowshoeing"
   },
   "massaggi_page": {
-    "meta_title": "Sports & Wellness Massages | Hotel du Soleil",
-    "meta_description": "Sports and deep-tissue massages at the Hotel du Soleil wellness area in Torgnon. Muscle recovery after a day in the mountains, expert hands and alpine essential oils.",
+    "meta_title": "Sports & Wellness Massages | Chalet do Soleil",
+    "meta_description": "Sports and deep-tissue massages at the Chalet do Soleil wellness area in Torgnon. Muscle recovery after a day in the mountains, expert hands and alpine essential oils.",
     "hero_label": "Tailored Wellbeing",
     "hero_title": "Our Massages",
     "hero_subtitle": "The perfect recovery after a day in the mountains",

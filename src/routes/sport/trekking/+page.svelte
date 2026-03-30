@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>Trekking in Alpeggio | Hotel du Soleil</title>
+    <title>Trekking in Alpeggio | Chalet do Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">

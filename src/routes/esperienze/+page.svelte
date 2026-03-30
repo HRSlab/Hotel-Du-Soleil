@@ -8,7 +8,7 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>{$t('experiences.main_title')} | Hotel du Soleil</title>
+    <title>{$t('experiences.main_title')} | Chalet do Soleil</title>
     <meta name="description" content={$t('experiences.page_meta_description')} />
 </svelte:head>
 

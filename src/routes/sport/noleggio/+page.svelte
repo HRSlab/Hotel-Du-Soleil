@@ -27,10 +27,10 @@
     function handleSubmit(e: Event) {
         e.preventDefault();
 
-        const subject = encodeURIComponent(`Prenotazione Noleggio – Hotel du Soleil – ${formName}`);
+        const subject = encodeURIComponent(`Prenotazione Noleggio – Chalet do Soleil – ${formName}`);
 
         let body = `RICHIESTA NOLEGGIO ATTREZZATURA\n`;
-        body += `Hotel du Soleil – Torgnon\n`;
+        body += `Chalet do Soleil – Torgnon\n`;
         body += `${'\u2500'.repeat(40)}\n\n`;
         body += `DATI OSPITE\n`;
         body += `Nome: ${formName}\n`;
@@ -53,7 +53,7 @@
             body += `\nNOTE\n${formNotes}\n`;
         }
         body += `\n${'\u2500'.repeat(40)}\n`;
-        body += `Inviato tramite il sito Hotel du Soleil`;
+        body += `Inviato tramite il sito Chalet do Soleil`;
 
         const mailtoUrl = `mailto:${PARTNER_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
         const link = document.createElement('a');
@@ -73,7 +73,7 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>Ski Box & Noleggio | Hotel du Soleil</title>
+    <title>Ski Box & Noleggio | Chalet do Soleil</title>
     <meta name="description" content="Deposito sci con ski box dedicati e servizio noleggio attrezzatura a Torgnon. Scarponi al caldo, sci sempre pronti." />
 </svelte:head>
 

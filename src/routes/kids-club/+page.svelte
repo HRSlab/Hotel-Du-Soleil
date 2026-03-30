@@ -8,8 +8,8 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>{$t('kids_club.title')} | Hotel du Soleil</title>
-    <meta name="description" content="Kids Club dell'Hotel du Soleil a Torgnon: laboratori creativi, giochi all'aperto, cacce al tesoro nella neve e attività dedicate ai bambini dai 3 ai 12 anni." />
+    <title>{$t('kids_club.title')} | Chalet do Soleil</title>
+    <meta name="description" content="Kids Club dell'Chalet do Soleil a Torgnon: laboratori creativi, giochi all'aperto, cacce al tesoro nella neve e attività dedicate ai bambini dai 3 ai 12 anni." />
 </svelte:head>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
@@ -18,7 +18,7 @@
         class="absolute inset-0 scale-110"
         style="transform: translateY({scrollY * 0.25}px) scale(1.1);"
     >
-        <img src="/imgs/winter-park.webp" class="h-full w-full object-cover opacity-60" alt="Kids Club Hotel du Soleil" />
+        <img src="/imgs/winter-park.webp" class="h-full w-full object-cover opacity-60" alt="Kids Club Chalet do Soleil" />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-alpine-bg"></div>
     </div>
 

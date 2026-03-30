@@ -25,7 +25,7 @@ not_found = []
 # Simple inline replacements (text content only, no > < wrappers for multiline elements)
 simple = [
     # Meta
-    ("<title>Yoga in Quota | Hotel du Soleil</title>", "<title>{$t('yoga_page.meta_title')}</title>"),
+    ("<title>Yoga in Quota | Chalet do Soleil</title>", "<title>{$t('yoga_page.meta_title')}</title>"),
     ("content=\"Yoga in quota a Torgnon, Valle d'Aosta. Sessioni all'alba e al tramonto a 1.500 metri, meditazione alpina, pranayama e retreats settimanali con vista sul Cervino.\"", "content={$t('yoga_page.meta_description')}"),
 
     # Hero
