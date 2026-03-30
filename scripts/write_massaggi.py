@@ -1,4 +1,10 @@
-<script lang="ts">
+#!/usr/bin/env python3
+"""Write the fully translated massaggi page."""
+import pathlib
+
+PAGE_PATH = pathlib.Path(__file__).resolve().parent.parent / "src" / "routes" / "wellness" / "massaggi" / "+page.svelte"
+
+content = r'''<script lang="ts">
     import { t } from '$lib/i18n';
     import { Heart, Clock, Droplets, Flame, Leaf, ArrowRight, ShieldCheck, Star, Hand, Sparkles, Waves } from 'lucide-svelte';
 
@@ -396,3 +402,7 @@
         </div>
     </div>
 </section>
+'''
+
+PAGE_PATH.write_text(content, encoding='utf-8')
+print(f"Massaggi page written to {PAGE_PATH}")
