@@ -34,7 +34,7 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>{$t('sport.main_title')} | Chalet do Soleil</title>
+    <title>{$t('sport.main_title')} | Chalet Du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[85vh] w-full overflow-hidden bg-[#1a1a1a]">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chalet do Soleil | Modern Alpine Retreat</title>
+    <title>Chalet Du Soleil | Modern Alpine Retreat</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -123,7 +123,7 @@
             <!-- Logo -->
             <div class="text-left cursor-pointer z-20 flex-shrink-0" onclick="window.scrollTo(0,0)">
                 <h1 class="font-serif text-2xl md:text-3xl tracking-widest uppercase">
-                    Chalet do Soleil
+                    Chalet Du Soleil
                 </h1>
             </div>
 
@@ -434,7 +434,7 @@
                 Crediamo nel lusso dell'essenziale, nel calore umano e nel valore del tempo rallentato.
             </h3>
             <p class="text-alpine-muted text-sm md:text-base leading-relaxed font-light mb-12 max-w-xl mx-auto">
-                L'Chalet do Soleil è il tuo Base Camp a 1.500 metri di quota. Abbiamo eliminato il superfluo per lasciare spazio a ciò che conta davvero: il legno naturale, il sapore autentico della cucina alpina e la maestosità della natura appena fuori dalla porta.
+                L'Chalet Du Soleil è il tuo Base Camp a 1.500 metri di quota. Abbiamo eliminato il superfluo per lasciare spazio a ciò che conta davvero: il legno naturale, il sapore autentico della cucina alpina e la maestosità della natura appena fuori dalla porta.
             </p>
             <a href="#" class="text-[11px] uppercase font-bold tracking-[0.2em] text-alpine-text border-b border-alpine-text pb-1 hover:text-alpine-gold hover:border-alpine-gold transition-colors">
                 Scopri la nostra storia
@@ -541,7 +541,7 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
             
             <div class="md:col-span-2">
-                <h2 class="font-serif text-3xl text-white mb-6 uppercase tracking-widest">Chalet do Soleil</h2>
+                <h2 class="font-serif text-3xl text-white mb-6 uppercase tracking-widest">Chalet Du Soleil</h2>
                 <p class="font-light text-sm leading-relaxed max-w-sm mb-8 opacity-80">
                     Un rifugio silenzioso nel cuore di Torgnon. Sostanza, eleganza e il calore della Valle d'Aosta dal 1980.
                 </p>
@@ -573,7 +573,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest opacity-60">
-            <p>&copy; 2026 Chalet do Soleil. Tutti i diritti riservati.</p>
+            <p>&copy; 2026 Chalet Du Soleil. Tutti i diritti riservati.</p>
             <p class="mt-4 md:mt-0">Design Minimalist Alpine</p>
         </div>
     </footer>

@@ -11,7 +11,7 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>{$t('wellness.main_title')} | Chalet do Soleil</title>
+    <title>{$t('wellness.main_title')} | Chalet Du Soleil</title>
     <meta name="description" content={$t('wellness.meta_description')} />
 </svelte:head>
 
@@ -54,7 +54,7 @@
 <!-- ═══════════════════ LA FILOSOFIA ═══════════════════ -->
 <section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
     <div class="fade-up-element overflow-hidden bg-alpine-border shadow-xl">
-        <img src="/imgs/sauna-hds.webp" alt="Sauna at Chalet do Soleil" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
+        <img src="/imgs/sauna-hds.webp" alt="Sauna at Chalet Du Soleil" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
     </div>
 
     <div class="fade-up-element">

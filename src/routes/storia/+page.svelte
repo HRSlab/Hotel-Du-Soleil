@@ -4,12 +4,12 @@
 </script>
 
 <svelte:head>
-    <title>{$t('storia.title')} | Chalet do Soleil</title>
+    <title>{$t('storia.title')} | Chalet Du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
     <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1554034483-04fda0d3507b?q=80&w=2000&auto=format&fit=crop" class="ken-burns h-full w-full object-cover opacity-80 grayscale" alt="History of Chalet do Soleil" />
+        <img src="https://images.unsplash.com/photo-1554034483-04fda0d3507b?q=80&w=2000&auto=format&fit=crop" class="ken-burns h-full w-full object-cover opacity-80 grayscale" alt="History of Chalet Du Soleil" />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
     </div>
 

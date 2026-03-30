@@ -6,7 +6,7 @@
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
     
     <div class="md:col-span-2">
-      <h2 class="font-serif text-3xl text-white mb-6 uppercase tracking-widest">Chalet do Soleil</h2>
+      <h2 class="font-serif text-3xl text-white mb-6 uppercase tracking-widest">Chalet Du Soleil</h2>
       <p class="font-light text-sm leading-relaxed max-w-sm mb-8 opacity-80">
         {$t('footer.description')}
       </p>

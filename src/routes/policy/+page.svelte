@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>{$t('policy.title')} | Chalet do Soleil</title>
+    <title>{$t('policy.title')} | Chalet Du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[40vh] w-full overflow-hidden bg-[#1a1a1a]">
@@ -14,7 +14,7 @@
 
     <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-16 text-center">
         <span class="mb-4 block text-[10px] font-medium tracking-[0.4em] text-white/60 uppercase md:text-xs fade-up-element">
-            Chalet do Soleil — Torgnon
+            Chalet Du Soleil — Torgnon
         </span>
         <h1 class="font-serif text-4xl md:text-6xl leading-tight font-light text-white fade-up-element">
             {$t('policy.title')}

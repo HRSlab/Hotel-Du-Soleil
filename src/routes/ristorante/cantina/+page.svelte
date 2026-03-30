@@ -76,7 +76,7 @@
 </script>
 
 <svelte:head>
-	<title>La Cantina | Chalet do Soleil</title>
+	<title>La Cantina | Chalet Du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
