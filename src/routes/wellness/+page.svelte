@@ -12,7 +12,7 @@
 
 <svelte:head>
     <title>{$t('wellness.main_title')} | Hotel du Soleil</title>
-    <meta name="description" content="Wellness area at Hotel du Soleil in Torgnon. Massages, private SPA, Finnish sauna, hydromassage and heated pool in the heart of the Aosta Valley Alps." />
+    <meta name="description" content={$t('wellness.meta_description')} />
 </svelte:head>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
@@ -21,7 +21,7 @@
         class="absolute inset-0 scale-110"
         style="transform: translateY({scrollY * 0.25}px) scale(1.1);"
     >
-        <img src="/imgs/massaggi-ingresso.webp" class="h-full w-full object-cover opacity-55" alt="Massage area at Hotel Du Soleil" />
+        <img src="/imgs/massaggi-ingresso.webp" class="h-full w-full object-cover opacity-55" alt={$t('wellness.meta_description')} />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-alpine-bg"></div>
     </div>
 
@@ -58,26 +58,22 @@
     </div>
 
     <div class="fade-up-element">
-        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Our Philosophy</span>
-        <h2 class="font-serif text-4xl text-alpine-text mb-6">Sport & Wellness,<br/>A Natural Bond</h2>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('wellness.philosophy_label')}</span>
+        <h2 class="font-serif text-4xl text-alpine-text mb-6">{@html $t('wellness.philosophy_heading')}</h2>
         <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-            We don't offer a generic treatment menu. Every massage is designed
-            for those who live the mountains actively: skiers, hikers, cyclists, climbers.
-            Our therapists assess your specific needs before each session.
+            {$t('wellness.philosophy_p1')}
         </p>
         <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-            We use local essential oils — arnica montana, stone pine, alpine juniper —
-            combining the mountain's fragrance with the anti-inflammatory
-            and muscle-relaxing properties of the Aosta Valley herbal tradition.
+            {$t('wellness.philosophy_p2')}
         </p>
         <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border">
             <div class="flex items-center gap-3">
                 <Leaf class="w-5 h-5 text-alpine-gold shrink-0" />
-                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Natural alpine oils</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('wellness.natural_oils')}</span>
             </div>
             <div class="flex items-center gap-3">
                 <ShieldCheck class="w-5 h-5 text-alpine-gold shrink-0" />
-                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Certified therapists</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('wellness.certified_therapists')}</span>
             </div>
         </div>
     </div>
@@ -88,19 +84,19 @@
     <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">6</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Massage types</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('wellness.stat_massage_types')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">3</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Exclusive SPA rooms</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('wellness.stat_spa_rooms')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">32°C</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Heated pool</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('wellness.stat_pool')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">7/7</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Days by appointment</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('wellness.stat_days')}</p>
         </div>
     </div>
 </section>
@@ -109,8 +105,8 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Our Massages</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Every treatment, a tailored experience</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('wellness.massages_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.massages_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -119,18 +115,16 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Waves class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Relaxing & Soothing</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.m_ling_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Ling Massage</h4>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.m_ling_name')}</h4>
                     <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-4">1 hr · €50</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        A soothing muscle massage with essential oils.
-                        Releases tension, improves circulation and drainage,
-                        promotes overall wellbeing and relieves stress.
+                        {$t('wellness.m_ling_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">Best for</p>
-                        <p class="text-xs text-alpine-text mt-2 font-light">Stress · Tension · General wellbeing</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.best_for')}</p>
+                        <p class="text-xs text-alpine-text mt-2 font-light">{$t('wellness.m_ling_for')}</p>
                     </div>
                 </div>
             </div>
@@ -140,18 +134,16 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Droplets class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Draining</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.m_anti_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Anticellulite</h4>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.m_anti_name')}</h4>
                     <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-4">1 hr · €55</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        Reactivates blood and lymphatic circulation
-                        to reduce fluid retention.
-                        A targeted treatment that restores lightness and tone.
+                        {$t('wellness.m_anti_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">Best for</p>
-                        <p class="text-xs text-alpine-text mt-2 font-light">Water retention · Heavy legs</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.best_for')}</p>
+                        <p class="text-xs text-alpine-text mt-2 font-light">{$t('wellness.m_anti_for')}</p>
                     </div>
                 </div>
             </div>
@@ -161,19 +153,16 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Flame class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Pre & Post Activity</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.m_sport_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Sports Deep Tissue</h4>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.m_sport_name')}</h4>
                     <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-4">1 hr · €50 · 30 min · €30</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        Stimulates tissues and muscles under strain,
-                        inducing deep relaxation and releasing knots,
-                        tension and pain. Also available as a 30-minute
-                        session on a specific area (legs or back).
+                        {$t('wellness.m_sport_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">Best for</p>
-                        <p class="text-xs text-alpine-text mt-2 font-light">Skiers · Cyclists · Hikers</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.best_for')}</p>
+                        <p class="text-xs text-alpine-text mt-2 font-light">{$t('wellness.m_sport_for')}</p>
                     </div>
                 </div>
             </div>
@@ -186,18 +175,16 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Footprints class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Mind-Body Balance</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.m_reflex_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Foot Reflexology</h4>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.m_reflex_name')}</h4>
                     <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-4">30 min · €30 · 1 hr · €45</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        Restores mind-body balance, reduces stress,
-                        anxiety and muscle tension. Improves circulation
-                        and promotes deep, lasting relaxation.
+                        {$t('wellness.m_reflex_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">Best for</p>
-                        <p class="text-xs text-alpine-text mt-2 font-light">Stress · Anxiety · Muscle tension</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.best_for')}</p>
+                        <p class="text-xs text-alpine-text mt-2 font-light">{$t('wellness.m_reflex_for')}</p>
                     </div>
                 </div>
             </div>
@@ -207,19 +194,16 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Sparkles class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Japanese Anti-Ageing</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.m_kobido_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Kobido</h4>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.m_kobido_name')}</h4>
                     <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-4">30 min · €30 · 1 hr · €50</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        Japanese massage on face, neck and décolleté.
-                        Natural lifting effect: stimulates circulation, collagen
-                        and elastin production to tone and brighten the skin.
-                        Helps with bruxism and headaches.
+                        {$t('wellness.m_kobido_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">Best for</p>
-                        <p class="text-xs text-alpine-text mt-2 font-light">Anti-ageing · Radiance · Bruxism</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.best_for')}</p>
+                        <p class="text-xs text-alpine-text mt-2 font-light">{$t('wellness.m_kobido_for')}</p>
                     </div>
                 </div>
             </div>
@@ -227,24 +211,21 @@
             <!-- TERRA & CIELO -->
             <div class="fade-up-element group border-2 border-alpine-gold bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-alpine-gold text-white px-5 py-1.5 text-[10px] uppercase tracking-[0.3em] font-bold">
-                    Complete Ritual
+                    {$t('wellness.m_terra_badge')}
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Star class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Body & Face</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.m_terra_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Terra & Cielo</h4>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.m_terra_name')}</h4>
                     <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-4">1 hr · €55</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        The best of both worlds: foot reflexology (30 min)
-                        combined with anti-ageing face, neck and décolleté massage (30 min).
-                        A complete ritual that rebalances body and mind
-                        in a single experience.
+                        {$t('wellness.m_terra_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-gold/30">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold">Includes</p>
-                        <p class="text-xs text-alpine-text mt-2 font-light">Foot reflexology + Anti-ageing facial</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold">{$t('wellness.m_terra_includes_label')}</p>
+                        <p class="text-xs text-alpine-text mt-2 font-light">{$t('wellness.m_terra_includes')}</p>
                     </div>
                 </div>
             </div>
@@ -260,14 +241,10 @@
 <section class="border-y border-alpine-border bg-white py-32 px-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="fade-up-element">
-            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">The Ritual</span>
-            <h2 class="font-serif text-4xl text-alpine-text mb-6">Every Massage<br/>Is a Complete Experience</h2>
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('wellness.ritual_label')}</span>
+            <h2 class="font-serif text-4xl text-alpine-text mb-6">{@html $t('wellness.ritual_heading')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                We never start directly with the treatment.
-                Every session begins with a brief consultation to understand your needs,
-                areas of tension and desired intensity.
-                Afterwards, a warm alpine herbal tea and a few minutes
-                of rest in the relaxation area complete the experience.
+                {$t('wellness.ritual_desc')}
             </p>
             <div class="space-y-6">
                 <div class="flex items-start gap-4">
@@ -275,8 +252,8 @@
                         <span class="text-xs font-serif text-alpine-gold">1</span>
                     </div>
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Welcome</p>
-                        <p class="text-xs text-alpine-muted font-light">Welcome tea and consultation with your therapist</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.ritual_step1')}</p>
+                        <p class="text-xs text-alpine-muted font-light">{$t('wellness.ritual_step1_desc')}</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -284,8 +261,8 @@
                         <span class="text-xs font-serif text-alpine-gold">2</span>
                     </div>
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">The Treatment</p>
-                        <p class="text-xs text-alpine-muted font-light">30–60 minutes of your chosen massage</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.ritual_step2')}</p>
+                        <p class="text-xs text-alpine-muted font-light">{$t('wellness.ritual_step2_desc')}</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -293,15 +270,15 @@
                         <span class="text-xs font-serif text-alpine-gold">3</span>
                     </div>
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Rest</p>
-                        <p class="text-xs text-alpine-muted font-light">Relaxation area with warm tea and soft blanket</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.ritual_step3')}</p>
+                        <p class="text-xs text-alpine-muted font-light">{$t('wellness.ritual_step3_desc')}</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="fade-up-element overflow-hidden bg-alpine-border shadow-xl">
-            <img src="/imgs/piscina.webp" alt="Relaxation area and pool" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
+            <img src="/imgs/piscina.webp" alt={$t('wellness.area_pool')} class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
         </div>
     </div>
 </section>
@@ -310,36 +287,30 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-5xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Our Oils</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">From the mountain, for your body</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('wellness.oils_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.oils_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="fade-up-element text-center p-10 bg-white border border-alpine-border">
                 <Leaf class="w-8 h-8 text-alpine-gold mx-auto mb-6" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Arnica Montana</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.oil_arnica_name')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Hand-picked in alpine pastures above 1,800 metres.
-                    A powerful natural anti-inflammatory, it is the traditional alpine remedy
-                    for muscle pain and bruises.
+                    {$t('wellness.oil_arnica_desc')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-10 bg-white border border-alpine-border">
                 <Droplets class="w-8 h-8 text-alpine-gold mx-auto mb-6" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Stone Pine</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.oil_pine_name')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    The essential oil of the “king of the Alps”. Distilled from wood and needles,
-                    it has scientifically proven relaxing properties:
-                    it lowers heart rate and promotes deep sleep.
+                    {$t('wellness.oil_pine_desc')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-10 bg-white border border-alpine-border">
                 <Star class="w-8 h-8 text-alpine-gold mx-auto mb-6" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Alpine Juniper</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.oil_juniper_name')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    From high-altitude juniper berries, an oil with a fresh, resinous fragrance.
-                    Stimulates circulation, drains fluids
-                    and restores lightness to tired legs.
+                    {$t('wellness.oil_juniper_desc')}
                 </p>
             </div>
         </div>
@@ -350,10 +321,9 @@
 <section class="bg-[#0a0a0a] py-28 px-6">
     <div class="max-w-3xl mx-auto text-center fade-up-element">
         <Moon class="w-10 h-10 text-alpine-gold mx-auto mb-8" />
-        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">Private SPA</h2>
+        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">{$t('wellness.spa_title')}</h2>
         <p class="text-white/50 text-sm font-light leading-relaxed max-w-lg mx-auto">
-            Close the door. The world stays outside. Hydromassage, Finnish sauna
-            and heated pool — all for your exclusive use, just for you.
+            {$t('wellness.spa_divider')}
         </p>
     </div>
 </section>
@@ -361,38 +331,35 @@
 <!-- ═══════════════════ L'AREA ═══════════════════ -->
 <section class="bg-alpine-bg py-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
     <div class="fade-up-element overflow-hidden bg-alpine-border shadow-xl">
-        <img src="/imgs/jacuzzi-spa-hds-2026.webp" alt="Hydromassage Private SPA" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
+        <img src="/imgs/jacuzzi-spa-hds-2026.webp" alt={$t('wellness.area_hydro')} class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
     </div>
 
     <div class="fade-up-element">
-        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Exclusive Access</span>
-        <h2 class="font-serif text-4xl text-alpine-text mb-6">Three Spaces,<br/>One Privilege</h2>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('wellness.area_label')}</span>
+        <h2 class="font-serif text-4xl text-alpine-text mb-6">{@html $t('wellness.area_heading')}</h2>
         <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-            When you book the Private SPA, the entire wellness area is closed
-            to other guests and becomes your private sanctuary.
-            Move freely between spaces, choose the music,
-            adjust the lighting and enjoy every moment at your own pace.
+            {$t('wellness.area_desc')}
         </p>
         <div class="space-y-4">
             <div class="flex items-start gap-4 p-4 border border-alpine-border bg-white">
                 <Droplets class="w-5 h-5 text-alpine-gold shrink-0 mt-0.5" />
                 <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Hydromassage</p>
-                    <p class="text-xs text-alpine-muted font-light">Jet pool at controlled temperature, chromotherapy and aromatherapy included</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.area_hydro')}</p>
+                    <p class="text-xs text-alpine-muted font-light">{$t('wellness.area_hydro_desc')}</p>
                 </div>
             </div>
             <div class="flex items-start gap-4 p-4 border border-alpine-border bg-white">
                 <Flame class="w-5 h-5 text-alpine-gold shrink-0 mt-0.5" />
                 <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Finnish Sauna</p>
-                    <p class="text-xs text-alpine-muted font-light">Temperature adjustable up to 90°C, Aosta Valley stone pine wood, steam infusions with essential oils</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.area_sauna')}</p>
+                    <p class="text-xs text-alpine-muted font-light">{$t('wellness.area_sauna_desc')}</p>
                 </div>
             </div>
             <div class="flex items-start gap-4 p-4 border border-alpine-border bg-white">
                 <Sparkles class="w-5 h-5 text-alpine-gold shrink-0 mt-0.5" />
                 <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Heated Pool</p>
-                    <p class="text-xs text-alpine-muted font-light">Water at 32°C, open swimming and relaxation area with heated loungers and Alpine views</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.area_pool')}</p>
+                    <p class="text-xs text-alpine-muted font-light">{$t('wellness.area_pool_desc')}</p>
                 </div>
             </div>
         </div>
@@ -403,8 +370,8 @@
 <section class="bg-alpine-bg pb-32 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Packages</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Choose the perfect experience for you</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('wellness.pkg_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.pkg_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -413,32 +380,30 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Heart class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">For Two</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.pkg_romantic_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Romantic Escape</h4>
-                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-6">2 hrs · 2 guests · €180</p>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.pkg_romantic_name')}</h4>
+                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-6">{$t('wellness.pkg_romantic_pricing')}</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        Two hours of absolute exclusivity for couples.
-                        The entire wellness area is yours: hydromassage with chromotherapy,
-                        Finnish sauna and heated pool.
+                        {$t('wellness.pkg_romantic_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border space-y-3">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-3">Includes</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-3">{$t('wellness.includes')}</p>
                         <div class="flex items-center gap-2">
                             <Wine class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Bottle of Aosta Valley wine</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_romantic_wine')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Gem class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Fresh fruit and chocolates</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_romantic_fruit')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Sparkles class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Premium bathrobes and slippers</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_romantic_robes')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Music class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Music selection of your choice</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_music')}</span>
                         </div>
                     </div>
                 </div>
@@ -449,32 +414,30 @@
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Users class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Small Group</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.pkg_group_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Friends & Family</h4>
-                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-6">2 hrs · 3–6 guests · €280</p>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.pkg_group_name')}</h4>
+                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-6">{$t('wellness.pkg_group_pricing')}</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        Perfect for celebrating a special occasion with close friends
-                        or a family evening. Same amenities as the couple's package,
-                        scaled up for the group.
+                        {$t('wellness.pkg_group_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-border space-y-3">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-3">Includes</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-3">{$t('wellness.includes')}</p>
                         <div class="flex items-center gap-2">
                             <Wine class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">2 bottles of Aosta Valley wine</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_group_wine')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Gem class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Cheese and fruit board</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_group_food')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Sparkles class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Bathrobes and slippers for everyone</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_group_robes')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Music class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Music selection of your choice</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_music')}</span>
                         </div>
                     </div>
                 </div>
@@ -483,45 +446,43 @@
             <!-- BY NIGHT — PREMIUM -->
             <div class="fade-up-element group border-2 border-alpine-gold bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-alpine-gold text-white px-5 py-1.5 text-[10px] uppercase tracking-[0.3em] font-bold">
-                    Exclusive
+                    {$t('wellness.pkg_night_badge')}
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
                         <Moon class="w-4 h-4 text-alpine-gold" />
-                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">Premium</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-alpine-muted font-bold">{$t('wellness.pkg_night_type')}</span>
                     </div>
-                    <h4 class="font-serif text-2xl text-alpine-text mb-2">Private SPA by Night</h4>
-                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-6">3 hrs · 2–4 guests · €380</p>
+                    <h4 class="font-serif text-2xl text-alpine-text mb-2">{$t('wellness.pkg_night_name')}</h4>
+                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-6">{$t('wellness.pkg_night_pricing')}</p>
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed mb-6">
-                        The ultimate experience. From 9 PM to midnight, the wellness area
-                        transforms into a nocturnal sanctuary with dim lights, candles
-                        and the absolute silence of the mountains. Three hours to lose track of time.
+                        {$t('wellness.pkg_night_desc')}
                     </p>
                     <div class="pt-6 border-t border-alpine-gold/30 space-y-3">
-                        <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-3">Everything included, and more</p>
+                        <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mb-3">{$t('wellness.pkg_night_includes')}</p>
                         <div class="flex items-center gap-2">
                             <Wine class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Bottle of Champagne or premium wine</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_night_champagne')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Gem class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Gourmet board and artisan pralines</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_night_gourmet')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Star class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Scented candles and mood lighting</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_night_candles')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Sparkles class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Premium beauty kit and warm bathrobes</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_night_beauty')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Music class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Curated playlist or total silence</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_night_playlist')}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <Clock class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">Full 3 hours (9 PM – midnight)</span>
+                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_night_hours')}</span>
                         </div>
                     </div>
                 </div>
@@ -534,18 +495,13 @@
 <section class="border-y border-alpine-border bg-white py-32 px-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="fade-up-element">
-            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Private SPA by Night</span>
-            <h2 class="font-serif text-4xl text-alpine-text mb-6">When the Mountain<br/>Sleeps, You Shine</h2>
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('wellness.pkg_night_label')}</span>
+            <h2 class="font-serif text-4xl text-alpine-text mb-6">{@html $t('wellness.night_heading')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-                From 9 PM, the hotel enters a special quiet.
-                The wellness lights dim, the candles come alive
-                and the only sound is flowing water.
-                It is the most exclusive hour of our hotel.
+                {$t('wellness.night_p1')}
             </p>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                Champagne awaits you at the poolside. The gourmet board —
-                Fontina DOP, Lardo d'Arnad, mountain honey, artisan pralines —
-                is prepared by our chef. Three hours that will never feel like enough.
+                {$t('wellness.night_p2')}
             </p>
             <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border">
                 <div class="flex items-center gap-3">
@@ -554,7 +510,7 @@
                 </div>
                 <div class="flex items-center gap-3">
                     <Lock class="w-5 h-5 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">100% Private</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('wellness.night_private')}</span>
                 </div>
             </div>
         </div>
@@ -569,41 +525,37 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-5xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Every Detail Matters</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Included in all Private SPA packages</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('wellness.detail_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.detail_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="fade-up-element text-center p-8 bg-white border border-alpine-border">
                 <Wine class="w-8 h-8 text-alpine-gold mx-auto mb-5" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Wine & Bubbles</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.detail_wine')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Aosta Valley wine or Champagne (By Night package).
-                    Served poolside at the perfect temperature.
+                    {$t('wellness.detail_wine_desc')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-8 bg-white border border-alpine-border">
                 <Gem class="w-8 h-8 text-alpine-gold mx-auto mb-5" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Tasting</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.detail_tasting')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Fresh fruit, artisan chocolates and local cheeses.
-                    The night package includes a full gourmet board.
+                    {$t('wellness.detail_tasting_desc')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-8 bg-white border border-alpine-border">
                 <Sparkles class="w-8 h-8 text-alpine-gold mx-auto mb-5" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Premium Comfort</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.detail_comfort')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    Warm bathrobes, soft slippers, towels and beauty kit
-                    with natural alpine products.
+                    {$t('wellness.detail_comfort_desc')}
                 </p>
             </div>
             <div class="fade-up-element text-center p-8 bg-white border border-alpine-border">
                 <Lock class="w-8 h-8 text-alpine-gold mx-auto mb-5" />
-                <h4 class="font-serif text-lg text-alpine-text mb-3">Total Privacy</h4>
+                <h4 class="font-serif text-lg text-alpine-text mb-3">{$t('wellness.detail_privacy')}</h4>
                 <p class="text-xs text-alpine-muted font-light leading-relaxed">
-                    The area is closed to all other guests.
-                    No interruptions, no schedule to keep within your booked time slot.
+                    {$t('wellness.detail_privacy_desc')}
                 </p>
             </div>
         </div>
@@ -618,38 +570,36 @@
         </div>
 
         <div class="fade-up-element order-1 md:order-2">
-            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">Tailor-Made</span>
-            <h2 class="font-serif text-4xl text-alpine-text mb-6">Special Occasions</h2>
+            <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-4 block">{$t('wellness.occasions_label')}</span>
+            <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('wellness.occasions_title')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                The Private SPA is the perfect place to make a special moment
-                even more unforgettable. Anniversaries, birthdays, marriage proposals:
-                tell us what you're celebrating and we'll personalise everything for you.
+                {$t('wellness.occasions_desc')}
             </p>
             <div class="space-y-5">
                 <div class="flex items-start gap-4">
                     <Heart class="w-5 h-5 text-alpine-gold shrink-0 mt-0.5" />
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Anniversaries & Proposals</p>
-                        <p class="text-xs text-alpine-muted font-light">Rose petals, Champagne and a personalised message</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.occasions_anniversary')}</p>
+                        <p class="text-xs text-alpine-muted font-light">{$t('wellness.occasions_anniversary_desc')}</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
                     <Star class="w-5 h-5 text-alpine-gold shrink-0 mt-0.5" />
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Birthdays</p>
-                        <p class="text-xs text-alpine-muted font-light">Custom cake and themed decorations</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.occasions_birthday')}</p>
+                        <p class="text-xs text-alpine-muted font-light">{$t('wellness.occasions_birthday_desc')}</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
                     <Users class="w-5 h-5 text-alpine-gold shrink-0 mt-0.5" />
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">Team & Hen/Stag Parties</p>
-                        <p class="text-xs text-alpine-muted font-light">Group package with prosecco, boards and party atmosphere</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-alpine-text mb-1">{$t('wellness.occasions_team')}</p>
+                        <p class="text-xs text-alpine-muted font-light">{$t('wellness.occasions_team_desc')}</p>
                     </div>
                 </div>
             </div>
             <p class="mt-8 text-[10px] uppercase tracking-widest text-alpine-muted font-bold">
-                Speak with reception to personalise your experience
+                {$t('wellness.occasions_footer')}
             </p>
         </div>
     </div>
@@ -659,8 +609,8 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-5xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Practical Information</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">Everything you need to know</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('wellness.info_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('wellness.info_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -668,32 +618,32 @@
             <div class="fade-up-element bg-white p-10 border border-alpine-border">
                 <h4 class="font-serif text-xl text-alpine-text mb-6 flex items-center gap-3">
                     <Clock class="w-5 h-5 text-alpine-gold" />
-                    Massages
+                    {$t('wellness.info_massages')}
                 </h4>
                 <div class="space-y-4 text-sm text-alpine-muted font-light">
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Availability</span>
-                        <span class="font-bold text-alpine-text">Every day</span>
+                        <span>{$t('wellness.info_availability')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_everyday')}</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Time slot</span>
+                        <span>{$t('wellness.info_timeslot')}</span>
                         <span class="font-bold text-alpine-text">10:00 – 20:00</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Booking</span>
-                        <span class="font-bold text-alpine-text">At reception</span>
+                        <span>{$t('wellness.info_booking')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_at_reception')}</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Recommended notice</span>
-                        <span class="font-bold text-alpine-text">The day before</span>
+                        <span>{$t('wellness.info_notice')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_day_before')}</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Cancellation</span>
-                        <span class="font-bold text-alpine-text">Free up to 6h before</span>
+                        <span>{$t('wellness.info_cancellation')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_free_6h')}</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span>Packages</span>
-                        <span class="font-bold text-alpine-text">3 sessions -15%</span>
+                        <span>{$t('wellness.info_packages')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_3sessions')}</span>
                     </div>
                 </div>
             </div>
@@ -702,32 +652,32 @@
             <div class="fade-up-element bg-white p-10 border border-alpine-border">
                 <h4 class="font-serif text-xl text-alpine-text mb-6 flex items-center gap-3">
                     <Lock class="w-5 h-5 text-alpine-gold" />
-                    Private SPA
+                    {$t('wellness.info_private_spa')}
                 </h4>
                 <div class="space-y-4 text-sm text-alpine-muted font-light">
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Daytime slots</span>
+                        <span>{$t('wellness.info_daytime')}</span>
                         <span class="font-bold text-alpine-text">10–12 / 14–16 / 17–19</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>By Night slot</span>
+                        <span>{$t('wellness.info_bynight')}</span>
                         <span class="font-bold text-alpine-text">21:00 – 00:00</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Minimum notice</span>
-                        <span class="font-bold text-alpine-text">24 hours</span>
+                        <span>{$t('wellness.info_min_notice')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_24h')}</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Cancellation</span>
-                        <span class="font-bold text-alpine-text">Free up to 24h before</span>
+                        <span>{$t('wellness.info_cancellation')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_free_24h')}</span>
                     </div>
                     <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                        <span>Add-on massage</span>
-                        <span class="font-bold text-alpine-text">Can be combined (-10%)</span>
+                        <span>{$t('wellness.info_addon')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_combinable')}</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span>Gift card</span>
-                        <span class="font-bold text-alpine-text">Available at reception</span>
+                        <span>{$t('wellness.info_giftcard')}</span>
+                        <span class="font-bold text-alpine-text">{$t('wellness.info_giftcard_value')}</span>
                     </div>
                 </div>
             </div>
@@ -736,32 +686,32 @@
         <div class="fade-up-element mt-8 bg-white p-10 border border-alpine-border">
             <h4 class="font-serif text-xl text-alpine-text mb-6 flex items-center gap-3">
                 <ShieldCheck class="w-5 h-5 text-alpine-gold" />
-                Good to Know
+                {$t('wellness.good_to_know')}
             </h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 text-sm text-alpine-muted font-light">
                 <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                    <span>Bathrobe</span>
-                    <span class="font-bold text-alpine-text">Included in room</span>
+                    <span>{$t('wellness.gtk_bathrobe')}</span>
+                    <span class="font-bold text-alpine-text">{$t('wellness.gtk_bathrobe_val')}</span>
                 </div>
                 <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                    <span>Swimsuit (Private SPA)</span>
-                    <span class="font-bold text-alpine-text">Required</span>
+                    <span>{$t('wellness.gtk_swimsuit')}</span>
+                    <span class="font-bold text-alpine-text">{$t('wellness.gtk_swimsuit_val')}</span>
                 </div>
                 <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                    <span>Recommended arrival</span>
-                    <span class="font-bold text-alpine-text">10 min early</span>
+                    <span>{$t('wellness.gtk_arrival')}</span>
+                    <span class="font-bold text-alpine-text">{$t('wellness.gtk_arrival_val')}</span>
                 </div>
                 <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                    <span>Minimum age</span>
-                    <span class="font-bold text-alpine-text">16 years</span>
+                    <span>{$t('wellness.gtk_minage')}</span>
+                    <span class="font-bold text-alpine-text">{$t('wellness.gtk_minage_val')}</span>
                 </div>
                 <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                    <span>Max guests (Private SPA)</span>
-                    <span class="font-bold text-alpine-text">6 people</span>
+                    <span>{$t('wellness.gtk_maxguests')}</span>
+                    <span class="font-bold text-alpine-text">{$t('wellness.gtk_maxguests_val')}</span>
                 </div>
                 <div class="flex justify-between items-center border-b border-alpine-border pb-3">
-                    <span>Booking</span>
-                    <span class="font-bold text-alpine-text">At reception</span>
+                    <span>{$t('wellness.info_booking')}</span>
+                    <span class="font-bold text-alpine-text">{$t('wellness.info_at_reception')}</span>
                 </div>
             </div>
         </div>
@@ -772,83 +722,83 @@
 <section class="border-y border-alpine-border bg-white py-20 px-6">
     <div class="max-w-4xl mx-auto">
         <div class="fade-up-element text-center mb-12">
-            <h3 class="font-serif text-3xl text-alpine-text">Price Summary</h3>
+            <h3 class="font-serif text-3xl text-alpine-text">{$t('wellness.price_title')}</h3>
         </div>
         <div class="fade-up-element border border-alpine-border divide-y divide-alpine-border">
             <div class="grid grid-cols-4 p-5 bg-alpine-bg">
-                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text">Treatment / Package</span>
-                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text text-center">Guests</span>
-                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text text-center">Duration</span>
-                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text text-right">Price</span>
+                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text">{$t('wellness.price_col_treatment')}</span>
+                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text text-center">{$t('wellness.price_col_guests')}</span>
+                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text text-center">{$t('wellness.price_col_duration')}</span>
+                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-text text-right">{$t('wellness.price_col_price')}</span>
             </div>
             <!-- Massaggi -->
             <div class="grid grid-cols-4 p-5 items-center">
-                <p class="font-serif text-sm text-alpine-text">Ling Massage</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.m_ling_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">1</p>
-                <p class="text-sm text-alpine-muted font-light text-center">1 hour</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_1h')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€50</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center bg-alpine-bg/50">
-                <p class="font-serif text-sm text-alpine-text">Anticellulite</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.m_anti_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">1</p>
-                <p class="text-sm text-alpine-muted font-light text-center">1 hour</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_1h')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€55</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center">
-                <p class="font-serif text-sm text-alpine-text">Sports Deep Tissue</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.m_sport_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">1</p>
-                <p class="text-sm text-alpine-muted font-light text-center">1 hour / 30 min</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_1h_30min')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€50 / €30</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center bg-alpine-bg/50">
-                <p class="font-serif text-sm text-alpine-text">Foot Reflexology</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.m_reflex_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">1</p>
-                <p class="text-sm text-alpine-muted font-light text-center">30 min / 1 hour</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_30min_1h')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€30 / €45</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center">
-                <p class="font-serif text-sm text-alpine-text">Kobido</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.m_kobido_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">1</p>
-                <p class="text-sm text-alpine-muted font-light text-center">30 min / 1 hour</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_30min_1h')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€30 / €50</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center bg-alpine-bg/50 border-l-4 border-l-alpine-gold">
                 <div>
-                    <p class="font-serif text-sm text-alpine-text">Terra & Cielo</p>
-                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mt-1">Ritual</p>
+                    <p class="font-serif text-sm text-alpine-text">{$t('wellness.m_terra_name')}</p>
+                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mt-1">{$t('wellness.price_ritual')}</p>
                 </div>
                 <p class="text-sm text-alpine-muted font-light text-center">1</p>
-                <p class="text-sm text-alpine-muted font-light text-center">1 hour</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_1h')}</p>
                 <p class="text-sm font-bold text-alpine-gold text-right">€55</p>
             </div>
             <!-- Divider -->
             <div class="grid grid-cols-4 p-4 bg-alpine-bg">
-                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-gold col-span-4">Private SPA</span>
+                <span class="text-[10px] uppercase tracking-widest font-bold text-alpine-gold col-span-4">{$t('wellness.spa_title')}</span>
             </div>
             <div class="grid grid-cols-4 p-5 items-center">
-                <p class="font-serif text-sm text-alpine-text">Romantic Escape</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.pkg_romantic_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">2</p>
-                <p class="text-sm text-alpine-muted font-light text-center">2 hours</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_2h')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€180</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center bg-alpine-bg/50">
-                <p class="font-serif text-sm text-alpine-text">Friends & Family</p>
+                <p class="font-serif text-sm text-alpine-text">{$t('wellness.pkg_group_name')}</p>
                 <p class="text-sm text-alpine-muted font-light text-center">3–6</p>
-                <p class="text-sm text-alpine-muted font-light text-center">2 hours</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_2h')}</p>
                 <p class="text-sm font-bold text-alpine-text text-right">€280</p>
             </div>
             <div class="grid grid-cols-4 p-5 items-center border-l-4 border-l-alpine-gold">
                 <div>
-                    <p class="font-serif text-sm text-alpine-text">Private SPA by Night</p>
-                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mt-1">Premium</p>
+                    <p class="font-serif text-sm text-alpine-text">{$t('wellness.pkg_night_name')}</p>
+                    <p class="text-[10px] uppercase tracking-widest text-alpine-gold font-bold mt-1">{$t('wellness.pkg_night_type')}</p>
                 </div>
                 <p class="text-sm text-alpine-muted font-light text-center">2–4</p>
-                <p class="text-sm text-alpine-muted font-light text-center">3 hours</p>
+                <p class="text-sm text-alpine-muted font-light text-center">{$t('wellness.price_3h')}</p>
                 <p class="text-sm font-bold text-alpine-gold text-right">€380</p>
             </div>
         </div>
         <p class="text-center text-[10px] uppercase tracking-widest text-alpine-muted font-bold mt-6">
-            Private SPA packages: wine, food & amenities included · Prices per person
+            {$t('wellness.price_footer')}
         </p>
     </div>
 </section>
@@ -857,13 +807,12 @@
 <section class="bg-[#0a0a0a] py-32 px-6">
     <div class="max-w-3xl mx-auto text-center">
         <div class="fade-up-element">
-            <h2 class="font-serif text-4xl text-white mb-6">Your Wellbeing Awaits</h2>
+            <h2 class="font-serif text-4xl text-white mb-6">{$t('wellness.cta_title')}</h2>
             <p class="text-white/50 text-sm font-light leading-relaxed max-w-lg mx-auto mb-12">
-                After a day in the mountains, treat yourself to the luxury of perfect recovery.
-                Expert massages, private SPA and alpine renewal.
+                {$t('wellness.cta_desc')}
             </p>
             <a href="mailto:info@hoteldusoleiltorgnon.com" class="inline-flex items-center justify-center gap-3 bg-white text-alpine-text px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-alpine-gold hover:text-white transition-all duration-300">
-                Book at Reception <ArrowRight class="w-4 h-4" />
+                {$t('wellness.cta_button')} <ArrowRight class="w-4 h-4" />
             </a>
         </div>
     </div>
