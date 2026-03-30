@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "https://hotel-du-soleil.it/*"
+  to = "https://www.hotel-du-soleil.it/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://hoteldusoleil.netlify.app/*"
+  to = "https://www.hotel-du-soleil.it/:splat"
+  status = 301
+  force = true
