@@ -26,18 +26,6 @@
         {
           "name": "位置与周边",
           "href": "/posizione"
-        },
-        {
-          "name": "儿童俱乐部",
-          "href": "/kids-club"
-        },
-        {
-          "name": "会议与活动",
-          "href": "/eventi"
-        },
-        {
-          "name": "可持续发展",
-          "href": "/sostenibilita"
         }
       ],
       "featured_label": "推荐",
@@ -74,10 +62,6 @@
         {
           "name": "餐厅",
           "href": "/ristorante"
-        },
-        {
-          "name": "休息吧与壁炉",
-          "href": "/ristorante/lounge-bar"
         }
       ],
       "featured_label": "推荐",
@@ -86,20 +70,7 @@
     },
     "wellness": {
       "title": "身心健康",
-      "links": [
-        {
-          "name": "运动按摩",
-          "href": "/wellness/massaggi"
-        },
-        {
-          "name": "身体护理",
-          "href": "/wellness/trattamenti"
-        },
-        {
-          "name": "私人SPA（夜间）",
-          "href": "/wellness/private-spa"
-        }
-      ],
+      "links": [],
       "featured_label": "推荐",
       "featured_text": "宁静的奢华。通过我们的养生之旅找到您的平衡，让我们专业治疗师的巧手为您提供呵护。",
       "featured_cta": "放松身心"

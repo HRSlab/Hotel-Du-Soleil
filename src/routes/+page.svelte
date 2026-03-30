@@ -89,7 +89,7 @@
 			<div class="fade-up-element order-2 lg:order-1">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home-restaurant.webp" 
+						src="/imgs/deer-dish-hero.webp" 
 						alt="Ristorante Hotel du Soleil" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
@@ -136,7 +136,7 @@
 			<div class="fade-up-element">
 				<div class="relative aspect-4/5 lg:aspect-square overflow-hidden rounded-sm shadow-2xl">
 					<img 
-						src="/imgs/home-wellness.webp" 
+						src="/imgs/jacuzzi-spa-hds-2026.webp" 
 						alt="Wellness & Spa" 
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>

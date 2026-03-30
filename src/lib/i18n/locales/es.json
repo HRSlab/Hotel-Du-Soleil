@@ -26,18 +26,6 @@
         {
           "name": "Ubicación y Alrededores",
           "href": "/posizione"
-        },
-        {
-          "name": "Kids Club",
-          "href": "/kids-club"
-        },
-        {
-          "name": "Reuniones y Eventos",
-          "href": "/eventi"
-        },
-        {
-          "name": "Sostenibilidad",
-          "href": "/sostenibilita"
         }
       ],
       "featured_label": "Destacado",
@@ -74,10 +62,6 @@
         {
           "name": "Restaurante",
           "href": "/ristorante"
-        },
-        {
-          "name": "Lounge Bar y Chimenea",
-          "href": "/ristorante/lounge-bar"
         }
       ],
       "featured_label": "Destacado",
@@ -86,20 +70,7 @@
     },
     "wellness": {
       "title": "Wellness",
-      "links": [
-        {
-          "name": "Masajes Deportivos",
-          "href": "/wellness/massaggi"
-        },
-        {
-          "name": "Tratamientos Corporales",
-          "href": "/wellness/trattamenti"
-        },
-        {
-          "name": "SPA Privado (Nocturno)",
-          "href": "/wellness/private-spa"
-        }
-      ],
+      "links": [],
       "featured_label": "Destacado",
       "featured_text": "El lujo del silencio. Encuentre su equilibrio con nuestros recorridos de bienestar y déjese mimar por las manos expertas de nuestros terapeutas.",
       "featured_cta": "Relajarse"

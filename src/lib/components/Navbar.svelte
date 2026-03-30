@@ -30,7 +30,7 @@
     let isBookingMenuOpen = $state(false);
     let isLangOpen = $state(false);
 
-    const darkHeroRoutes = ['/', '/camere', '/struttura', '/posizione', '/sostenibilita', '/wellness', '/sport', '/esperienze'];
+    const darkHeroRoutes = ['/', '/camere', '/struttura', '/posizione', '/wellness', '/sport', '/esperienze'];
     const isDarkHero = $derived(
         darkHeroRoutes.includes(page.url.pathname) || 
         page.url.pathname.startsWith('/camere/') ||

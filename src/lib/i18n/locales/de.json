@@ -26,18 +26,6 @@
         {
           "name": "Lage & Umgebung",
           "href": "/posizione"
-        },
-        {
-          "name": "Kids Club",
-          "href": "/kids-club"
-        },
-        {
-          "name": "Meetings & Events",
-          "href": "/eventi"
-        },
-        {
-          "name": "Nachhaltigkeit",
-          "href": "/sostenibilita"
         }
       ],
       "featured_label": "Im Fokus",
@@ -74,10 +62,6 @@
         {
           "name": "Restaurant",
           "href": "/ristorante"
-        },
-        {
-          "name": "Lounge Bar & Kamin",
-          "href": "/ristorante/lounge-bar"
         }
       ],
       "featured_label": "Im Fokus",
@@ -86,20 +70,7 @@
     },
     "wellness": {
       "title": "Wellness",
-      "links": [
-        {
-          "name": "Sportmassagen",
-          "href": "/wellness/massaggi"
-        },
-        {
-          "name": "Körperbehandlungen",
-          "href": "/wellness/trattamenti"
-        },
-        {
-          "name": "Private SPA (Nächtlich)",
-          "href": "/wellness/private-spa"
-        }
-      ],
+      "links": [],
       "featured_label": "Im Fokus",
       "featured_text": "Der Luxus der Stille. Finden Sie Ihr Gleichgewicht mit unseren Wellness-Angeboten und lassen Sie sich von den erfahrenen Händen unserer Therapeuten verwöhnen.",
       "featured_cta": "Entspannen"

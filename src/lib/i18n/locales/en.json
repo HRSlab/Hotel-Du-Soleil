@@ -19,11 +19,14 @@
     "overview": {
       "title": "Overview",
       "links": [
-        { "name": "The Structure", "href": "/struttura" },
-        { "name": "Location & Surroundings", "href": "/posizione" },
-        { "name": "Kids Club", "href": "/kids-club" },
-        { "name": "Meetings & Events", "href": "/eventi" },
-        { "name": "Sustainability", "href": "/sostenibilita" }
+        {
+          "name": "The Structure",
+          "href": "/struttura"
+        },
+        {
+          "name": "Location & Surroundings",
+          "href": "/posizione"
+        }
       ],
       "featured_label": "Highlighted",
       "featured_text": "Discover the authentic charm of a retreat at 1,500 meters. The elegance of simplicity and the warmth of a family-run hotel since 1980.",
@@ -32,10 +35,22 @@
     "rooms": {
       "title": "Accommodations",
       "links": [
-        { "name": "Double Room", "href": "/camere/matrimoniale" },
-        { "name": "Triple Room", "href": "/camere/tripla" },
-        { "name": "Standard Quadruple", "href": "/camere/quadrupla_standard" },
-        { "name": "Family Quadruple", "href": "/camere/familiare" }
+        {
+          "name": "Double Room",
+          "href": "/camere/matrimoniale"
+        },
+        {
+          "name": "Triple Room",
+          "href": "/camere/tripla"
+        },
+        {
+          "name": "Standard Quadruple",
+          "href": "/camere/quadrupla_standard"
+        },
+        {
+          "name": "Family Quadruple",
+          "href": "/camere/familiare"
+        }
       ],
       "featured_label": "Highlighted",
       "featured_text": "Spaces designed for your rest. Natural wood, alpine light, and essential comfort to regenerate after a day in the heights.",
@@ -44,8 +59,10 @@
     "restaurant": {
       "title": "Alpine Taste",
       "links": [
-        { "name": "Central Restaurant", "href": "/ristorante" },
-        { "name": "Lounge Bar & Fireplace", "href": "/ristorante/lounge-bar" }
+        {
+          "name": "Central Restaurant",
+          "href": "/ristorante"
+        }
       ],
       "featured_label": "Highlighted",
       "featured_text": "Authentic flavors of Aosta Valley. Zero-mile raw materials, family recipes passed down with care, and a convivial atmosphere.",
@@ -53,11 +70,7 @@
     },
     "wellness": {
       "title": "Wellness",
-      "links": [
-        { "name": "Sports Massages", "href": "/wellness/massaggi" },
-        { "name": "Body Treatments", "href": "/wellness/trattamenti" },
-        { "name": "Private SPA (Night)", "href": "/wellness/private-spa" }
-      ],
+      "links": [],
       "featured_label": "Highlighted",
       "featured_text": "The luxury of silence. Find your balance with our wellness paths and let yourself be pampered by the expert hands of our therapists.",
       "featured_cta": "Relax"
@@ -65,10 +78,22 @@
     "sport": {
       "title": "Activities",
       "links": [
-        { "name": "Ski & Snowboard (Ski-in)", "href": "/sport/sci" },
-        { "name": "Mountain Bike & E-Bike", "href": "/sport/bike" },
-        { "name": "Alp Trekking", "href": "/sport/trekking" },
-        { "name": "Ski Box & Rental", "href": "/sport/noleggio" }
+        {
+          "name": "Ski & Snowboard (Ski-in)",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "Mountain Bike & E-Bike",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "Alp Trekking",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "Ski Box & Rental",
+          "href": "/sport/noleggio"
+        }
       ],
       "featured_label": "Highlighted",
       "featured_text": "Adrenaline starts 20 meters from our door. Direct access to the lifts in winter and infinite panoramic trails in summer.",
@@ -77,10 +102,22 @@
     "experiences": {
       "title": "The Territory",
       "links": [
-        { "name": "Fontina DOP Tasting", "href": "/esperienze/degustazione" },
-        { "name": "Night Snowshoeing", "href": "/esperienze/ciaspolate" },
-        { "name": "High-Altitude Yoga", "href": "/esperienze/yoga" },
-        { "name": "Partner Alpine Guides", "href": "/esperienze/guide" }
+        {
+          "name": "Fontina DOP Tasting",
+          "href": "/esperienze/degustazione"
+        },
+        {
+          "name": "Night Snowshoeing",
+          "href": "/esperienze/ciaspolate"
+        },
+        {
+          "name": "High-Altitude Yoga",
+          "href": "/esperienze/yoga"
+        },
+        {
+          "name": "Partner Alpine Guides",
+          "href": "/esperienze/guide"
+        }
       ],
       "featured_label": "Highlighted",
       "featured_text": "Not a simple vacation, but a collection of memories. Explore the territory through authentic activities, in total harmony with the rhythms of the mountain.",
@@ -116,7 +153,11 @@
     "philosophy_text": "Hotel du Soleil was conceived to integrate harmoniously into the Torgnon landscape. Every detail reflects Aosta Valley tradition, reinterpreted with a modern and functional taste.",
     "common_spaces_title": "Common Spaces",
     "common_spaces_text": "From our cozy hall to the fireplace room, every space is designed to encourage relaxation and conviviality. Large windows open onto the surrounding panorama, bringing the majesty of the Alps inside the hotel.",
-    "amenities": ["Fireplace Room & Library", "Solarium Panorama Terrace", "Winter Garden"]
+    "amenities": [
+      "Fireplace Room & Library",
+      "Solarium Panorama Terrace",
+      "Winter Garden"
+    ]
   },
   "posizione": {
     "subtitle": "In the Heart of Torgnon",
@@ -145,45 +186,100 @@
     "philosophy_title": "We respect the mountain, we care for the future.",
     "philosophy_text": "We are custodians of a precious and fragile territory. For this reason, we daily adopt sustainable practices that reduce our environmental impact and promote the local economy.",
     "features": {
-      "energy": { "title": "Clean Energy", "text": "Solar panels for hot water production and low-consumption LED lighting." },
-      "plastic": { "title": "Zero Plastic", "text": "We have eliminated plastic single-portions in favor of dispensers and glass bottles." },
-      "water": { "title": "Spring Water", "text": "We value the pure water from the Torgnon springs, filtered and served at the table." },
-      "km0": { "title": "Km 0 & Organic", "text": "We prioritize valley producers to reduce emissions related to transport." }
+      "energy": {
+        "title": "Clean Energy",
+        "text": "Solar panels for hot water production and low-consumption LED lighting."
+      },
+      "plastic": {
+        "title": "Zero Plastic",
+        "text": "We have eliminated plastic single-portions in favor of dispensers and glass bottles."
+      },
+      "water": {
+        "title": "Spring Water",
+        "text": "We value the pure water from the Torgnon springs, filtered and served at the table."
+      },
+      "km0": {
+        "title": "Km 0 & Organic",
+        "text": "We prioritize valley producers to reduce emissions related to transport."
+      }
     }
   },
   "wellness": {
     "main_title": "Alpine Wellness",
-    "main_subtitle": "High Altitude Regeneration",
-    "spa": { "title": "The SPA in the Heights", "subtitle": "Deep Regeneration", "cta": "Discover the SPA" },
-    "massaggi": { "title": "Sports Massages", "subtitle": "Muscle Recovery", "cta": "Massages" },
-    "trattamenti": { "title": "Body Treatments", "subtitle": "Alpine Rituals", "cta": "See Treatments" },
-    "private_spa": { "title": "Private Night SPA", "subtitle": "Exclusivity & Romance", "cta": "Private Experience" }
+    "main_subtitle": "High-Altitude Renewal",
+    "hero_description": "Massages, private SPA & alpine restoration",
+    "philosophy_title": "The warmth of wood, the purity of steam.",
+    "philosophy_text": "Our wellness area is a secluded retreat where the warmth of natural wood meets time-honoured alpine healing traditions. After a day on the slopes, trails or bike paths, your body deserves expert care.",
+    "spa": {
+      "title": "The Mountain SPA",
+      "subtitle": "Deep Regeneration",
+      "cta": "Discover the SPA"
+    },
+    "massaggi": {
+      "title": "Our Massages",
+      "subtitle": "Tailored Wellbeing",
+      "cta": "Massages"
+    },
+    "trattamenti": {
+      "title": "Body Treatments",
+      "subtitle": "Alpine Rituals",
+      "cta": "View Treatments"
+    },
+    "private_spa": {
+      "title": "Private Night SPA",
+      "subtitle": "Exclusivity & Romance",
+      "cta": "Private Experience"
+    }
   },
   "sport": {
     "main_title": "Sport & Outdoor",
     "main_subtitle": "Live the Mountain",
     "philosophy_title": "Adrenaline starts 20 meters from the hall.",
     "philosophy_text": "Forget the car. In Torgnon, at 1,500 meters, nature is not a destination, it's your starting point. Whether it's ski-in/ski-out or heroic trekking, we offer you the perfect comfort before and after the adventure.",
-    "sci": { 
-      "title": "Ski & Snowboard", 
+    "sci": {
+      "title": "Ski & Snowboard",
       "subtitle": "Direct access to the Torgnon ski area. Perfectly groomed slopes, breathtaking views of the Matterhorn, and the convenience of returning to the hotel with your skis on.",
-      "cta": "Ski in Torgnon" 
+      "cta": "Ski in Torgnon"
     },
-    "bike": { 
-      "title": "MTB & E-Bike", 
+    "bike": {
+      "title": "MTB & E-Bike",
       "subtitle": "Explore the trails of the Aosta Valley on two wheels. From adrenaline-pumping routes for experts to gentle panoramic walks for families, Torgnon is a paradise for bikers.",
-      "cta": "By Bike" 
+      "cta": "By Bike"
     },
-    "trekking": { "title": "Alp Trekking", "subtitle": "Slow Exploration", "cta": "Trekking Trails" },
-    "noleggio": { "title": "Ski Box & Rental", "subtitle": "Convenient & Safe Services", "cta": "Ski Services" }
+    "trekking": {
+      "title": "Alp Trekking",
+      "subtitle": "Slow Exploration",
+      "cta": "Trekking Trails"
+    },
+    "noleggio": {
+      "title": "Ski Box & Rental",
+      "subtitle": "Convenient & Safe Services",
+      "cta": "Ski Services"
+    }
   },
   "experiences": {
     "main_title": "Alpine Experiences",
     "main_subtitle": "Authentic Memories",
-    "degustazione": { "title": "Fontina DOP", "subtitle": "Gastronomic Experience", "cta": "Tasting" },
-    "ciaspolate": { "title": "Night Snowshoeing", "subtitle": "The Magic of the Night", "cta": "Night Excursions" },
-    "yoga": { "title": "High Altitude Yoga", "subtitle": "Inner Balance", "cta": "Yoga Lessons" },
-    "guide": { "title": "Partner Alpine Guides", "subtitle": "Mountain Experts", "cta": "Contact Guides" }
+    "degustazione": {
+      "title": "Fontina DOP",
+      "subtitle": "Gastronomic Experience",
+      "cta": "Tasting"
+    },
+    "ciaspolate": {
+      "title": "Night Snowshoeing",
+      "subtitle": "The Magic of the Night",
+      "cta": "Night Excursions"
+    },
+    "yoga": {
+      "title": "High Altitude Yoga",
+      "subtitle": "Inner Balance",
+      "cta": "Yoga Lessons"
+    },
+    "guide": {
+      "title": "Partner Alpine Guides",
+      "subtitle": "Mountain Experts",
+      "cta": "Contact Guides"
+    }
   },
   "meteo": {
     "title": "Weather & Snow Report",
@@ -301,10 +397,22 @@
     "cancel_title": "Cancellation Policy & Deposit",
     "cancel_intro": "To definitively confirm the booking, a deposit of 30% of the total stay (or the first night for short stays) is required.",
     "cancel_rules": [
-      { "label": "Free cancellation", "text": "Up to 14 days before the expected arrival date, the deposit will be fully refunded (net of any bank processing fees)." },
-      { "label": "Late cancellation (14 to 7 days before)", "text": "The deposit will not be refunded, but can be converted into a voucher of equal value, usable for a future stay within 6 months (subject to availability)." },
-      { "label": "Cancellation under 7 days or No-Show", "text": "The deposit will be retained in full as compensation." },
-      { "label": "Early departure", "text": "In case of early departure during the stay, the total amount for the remaining nights will be charged (room only)." }
+      {
+        "label": "Free cancellation",
+        "text": "Up to 14 days before the expected arrival date, the deposit will be fully refunded (net of any bank processing fees)."
+      },
+      {
+        "label": "Late cancellation (14 to 7 days before)",
+        "text": "The deposit will not be refunded, but can be converted into a voucher of equal value, usable for a future stay within 6 months (subject to availability)."
+      },
+      {
+        "label": "Cancellation under 7 days or No-Show",
+        "text": "The deposit will be retained in full as compensation."
+      },
+      {
+        "label": "Early departure",
+        "text": "In case of early departure during the stay, the total amount for the remaining nights will be charged (room only)."
+      }
     ],
     "family_title": "Family Quadruples (Apartments)",
     "family_items": [

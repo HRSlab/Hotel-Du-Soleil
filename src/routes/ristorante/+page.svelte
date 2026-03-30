@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n';
-	import { Coffee, UtensilsCrossed, Wine } from 'lucide-svelte';
+	import { Coffee, UtensilsCrossed, Wine, Flame, Gamepad2, Sun } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -88,6 +88,24 @@
 			</p>
 		</div>
 
+		<!-- Lounge Bar -->
+		<div class="fade-up-element group flex flex-col items-center text-center">
+			<div
+				class="relative mb-8 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-alpine-border bg-white"
+			>
+				<Wine
+					class="z-10 h-8 w-8 text-alpine-gold transition-transform duration-500 group-hover:scale-110"
+					strokeWidth="1.5"
+				/>
+			</div>
+			<h4 class="mb-4 font-serif text-2xl text-alpine-text">Lounge & Camino</h4>
+			<p class="text-sm leading-relaxed font-light text-alpine-muted">
+				Il nostro grande camino in mattoni e rame è il cuore dell'hotel. Lasciatevi avvolgere dal
+				crepitio del fuoco con una cioccolata calda alpina, un cocktail d'autore o un distillato
+				artigianale dopo una giornata all'aria aperta.
+			</p>
+		</div>
+
 
 	</div>
 </section>
@@ -125,6 +143,92 @@
 					<UtensilsCrossed class="h-64 w-64 text-alpine-text" />
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+
+<!-- LOUNGE & CAMINO -->
+<section class="border-t border-alpine-border bg-alpine-bg px-6 py-32">
+	<div class="fade-up-element mx-auto max-w-3xl text-center">
+		<Flame class="mx-auto mb-10 h-10 w-10 text-alpine-gold" />
+		<h2 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-5xl">
+			Ritrova il tepore.
+		</h2>
+		<p class="text-sm leading-relaxed font-light text-alpine-muted md:text-base">
+			Il cuore pulsante dell'Hotel du Soleil. Il nostro grande camino centrale in mattoni e rame è
+			il luogo ideale dove fermare il tempo. Lasciatevi avvolgere dal crepitio del fuoco con una
+			cioccolata calda alpina o un distillato artigianale dopo una giornata all'aria aperta.
+		</p>
+	</div>
+</section>
+
+<section class="mx-auto max-w-7xl space-y-32 bg-alpine-bg px-6 pb-32">
+	<!-- Svago -->
+	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row lg:gap-20">
+		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
+			<img
+				src="/imgs/bar-and-lounge/bar-pooltable.webp"
+				alt="Sala Biliardo"
+				class="img-elegant aspect-4/3 h-full w-full object-cover"
+			/>
+		</div>
+		<div class="w-full md:w-1/2">
+			<Gamepad2 class="mb-6 h-8 w-8 text-alpine-gold" />
+			<h3 class="mb-4 font-serif text-4xl text-alpine-text">Svago e Convivialità</h3>
+			<p class="mb-6 text-[10px] font-bold tracking-widest text-alpine-muted uppercase">
+				Biliardo & Calcio Balilla
+			</p>
+			<p class="text-sm leading-relaxed font-light text-alpine-muted">
+				La nostra area lounge è pensata per il relax di tutta la famiglia. Sfidatevi in una partita
+				a biliardo o a calcio balilla in un ambiente informale e spazioso, sempre accompagnati dal
+				calore del camino sullo sfondo.
+			</p>
+		</div>
+	</div>
+
+	<!-- Aperitivo -->
+	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row-reverse lg:gap-20">
+		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
+			<img
+				src="/imgs/bar-and-lounge/aperitivo-garden.webp"
+				alt="Aperitivo all'aperto"
+				class="img-elegant aspect-4/3 h-full w-full object-cover"
+			/>
+		</div>
+		<div class="w-full md:w-1/2">
+			<Sun class="mb-6 h-8 w-8 text-alpine-gold" />
+			<h3 class="mb-4 font-serif text-4xl text-alpine-text">Aperitivo al Sole</h3>
+			<p class="mb-6 text-[10px] font-bold tracking-widest text-alpine-muted uppercase">
+				Cocktail & Relax in Giardino
+			</p>
+			<p class="text-sm leading-relaxed font-light text-alpine-muted">
+				Nelle giornate più miti, il nostro bar si estende verso l'esterno. Godetevi cocktail
+				colorati e rinfrescanti comodamente sdraiati sui lettini del giardino, con la vista
+				inconfondibile dell'architettura valdostana in pietra e legno.
+			</p>
+		</div>
+	</div>
+
+	<!-- Colazione al camino -->
+	<div class="fade-up-element flex flex-col items-center gap-12 md:flex-row lg:gap-20">
+		<div class="group relative w-full overflow-hidden bg-alpine-border md:w-1/2">
+			<img
+				src="/imgs/bar-and-lounge/fireplace-bar.webp"
+				alt="Colazione accanto al camino"
+				class="img-elegant aspect-4/3 h-full w-full object-cover"
+			/>
+		</div>
+		<div class="w-full md:w-1/2">
+			<Flame class="mb-6 h-8 w-8 text-alpine-gold" />
+			<h3 class="mb-4 font-serif text-4xl text-alpine-text">Il Dolce Risveglio</h3>
+			<p class="mb-6 text-[10px] font-bold tracking-widest text-alpine-muted uppercase">
+				Colazione accanto al fuoco
+			</p>
+			<p class="text-sm leading-relaxed font-light text-alpine-muted">
+				Iniziate la giornata circondati dal profumo del legno e dal calore del focolare. I nostri
+				ampi tavoli rustici vi accolgono per un momento di pura energia prima di esplorare le
+				meraviglie di Torgnon.
+			</p>
 		</div>
 	</div>
 </section>

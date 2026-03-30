@@ -19,11 +19,14 @@
     "overview": {
       "title": "Aperçu",
       "links": [
-        { "name": "L'Hôtel", "href": "/struttura" },
-        { "name": "Emplacement & Environs", "href": "/posizione" },
-        { "name": "Kids Club", "href": "/kids-club" },
-        { "name": "Réunions & Événements", "href": "/eventi" },
-        { "name": "Durabilité", "href": "/sostenibilita" }
+        {
+          "name": "L'Hôtel",
+          "href": "/struttura"
+        },
+        {
+          "name": "Emplacement & Environs",
+          "href": "/posizione"
+        }
       ],
       "featured_label": "En Vedette",
       "featured_text": "Découvrez le charme authentique d'un refuge à 1 500 mètres. L'élégance de la simplicité et la chaleur d'un hôtel familial depuis 1980.",
@@ -32,10 +35,22 @@
     "rooms": {
       "title": "Hébergements",
       "links": [
-        { "name": "Chambre Double", "href": "/camere/matrimoniale" },
-        { "name": "Chambre Triple", "href": "/camere/tripla" },
-        { "name": "Quadruple Standard", "href": "/camere/quadrupla_standard" },
-        { "name": "Quadruple Familiale", "href": "/camere/familiare" }
+        {
+          "name": "Chambre Double",
+          "href": "/camere/matrimoniale"
+        },
+        {
+          "name": "Chambre Triple",
+          "href": "/camere/tripla"
+        },
+        {
+          "name": "Quadruple Standard",
+          "href": "/camere/quadrupla_standard"
+        },
+        {
+          "name": "Quadruple Familiale",
+          "href": "/camere/familiare"
+        }
       ],
       "featured_label": "En Vedette",
       "featured_text": "Des espaces conçus pour votre repos. Bois naturel, lumière alpine et un confort essentiel pour se ressourcer après une journée en altitude.",
@@ -44,8 +59,10 @@
     "restaurant": {
       "title": "Saveurs Alpines",
       "links": [
-        { "name": "Restaurant", "href": "/ristorante" },
-        { "name": "Lounge Bar & Cheminée", "href": "/ristorante/lounge-bar" }
+        {
+          "name": "Restaurant",
+          "href": "/ristorante"
+        }
       ],
       "featured_label": "En Vedette",
       "featured_text": "Les saveurs authentiques du Val d'Aoste. Matières premières à km 0, recettes familiales transmises avec soin et une atmosphère conviviale.",
@@ -53,11 +70,7 @@
     },
     "wellness": {
       "title": "Wellness",
-      "links": [
-        { "name": "Massages Sportifs", "href": "/wellness/massaggi" },
-        { "name": "Soins du Corps", "href": "/wellness/trattamenti" },
-        { "name": "SPA Privé (Nocturne)", "href": "/wellness/private-spa" }
-      ],
+      "links": [],
       "featured_label": "En Vedette",
       "featured_text": "Le luxe du silence. Retrouvez votre équilibre avec nos parcours bien-être et laissez-vous choyer par les mains expertes de nos thérapeutes.",
       "featured_cta": "Se Détendre"
@@ -65,10 +78,22 @@
     "sport": {
       "title": "Activités",
       "links": [
-        { "name": "Ski & Snowboard (Ski-in)", "href": "/sport/sci" },
-        { "name": "VTT & Vélo électrique", "href": "/sport/bike" },
-        { "name": "Trekking en Alpage", "href": "/sport/trekking" },
-        { "name": "Ski Box & Location", "href": "/sport/noleggio" }
+        {
+          "name": "Ski & Snowboard (Ski-in)",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "VTT & Vélo électrique",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "Trekking en Alpage",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "Ski Box & Location",
+          "href": "/sport/noleggio"
+        }
       ],
       "featured_label": "En Vedette",
       "featured_text": "L'adrénaline commence à 20 mètres de notre porte. Accès direct aux remontées en hiver et sentiers panoramiques infinis en été.",
@@ -77,10 +102,22 @@
     "experiences": {
       "title": "Le Territoire",
       "links": [
-        { "name": "Dégustation Fontina DOP", "href": "/esperienze/degustazione" },
-        { "name": "Randonnée Nocturne en Raquettes", "href": "/esperienze/ciaspolate" },
-        { "name": "Yoga en Altitude", "href": "/esperienze/yoga" },
-        { "name": "Guides Alpins Partenaires", "href": "/esperienze/guide" }
+        {
+          "name": "Dégustation Fontina DOP",
+          "href": "/esperienze/degustazione"
+        },
+        {
+          "name": "Randonnée Nocturne en Raquettes",
+          "href": "/esperienze/ciaspolate"
+        },
+        {
+          "name": "Yoga en Altitude",
+          "href": "/esperienze/yoga"
+        },
+        {
+          "name": "Guides Alpins Partenaires",
+          "href": "/esperienze/guide"
+        }
       ],
       "featured_label": "En Vedette",
       "featured_text": "Pas de simples vacances, mais une collection de souvenirs. Explorez le territoire à travers des activités authentiques, en harmonie avec les rythmes de la montagne.",
@@ -116,7 +153,11 @@
     "philosophy_text": "L'Hotel du Soleil a été conçu pour s'intégrer harmonieusement dans le paysage de Torgnon. Chaque détail reflète la tradition valdôtaine, réinterprétée avec un goût moderne et fonctionnel.",
     "common_spaces_title": "Espaces Communs",
     "common_spaces_text": "De notre hall accueillant à la salle cheminée, chaque espace est pensé pour favoriser la détente et la convivialité. De grandes baies vitrées s'ouvrent sur le panorama environnant, invitant la majesté des Alpes à l'intérieur de l'hôtel.",
-    "amenities": ["Salle Cheminée & Bibliothèque", "Terrasse Solarium Panoramique", "Jardin d'Hiver"]
+    "amenities": [
+      "Salle Cheminée & Bibliothèque",
+      "Terrasse Solarium Panoramique",
+      "Jardin d'Hiver"
+    ]
   },
   "posizione": {
     "subtitle": "Au Cœur de Torgnon",
@@ -145,18 +186,46 @@
     "philosophy_title": "Nous respectons la montagne, nous prenons soin de l'avenir.",
     "philosophy_text": "Nous sommes les gardiens d'un territoire précieux et fragile. C'est pourquoi nous adoptons quotidiennement des pratiques durables qui réduisent notre impact environnemental et promeuvent l'économie locale.",
     "features": {
-      "energy": { "title": "Énergie Propre", "text": "Panneaux solaires pour la production d'eau chaude et éclairage LED à faible consommation." },
-      "plastic": { "title": "Zéro Plastique", "text": "Nous avons éliminé les mono-portions plastiques au profit de distributeurs et de bouteilles en verre." },
-      "water": { "title": "Eau de Source", "text": "Nous valorisons l'eau pure des sources de Torgnon, filtrée et servie à table." }
+      "energy": {
+        "title": "Énergie Propre",
+        "text": "Panneaux solaires pour la production d'eau chaude et éclairage LED à faible consommation."
+      },
+      "plastic": {
+        "title": "Zéro Plastique",
+        "text": "Nous avons éliminé les mono-portions plastiques au profit de distributeurs et de bouteilles en verre."
+      },
+      "water": {
+        "title": "Eau de Source",
+        "text": "Nous valorisons l'eau pure des sources de Torgnon, filtrée et servie à table."
+      }
     }
   },
   "wellness": {
     "main_title": "Bien-être Alpin",
-    "main_subtitle": "Régénération en Altitude",
-    "spa": { "title": "Le SPA en Altitude", "subtitle": "Régénération Profonde", "cta": "Découvrir le SPA" },
-    "massaggi": { "title": "Massages Sportifs", "subtitle": "Récupération Musculaire", "cta": "Les Massages" },
-    "trattamenti": { "title": "Soins du Corps", "subtitle": "Rituels Alpins", "cta": "Voir les Soins" },
-    "private_spa": { "title": "SPA Privé Nocturne", "subtitle": "Exclusivité & Romantisme", "cta": "Expérience Privée" }
+    "main_subtitle": "Ressourcement en Altitude",
+    "hero_description": "Massages, SPA privé et régénération alpine",
+    "philosophy_title": "La chaleur du bois, la pureté de la vapeur.",
+    "philosophy_text": "Notre espace bien-être est un refuge intime où la chaleur du bois se mêle aux traditions ancestrales du soin alpin. Après une journée sur les pistes, les sentiers ou le vélo, votre corps mérite une attention experte.",
+    "spa": {
+      "title": "Le SPA en Altitude",
+      "subtitle": "Régénération Profonde",
+      "cta": "Découvrir le SPA"
+    },
+    "massaggi": {
+      "title": "Nos Massages",
+      "subtitle": "Bien-être Sur Mesure",
+      "cta": "Les Massages"
+    },
+    "trattamenti": {
+      "title": "Soins du Corps",
+      "subtitle": "Rituels Alpins",
+      "cta": "Voir les Soins"
+    },
+    "private_spa": {
+      "title": "SPA Privé Nocturne",
+      "subtitle": "Exclusivité & Romantisme",
+      "cta": "Expérience Privée"
+    }
   },
   "sport": {
     "main_title": "Sport & Plein Air",
@@ -173,16 +242,40 @@
       "subtitle": "Explorez les sentiers du Val d'Aoste sur deux roues. Des parcours d'adrénaline pour les experts aux douces promenades panoramiques pour les familles, Torgnon est un paradis pour les cyclistes.",
       "cta": "En Vélo"
     },
-    "trekking": { "title": "Trekking en Alpage", "subtitle": "Exploration Lente", "cta": "Sentiers de Trekking" },
-    "noleggio": { "title": "Ski Box & Location", "subtitle": "Services Pratiques & Sûrs", "cta": "Services Ski" }
+    "trekking": {
+      "title": "Trekking en Alpage",
+      "subtitle": "Exploration Lente",
+      "cta": "Sentiers de Trekking"
+    },
+    "noleggio": {
+      "title": "Ski Box & Location",
+      "subtitle": "Services Pratiques & Sûrs",
+      "cta": "Services Ski"
+    }
   },
   "experiences": {
     "main_title": "Expériences Alpines",
     "main_subtitle": "Souvenirs Authentiques",
-    "degustazione": { "title": "Fontina DOP", "subtitle": "Expérience Gastronomique", "cta": "La Dégustation" },
-    "ciaspolate": { "title": "Randonnées Nocturnes en Raquettes", "subtitle": "La Magie de la Nuit", "cta": "Excursions Nocturnes" },
-    "yoga": { "title": "Yoga en Altitude", "subtitle": "Équilibre Intérieur", "cta": "Cours de Yoga" },
-    "guide": { "title": "Guides Alpins Partenaires", "subtitle": "Experts de la Montagne", "cta": "Contacter les Guides" }
+    "degustazione": {
+      "title": "Fontina DOP",
+      "subtitle": "Expérience Gastronomique",
+      "cta": "La Dégustation"
+    },
+    "ciaspolate": {
+      "title": "Randonnées Nocturnes en Raquettes",
+      "subtitle": "La Magie de la Nuit",
+      "cta": "Excursions Nocturnes"
+    },
+    "yoga": {
+      "title": "Yoga en Altitude",
+      "subtitle": "Équilibre Intérieur",
+      "cta": "Cours de Yoga"
+    },
+    "guide": {
+      "title": "Guides Alpins Partenaires",
+      "subtitle": "Experts de la Montagne",
+      "cta": "Contacter les Guides"
+    }
   },
   "meteo": {
     "title": "Météo & Bulletin Neige",
@@ -300,10 +393,22 @@
     "cancel_title": "Politique d'Annulation & Acompte",
     "cancel_intro": "Pour confirmer définitivement la réservation, un acompte de 30% du montant total du séjour (ou de la première nuit pour les courts séjours) est requis.",
     "cancel_rules": [
-      { "label": "Annulation gratuite", "text": "Jusqu'à 14 jours avant la date d'arrivée prévue, l'acompte sera intégralement remboursé (net des frais bancaires éventuels)." },
-      { "label": "Annulation tardive (de 14 à 7 jours avant)", "text": "L'acompte ne sera pas remboursé, mais pourra être converti en un bon de valeur égale, utilisable pour un futur séjour dans les 6 mois (sous réserve de disponibilité)." },
-      { "label": "Annulation sous 7 jours ou No-Show", "text": "L'acompte sera intégralement retenu à titre d'indemnisation." },
-      { "label": "Départ anticipé", "text": "En cas de départ anticipé en cours de séjour, le montant total des nuits restantes sera facturé (nuitée seule)." }
+      {
+        "label": "Annulation gratuite",
+        "text": "Jusqu'à 14 jours avant la date d'arrivée prévue, l'acompte sera intégralement remboursé (net des frais bancaires éventuels)."
+      },
+      {
+        "label": "Annulation tardive (de 14 à 7 jours avant)",
+        "text": "L'acompte ne sera pas remboursé, mais pourra être converti en un bon de valeur égale, utilisable pour un futur séjour dans les 6 mois (sous réserve de disponibilité)."
+      },
+      {
+        "label": "Annulation sous 7 jours ou No-Show",
+        "text": "L'acompte sera intégralement retenu à titre d'indemnisation."
+      },
+      {
+        "label": "Départ anticipé",
+        "text": "En cas de départ anticipé en cours de séjour, le montant total des nuits restantes sera facturé (nuitée seule)."
+      }
     ],
     "family_title": "Quadruples Familiales (Appartements)",
     "family_items": [

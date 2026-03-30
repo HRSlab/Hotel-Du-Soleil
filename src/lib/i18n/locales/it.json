@@ -19,11 +19,14 @@
     "overview": {
       "title": "Panoramica",
       "links": [
-        { "name": "La Struttura", "href": "/struttura" },
-        { "name": "Posizione & Dintorni", "href": "/posizione" },
-        { "name": "Kids Club", "href": "/kids-club" },
-        { "name": "Meeting & Eventi", "href": "/eventi" },
-        { "name": "Sostenibilità", "href": "/sostenibilita" }
+        {
+          "name": "La Struttura",
+          "href": "/struttura"
+        },
+        {
+          "name": "Posizione & Dintorni",
+          "href": "/posizione"
+        }
       ],
       "featured_label": "In Evidenza",
       "featured_text": "Scopri il fascino autentico di un rifugio a 1.500 metri. L'eleganza della semplicità e il calore di una gestione familiare dal 1980.",
@@ -32,10 +35,22 @@
     "rooms": {
       "title": "Sistemazioni",
       "links": [
-        { "name": "Camera Matrimoniale", "href": "/camere/matrimoniale" },
-        { "name": "Camera Tripla", "href": "/camere/tripla" },
-        { "name": "Quadrupla Standard", "href": "/camere/quadrupla_standard" },
-        { "name": "Quadrupla Familiare", "href": "/camere/familiare" }
+        {
+          "name": "Camera Matrimoniale",
+          "href": "/camere/matrimoniale"
+        },
+        {
+          "name": "Camera Tripla",
+          "href": "/camere/tripla"
+        },
+        {
+          "name": "Quadrupla Standard",
+          "href": "/camere/quadrupla_standard"
+        },
+        {
+          "name": "Quadrupla Familiare",
+          "href": "/camere/familiare"
+        }
       ],
       "featured_label": "In Evidenza",
       "featured_text": "Spazi pensati per il tuo riposo. Legno naturale, luce alpina e un comfort essenziale per rigenerarsi dopo una giornata in quota.",
@@ -44,8 +59,10 @@
     "restaurant": {
       "title": "Gusto Alpino",
       "links": [
-        { "name": "Ristorante", "href": "/ristorante" },
-        { "name": "Lounge Bar & Camino", "href": "/ristorante/lounge-bar" }
+        {
+          "name": "Ristorante",
+          "href": "/ristorante"
+        }
       ],
       "featured_label": "In Evidenza",
       "featured_text": "I sapori autentici della Valle d'Aosta. Materie prime a km 0, ricette di famiglia tramandate con cura e un'atmosfera conviviale.",
@@ -53,11 +70,7 @@
     },
     "wellness": {
       "title": "Wellness",
-      "links": [
-        { "name": "Massaggi Sportivi", "href": "/wellness/massaggi" },
-        { "name": "Trattamenti Corpo", "href": "/wellness/trattamenti" },
-        { "name": "Private SPA (Notturna)", "href": "/wellness/private-spa" }
-      ],
+      "links": [],
       "featured_label": "In Evidenza",
       "featured_text": "Il lusso del silenzio. Ritrova il tuo equilibrio con i nostri percorsi benessere e lasciati coccolare dalle mani esperte dei nostri terapisti.",
       "featured_cta": "Rilassati"
@@ -65,10 +78,22 @@
     "sport": {
       "title": "Attività",
       "links": [
-        { "name": "Sci & Snowboard (Ski-in)", "href": "/sport/sci" },
-        { "name": "Mountain Bike & E-Bike", "href": "/sport/bike" },
-        { "name": "Trekking in Alpeggio", "href": "/sport/trekking" },
-        { "name": "Ski Box & Noleggio", "href": "/sport/noleggio" }
+        {
+          "name": "Sci & Snowboard (Ski-in)",
+          "href": "/sport/sci"
+        },
+        {
+          "name": "Mountain Bike & E-Bike",
+          "href": "/sport/bike"
+        },
+        {
+          "name": "Trekking in Alpeggio",
+          "href": "/sport/trekking"
+        },
+        {
+          "name": "Ski Box & Noleggio",
+          "href": "/sport/noleggio"
+        }
       ],
       "featured_label": "In Evidenza",
       "featured_text": "L'adrenalina inizia a 20 metri dalla nostra porta. Accesso diretto agli impianti in inverno e a infiniti sentieri panoramici in estate.",
@@ -77,10 +102,22 @@
     "experiences": {
       "title": "Il Territorio",
       "links": [
-        { "name": "Degustazione Fontina DOP", "href": "/esperienze/degustazione" },
-        { "name": "Ciaspolate Notturne", "href": "/esperienze/ciaspolate" },
-        { "name": "Yoga in Quota", "href": "/esperienze/yoga" },
-        { "name": "Guide Alpine Partner", "href": "/esperienze/guide" }
+        {
+          "name": "Degustazione Fontina DOP",
+          "href": "/esperienze/degustazione"
+        },
+        {
+          "name": "Ciaspolate Notturne",
+          "href": "/esperienze/ciaspolate"
+        },
+        {
+          "name": "Yoga in Quota",
+          "href": "/esperienze/yoga"
+        },
+        {
+          "name": "Guide Alpine Partner",
+          "href": "/esperienze/guide"
+        }
       ],
       "featured_label": "In Evidenza",
       "featured_text": "Non una semplice vacanza, ma una collezione di ricordi. Esplora il territorio attraverso attività autentiche, in totale sintonia con i ritmi della montagna.",
@@ -116,53 +153,108 @@
     "philosophy_text": "L'Hotel du Soleil è stato concepito per integrarsi armoniosamente nel paesaggio di Torgnon. Ogni dettaglio riflette la tradizione valdostana, reinterpretata con un gusto moderno e funzionale.",
     "common_spaces_title": "Spazi Comuni",
     "common_spaces_text": "Dalla nostra hall accogliente fino alla sala camino, ogni spazio è pensato per favorire il relax e la convivialità. Grandi vetrate si aprono sul panorama circostante, portando la maestosità delle Alpi all'interno dell'hotel.",
-    "amenities": ["Sala Camino & Library", "Terrazza Solarium Panorama", "Winter Garden"]
+    "amenities": [
+      "Sala Camino & Library",
+      "Terrazza Solarium Panorama",
+      "Winter Garden"
+    ]
   },
-
   "sostenibilita": {
     "subtitle": "In Armonia con l'Ambiente",
     "title": "Sostenibilità",
     "philosophy_title": "Rispettiamo la montagna, curiamo il futuro.",
     "philosophy_text": "Siamo custodi di un territorio prezioso e fragile. Per questo motivo adottiamo quotidianamente pratiche sostenibili che riducono il nostro impatto ambientale e promuovono l'economia locale.",
     "features": {
-      "energy": { "title": "Energia Pulita", "text": "Pannelli solari per la produzione di acqua calda e illuminazione LED a basso consumo." },
-      "plastic": { "title": "Zero Plastica", "text": "Abbiamo eliminato le monoporzioni di plastica in favore di dispenser e bottiglie di vetro." },
-      "water": { "title": "Acqua di Fonte", "text": "Valorizziamo l'acqua purissima delle sorgenti di Torgnon, filtrata e servita al tavolo." }
+      "energy": {
+        "title": "Energia Pulita",
+        "text": "Pannelli solari per la produzione di acqua calda e illuminazione LED a basso consumo."
+      },
+      "plastic": {
+        "title": "Zero Plastica",
+        "text": "Abbiamo eliminato le monoporzioni di plastica in favore di dispenser e bottiglie di vetro."
+      },
+      "water": {
+        "title": "Acqua di Fonte",
+        "text": "Valorizziamo l'acqua purissima delle sorgenti di Torgnon, filtrata e servita al tavolo."
+      }
     }
   },
   "wellness": {
     "main_title": "Benessere Alpino",
     "main_subtitle": "Rigenerazione ad Alta Quota",
-    "spa": { "title": "La SPA in Quota", "subtitle": "Rigenerazione Profonda", "cta": "Scopri la SPA" },
-    "massaggi": { "title": "Massaggi Sportivi", "subtitle": "Recupero Muscolare", "cta": "I Massaggi" },
-    "trattamenti": { "title": "Trattamenti Corpo", "subtitle": "Rituali Alpini", "cta": "Vedi Trattamenti" },
-    "private_spa": { "title": "Private SPA Notturna", "subtitle": "Esclusività & Romanticismo", "cta": "Esperienza Privata" }
+    "hero_description": "Massaggi, SPA privata e rigenerazione alpina",
+    "philosophy_title": "Il calore del legno, il vapore purificante.",
+    "philosophy_text": "La nostra area wellness è un rifugio intimo dove il calore del legno si fonde con le antiche tradizioni del benessere alpino. Dopo ore sugli sci, sui sentieri o in bicicletta, il corpo ha bisogno di cure esperte.",
+    "spa": {
+      "title": "La SPA in Quota",
+      "subtitle": "Rigenerazione Profonda",
+      "cta": "Scopri la SPA"
+    },
+    "massaggi": {
+      "title": "I Nostri Massaggi",
+      "subtitle": "Benessere Su Misura",
+      "cta": "I Massaggi"
+    },
+    "trattamenti": {
+      "title": "Trattamenti Corpo",
+      "subtitle": "Rituali Alpini",
+      "cta": "Vedi Trattamenti"
+    },
+    "private_spa": {
+      "title": "Private SPA Notturna",
+      "subtitle": "Esclusività & Romanticismo",
+      "cta": "Esperienza Privata"
+    }
   },
   "sport": {
     "main_title": "Sport & Outdoor",
     "main_subtitle": "La Montagna da Vivere",
     "philosophy_title": "L'adrenalina inizia a 20 metri dalla hall.",
     "philosophy_text": "Dimentica l'auto. A Torgnon, a 1.500 metri, la natura non è una destinazione, è il tuo punto di partenza. Che sia sci-in/ski-out o trekking eroico, noi ti offriamo il comfort perfetto prima e dopo l'avventura.",
-    "sci": { 
-      "title": "Sci & Snowboard", 
+    "sci": {
+      "title": "Sci & Snowboard",
       "subtitle": "Accesso diretto al comprensorio di Torgnon. Piste perfettamente battute, panorami mozzafiato sul Cervino e la comodità di rientrare in hotel con gli sci ai piedi.",
-      "cta": "Sciare a Torgnon" 
+      "cta": "Sciare a Torgnon"
     },
-    "bike": { 
-      "title": "MTB & E-Bike", 
+    "bike": {
+      "title": "MTB & E-Bike",
       "subtitle": "Esplora i sentieri della Valle d'Aosta su due ruote. Dai percorsi adrenalinici per esperti alle dolci passeggiate panoramiche per famiglie, Torgnon è un paradiso per i bikers.",
-      "cta": "In Bici" 
+      "cta": "In Bici"
     },
-    "trekking": { "title": "Trekking in Alpeggio", "subtitle": "Esplorazione Lenta", "cta": "Sentieri Trekking" },
-    "noleggio": { "title": "Ski Box & Noleggio", "subtitle": "Servizi Comodi & Sicuri", "cta": "Servizi Sci" }
+    "trekking": {
+      "title": "Trekking in Alpeggio",
+      "subtitle": "Esplorazione Lenta",
+      "cta": "Sentieri Trekking"
+    },
+    "noleggio": {
+      "title": "Ski Box & Noleggio",
+      "subtitle": "Servizi Comodi & Sicuri",
+      "cta": "Servizi Sci"
+    }
   },
   "experiences": {
     "main_title": "Esperienze Alpine",
     "main_subtitle": "Ricordi Autentici",
-    "degustazione": { "title": "Fontina DOP", "subtitle": "Esperienza Gastronomica", "cta": "La Degustazione" },
-    "ciaspolate": { "title": "Ciaspolate Notturne", "subtitle": "La Magia della Notte", "cta": "Escursioni Notturne" },
-    "yoga": { "title": "Yoga in Quota", "subtitle": "Equilibrio Interiore", "cta": "Lezioni Yoga" },
-    "guide": { "title": "Guide Alpine Partner", "subtitle": "Esperti della Montagna", "cta": "Contatta Guide" }
+    "degustazione": {
+      "title": "Fontina DOP",
+      "subtitle": "Esperienza Gastronomica",
+      "cta": "La Degustazione"
+    },
+    "ciaspolate": {
+      "title": "Ciaspolate Notturne",
+      "subtitle": "La Magia della Notte",
+      "cta": "Escursioni Notturne"
+    },
+    "yoga": {
+      "title": "Yoga in Quota",
+      "subtitle": "Equilibrio Interiore",
+      "cta": "Lezioni Yoga"
+    },
+    "guide": {
+      "title": "Guide Alpine Partner",
+      "subtitle": "Esperti della Montagna",
+      "cta": "Contatta Guide"
+    }
   },
   "meteo": {
     "title": "Meteo & Snow Report",
@@ -236,27 +328,27 @@
     "description_label": "Descrizione",
     "amenities_label": "Servizi inclusi"
   },
-"posizione": {
-  "title": "Posizione",
-  "subtitle": "Il Cuore di Torgnon",
-  "philosophy_title": "Dove la strada finisce, inizia la montagna.",
-  "philosophy_text": "Situato a 1.500 metri di altitudine, l'Hotel du Soleil domina la valle del Cervino. Un rifugio facilmente accessibile ma meravigliosamente isolato dal caos quotidiano.",
-  "arrival_title": "Il tuo Base Camp",
-  "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Situati nel centro del paese, offriamo un garage coperto riservato ai nostri ospiti e l'incredibile comodità di avere gli impianti di risalita a due passi dalla hall.",
-  "maps_cta": "Apri su Google Maps",
-  "directions_title": "Come Raggiungerci",
-  "by_car_title": "In Auto",
-  "by_car_text": "Autostrada A5 Torino-Aosta, uscita Châtillon-Saint-Vincent. Proseguire sulla SR 9 in direzione Valtournenche, poi svoltare per Torgnon (circa 20 min dal casello).",
-  "by_train_title": "In Treno",
-  "by_train_text": "Stazione ferroviaria di Châtillon-Saint-Vincent. Da qui, servizio autobus di linea SAVDA diretto per Torgnon o servizio taxi convenzionato con l'hotel.",
-  "by_plane_title": "In Aereo",
-  "by_plane_text": "Gli aeroporti più vicini sono Torino Caselle (110 km), Milano Malpensa (170 km) e Ginevra (180 km). Organizziamo transfer privati su richiesta.",
-  "distances_title": "Punti di Interesse",
-  "dist_ski": "Impianti di Risalita (Ski-in/Ski-out)",
-  "dist_cervinia": "Breuil-Cervinia",
-  "dist_aosta": "Aosta (Centro Storico)",
-  "dist_milano": "Milano"
-},
+  "posizione": {
+    "title": "Posizione",
+    "subtitle": "Il Cuore di Torgnon",
+    "philosophy_title": "Dove la strada finisce, inizia la montagna.",
+    "philosophy_text": "Situato a 1.500 metri di altitudine, l'Hotel du Soleil domina la valle del Cervino. Un rifugio facilmente accessibile ma meravigliosamente isolato dal caos quotidiano.",
+    "arrival_title": "Il tuo Base Camp",
+    "arrival_text": "Piazza Frutaz 30, Torgnon (AO). Situati nel centro del paese, offriamo un garage coperto riservato ai nostri ospiti e l'incredibile comodità di avere gli impianti di risalita a due passi dalla hall.",
+    "maps_cta": "Apri su Google Maps",
+    "directions_title": "Come Raggiungerci",
+    "by_car_title": "In Auto",
+    "by_car_text": "Autostrada A5 Torino-Aosta, uscita Châtillon-Saint-Vincent. Proseguire sulla SR 9 in direzione Valtournenche, poi svoltare per Torgnon (circa 20 min dal casello).",
+    "by_train_title": "In Treno",
+    "by_train_text": "Stazione ferroviaria di Châtillon-Saint-Vincent. Da qui, servizio autobus di linea SAVDA diretto per Torgnon o servizio taxi convenzionato con l'hotel.",
+    "by_plane_title": "In Aereo",
+    "by_plane_text": "Gli aeroporti più vicini sono Torino Caselle (110 km), Milano Malpensa (170 km) e Ginevra (180 km). Organizziamo transfer privati su richiesta.",
+    "distances_title": "Punti di Interesse",
+    "dist_ski": "Impianti di Risalita (Ski-in/Ski-out)",
+    "dist_cervinia": "Breuil-Cervinia",
+    "dist_aosta": "Aosta (Centro Storico)",
+    "dist_milano": "Milano"
+  },
   "footer": {
     "description": "Un rifugio silenzioso nel cuore di Torgnon. Sostanza, eleganza e il calore della Valle d'Aosta dal 1980.",
     "contacts_title": "Contatti",
@@ -301,10 +393,22 @@
     "cancel_title": "Politica di Cancellazione e Caparra",
     "cancel_intro": "Per confermare definitivamente la prenotazione, è richiesto il versamento di una caparra confirmatoria pari al 30% del totale del soggiorno (o della prima notte per soggiorni brevi).",
     "cancel_rules": [
-      { "label": "Cancellazione gratuita", "text": "Fino a 14 giorni prima della data di arrivo prevista, la caparra verrà rimborsata integralmente (al netto di eventuali spese bancarie di gestione)." },
-      { "label": "Cancellazione tardiva (da 14 a 7 giorni prima)", "text": "La caparra non verrà rimborsata, ma potrà essere trasformata in un voucher di pari valore, utilizzabile per un futuro soggiorno entro 6 mesi (previa disponibilità)." },
-      { "label": "Cancellazione sotto i 7 giorni o No-Show", "text": "La caparra verrà trattenuta interamente a titolo di indennizzo." },
-      { "label": "Partenza anticipata", "text": "In caso di partenza anticipata durante il soggiorno, verrà addebitato l'importo totale delle notti rimanenti (solo pernottamento)." }
+      {
+        "label": "Cancellazione gratuita",
+        "text": "Fino a 14 giorni prima della data di arrivo prevista, la caparra verrà rimborsata integralmente (al netto di eventuali spese bancarie di gestione)."
+      },
+      {
+        "label": "Cancellazione tardiva (da 14 a 7 giorni prima)",
+        "text": "La caparra non verrà rimborsata, ma potrà essere trasformata in un voucher di pari valore, utilizzabile per un futuro soggiorno entro 6 mesi (previa disponibilità)."
+      },
+      {
+        "label": "Cancellazione sotto i 7 giorni o No-Show",
+        "text": "La caparra verrà trattenuta interamente a titolo di indennizzo."
+      },
+      {
+        "label": "Partenza anticipata",
+        "text": "In caso di partenza anticipata durante il soggiorno, verrà addebitato l'importo totale delle notti rimanenti (solo pernottamento)."
+      }
     ],
     "family_title": "Quadruple Familiari (Appartamenti)",
     "family_items": [

@@ -26,18 +26,6 @@
         {
           "name": "الموقع والمحيط",
           "href": "/posizione"
-        },
-        {
-          "name": "نادي الأطفال",
-          "href": "/kids-club"
-        },
-        {
-          "name": "الاجتماعات والفعاليات",
-          "href": "/eventi"
-        },
-        {
-          "name": "الاستدامة",
-          "href": "/sostenibilita"
         }
       ],
       "featured_label": "مميز",
@@ -74,10 +62,6 @@
         {
           "name": "المطعم",
           "href": "/ristorante"
-        },
-        {
-          "name": "صالة البار والمدفأة",
-          "href": "/ristorante/lounge-bar"
         }
       ],
       "featured_label": "مميز",
@@ -86,20 +70,7 @@
     },
     "wellness": {
       "title": "العافية",
-      "links": [
-        {
-          "name": "التدليك الرياضي",
-          "href": "/wellness/massaggi"
-        },
-        {
-          "name": "علاجات الجسم",
-          "href": "/wellness/trattamenti"
-        },
-        {
-          "name": "سبا خاص (ليلي)",
-          "href": "/wellness/private-spa"
-        }
-      ],
+      "links": [],
       "featured_label": "مميز",
       "featured_text": "رفاهية الصمت. جد توازنك مع مسارات العافية لدينا ودع أيدي معالجينا الخبراء تدللك.",
       "featured_cta": "استرخِ"
