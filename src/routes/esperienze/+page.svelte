@@ -9,7 +9,7 @@
 
 <svelte:head>
     <title>{$t('experiences.main_title')} | Hotel du Soleil</title>
-    <meta name="description" content="Esperienze alpine autentiche a Torgnon, Valle d'Aosta. Degustazione Fontina DOP, ciaspolate notturne, yoga in quota e guide alpine certificate." />
+    <meta name="description" content={$t('experiences.page_meta_description')} />
 </svelte:head>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
@@ -30,7 +30,7 @@
             {$t('experiences.main_title')}
         </h1>
         <p class="mt-6 text-white/50 text-sm font-light max-w-md fade-up-element">
-            Non una semplice vacanza, ma una collezione di ricordi
+            {$t('experiences.page_hero_text')}
         </p>
     </div>
 </header>
@@ -40,14 +40,10 @@
     <div class="fade-up-element mx-auto max-w-3xl text-center">
         <Mountain class="w-10 h-10 text-alpine-gold mx-auto mb-10" />
         <h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-4xl">
-            La montagna si vive con tutti i sensi.
+            {$t('experiences.page_intro_title')}
         </h3>
         <p class="text-alpine-muted leading-relaxed font-light text-sm md:text-base border-t border-alpine-border pt-12 mt-12 mx-auto max-w-xl">
-            A Torgnon, a 1.500 metri di quota, ogni stagione offre esperienze 
-            che non troverete da nessun'altra parte. Il sapore della Fontina 
-            appena stagionata, il silenzio di una ciaspolata sotto le stelle, 
-            il respiro consapevole tra le cime \u2014 sono questi i ricordi 
-            che vi porterete a casa.
+            {$t('experiences.page_intro_text')}
         </p>
     </div>
 </section>
@@ -59,29 +55,29 @@
             <div class="h-20 w-20 rounded-full border border-alpine-border bg-white flex items-center justify-center mx-auto mb-5">
                 <Utensils class="w-7 h-7 text-alpine-gold" />
             </div>
-            <h4 class="font-serif text-lg text-alpine-text mb-2">Sapori</h4>
-            <p class="text-xs text-alpine-muted font-light">Fontina DOP e tradizione</p>
+            <h4 class="font-serif text-lg text-alpine-text mb-2">{$t('experiences.page_highlight_flavours')}</h4>
+            <p class="text-xs text-alpine-muted font-light">{$t('experiences.page_highlight_flavours_text')}</p>
         </div>
         <div class="fade-up-element">
             <div class="h-20 w-20 rounded-full border border-alpine-border bg-white flex items-center justify-center mx-auto mb-5">
                 <Moon class="w-7 h-7 text-alpine-gold" />
             </div>
-            <h4 class="font-serif text-lg text-alpine-text mb-2">Notti Stellate</h4>
-            <p class="text-xs text-alpine-muted font-light">Ciaspolate al chiaro di luna</p>
+            <h4 class="font-serif text-lg text-alpine-text mb-2">{$t('experiences.page_highlight_nights')}</h4>
+            <p class="text-xs text-alpine-muted font-light">{$t('experiences.page_highlight_nights_text')}</p>
         </div>
         <div class="fade-up-element">
             <div class="h-20 w-20 rounded-full border border-alpine-border bg-white flex items-center justify-center mx-auto mb-5">
                 <Flower2 class="w-7 h-7 text-alpine-gold" />
             </div>
-            <h4 class="font-serif text-lg text-alpine-text mb-2">Equilibrio</h4>
-            <p class="text-xs text-alpine-muted font-light">Yoga a 1.500 metri</p>
+            <h4 class="font-serif text-lg text-alpine-text mb-2">{$t('experiences.page_highlight_balance')}</h4>
+            <p class="text-xs text-alpine-muted font-light">{$t('experiences.page_highlight_balance_text')}</p>
         </div>
         <div class="fade-up-element">
             <div class="h-20 w-20 rounded-full border border-alpine-border bg-white flex items-center justify-center mx-auto mb-5">
                 <Compass class="w-7 h-7 text-alpine-gold" />
             </div>
-            <h4 class="font-serif text-lg text-alpine-text mb-2">Avventura</h4>
-            <p class="text-xs text-alpine-muted font-light">Guide alpine certificate</p>
+            <h4 class="font-serif text-lg text-alpine-text mb-2">{$t('experiences.page_highlight_adventure')}</h4>
+            <p class="text-xs text-alpine-muted font-light">{$t('experiences.page_highlight_adventure_text')}</p>
         </div>
     </div>
 </section>
@@ -96,28 +92,23 @@
         <div class="fade-up-element">
             <div class="flex items-center gap-3 mb-6">
                 <Utensils class="w-5 h-5 text-alpine-gold" />
-                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">Esperienza Gastronomica</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">{$t('experiences.degustazione.label')}</span>
             </div>
             <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('experiences.degustazione.title')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-                A dieci minuti dall\u2019hotel, la famiglia Perraillon produce Fontina DOP 
-                come si faceva cento anni fa. Visitate l'alpeggio, accarezzate le bovine 
-                al pascolo e assaggiate il formaggio appena tolto dalle forme di stagionatura. 
-                Un'esperienza che coinvolge tutti i sensi.
+                {$t('experiences.degustazione.desc1')}
             </p>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                La degustazione include cinque stagionature diverse, dal giovane al 18 mesi, 
-                accompagnate da miele di montagna, pane nero e un calice di vino valdostano. 
-                La reception organizza la visita su prenotazione.
+                {$t('experiences.degustazione.desc2')}
             </p>
             <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border mb-10">
                 <div class="flex items-center gap-3">
                     <MapPin class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">10 min dall'hotel</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('experiences.degustazione.badge_distance')}</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <Utensils class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">5 stagionature</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('experiences.degustazione.badge_tastings')}</span>
                 </div>
             </div>
             <a href="/esperienze/degustazione" class="inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase font-bold text-alpine-text hover:text-alpine-gold transition-colors duration-300">
@@ -133,29 +124,23 @@
         <div class="fade-up-element order-2 md:order-1">
             <div class="flex items-center gap-3 mb-6">
                 <Moon class="w-5 h-5 text-alpine-gold" />
-                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">La Magia della Notte</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">{$t('experiences.ciaspolate.label')}</span>
             </div>
             <h2 class="font-serif text-4xl text-white mb-6">{$t('experiences.ciaspolate.title')}</h2>
             <p class="text-white/60 text-sm font-light leading-relaxed mb-6">
-                Quando il sole tramonta dietro il Cervino, la montagna si trasforma. 
-                Indossate le ciaspole, accendete la frontale e seguite la guida 
-                nel silenzio assoluto del bosco innevato. Sopra di voi, 
-                un cielo stellato che in citt\u00e0 non vedrete mai.
+                {$t('experiences.ciaspolate.desc1')}
             </p>
             <p class="text-white/60 text-sm font-light leading-relaxed mb-8">
-                Il percorso di 2 ore si conclude al Rifugio con una cena valdostana: 
-                fonduta, polenta concia e vin br\u00fbl\u00e9. La guida racconta leggende locali 
-                mentre la neve scricchiola sotto i passi. Un'esperienza indimenticabile 
-                da dicembre a marzo.
+                {$t('experiences.ciaspolate.desc2')}
             </p>
             <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/20 mb-10">
                 <div class="flex items-center gap-3">
                     <Snowflake class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-white/80">Dicembre \u2013 Marzo</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-white/80">{$t('experiences.ciaspolate.badge_season')}</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <Moon class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-white/80">Partenza ore 18:00</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-white/80">{$t('experiences.ciaspolate.badge_departure')}</span>
                 </div>
             </div>
             <a href="/esperienze/ciaspolate" class="inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase font-bold text-white hover:text-alpine-gold transition-colors duration-300">
@@ -179,29 +164,23 @@
         <div class="fade-up-element">
             <div class="flex items-center gap-3 mb-6">
                 <Flower2 class="w-5 h-5 text-alpine-gold" />
-                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">Equilibrio Interiore</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">{$t('experiences.yoga.label')}</span>
             </div>
             <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('experiences.yoga.title')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-                A 1.500 metri, l'aria \u00e8 pi\u00f9 pura, il silenzio pi\u00f9 profondo 
-                e la mente si svuota naturalmente. Le nostre sessioni di yoga 
-                si tengono all'aperto, sulla terrazza panoramica con vista 
-                sul Cervino e la catena del Monte Rosa.
+                {$t('experiences.yoga.desc1')}
             </p>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                Lezioni all'alba e al tramonto, guidate da istruttori certificati. 
-                Hatha yoga, pranayama e meditazione alpina. 
-                Tutti i livelli sono benvenuti \u2014 dai principianti ai praticanti esperti. 
-                D'inverno le sessioni si spostano nella sala wellness con vetrate sulle cime.
+                {$t('experiences.yoga.desc2')}
             </p>
             <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border mb-10">
                 <div class="flex items-center gap-3">
                     <Wind class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Alba & Tramonto</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('experiences.yoga.badge_time')}</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <Flower2 class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Tutti i livelli</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('experiences.yoga.badge_level')}</span>
                 </div>
             </div>
             <a href="/esperienze/yoga" class="inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase font-bold text-alpine-text hover:text-alpine-gold transition-colors duration-300">
@@ -217,29 +196,23 @@
         <div class="fade-up-element order-2 md:order-1">
             <div class="flex items-center gap-3 mb-6">
                 <Compass class="w-5 h-5 text-alpine-gold" />
-                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">Esperti della Montagna</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold">{$t('experiences.guide.label')}</span>
             </div>
             <h2 class="font-serif text-4xl text-alpine-text mb-6">{$t('experiences.guide.title')}</h2>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-6">
-                Le nostre guide alpine certificate conoscono ogni sentiero, 
-                ogni cresta e ogni segreto delle montagne intorno a Torgnon. 
-                Che vogliate un trekking panoramico in famiglia o un'ascensione 
-                impegnativa, c'\u00e8 sempre un esperto pronto a guidarvi.
+                {$t('experiences.guide.desc1')}
             </p>
             <p class="text-alpine-muted text-sm font-light leading-relaxed mb-8">
-                Escursioni estive, freeride invernale, arrampicata su ghiaccio, 
-                ciaspolate guidate e uscite di mountain bike. 
-                Ogni avventura \u00e8 personalizzabile per livello ed esigenze. 
-                La reception prenota per voi con 48 ore di anticipo.
+                {$t('experiences.guide.desc2')}
             </p>
             <div class="grid grid-cols-2 gap-6 pt-6 border-t border-alpine-border mb-10">
                 <div class="flex items-center gap-3">
                     <Compass class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Guide certificate</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('experiences.guide.badge_certified')}</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <Mountain class="w-4 h-4 text-alpine-gold shrink-0" />
-                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">Estate & Inverno</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-alpine-text">{$t('experiences.guide.badge_season')}</span>
                 </div>
             </div>
             <a href="/esperienze/guide" class="inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase font-bold text-alpine-text hover:text-alpine-gold transition-colors duration-300">
@@ -258,19 +231,19 @@
     <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">4</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Esperienze uniche</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('experiences.page_stats_unique')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">12</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Mesi di attivit\u00e0</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('experiences.page_stats_months')}</p>
         </div>
         <div class="fade-up-element">
             <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">1.500m</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Di altitudine</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('experiences.page_stats_altitude')}</p>
         </div>
         <div class="fade-up-element">
-            <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">\u221e</p>
-            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">Ricordi da portare a casa</p>
+            <p class="font-serif text-4xl md:text-5xl text-alpine-text mb-2">∞</p>
+            <p class="text-[10px] uppercase tracking-[0.25em] text-alpine-muted font-bold">{$t('experiences.page_stats_memories')}</p>
         </div>
     </div>
 </section>
@@ -279,8 +252,8 @@
 <section class="bg-alpine-bg py-32 px-6">
     <div class="max-w-7xl mx-auto">
         <div class="fade-up-element text-center mb-20 max-w-xl mx-auto">
-            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">Ogni Stagione, un'Avventura</h2>
-            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">La montagna non si ferma mai</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-alpine-text mb-5 leading-tight">{$t('experiences.page_gallery_title')}</h2>
+            <p class="text-[11px] uppercase tracking-widest text-alpine-muted font-bold">{$t('experiences.page_gallery_subtitle')}</p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -288,8 +261,8 @@
                 <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=800&auto=format&fit=crop" alt="Alpeggio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90" />
                 <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-5">
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">Tutto l'anno</p>
-                        <p class="font-serif text-lg text-white">Degustazione</p>
+                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">{$t('experiences.page_gallery_tasting_season')}</p>
+                        <p class="font-serif text-lg text-white">{$t('experiences.page_gallery_tasting_name')}</p>
                     </div>
                 </div>
             </a>
@@ -297,8 +270,8 @@
                 <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=800&auto=format&fit=crop" alt="Ciaspolata" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-85" />
                 <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-5">
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">Dic \u2013 Mar</p>
-                        <p class="font-serif text-lg text-white">Ciaspolate</p>
+                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">{$t('experiences.page_gallery_snowshoe_season')}</p>
+                        <p class="font-serif text-lg text-white">{$t('experiences.page_gallery_snowshoe_name')}</p>
                     </div>
                 </div>
             </a>
@@ -306,8 +279,8 @@
                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Yoga in montagna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90" />
                 <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-5">
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">Tutto l'anno</p>
-                        <p class="font-serif text-lg text-white">Yoga in Quota</p>
+                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">{$t('experiences.page_gallery_yoga_season')}</p>
+                        <p class="font-serif text-lg text-white">{$t('experiences.page_gallery_yoga_name')}</p>
                     </div>
                 </div>
             </a>
@@ -315,8 +288,8 @@
                 <img src="https://images.unsplash.com/photo-1544450531-64d7fa39b400?q=80&w=800&auto=format&fit=crop" alt="Guide alpine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90" />
                 <div class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-5">
                     <div>
-                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">Estate & Inverno</p>
-                        <p class="font-serif text-lg text-white">Guide Alpine</p>
+                        <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold">{$t('experiences.page_gallery_guides_season')}</p>
+                        <p class="font-serif text-lg text-white">{$t('experiences.page_gallery_guides_name')}</p>
                     </div>
                 </div>
             </a>
@@ -328,13 +301,12 @@
 <section class="bg-[#0a0a0a] py-32 px-6">
     <div class="max-w-3xl mx-auto text-center">
         <div class="fade-up-element">
-            <h2 class="font-serif text-4xl text-white mb-6">Quale Sar\u00e0 la Vostra Avventura?</h2>
+            <h2 class="font-serif text-4xl text-white mb-6">{$t('experiences.page_cta_title')}</h2>
             <p class="text-white/50 text-sm font-light leading-relaxed max-w-lg mx-auto mb-12">
-                La reception \u00e8 a vostra disposizione per organizzare ogni esperienza. 
-                Chiedete e personalizziamo tutto per voi.
+                {$t('experiences.page_cta_text')}
             </p>
             <a href="mailto:info@hoteldusoleiltorgnon.com" class="inline-flex items-center justify-center gap-3 bg-white text-alpine-text px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-alpine-gold hover:text-white transition-all duration-300">
-                Parliamone Insieme <ArrowRight class="w-4 h-4" />
+                {$t('experiences.page_cta_button')} <ArrowRight class="w-4 h-4" />
             </a>
         </div>
     </div>

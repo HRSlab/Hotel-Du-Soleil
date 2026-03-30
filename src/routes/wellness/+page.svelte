@@ -437,7 +437,7 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <Music class="w-3.5 h-3.5 text-alpine-gold shrink-0" />
-                            <span class="text-xs text-alpine-text font-light">{$t('wellness.pkg_music')}</span>
+                            <span class="text-xs text-alpine-text font-light">Music selection of your choice</span>
                         </div>
                     </div>
                 </div>

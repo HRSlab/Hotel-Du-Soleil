@@ -24,10 +24,10 @@
 			<span
 				class="mb-6 block text-[10px] font-medium tracking-[0.4em] text-white/80 uppercase md:text-xs"
 			>
-				Sapori Autentici
+				{$t('ristorante.hero_label')}
 			</span>
 			<h1 class="mb-10 font-serif text-5xl leading-tight font-light text-white md:text-7xl">
-				Il Ristorante
+				{$t('ristorante.hero_title')}
 			</h1>
 		</div>
 	</div>
@@ -38,13 +38,10 @@
 	<div class="fade-up-element mx-auto max-w-3xl text-center">
 		<div class="deco-line mb-12"></div>
 		<h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-5xl">
-			La tradizione valdostana incontra la freschezza degli ingredienti di montagna.
+			{$t('ristorante.philosophy_title')}
 		</h3>
 		<p class="mx-auto max-w-xl text-sm leading-relaxed font-light text-alpine-muted md:text-base">
-			La nostra cucina è un omaggio sincero al territorio. Privilegiamo le materie prime a
-			chilometro zero, selezionando personalmente i migliori formaggi degli alpeggi locali, le carni
-			del territorio e le erbe spontanee per offrirvi un'esperienza gastronomica genuina e
-			indimenticabile.
+			{$t('ristorante.philosophy_text')}
 		</p>
 	</div>
 </section>
@@ -62,11 +59,9 @@
 					strokeWidth="1.5"
 				/>
 			</div>
-			<h4 class="mb-4 font-serif text-2xl text-alpine-text">Il Risveglio</h4>
+			<h4 class="mb-4 font-serif text-2xl text-alpine-text">{$t('ristorante.breakfast_title')}</h4>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Il buongiorno inizia con il profumo del burro di montagna e delle torte fatte in casa. Il
-				nostro buffet offre un'ampia selezione di dolce e salato: Fontina DOP, salumi tipici, yogurt
-				locali, cereali e confetture artigianali.
+				{$t('ristorante.breakfast_text')}
 			</p>
 		</div>
 
@@ -80,11 +75,9 @@
 					strokeWidth="1.5"
 				/>
 			</div>
-			<h4 class="mb-4 font-serif text-2xl text-alpine-text">La Cena</h4>
+			<h4 class="mb-4 font-serif text-2xl text-alpine-text">{$t('ristorante.dinner_title')}</h4>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Ogni sera il nostro chef propone un menù curato che spazia dalle ricette classiche come la
-				Valpellinentze o la polenta concia, a piatti internazionali, sempre accompagnati da un ricco
-				buffet di verdure e sfiziosità.
+				{$t('ristorante.dinner_text')}
 			</p>
 		</div>
 
@@ -98,11 +91,9 @@
 					strokeWidth="1.5"
 				/>
 			</div>
-			<h4 class="mb-4 font-serif text-2xl text-alpine-text">Lounge & Camino</h4>
+			<h4 class="mb-4 font-serif text-2xl text-alpine-text">{$t('ristorante.lounge_title')}</h4>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Il nostro grande camino in mattoni e rame è il cuore dell'hotel. Lasciatevi avvolgere dal
-				crepitio del fuoco con una cioccolata calda alpina, un cocktail d'autore o un distillato
-				artigianale dopo una giornata all'aria aperta.
+				{$t('ristorante.lounge_text')}
 			</p>
 		</div>
 
@@ -132,12 +123,11 @@
 				class="relative flex flex-1 flex-col items-start justify-center overflow-hidden border border-alpine-border bg-alpine-bg p-12"
 			>
 				<span class="mb-4 block text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
-					>Dietro le Quinte</span
-				>
-				<h4 class="relative z-10 mb-6 font-serif text-3xl text-alpine-text">Prodotti a KM Zero</h4>
+				>{$t('ristorante.behind_label')}</span
+			>
+				<h4 class="relative z-10 mb-6 font-serif text-3xl text-alpine-text">{$t('ristorante.km0_title')}</h4>
 				<p class="relative z-10 text-sm leading-relaxed font-light text-alpine-muted">
-					La nostra Fontina arriva direttamente dagli alpeggi circostanti, e molte verdure dal
-					nostro orto di famiglia. Una scelta di qualità e sostenibilità.
+					{$t('ristorante.km0_text')}
 				</p>
 				<div class="pointer-events-none absolute -right-12 -bottom-12 opacity-5">
 					<UtensilsCrossed class="h-64 w-64 text-alpine-text" />
@@ -152,12 +142,10 @@
 	<div class="fade-up-element mx-auto max-w-3xl text-center">
 		<Flame class="mx-auto mb-10 h-10 w-10 text-alpine-gold" />
 		<h2 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-5xl">
-			Ritrova il tepore.
+			{$t('ristorante.warmth_title')}
 		</h2>
 		<p class="text-sm leading-relaxed font-light text-alpine-muted md:text-base">
-			Il cuore pulsante dell'Hotel du Soleil. Il nostro grande camino centrale in mattoni e rame è
-			il luogo ideale dove fermare il tempo. Lasciatevi avvolgere dal crepitio del fuoco con una
-			cioccolata calda alpina o un distillato artigianale dopo una giornata all'aria aperta.
+			{$t('ristorante.warmth_text')}
 		</p>
 	</div>
 </section>
@@ -174,14 +162,12 @@
 		</div>
 		<div class="w-full md:w-1/2">
 			<Gamepad2 class="mb-6 h-8 w-8 text-alpine-gold" />
-			<h3 class="mb-4 font-serif text-4xl text-alpine-text">Svago e Convivialità</h3>
+			<h3 class="mb-4 font-serif text-4xl text-alpine-text">{$t('ristorante.games_title')}</h3>
 			<p class="mb-6 text-[10px] font-bold tracking-widest text-alpine-muted uppercase">
-				Biliardo & Calcio Balilla
+				{$t('ristorante.games_subtitle')}
 			</p>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				La nostra area lounge è pensata per il relax di tutta la famiglia. Sfidatevi in una partita
-				a biliardo o a calcio balilla in un ambiente informale e spazioso, sempre accompagnati dal
-				calore del camino sullo sfondo.
+				{$t('ristorante.games_text')}
 			</p>
 		</div>
 	</div>
@@ -197,14 +183,12 @@
 		</div>
 		<div class="w-full md:w-1/2">
 			<Sun class="mb-6 h-8 w-8 text-alpine-gold" />
-			<h3 class="mb-4 font-serif text-4xl text-alpine-text">Aperitivo al Sole</h3>
+			<h3 class="mb-4 font-serif text-4xl text-alpine-text">{$t('ristorante.aperitivo_title')}</h3>
 			<p class="mb-6 text-[10px] font-bold tracking-widest text-alpine-muted uppercase">
-				Cocktail & Relax in Giardino
+				{$t('ristorante.aperitivo_subtitle')}
 			</p>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Nelle giornate più miti, il nostro bar si estende verso l'esterno. Godetevi cocktail
-				colorati e rinfrescanti comodamente sdraiati sui lettini del giardino, con la vista
-				inconfondibile dell'architettura valdostana in pietra e legno.
+				{$t('ristorante.aperitivo_text')}
 			</p>
 		</div>
 	</div>
@@ -220,14 +204,12 @@
 		</div>
 		<div class="w-full md:w-1/2">
 			<Flame class="mb-6 h-8 w-8 text-alpine-gold" />
-			<h3 class="mb-4 font-serif text-4xl text-alpine-text">Il Dolce Risveglio</h3>
+			<h3 class="mb-4 font-serif text-4xl text-alpine-text">{$t('ristorante.morning_title')}</h3>
 			<p class="mb-6 text-[10px] font-bold tracking-widest text-alpine-muted uppercase">
-				Colazione accanto al fuoco
+				{$t('ristorante.morning_subtitle')}
 			</p>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Iniziate la giornata circondati dal profumo del legno e dal calore del focolare. I nostri
-				ampi tavoli rustici vi accolgono per un momento di pura energia prima di esplorare le
-				meraviglie di Torgnon.
+				{$t('ristorante.morning_text')}
 			</p>
 		</div>
 	</div>
