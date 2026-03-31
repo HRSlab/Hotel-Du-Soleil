@@ -1,5 +1,3 @@
-/* eslint-disable svelte/require-each-key */
-/* eslint-disable svelte/require-each-key */
 <script lang="ts">
     import { Snowflake, ShieldCheck, Sparkles, Mountain } from 'lucide-svelte';
 
