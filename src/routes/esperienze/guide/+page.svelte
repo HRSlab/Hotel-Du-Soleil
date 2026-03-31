@@ -18,7 +18,7 @@
         class="absolute inset-0 scale-110"
         style="transform: translateY({scrollY * 0.25}px) scale(1.1);"
     >
-        <img src="https://images.unsplash.com/photo-1544450531-64d7fa39b400?q=80&w=2000&auto=format&fit=crop" class="h-full w-full object-cover opacity-55" alt="Guida alpina in Valle d'Aosta" />
+        <img src="/imgs/ski-sport-hero.webp" class="h-full w-full object-cover opacity-55" alt="Guida alpina in Valle d'Aosta" />
         <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-alpine-bg"></div>
     </div>
 
@@ -51,7 +51,7 @@
 <!-- ═══════════════════ I NOSTRI PARTNER ═══════════════════ -->
 <section class="bg-alpine-bg pb-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
     <div class="fade-up-element overflow-hidden bg-alpine-border shadow-xl">
-        <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1500&auto=format&fit=crop" alt="Guida alpina con gruppo in montagna" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
+        <img src="/imgs/skiers-torgnon.webp" alt="Guida alpina con gruppo in montagna" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
     </div>
 
     <div class="fade-up-element">
@@ -110,7 +110,7 @@
             <!-- Alpinismo -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Alpinismo in Valle d'Aosta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/slope-torgnon.webp" alt="Alpinismo in Valle d'Aosta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -128,7 +128,7 @@
             <!-- Freeride -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?q=80&w=800&auto=format&fit=crop" alt="Freeride neve fresca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/skier-torgnon.webp" alt="Freeride neve fresca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -146,7 +146,7 @@
             <!-- Trekking -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop" alt="Trekking guidato nelle Alpi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/torgnon-view.webp" alt="Trekking guidato nelle Alpi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -167,7 +167,7 @@
             <!-- Ciaspolate -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?q=80&w=800&auto=format&fit=crop" alt="Ciaspolata guidata" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/winter-park.webp" alt="Ciaspolata guidata" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -188,7 +188,7 @@
             <!-- MTB -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="https://images.unsplash.com/photo-1544191714-3d71bc294943?q=80&w=800&auto=format&fit=crop" alt="Mountain bike guidata" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/mtb-torgnon-1.webp" alt="Mountain bike guidata" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -209,7 +209,7 @@
             <!-- Natura & Fauna -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?q=80&w=800&auto=format&fit=crop" alt="Osservazione fauna alpina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/home-activities.webp" alt="Osservazione fauna alpina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -318,7 +318,7 @@
         </div>
 
         <div class="fade-up-element order-1 md:order-2 overflow-hidden bg-alpine-border shadow-xl">
-            <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?q=80&w=1500&auto=format&fit=crop" alt="Guida alpina in cresta" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
+            <img src="/imgs/ski-gondola-view.webp" alt="Guida alpina in cresta" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
         </div>
     </div>
 </section>
