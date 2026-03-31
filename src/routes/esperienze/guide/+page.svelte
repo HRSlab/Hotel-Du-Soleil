@@ -128,7 +128,7 @@
             <!-- Freeride -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="/imgs/skier-torgnon.webp" alt="Freeride neve fresca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/freeride-guide.jpg" alt="Sciatore freeride in neve fresca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -167,7 +167,7 @@
             <!-- Ciaspolate -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="/imgs/winter-park.webp" alt="Ciaspolata guidata" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/snowshoe-guide.jpg" alt="Escursione con ciaspole in montagna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -209,7 +209,7 @@
             <!-- Natura & Fauna -->
             <div class="fade-up-element group border border-alpine-border bg-white hover:border-alpine-gold hover:shadow-2xl transition-all duration-500">
                 <div class="overflow-hidden aspect-3/2">
-                    <img src="/imgs/home-activities.webp" alt="Osservazione fauna alpina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src="/imgs/nature-fauna-ibex.jpg" alt="Stambecco alpino in ambiente naturale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div class="p-8 md:p-10">
                     <div class="flex items-center gap-2 mb-4">
@@ -318,7 +318,7 @@
         </div>
 
         <div class="fade-up-element order-1 md:order-2 overflow-hidden bg-alpine-border shadow-xl">
-            <img src="/imgs/ski-gondola-view.webp" alt="Guida alpina in cresta" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
+            <img src="/imgs/alpine-safety.jpg" alt="Squadra di sicurezza alpina sulla neve" class="w-full h-full object-cover img-elegant aspect-4/3 brightness-90" />
         </div>
     </div>
 </section>
