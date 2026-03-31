@@ -15,9 +15,9 @@
 <header class="relative h-screen w-full overflow-hidden bg-[#1a1a1a]">
 	<div class="absolute inset-0">
 		<img
-			src="/imgs/deer-dish-hero.webp"
+			src="/imgs/exterior-snow-back-2026.webp"
 			alt="Chalet du Soleil hero background"
-			class="h-full w-full object-cover"
+			class="h-full w-full object-cover md:hidden"
 		/>
 		<video
 			autoplay
@@ -26,7 +26,7 @@
 			playsinline
 			preload="metadata"
 			poster="/imgs/deer-dish-hero.webp"
-			class="absolute inset-0 h-full w-full object-cover opacity-100"
+			class="absolute inset-0 hidden h-full w-full object-cover opacity-100 md:block"
 		>
 			<source src="/imgs/fontina-dop-hero.mp4" type="video/mp4" />
 		</video>
