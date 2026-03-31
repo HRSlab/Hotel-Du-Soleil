@@ -452,13 +452,13 @@
     },
     "noleggio": {
       "title": "Ski Box & Rental",
-      "subtitle": "Convenient & Safe Services",
+      "subtitle": "Shared ski boxes & boot room",
       "cta": "Ski Services"
     },
     "sci_label": "Ski-in / Ski-out Resort",
     "sci_services": [
       "Direct access to the ski lifts",
-      "Ski Room & Heated Boot Storage",
+      "Heated boot room near reception",
       "Skipass at Reception"
     ],
     "bike_label": "E-Bike & Trekking",
@@ -469,8 +469,8 @@
     ],
     "services_title": "Services for Athletes",
     "services_subtitle": "Everything you need, in one place",
-    "service_skiroom_title": "Ski Room & Dry",
-    "service_skiroom_text": "Private lockers and a heated drying system for boots — always ready for you.",
+    "service_skiroom_title": "Boot Room",
+    "service_skiroom_text": "Shared boot storage in a heated room near reception, with no boot dryer.",
     "service_guides_title": "Partner Guides",
     "service_guides_text": "We work with the best local guides for winter freeride and summer climbing.",
     "service_breakfast_title": "Bio Breakfast",

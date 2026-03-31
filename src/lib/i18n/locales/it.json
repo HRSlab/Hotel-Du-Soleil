@@ -427,13 +427,13 @@
     },
     "noleggio": {
       "title": "Ski Box & Noleggio",
-      "subtitle": "Servizi Comodi & Sicuri",
+      "subtitle": "Ski box condivisi & deposito scarponi",
       "cta": "Servizi Sci"
     },
     "sci_label": "Ski-in / Ski-out Resort",
     "sci_services": [
       "Accesso diretto agli impianti",
-      "Ski Room e Deposito Scarponi Riscaldato",
+      "Deposito scarponi riscaldato vicino alla reception",
       "Skipass in Reception"
     ],
     "bike_label": "E-Bike & Trekking",
@@ -444,8 +444,8 @@
     ],
     "services_title": "Servizi per lo Sportivo",
     "services_subtitle": "Tutto ciò che ti serve, in un solo posto",
-    "service_skiroom_title": "Ski Room & Dry",
-    "service_skiroom_text": "Armadietti privati e sistema di asciugatura e riscaldamento per scarponi, sempre pronti.",
+    "service_skiroom_title": "Deposito Scarponi",
+    "service_skiroom_text": "Deposito scarponi condiviso in una stanza riscaldata vicino alla reception, senza asciugascarponi.",
     "service_guides_title": "Guide Partner",
     "service_guides_text": "Collaboriamo con le migliori guide locali per freeride invernale e scalate estive.",
     "service_breakfast_title": "Colazione Bio",
