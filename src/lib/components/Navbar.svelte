@@ -204,7 +204,38 @@
     </div>
 
     <nav class="mt-20 flex flex-col gap-8 pb-20 text-center">
-        <div class="px-6">
+        <div class="flex flex-col gap-5 px-6">
+            <div class="flex flex-wrap justify-center gap-6">
+                {#each locales as l (l)}
+                    <button
+                        onclick={() => {
+                            $locale = l;
+                            isMobileMenuOpen = false;
+                        }}
+                        class={cn(
+                            'text-[11px] uppercase tracking-widest',
+                            $locale === l ? 'font-bold text-alpine-gold' : 'opacity-40'
+                        )}
+                    >
+                        {l}
+                    </button>
+                {/each}
+            </div>
+
+            <a
+                href="tel:+393793357713"
+                class="block text-[11px] font-semibold tracking-[0.12em] uppercase text-alpine-text hover:text-alpine-gold"
+            >
+                +39 379 335 7713
+            </a>
+
+            <a
+                href="mailto:booking@hotel-du-soleil.it"
+                class="block break-all text-[11px] font-semibold tracking-[0.12em] uppercase text-alpine-text hover:text-alpine-gold"
+            >
+                booking@hotel-du-soleil.it
+            </a>
+
             <button
                 onclick={() => {
                     isMobileMenuOpen = false;
@@ -237,22 +268,6 @@
             </div>
         {/each}
         
-        <div class="mt-6 flex flex-wrap justify-center gap-6">
-            {#each locales as l (l)}
-                <button
-                    onclick={() => {
-                        $locale = l;
-                        isMobileMenuOpen = false;
-                    }}
-                    class={cn(
-                        'text-[11px] uppercase tracking-widest',
-                        $locale === l ? 'font-bold text-alpine-gold' : 'opacity-40'
-                    )}
-                >
-                    {l}
-                </button>
-            {/each}
-        </div>
     </nav>
 </div>
 <BookingDrawer bind:isOpen={isBookingMenuOpen} />
