@@ -3,7 +3,7 @@
     import { t, locale, locales } from '$lib/i18n';
 
     import { onMount } from 'svelte';
-    import { Menu, X, Minus, ArrowRight, Globe, ChevronDown } from 'lucide-svelte';
+    import { Menu, X, Minus, ArrowRight, Globe, ChevronDown, Phone, Mail } from 'lucide-svelte';
     import { page } from '$app/state';
     import { clsx, type ClassValue } from 'clsx';
     import { twMerge } from 'tailwind-merge';
@@ -64,6 +64,11 @@
         { key: 'sport', href: '/sport' },
         { key: 'experiences', href: '/esperienze' }
     ];
+
+    const bookingPhoneHref = 'tel:+393793357713';
+    const bookingPhoneLabel = '+39 379 335 7713';
+    const bookingEmail = 'booking@hotel-du-soleil.it';
+    const bookingEmailHref = `mailto:${bookingEmail}`;
 </script>
 
 <nav
@@ -191,6 +196,32 @@
         </ul>
 
         <div class="z-20 flex items-center gap-6">
+            <div class="hidden xl:flex flex-col items-end gap-1 text-right">
+                <a
+                    href={bookingPhoneHref}
+                    class={cn(
+                        'flex items-center gap-2 text-xs font-medium transition-colors',
+                        isScrolled || !isDarkHero
+                            ? 'text-alpine-text/80 hover:text-alpine-gold'
+                            : 'text-white/85 hover:text-alpine-gold'
+                    )}
+                >
+                    <Phone class="h-3.5 w-3.5" />
+                    <span>{bookingPhoneLabel}</span>
+                </a>
+                <a
+                    href={bookingEmailHref}
+                    class={cn(
+                        'flex items-center gap-2 text-xs font-medium transition-colors',
+                        isScrolled || !isDarkHero
+                            ? 'text-alpine-text/80 hover:text-alpine-gold'
+                            : 'text-white/85 hover:text-alpine-gold'
+                    )}
+                >
+                    <Mail class="h-3.5 w-3.5" />
+                    <span>{bookingEmail}</span>
+                </a>
+            </div>
             <button
                 onclick={() => (isBookingMenuOpen = true)}
                 class={cn(
@@ -259,6 +290,25 @@
                 class="block w-full bg-alpine-text px-10 py-5 text-xs tracking-[0.2em] text-white uppercase shadow-lg"
                 >{$t('nav.book')}</button
             >
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 px-6">
+            <a
+                href={bookingPhoneHref}
+                class="flex items-center justify-center gap-3 border border-alpine-border px-6 py-4 text-xs font-semibold tracking-[0.15em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
+                onclick={() => (isMobileMenuOpen = false)}
+            >
+                <Phone class="h-4 w-4" />
+                <span>{bookingPhoneLabel}</span>
+            </a>
+            <a
+                href={bookingEmailHref}
+                class="flex items-center justify-center gap-3 border border-alpine-border px-6 py-4 text-[11px] font-semibold tracking-[0.08em] text-alpine-text transition-colors hover:border-alpine-gold hover:text-alpine-gold"
+                onclick={() => (isMobileMenuOpen = false)}
+            >
+                <Mail class="h-4 w-4" />
+                <span>{bookingEmail}</span>
+            </a>
         </div>
 
         <div class="mt-6 flex flex-wrap justify-center gap-3">
