@@ -203,7 +203,18 @@
         <img src="/imgs/logo.webp" alt="Logo Hotel du Soleil" class="h-10 w-auto object-contain" />
     </div>
 
-    <nav class="mt-20 flex flex-col gap-8 text-center pb-20">
+    <nav class="mt-20 flex flex-col gap-8 pb-20 text-center">
+        <div class="px-6">
+            <button
+                onclick={() => {
+                    isMobileMenuOpen = false;
+                    isBookingMenuOpen = true;
+                }}
+                class="block w-full bg-alpine-text px-10 py-5 text-xs tracking-[0.2em] text-white uppercase shadow-lg"
+                >{$t('nav.book')}</button
+            >
+        </div>
+
         {#each navItems as item (item.key)}
             <div class="flex flex-col gap-2">
                 <a href={item.href as any} class="font-serif text-3xl text-alpine-text" onclick={() => (isMobileMenuOpen = false)}>
@@ -226,17 +237,6 @@
             </div>
         {/each}
         
-        <div class="mt-4 px-6">
-            <button
-                onclick={() => {
-                    isMobileMenuOpen = false;
-                    isBookingMenuOpen = true;
-                }}
-                class="block w-full bg-alpine-text px-10 py-5 text-xs tracking-[0.2em] text-white uppercase shadow-lg"
-                >{$t('nav.book')}</button
-            >
-        </div>
-
         <div class="mt-6 flex flex-wrap justify-center gap-6">
             {#each locales as l (l)}
                 <button
