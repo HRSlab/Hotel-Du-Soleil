@@ -1,5 +1,11 @@
 {
 	"files.associations": {
 		"*.css": "tailwindcss"
+	},
+	"chat.tools.terminal.autoApprove": {
+		"/^cd '/Users/hrs/Documents/01 PROJECT/Hotel Du Soleil' && node - <<'NODE'\nconst fs = require\\('fs'\\);\nconst path = require\\('path'\\);\nconst it = JSON\\.parse\\(fs\\.readFileSync\\('src/lib/i18n/locales/it\\.json', 'utf8'\\)\\);\nconst ru = JSON\\.parse\\(fs\\.readFileSync\\('src/lib/i18n/locales/ru\\.json', 'utf8'\\)\\);\nconst missing = \\[\\];\nfunction walk\\(base, a, b\\) \\{\n  if \\(Array\\.isArray\\(a\\)\\) return;\n  if \\(a && typeof a === 'object'\\) \\{\n    for \\(const key of Object\\.keys\\(a\\)\\) \\{\n      const next = base \\? `\\$\\{base\\}\\.\\$\\{key\\}` : key;\n      if \\(!\\(b && Object\\.prototype\\.hasOwnProperty\\.call\\(b, key\\)\\)\\) \\{\n        missing\\.push\\(next\\);\n      \\} else \\{\n        walk\\(next, a\\[key\\], b\\[key\\]\\);\n      \\}\n    \\}\n  \\}\n\\}\nwalk\\('', it, ru\\);\nconsole\\.log\\(missing\\.join\\('\\\\n'\\)\\);\nNODE$/": {
+			"approve": true,
+			"matchCommandLine": true
+		}
 	}
 }

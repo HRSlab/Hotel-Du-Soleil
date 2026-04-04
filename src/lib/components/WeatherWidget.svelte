@@ -18,6 +18,10 @@
 
   let weather = $state<WeatherData | null>(null);
 
+  const copy = $derived($locale === 'ru'
+    ? { stable: 'Свежо и стабильно', detail: 'Подробнее', snowTitle: 'Снег', windTitle: 'Ветер', estimatedSnow: 'Снег на земле (оценка)' }
+    : { stable: 'Fresco & Stabile', detail: 'In-Depth', snowTitle: 'Neve', windTitle: 'Vento', estimatedSnow: 'Neve al suolo (stimata)' });
+
   onMount(async () => {
     try {
       const res = await fetch('https://wttr.in/Torgnon?format=j1');
@@ -61,24 +65,24 @@
       
       <!-- Snow Depth / Forecast -->
       {#if parseFloat(weather.snow) > 0 || parseFloat(weather.chanceSnow) > 10}
-        <div class="flex items-center gap-1.5 text-alpine-gold" title="Neve">
+        <div class="flex items-center gap-1.5 text-alpine-gold" title={copy.snowTitle}>
           <Snowflake class="w-3 h-3" />
           <span>{weather.snow} cm / {weather.chanceSnow}% Neve</span>
         </div>
       {:else}
-        <div class="flex items-center gap-1.5 opacity-40" title="Neve al suolo (stimata)">
+        <div class="flex items-center gap-1.5 opacity-40" title={copy.estimatedSnow}>
           <Snowflake class="w-3 h-3" />
-          <span>Fresco & Stabile</span>
+          <span>{copy.stable}</span>
         </div>
       {/if}
 
-      <div class="flex items-center gap-1.5" title="Vento">
+      <div class="flex items-center gap-1.5" title={copy.windTitle}>
         <Wind class="w-3 h-3" />
         <span>{weather.wind} km/h</span>
       </div>
       
       <div class="flex items-center gap-1.5 text-alpine-gold opacity-0 group-hover:opacity-100 transition-opacity ml-2">
-        <span class="text-[8px]">In-Depth</span>
+        <span class="text-[8px]">{copy.detail}</span>
         <Activity class="w-3 h-3" />
       </div>
     </div>

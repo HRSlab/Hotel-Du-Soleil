@@ -1,5 +1,9 @@
 <script lang="ts">
-  import { t } from '$lib/i18n';
+  import { t, locale } from '$lib/i18n';
+
+  const copy = $derived($locale === 'ru'
+    ? { policy: 'Правила проживания', cookies: 'Политика cookie' }
+    : { policy: 'Policy di Soggiorno', cookies: 'Politica sui Cookie' });
 </script>
 
 <footer class="bg-alpine-text text-white/70 pt-24 pb-12 px-6">
@@ -32,7 +36,9 @@
         <li><a href="/camere" class="hover:text-white transition-colors">{$t('footer.links.rooms')}</a></li>
         <li><a href="/ristorante" class="hover:text-white transition-colors">{$t('footer.links.restaurant')}</a></li>
         <li><a href="/termini" class="hover:text-white transition-colors">{$t('footer.links.terms')}</a></li>
-        <li><a href="/policy" class="hover:text-white transition-colors">{$t('footer.links.policy') || 'Policy'}</a></li>        <li><a href="/cookie-policy" class="hover:text-white transition-colors">{$t('footer.links.cookies')}</a></li>      </ul>
+        <li><a href="/policy" class="hover:text-white transition-colors">{$t('footer.links.policy') || copy.policy}</a></li>
+        <li><a href="/cookie-policy" class="hover:text-white transition-colors">{$t('footer.links.cookies') || copy.cookies}</a></li>
+      </ul>
     </div>
 
   </div>

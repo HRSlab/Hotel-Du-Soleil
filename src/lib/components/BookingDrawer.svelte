@@ -53,6 +53,44 @@
             document.body.style.overflow = '';
         }
     });
+
+    const copy = $derived($locale === 'ru'
+        ? {
+            close: 'Закрыть меню бронирования',
+            closeButton: 'Закрыть',
+            online: 'Онлайн',
+            direct: 'Напрямую',
+            selectDates: 'Выберите даты',
+            guestsBooking: 'Гости и бронирование',
+            adults: 'Взрослые',
+            children: 'Дети',
+            availability: 'Проверить наличие',
+            directHelp: 'Прямая помощь',
+            call: 'Позвоните нам',
+            whatsapp: 'WhatsApp',
+            quickMessage: 'Быстрое сообщение',
+            email: 'Email',
+            writeUs: 'Напишите нам',
+            bestPrice: 'Лучшая цена гарантирована на нашем сайте'
+        }
+        : {
+            close: 'Close booking menu',
+            closeButton: 'Chiudi',
+            online: 'Online',
+            direct: 'Diretta',
+            selectDates: 'Seleziona Date',
+            guestsBooking: 'Ospiti & Prenotazione',
+            adults: 'Adulti',
+            children: 'Bambini',
+            availability: 'Verifica Disponibilita',
+            directHelp: 'Assistenza Diretta',
+            call: 'Chiamaci',
+            whatsapp: 'WhatsApp',
+            quickMessage: 'Messaggio Rapido',
+            email: 'Email',
+            writeUs: 'Scrivici',
+            bestPrice: 'Miglior Prezzo Garantito sul nostro sito'
+        });
 </script>
 
 {#if isOpen}
@@ -63,7 +101,7 @@
         onkeydown={(e) => e.key === 'Escape' && close()}
         role="button"
         tabindex="-1"
-        aria-label="Close booking menu"
+        aria-label={copy.close}
     ></div>
 
     <div
@@ -75,7 +113,7 @@
             <button
                 onclick={close}
                 class="rounded-full p-2 transition-colors hover:bg-alpine-border"
-                aria-label="Chiudi"
+                aria-label={copy.closeButton}
             >
                 <X class="h-6 w-6 text-alpine-text" />
             </button>
@@ -85,11 +123,11 @@
             <button 
                 onclick={() => activeTab = 'online'}
                 class={cn("py-4 text-[10px] font-bold uppercase tracking-widest transition-colors", activeTab === 'online' ? "bg-alpine-text text-white" : "bg-white text-alpine-muted hover:bg-alpine-bg")}
-            >Online</button>
+            >{copy.online}</button>
             <button 
                 onclick={() => activeTab = 'assisted'}
                 class={cn("py-4 text-[10px] font-bold uppercase tracking-widest transition-colors", activeTab === 'assisted' ? "bg-alpine-text text-white" : "bg-white text-alpine-muted hover:bg-alpine-bg")}
-            >Diretta</button>
+            >{copy.direct}</button>
         </div>
 
         <div class="flex-1 overflow-y-auto lg:overflow-hidden p-4 lg:p-8">
@@ -100,7 +138,7 @@
                     <div class="mb-4 flex items-center gap-3 flex-none">
                         <div class="h-px flex-1 bg-alpine-border"></div>
                         <span class="text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase lg:text-xs">
-                            Seleziona Date
+                                {copy.selectDates}
                         </span>
                         <div class="h-px flex-1 bg-alpine-border"></div>
                     </div>
@@ -116,14 +154,14 @@
                         <div class="mb-2 flex items-center gap-3 flex-none">
                             <div class="h-px flex-1 bg-alpine-border"></div>
                             <span class="text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase lg:text-xs">
-                                Ospiti & Prenotazione
+                                {copy.guestsBooking}
                             </span>
                             <div class="h-px flex-1 bg-alpine-border"></div>
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
                             <div class="flex flex-col gap-1 border border-alpine-border bg-alpine-bg px-3 py-2">
-                                <span class="text-[9px] text-alpine-muted uppercase tracking-widest font-bold">Adulti</span>
+                                <span class="text-[9px] text-alpine-muted uppercase tracking-widest font-bold">{copy.adults}</span>
                                 <div class="flex items-center justify-between">
                                     <button onclick={() => adults = Math.max(1, adults - 1)} class="text-xl hover:text-alpine-gold transition-colors leading-none">-</button>
                                     <span class="text-[14px] font-bold">{adults}</span>
@@ -131,7 +169,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-col gap-1 border border-alpine-border bg-alpine-bg px-3 py-2">
-                                <span class="text-[9px] text-alpine-muted uppercase tracking-widest font-bold">Bambini</span>
+                                <span class="text-[9px] text-alpine-muted uppercase tracking-widest font-bold">{copy.children}</span>
                                 <div class="flex items-center justify-between">
                                     <button onclick={() => children = Math.max(0, children - 1)} class="text-xl hover:text-alpine-gold transition-colors leading-none">-</button>
                                     <span class="text-[14px] font-bold">{children}</span>
@@ -145,7 +183,7 @@
                             target="_blank"
                             class="group flex w-full items-center justify-center gap-3 bg-alpine-text py-4 lg:py-5 text-xs lg:text-sm font-bold tracking-[0.2em] text-white uppercase transition-all hover:bg-alpine-gold"
                         >
-                            {$t('booking.check') || "Verifica Disponibilità"}
+                            {$t('booking.check') || copy.availability}
                             <ChevronRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </a>
                     </div>
@@ -154,7 +192,7 @@
                         <div class="mb-1 flex items-center gap-3">
                             <div class="h-px flex-1 bg-alpine-border"></div>
                             <span class="text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase">
-                                Assistenza Diretta
+                                {copy.directHelp}
                             </span>
                             <div class="h-px flex-1 bg-alpine-border"></div>
                         </div>
@@ -165,7 +203,7 @@
                                     <Phone class="h-4 w-4 text-alpine-gold" />
                                 </div>
                                 <div class="text-left leading-tight">
-                                    <span class="block text-[9px] font-bold tracking-widest text-alpine-muted uppercase">Chiamaci</span>
+                                    <span class="block text-[9px] font-bold tracking-widest text-alpine-muted uppercase">{copy.call}</span>
                                     <span class="text-xs font-medium text-alpine-text">+39 379 335 7713</span>
                                 </div>
                             </div>
@@ -178,8 +216,8 @@
                                     <MessageCircle class="h-4 w-4 text-[#25D366]" />
                                 </div>
                                 <div class="text-left leading-tight">
-                                    <span class="block text-[9px] font-bold tracking-widest text-alpine-muted uppercase">WhatsApp</span>
-                                    <span class="text-xs font-medium text-alpine-text">Messaggio Rapido</span>
+                                    <span class="block text-[9px] font-bold tracking-widest text-alpine-muted uppercase">{copy.whatsapp}</span>
+                                    <span class="text-xs font-medium text-alpine-text">{copy.quickMessage}</span>
                                 </div>
                             </div>
                             <ChevronRight class="h-4 w-4 text-alpine-border transition-transform group-hover:translate-x-1 group-hover:text-[#25D366]" />
@@ -191,8 +229,8 @@
                                     <Mail class="h-4 w-4 text-blue-400" />
                                 </div>
                                 <div class="text-left leading-tight">
-                                    <span class="block text-[9px] font-bold tracking-widest text-alpine-muted uppercase">Email</span>
-                                    <span class="text-xs font-medium text-alpine-text truncate">Scrivici</span>
+                                    <span class="block text-[9px] font-bold tracking-widest text-alpine-muted uppercase">{copy.email}</span>
+                                    <span class="text-xs font-medium text-alpine-text truncate">{copy.writeUs}</span>
                                 </div>
                             </div>
                             <ChevronRight class="h-4 w-4 text-alpine-border transition-transform group-hover:translate-x-1 group-hover:text-blue-400" />
@@ -205,7 +243,7 @@
 
         <div class="flex-none bg-alpine-bg border-t border-alpine-border p-3 text-center">
             <p class="text-[9px] uppercase tracking-[0.2em] text-alpine-muted font-bold lg:text-[10px]">
-                Miglior Prezzo Garantito sul nostro sito
+                {copy.bestPrice}
             </p>
         </div>
     </div>

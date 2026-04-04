@@ -1,6 +1,8 @@
 <script lang="ts">
-    import { t } from '$lib/i18n';
+    import { t, locale } from '$lib/i18n';
     import { MapPin, Mountain, Car, Train, Plane, Map } from 'lucide-svelte';
+
+    const copy = $derived($locale === 'ru' ? { region: 'Торньон, Валле-д’Аоста' } : { region: "Torgnon, Valle d'Aosta" });
 </script>
 
 <svelte:head>
@@ -58,7 +60,7 @@
     
     <div class="fade-up-element text-center mb-16">
         <h2 class="font-serif text-3xl md:text-4xl text-alpine-text mb-4">{$t('posizione.directions_title')}</h2>
-        <p class="text-[10px] uppercase tracking-widest text-alpine-muted">Torgnon, Valle d'Aosta</p>
+        <p class="text-[10px] uppercase tracking-widest text-alpine-muted">{copy.region}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 fade-up-element">

@@ -1,96 +1,134 @@
 <script lang="ts">
-  import { page } from '$app/state';
-  import { rooms } from '$lib/rooms';
-  import { t } from '$lib/i18n';
-  import { ChevronLeft, Check } from 'lucide-svelte';
-  import RoomBookingWidget from '$lib/components/RoomBookingWidget.svelte';
+	import { page } from '$app/state';
+	import { rooms } from '$lib/rooms';
+	import { t, locale } from '$lib/i18n';
+	import { ChevronLeft, Check } from 'lucide-svelte';
+	import RoomBookingWidget from '$lib/components/RoomBookingWidget.svelte';
 
-  const slug = $derived(page.params.slug);
-  const room = $derived(rooms[slug as keyof typeof rooms]);
-  const title = $derived(room ? `${$t(`rooms_data.${slug}.name`)} | Hotel du Soleil` : $t('errors.not_found'));
+	const slug = $derived(page.params.slug);
+	const room = $derived(rooms[slug as keyof typeof rooms]);
+	const title = $derived(
+		room ? `${$t(`rooms_data.${slug}.name`)} | Hotel du Soleil` : $t('errors.not_found')
+	);
+	const copy = $derived(
+		$locale === 'ru'
+			? {
+					tagline:
+						'Всего в 20 метрах от склонов ваш номер становится не просто местом для сна, а вашим базовым лагерем в горах.',
+					gallery: 'Фотогалерея'
+				}
+			: {
+					tagline:
+						'A soli 20 metri dalle piste da sci, la vostra stanza non e solo un letto: e il vostro Base Camp.',
+					gallery: 'Galleria Fotografica'
+				}
+	);
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+	<title>{title}</title>
 </svelte:head>
 
 {#if room}
-  <!-- Hero Section -->
-  <div class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
-    <div class="absolute inset-0">
-      <img 
-        src={room.image} 
-        alt={$t(`rooms_data.${slug}.name`)} 
-        class="w-full h-full object-cover ken-burns opacity-70"
-      >
-      <div class="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-alpine-bg"></div>
-    </div>
-    <div class="absolute inset-0 flex flex-col items-center justify-end px-6 pb-24 text-center z-10 pt-20">
-      <h1 class="font-serif text-5xl md:text-7xl text-white font-light tracking-tight fade-up-element">{$t(`rooms_data.${slug}.name`)}</h1>
-    </div>
-  </div>
+	<!-- Hero Section -->
+	<div class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
+		<div class="absolute inset-0">
+			<img
+				src={room.image}
+				alt={$t(`rooms_data.${slug}.name`)}
+				class="ken-burns h-full w-full object-cover opacity-70"
+			/>
+			<div class="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-alpine-bg"></div>
+		</div>
+		<div
+			class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pt-20 pb-24 text-center"
+		>
+			<h1
+				class="fade-up-element font-serif text-5xl font-light tracking-tight text-white md:text-7xl"
+			>
+				{$t(`rooms_data.${slug}.name`)}
+			</h1>
+		</div>
+	</div>
 
-  <div class="pb-24 px-6 bg-alpine-bg min-h-screen">
-    <div class="max-w-7xl mx-auto">
-      
-      <!-- Back Link -->
-      <a href="/camere" class="inline-flex items-center gap-2 text-alpine-muted text-[10px] uppercase font-bold tracking-[0.2em] my-12 hover:text-alpine-gold transition-colors fade-up-element">
-        <ChevronLeft class="w-4 h-4" />
-        {$t('rooms.back_link') || "Tutte le sistemazioni"}
-      </a>
+	<div class="min-h-screen bg-alpine-bg px-6 pb-24">
+		<div class="mx-auto max-w-7xl">
+			<!-- Back Link -->
+			<a
+				href="/camere"
+				class="fade-up-element my-12 inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase transition-colors hover:text-alpine-gold"
+			>
+				<ChevronLeft class="h-4 w-4" />
+				{$t('rooms.back_link') || 'Tutte le sistemazioni'}
+			</a>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
-        
-        <!-- Main Content (Info) -->
-        <div class="lg:col-span-2 fade-up-element">
-          <h2 class="font-serif text-4xl text-alpine-text mb-8">{$t('rooms.description_label') || "Descrizione"}</h2>
-          <p class="text-alpine-muted leading-relaxed text-lg mb-12 font-light whitespace-pre-line">
-            {$t(`rooms_data.${slug}.description`)}
-          </p>
+			<div class="grid grid-cols-1 items-start gap-16 lg:grid-cols-3">
+				<!-- Main Content (Info) -->
+				<div class="fade-up-element lg:col-span-2">
+					<h2 class="mb-8 font-serif text-4xl text-alpine-text">
+						{$t('rooms.description_label') || 'Descrizione'}
+					</h2>
+					<p class="mb-12 text-lg leading-relaxed font-light whitespace-pre-line text-alpine-muted">
+						{$t(`rooms_data.${slug}.description`)}
+					</p>
 
-          <div class="mb-12 border-t border-alpine-border pt-12">
-            <h4 class="text-[10px] uppercase tracking-widest text-alpine-text font-bold mb-8 italic">{$t('rooms.amenities_label') || "Servizi inclusi"}</h4>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
-              {#each room.amenities as amenity}
-                <li class="flex items-center gap-3 text-sm text-alpine-muted border-b border-alpine-border/30 pb-3 font-light">
-                  <Check class="w-3 h-3 text-alpine-gold" />
-                  {amenity}
-                </li>
-              {/each}
-            </ul>
-          </div>
+					<div class="mb-12 border-t border-alpine-border pt-12">
+						<h4
+							class="mb-8 text-[10px] font-bold tracking-widest text-alpine-text uppercase italic"
+						>
+							{$t('rooms.amenities_label') || 'Servizi inclusi'}
+						</h4>
+						<ul class="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+							{#each room.amenities as amenity}
+								<li
+									class="flex items-center gap-3 border-b border-alpine-border/30 pb-3 text-sm font-light text-alpine-muted"
+								>
+									<Check class="h-3 w-3 text-alpine-gold" />
+									{amenity}
+								</li>
+							{/each}
+						</ul>
+					</div>
 
-          <!-- Emotional Tagline -->
-          <div class="mt-16 py-12 border-t border-alpine-border">
-            <p class="font-serif text-2xl md:text-3xl text-alpine-text italic leading-snug">
-              "A soli <span class="text-alpine-gold">20 metri</span> dalle piste da sci, la vostra stanza non è solo un letto: è il vostro <span class="text-alpine-gold">Base Camp</span>."
-            </p>
-          </div>
-        </div>
+					<!-- Emotional Tagline -->
+					<div class="mt-16 border-t border-alpine-border py-12">
+						<p class="font-serif text-2xl leading-snug text-alpine-text italic md:text-3xl">
+							{copy.tagline}
+						</p>
+					</div>
+				</div>
 
-        <!-- Sticky Sidebar (Booking Widget) -->
-        <div class="lg:col-span-1">
-          <RoomBookingWidget />
-        </div>
+				<!-- Sticky Sidebar (Booking Widget) -->
+				<div class="lg:col-span-1">
+					<RoomBookingWidget />
+				</div>
+			</div>
 
-      </div>
-
-      <!-- Full Width Gallery -->
-      <div class="mt-24 pt-24 border-t border-alpine-border">
-        <h4 class="text-[10px] uppercase tracking-widest text-alpine-muted font-bold mb-12 text-center">Galleria Fotografica</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-up-element">
-          {#each room.gallery as img}
-            <div class="aspect-16/10 overflow-hidden bg-stone-200 shadow-sm border border-alpine-border">
-              <img src={img} alt={$t(`rooms_data.${slug}.name`)} class="w-full h-full object-cover img-elegant hover:scale-105 transition-transform duration-[1.5s]" />
-            </div>
-          {/each}
-        </div>
-      </div>
-
-    </div>
-  </div>
+			<!-- Full Width Gallery -->
+			<div class="mt-24 border-t border-alpine-border pt-24">
+				<h4
+					class="mb-12 text-center text-[10px] font-bold tracking-widest text-alpine-muted uppercase"
+				>
+					{copy.gallery}
+				</h4>
+				<div class="fade-up-element grid grid-cols-1 gap-8 md:grid-cols-2">
+					{#each room.gallery as img}
+						<div
+							class="aspect-16/10 overflow-hidden border border-alpine-border bg-stone-200 shadow-sm"
+						>
+							<img
+								src={img}
+								alt={$t(`rooms_data.${slug}.name`)}
+								class="img-elegant h-full w-full object-cover transition-transform duration-[1.5s] hover:scale-105"
+							/>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</div>
+	</div>
 {:else}
-  <div class="h-screen flex items-center justify-center">
-    <p>{$t('errors.not_found')}</p>
-  </div>
+	<div class="flex h-screen items-center justify-center">
+		<p>{$t('errors.not_found')}</p>
+	</div>
 {/if}

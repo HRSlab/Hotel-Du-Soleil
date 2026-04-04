@@ -1,6 +1,7 @@
 /* eslint-disable svelte/require-each-key */
 /* eslint-disable svelte/require-each-key */
 <script lang="ts">
+    import { locale } from '$lib/i18n';
     import { Snowflake, ShieldCheck, Sparkles, Mountain } from 'lucide-svelte';
 
     // Svelte 5 reactivity for scroll-based animations
@@ -72,10 +73,60 @@
             window.removeEventListener('scroll', handleScroll);
         };
     });
+
+    const copy = $derived($locale === 'ru'
+        ? {
+            title: 'Лыжи и сноуборд',
+            heroLabel: 'SKI-IN SKI-OUT',
+            heroText: 'Всего в 50 метрах от подъемников Торньона. Испытайте первоклассные трассы под взглядом Маттерхорна.',
+            sideTitle: 'Солнечные склоны',
+            sideText: 'Горнолыжная зона Торньона предлагает идеально подготовленные трассы для любого уровня с захватывающими видами от Маттерхорна до Монте-Роза.',
+            expLabel: 'ВПЕЧАТЛЕНИЕ',
+            expTitle: 'Чистое альпийское приключение',
+            features: [
+                { title: 'Трассы для любого уровня', text: 'От мягких учебных склонов до сложных черных трасс: здесь комфортно и новичкам, и опытным лыжникам.' },
+                { title: 'Фрирайд с гидом', text: 'Исследуйте свежий снег с сертифицированными гидами и открывайте безопасные и незабываемые маршруты вне трасс.' },
+                { title: 'Snow Park', text: 'Современный snow park с трамплинами, рейлами и зонами для freestyle-катания на лыжах и сноуборде.' }
+            ],
+            servicesLabel: 'ПРЕМИУМ-СЕРВИС',
+            servicesTitle: 'Удобства Ski Club',
+            services: [
+                { title: 'Надежное хранение лыж', text: 'Лыжная комната с видеонаблюдением, персональными шкафчиками и зоной подогрева ботинок.' },
+                { title: 'Сервис оборудования', text: 'Профессиональная подготовка лыж, waxing и прокат оборудования через наших партнеров.' },
+                { title: 'Сертифицированные инструкторы', text: 'Сотрудничество с лыжными школами для индивидуальных и групповых занятий.' }
+            ],
+            galleryLabel: 'ВИЗУАЛЬНОЕ ПУТЕШЕСТВИЕ',
+            galleryTitle: 'Проживите снег',
+            galleryText: 'Прокручивайте галерею по горизонтали и открывайте нашу зимнюю вселенную через альпийские фотографии.'
+        }
+        : {
+            title: 'Ski & Snowboard',
+            heroLabel: 'SKI-IN SKI-OUT',
+            heroText: 'Just 50 meters from the Torgnon ski lifts. Experience world-class slopes in the shadow of the Matterhorn.',
+            sideTitle: 'Sun-Kissed Slopes',
+            sideText: "Torgnon's ski area offers perfectly groomed pistes for all levels, surrounded by breathtaking views from the Matterhorn to Monte Rosa.",
+            expLabel: 'THE EXPERIENCE',
+            expTitle: 'Pure Alpine Adventure',
+            features: [
+                { title: 'Slopes for Every Level', text: 'From gentle beginner trails to challenging black runs, our ski area caters to all abilities with professional instruction available.' },
+                { title: 'Guided Off-Piste', text: 'Explore fresh powder with our certified guides for safe and unforgettable backcountry experiences.' },
+                { title: 'Snow Park Excellence', text: 'State-of-the-art snow park with jumps, rails, and halfpipe for freestyle skiing and snowboarding.' }
+            ],
+            servicesLabel: 'PREMIUM SERVICES',
+            servicesTitle: 'Ski Club Amenities',
+            services: [
+                { title: 'Secure Ski Storage', text: 'CCTV-monitored ski room with individual lockers and boot warming area.' },
+                { title: 'Equipment Services', text: 'Professional ski tuning, waxing, and on-site rental equipment.' },
+                { title: 'Certified Instruction', text: 'Partnered with certified ski schools for private and group lessons.' }
+            ],
+            galleryLabel: 'VISUAL JOURNEY',
+            galleryTitle: 'Live the Snow',
+            galleryText: 'Scroll horizontally to explore our winter wonderland through stunning alpine photography'
+        });
 </script>
 
 <svelte:head>
-    <title>Ski & Snowboard | Hotel du Soleil</title>
+    <title>{copy.title} | Hotel du Soleil</title>
 </svelte:head>
 
 <!-- Hero Section with Parallax -->
@@ -97,13 +148,13 @@
     <div class="absolute inset-0 z-10 flex flex-col justify-end px-6 pb-32 md:pb-40">
         <div class="max-w-4xl">
             <span class="mb-6 block text-[10px] font-bold tracking-[0.4em] text-white/70 uppercase fade-up-element">
-                SKI-IN SKI-OUT
+                {copy.heroLabel}
             </span>
             <h1 class="font-serif text-6xl md:text-8xl leading-none font-light text-white fade-up-element mb-8">
-                Ski &<br/>Snowboard
+                {copy.title}
             </h1>
             <p class="text-white/80 text-lg font-light leading-relaxed max-w-lg fade-up-element">
-                Just 50 meters from the Torgnon ski lifts. Experience world-class slopes in the shadow of the Matterhorn.
+                {copy.heroText}
             </p>
         </div>
     </div>
@@ -118,10 +169,10 @@
                 <div class="bg-white p-12 border border-alpine-border shadow-2xl">
                     <Snowflake class="w-8 h-8 text-alpine-gold mb-6" strokeWidth={1} />
                     <h3 class="font-serif text-2xl text-alpine-text mb-4 italic">
-                        Sun-Kissed Slopes
+                        {copy.sideTitle}
                     </h3>
                     <p class="text-alpine-muted font-light leading-relaxed text-sm">
-                        Torgnon's ski area offers perfectly groomed pistes for all levels, surrounded by breathtaking views from the Matterhorn to Monte Rosa.
+                        {copy.sideText}
                     </p>
                 </div>
             </div>
@@ -129,32 +180,32 @@
             <div class="md:w-3/5 md:pr-24 fade-up-element md:mt-24">
                 <div class="mb-16">
                     <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-8 block">
-                        THE EXPERIENCE
+                        {copy.expLabel}
                     </span>
                     <h2 class="font-serif text-5xl md:text-6xl text-alpine-text font-light leading-tight mb-12">
-                        Pure Alpine<br/>Adventure
+                        {copy.expTitle}
                     </h2>
                 </div>
 
                 <div class="space-y-12">
                     <div class="border-l-2 border-alpine-gold pl-8">
-                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">Slopes for Every Level</h4>
+                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">{copy.features[0].title}</h4>
                         <p class="text-alpine-muted font-light leading-relaxed">
-                            From gentle beginner trails to challenging black runs, our ski area caters to all abilities with professional instruction available.
+                            {copy.features[0].text}
                         </p>
                     </div>
 
                     <div class="border-l-2 border-alpine-gold pl-8">
-                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">Guided Off-Piste</h4>
+                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">{copy.features[1].title}</h4>
                         <p class="text-alpine-muted font-light leading-relaxed">
-                            Explore fresh powder with our certified guides for safe and unforgettable backcountry experiences.
+                            {copy.features[1].text}
                         </p>
                     </div>
 
                     <div class="border-l-2 border-alpine-gold pl-8">
-                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">Snow Park Excellence</h4>
+                        <h4 class="font-serif text-2xl text-alpine-text mb-4 italic">{copy.features[2].title}</h4>
                         <p class="text-alpine-muted font-light leading-relaxed">
-                            State-of-the-art snow park with jumps, rails, and halfpipe for freestyle skiing and snowboarding.
+                            {copy.features[2].text}
                         </p>
                     </div>
                 </div>
@@ -168,35 +219,35 @@
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-20 fade-up-element">
             <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-6 block">
-                PREMIUM SERVICES
+                {copy.servicesLabel}
             </span>
             <h2 class="font-serif text-4xl md:text-5xl text-white font-light">
-                Ski Club Amenities
+                {copy.servicesTitle}
             </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 fade-up-element">
                 <ShieldCheck class="w-6 h-6 text-alpine-gold mb-6" />
-                <h4 class="text-white text-lg font-serif mb-4">Secure Ski Storage</h4>
+                <h4 class="text-white text-lg font-serif mb-4">{copy.services[0].title}</h4>
                 <p class="text-white/70 font-light text-sm leading-relaxed">
-                    CCTV-monitored ski room with individual lockers and boot warming area.
+                    {copy.services[0].text}
                 </p>
             </div>
 
             <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 fade-up-element md:mt-12">
                 <Sparkles class="w-6 h-6 text-alpine-gold mb-6" />
-                <h4 class="text-white text-lg font-serif mb-4">Equipment Services</h4>
+                <h4 class="text-white text-lg font-serif mb-4">{copy.services[1].title}</h4>
                 <p class="text-white/70 font-light text-sm leading-relaxed">
-                    Professional ski tuning, waxing, and on-site rental equipment.
+                    {copy.services[1].text}
                 </p>
             </div>
 
             <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 fade-up-element md:mt-24">
                 <Mountain class="w-6 h-6 text-alpine-gold mb-6" />
-                <h4 class="text-white text-lg font-serif mb-4">Certified Instruction</h4>
+                <h4 class="text-white text-lg font-serif mb-4">{copy.services[2].title}</h4>
                 <p class="text-white/70 font-light text-sm leading-relaxed">
-                    Partnered with certified ski schools for private and group lessons.
+                    {copy.services[2].text}
                 </p>
             </div>
         </div>
@@ -208,10 +259,10 @@
     <div class="max-w-7xl mx-auto">
         <div class="mb-20 fade-up-element">
             <span class="text-[10px] uppercase tracking-[0.3em] text-alpine-gold font-bold mb-6 block">
-                VISUAL JOURNEY
+                {copy.galleryLabel}
             </span>
             <h2 class="font-serif text-5xl md:text-6xl text-alpine-text font-light leading-tight">
-                Live the<br/>Snow
+                {copy.galleryTitle}
             </h2>
         </div>
 
@@ -235,7 +286,7 @@
 
         <div class="text-center mt-12 fade-up-element">
             <p class="text-alpine-muted font-light text-sm max-w-md mx-auto">
-                Scroll horizontally to explore our winter wonderland through stunning alpine photography
+                {copy.galleryText}
             </p>
             <!-- Scroll indicator -->
             <div class="flex justify-center mt-6">

@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { locale } from '$lib/i18n';
 	import { Wine, Grape, GlassWater, Coffee } from 'lucide-svelte';
 
-	// Strutturiamo i dati dei vini per un rendering pulito e per facilitare future traduzioni (i18n)
-	const menuVini = [
+	const italianSections = [
 		{
 			titolo: "Bollicine d'Alta Quota",
 			sottotitolo: 'Metodo Classico & Spumanti',
@@ -67,16 +67,57 @@
 		}
 	];
 
+	const russianSections = [
+		{
+			titolo: 'Игристые вина высокогорья',
+			sottotitolo: 'Metodo Classico и спуманте',
+			icona: Wine,
+			vini: italianSections[0].vini
+		},
+		{
+			titolo: 'Белые вина',
+			sottotitolo: 'Свежесть и альпийская минеральность',
+			icona: Grape,
+			vini: italianSections[1].vini
+		},
+		{
+			titolo: 'Красные вина',
+			sottotitolo: 'Тело, традиция и характер',
+			icona: GlassWater,
+			vini: italianSections[2].vini
+		}
+	];
+
 	const spiriti = [
 		{ nome: 'Gin Acqueverdi (La Valdôtaine)', prezzo: '12 €' },
 		{ nome: 'Amaro Ebo Lebo (Ottoz)', prezzo: '5 €' },
 		{ nome: 'Grappa Monovitigno Blanc de Morgex', prezzo: '4 €' },
 		{ nome: 'Grappa Chaudelune (La Valdôtaine)', prezzo: '7 €' }
 	];
+
+	const copy = $derived(
+		$locale === 'ru'
+			? {
+					title: 'Винный погреб',
+					introTitle: 'Героическое виноделие высокогорья.',
+					introText:
+						'Мы с вниманием и страстью отбираем лучшие и самые редкие вина Валле-д’Аоста, чтобы раскрыть характер гордой и сложной земли. Наши maîtres проведут вас по винному маршруту, который тонко подчеркивает каждое блюдо.',
+					spiritsTitle: 'Дижестивы и завершение ужина',
+					sections: russianSections
+				}
+			: {
+					title: 'La Cantina',
+					introTitle: "Viticoltura eroica d'alta quota.",
+					introText:
+						'Selezioniamo con cura e passione le migliori e piu esclusive etichette valdostane per valorizzare una terra complessa e fiera. I nostri maitres vi guideranno in un viaggio enologico unico, pensato per esaltare ogni sfumatura culinaria.',
+					spiritsTitle: 'Spiriti e Fine Pasto',
+					sections: italianSections
+				}
+	);
 </script>
 
 <svelte:head>
-	<title>La Cantina | Hotel du Soleil</title>
+	<title>{copy.title} | Hotel du Soleil</title>
 </svelte:head>
 
 <header class="relative h-[60vh] w-full overflow-hidden bg-[#1a1a1a]">
@@ -88,7 +129,7 @@
 	<div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
 	<div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-24 text-center">
 		<h1 class="fade-up-element font-serif text-5xl leading-tight font-light text-white md:text-7xl">
-			La Cantina
+			{copy.title}
 		</h1>
 	</div>
 </header>
@@ -97,24 +138,23 @@
 	<div class="fade-up-element mx-auto max-w-3xl text-center">
 		<Wine class="mx-auto mb-10 h-10 w-10 text-alpine-gold" />
 		<h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-4xl">
-			Viticoltura eroica d'alta quota.
+			{copy.introTitle}
 		</h3>
 		<p
 			class="mt-12 border-t border-alpine-border pt-12 text-sm leading-relaxed font-light text-alpine-muted md:text-base"
 		>
-			Selezioniamo con cura e passione le migliori e più esclusive etichette valdostane per
-			valorizzare una terra complessa e fiera. I nostri maîtres vi guideranno in un viaggio
-			enologico unico, pensato per esaltare ogni sfumatura culinaria.
+			{copy.introText}
 		</p>
 	</div>
 </section>
 
 <section class="bg-alpine-bg px-6 pb-32">
 	<div class="mx-auto max-w-4xl">
-		{#each menuVini as sezione}
+		{#each copy.sections as sezione}
+			{@const Icon = sezione.icona}
 			<div class="fade-up-element mb-24">
 				<div class="mb-16 text-center">
-					<svelte:component this={sezione.icona} class="mx-auto mb-4 h-6 w-6 text-alpine-gold" />
+					<Icon class="mx-auto mb-4 h-6 w-6 text-alpine-gold" />
 					<h2 class="font-serif text-3xl text-alpine-text md:text-4xl">{sezione.titolo}</h2>
 					<p class="mt-3 text-[10px] tracking-widest text-alpine-muted uppercase">
 						{sezione.sottotitolo}
@@ -144,7 +184,7 @@
 
 		<div class="fade-up-element mt-32 border border-alpine-border bg-white p-10 shadow-sm md:p-16">
 			<Coffee class="mx-auto mb-6 h-6 w-6 text-alpine-gold" />
-			<h3 class="mb-10 text-center font-serif text-2xl text-alpine-text">Spiriti e Fine Pasto</h3>
+			<h3 class="mb-10 text-center font-serif text-2xl text-alpine-text">{copy.spiritsTitle}</h3>
 			<div class="grid grid-cols-1 gap-x-16 gap-y-6 md:grid-cols-2">
 				{#each spiriti as spirito}
 					<div
@@ -164,7 +204,7 @@
 <style>
 	/* Svelte scopes CSS automatically, keeping things perfectly clean */
 	.menu-leader {
-		grow: 1;
+		flex-grow: 1;
 		border-bottom: 1px dotted #d6d3cd;
 		position: relative;
 		top: -6px;

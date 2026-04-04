@@ -51,6 +51,8 @@
         { key: 'sport', href: '/sport' },
         { key: 'experiences', href: '/esperienze' }
     ];
+
+    const copy = $derived($locale === 'ru' ? { explore: 'Открыть' } : { explore: 'Esplora' });
 </script>
 
 <nav
@@ -139,7 +141,7 @@
                                 >
                                     <span
                                         class="border border-white px-4 py-2 text-xs font-bold tracking-widest text-white uppercase"
-                                        >Esplora</span
+                                        >{copy.explore}</span
                                     >
                                 </div>
                             </div>

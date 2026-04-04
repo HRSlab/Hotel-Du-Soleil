@@ -1,10 +1,49 @@
 <script lang="ts">
-	import { t } from '$lib/i18n';
+	import { locale } from '$lib/i18n';
 	import { Coffee, UtensilsCrossed, Wine } from 'lucide-svelte';
+
+	const copy = $derived(
+		$locale === 'ru'
+			? {
+					title: 'Ресторан',
+					heroLabel: 'Подлинные вкусы',
+					philosophyTitle: 'Традиции Валле-д’Аоста встречаются со свежестью горных ингредиентов.',
+					philosophyText:
+						'Наша кухня это искреннее посвящение территории. Мы делаем ставку на местные продукты, лично отбираем лучшие сыры альпийских пастбищ, локальное мясо и дикие травы, чтобы подарить вам подлинный и запоминающийся гастрономический опыт.',
+					breakfastTitle: 'Пробуждение',
+					breakfastText:
+						'Утро начинается с аромата горного масла и домашней выпечки. Наш буфет сочетает сладкие и соленые вкусы: Fontina DOP, местные колбасы, фермерские йогурты, злаки и ремесленные джемы.',
+					dinnerTitle: 'Ужин',
+					dinnerText:
+						'Каждый вечер шеф предлагает продуманное меню: от классики вроде Valpellinentze и polenta concia до международных блюд, всегда в сопровождении богатого овощного буфета и сезонных закусок.',
+					gridLabel: 'За кулисами',
+					gridTitle: 'Продукты нулевого километра',
+					gridText:
+						'Наша Fontina поступает прямо с окрестных альпийских пастбищ, а многие овощи выращиваются в семейном огороде. Это выбор в пользу качества и устойчивости.'
+				}
+			: {
+					title: 'Il Ristorante',
+					heroLabel: 'Sapori Autentici',
+					philosophyTitle:
+						'La tradizione valdostana incontra la freschezza degli ingredienti di montagna.',
+					philosophyText:
+						"La nostra cucina e un omaggio sincero al territorio. Privilegiamo le materie prime a chilometro zero, selezionando personalmente i migliori formaggi degli alpeggi locali, le carni del territorio e le erbe spontanee per offrirvi un'esperienza gastronomica genuina e indimenticabile.",
+					breakfastTitle: 'Il Risveglio',
+					breakfastText:
+						"Il buongiorno inizia con il profumo del burro di montagna e delle torte fatte in casa. Il nostro buffet offre un'ampia selezione di dolce e salato: Fontina DOP, salumi tipici, yogurt locali, cereali e confetture artigianali.",
+					dinnerTitle: 'La Cena',
+					dinnerText:
+						'Ogni sera il nostro chef propone un menu curato che spazia dalle ricette classiche come la Valpellinentze o la polenta concia, a piatti internazionali, sempre accompagnati da un ricco buffet di verdure e sfiziosita.',
+					gridLabel: 'Dietro le Quinte',
+					gridTitle: 'Prodotti a KM Zero',
+					gridText:
+						'La nostra Fontina arriva direttamente dagli alpeggi circostanti, e molte verdure dal nostro orto di famiglia. Una scelta di qualita e sostenibilita.'
+				}
+	);
 </script>
 
 <svelte:head>
-	<title>Ristorante | Hotel du Soleil Torgnon</title>
+	<title>{copy.title} | Hotel du Soleil</title>
 </svelte:head>
 
 <!-- HERO SECTION -->
@@ -24,10 +63,10 @@
 			<span
 				class="mb-6 block text-[10px] font-medium tracking-[0.4em] text-white/80 uppercase md:text-xs"
 			>
-				Sapori Autentici
+				{copy.heroLabel}
 			</span>
 			<h1 class="mb-10 font-serif text-5xl leading-tight font-light text-white md:text-7xl">
-				Il Ristorante
+				{copy.title}
 			</h1>
 		</div>
 	</div>
@@ -38,13 +77,10 @@
 	<div class="fade-up-element mx-auto max-w-3xl text-center">
 		<div class="deco-line mb-12"></div>
 		<h3 class="mb-10 font-serif text-3xl leading-snug text-alpine-text md:text-5xl">
-			La tradizione valdostana incontra la freschezza degli ingredienti di montagna.
+			{copy.philosophyTitle}
 		</h3>
 		<p class="mx-auto max-w-xl text-sm leading-relaxed font-light text-alpine-muted md:text-base">
-			La nostra cucina è un omaggio sincero al territorio. Privilegiamo le materie prime a
-			chilometro zero, selezionando personalmente i migliori formaggi degli alpeggi locali, le carni
-			del territorio e le erbe spontanee per offrirvi un'esperienza gastronomica genuina e
-			indimenticabile.
+			{copy.philosophyText}
 		</p>
 	</div>
 </section>
@@ -62,11 +98,9 @@
 					strokeWidth="1.5"
 				/>
 			</div>
-			<h4 class="mb-4 font-serif text-2xl text-alpine-text">Il Risveglio</h4>
+			<h4 class="mb-4 font-serif text-2xl text-alpine-text">{copy.breakfastTitle}</h4>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Il buongiorno inizia con il profumo del burro di montagna e delle torte fatte in casa. Il
-				nostro buffet offre un'ampia selezione di dolce e salato: Fontina DOP, salumi tipici, yogurt
-				locali, cereali e confetture artigianali.
+				{copy.breakfastText}
 			</p>
 		</div>
 
@@ -80,15 +114,11 @@
 					strokeWidth="1.5"
 				/>
 			</div>
-			<h4 class="mb-4 font-serif text-2xl text-alpine-text">La Cena</h4>
+			<h4 class="mb-4 font-serif text-2xl text-alpine-text">{copy.dinnerTitle}</h4>
 			<p class="text-sm leading-relaxed font-light text-alpine-muted">
-				Ogni sera il nostro chef propone un menù curato che spazia dalle ricette classiche come la
-				Valpellinentze o la polenta concia, a piatti internazionali, sempre accompagnati da un ricco
-				buffet di verdure e sfiziosità.
+				{copy.dinnerText}
 			</p>
 		</div>
-
-
 	</div>
 </section>
 
@@ -114,12 +144,11 @@
 				class="relative flex flex-1 flex-col items-start justify-center overflow-hidden border border-alpine-border bg-alpine-bg p-12"
 			>
 				<span class="mb-4 block text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
-					>Dietro le Quinte</span
+					>{copy.gridLabel}</span
 				>
-				<h4 class="relative z-10 mb-6 font-serif text-3xl text-alpine-text">Prodotti a KM Zero</h4>
+				<h4 class="relative z-10 mb-6 font-serif text-3xl text-alpine-text">{copy.gridTitle}</h4>
 				<p class="relative z-10 text-sm leading-relaxed font-light text-alpine-muted">
-					La nostra Fontina arriva direttamente dagli alpeggi circostanti, e molte verdure dal
-					nostro orto di famiglia. Una scelta di qualità e sostenibilità.
+					{copy.gridText}
 				</p>
 				<div class="pointer-events-none absolute -right-12 -bottom-12 opacity-5">
 					<UtensilsCrossed class="h-64 w-64 text-alpine-text" />
