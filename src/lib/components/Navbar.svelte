@@ -29,6 +29,7 @@
     let isMobileMenuOpen = $state(false);
     let isBookingMenuOpen = $state(false);
     let isLangOpen = $state(false);
+    let isMobileLangOpen = $state(false);
 
     const darkHeroRoutes = ['/', '/camere', '/struttura', '/posizione', '/wellness', '/sport', '/esperienze'];
     const isDarkHero = $derived(
@@ -196,7 +197,7 @@
         </ul>
 
         <div class="z-20 flex items-center gap-6">
-            <div class="hidden xl:flex flex-col items-end gap-1 text-right">
+            <div class="hidden lg:flex flex-col items-end gap-1 text-right">
                 <a
                     href={bookingPhoneHref}
                     class={cn(
@@ -311,23 +312,36 @@
             </a>
         </div>
 
-        <div class="mt-6 flex flex-wrap justify-center gap-3">
-            {#each locales as l (l)}
-                <button
-                    onclick={() => {
-                        $locale = l;
-                        isMobileMenuOpen = false;
-                    }}
-                    class={cn(
-                        'rounded-full border px-4 py-2 text-[11px] uppercase tracking-widest transition-colors',
-                        $locale === l
-                            ? 'border-alpine-gold bg-alpine-gold/10 font-bold text-alpine-gold'
-                            : 'border-alpine-border opacity-50'
-                    )}
-                >
-                    {l}
-                </button>
-            {/each}
+        <div class="mt-6 px-6" use:clickOutside={() => (isMobileLangOpen = false)}>
+            <button
+                onclick={() => (isMobileLangOpen = !isMobileLangOpen)}
+                class="flex w-full items-center justify-center gap-2 border border-alpine-border px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.15em] text-alpine-text transition-colors hover:border-alpine-gold hover:text-alpine-gold"
+            >
+                <Globe class="h-4 w-4" />
+                <span>{langLabels[$locale] ?? $locale.toUpperCase()}</span>
+                <ChevronDown class={cn('h-4 w-4 transition-transform', isMobileLangOpen && 'rotate-180')} />
+            </button>
+
+            {#if isMobileLangOpen}
+                <div class="mt-3 border border-alpine-border bg-white py-2 shadow-xl">
+                    {#each locales as l (l)}
+                        <button
+                            onclick={() => {
+                                $locale = l;
+                                isMobileLangOpen = false;
+                                isMobileMenuOpen = false;
+                            }}
+                            class={cn(
+                                'flex w-full items-center justify-between px-5 py-3 text-left text-xs tracking-wide transition-colors hover:bg-alpine-bg',
+                                $locale === l ? 'font-bold text-alpine-gold' : 'text-alpine-text'
+                            )}
+                        >
+                            <span>{langLabels[l] ?? l}</span>
+                            <span class="text-[10px] uppercase opacity-40">{l}</span>
+                        </button>
+                    {/each}
+                </div>
+            {/if}
         </div>
     </nav>
 </div>
