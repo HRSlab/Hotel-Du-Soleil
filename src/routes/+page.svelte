@@ -28,7 +28,7 @@
 			poster="/imgs/deer-dish-hero.webp"
 			class="absolute inset-0 hidden h-full w-full object-cover opacity-100 md:block"
 		>
-			<source src="/imgs/fontina-dop-hero.mp4" type="video/mp4" />
+			<source src="https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404168/summer_hero_video_pgdxsf.mp4" type="video/mp4" />
 		</video>
 		<div class="absolute inset-0 bg-black/40"></div>
 		<div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>

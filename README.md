@@ -108,6 +108,7 @@ The app now includes a global runtime hook in `src/lib/components/CloudinaryRunt
 
 - When `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=false`, the site keeps using the current local `/imgs/...` files.
 - When `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=true`, local image, video source, and poster URLs are rewritten to Cloudinary on the client.
-- The default mapping turns `/imgs/Rooms/matrimoniale-superior-hero-1.webp` into `hotel-du-soleil/imgs/Rooms/matrimoniale-superior-hero-1`.
+- Exact local-to-Cloudinary mapping is read from `src/lib/generated/cloudinary-manifest.json`.
+- Run `npm run cloudinary:sync` after uploading new files so the manifest picks up their real public IDs and versions.
 
-That means you can upload assets later using the same relative path structure under your Cloudinary base folder, then switch delivery on without editing every page.
+If a local asset is not present in the manifest yet, the app falls back to the existing local `/imgs/...` file instead of breaking the page.

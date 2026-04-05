@@ -1,0 +1,338 @@
+{
+  "/imgs/Meeting_Room.webp": {
+    "publicId": "Meeting_Room_acft9o",
+    "resourceType": "image",
+    "version": 1775404101,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404101/Meeting_Room_acft9o.webp"
+  },
+  "/imgs/Ski_slope.webp": {
+    "publicId": "Ski_slope_pmhjw9",
+    "resourceType": "image",
+    "version": 1775404106,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404106/Ski_slope_pmhjw9.webp"
+  },
+  "/imgs/alpine-safety.jpg": {
+    "publicId": "alpine-safety_d5odzy",
+    "resourceType": "image",
+    "version": 1775404071,
+    "format": "jpg",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404071/alpine-safety_d5odzy.jpg"
+  },
+  "/imgs/amuse-hds-bouche.webp": {
+    "publicId": "amuse-hds-bouche_ibuwls",
+    "resourceType": "image",
+    "version": 1775404087,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404087/amuse-hds-bouche_ibuwls.webp"
+  },
+  "/imgs/bg-video-hero.webm": {
+    "publicId": "bg-video-hero_waw6g8",
+    "resourceType": "video",
+    "version": 1775404103,
+    "format": "webm",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404103/bg-video-hero_waw6g8.webm"
+  },
+  "/imgs/camera-doppia.webp": {
+    "publicId": "camera-doppia_y3klyx",
+    "resourceType": "image",
+    "version": 1775404089,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404089/camera-doppia_y3klyx.webp"
+  },
+  "/imgs/deer-dish-hds.webp": {
+    "publicId": "deer-dish-hds_nrzx1a",
+    "resourceType": "image",
+    "version": 1775404093,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404093/deer-dish-hds_nrzx1a.webp"
+  },
+  "/imgs/deer-dish-hero.webp": {
+    "publicId": "deer-dish-hero_gappqb",
+    "resourceType": "image",
+    "version": 1775404090,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404090/deer-dish-hero_gappqb.webp"
+  },
+  "/imgs/download-(1).webp": {
+    "publicId": "download-_1_i9qbd2",
+    "resourceType": "image",
+    "version": 1775404091,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404091/download-_1_i9qbd2.webp"
+  },
+  "/imgs/esterni-tetto-ardesia.webp": {
+    "publicId": "esterni-tetto-ardesia_aleksh",
+    "resourceType": "image",
+    "version": 1775404093,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404093/esterni-tetto-ardesia_aleksh.webp"
+  },
+  "/imgs/esterno-hotel-pista.webp": {
+    "publicId": "esterno-hotel-pista_je2rmt",
+    "resourceType": "image",
+    "version": 1775404092,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404092/esterno-hotel-pista_je2rmt.webp"
+  },
+  "/imgs/esterno-terrazza.webp": {
+    "publicId": "esterno-terrazza_dxa0mr",
+    "resourceType": "image",
+    "version": 1775404093,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404093/esterno-terrazza_dxa0mr.webp"
+  },
+  "/imgs/exterior-snow-back-2026.webp": {
+    "publicId": "exterior-snow-back-2026_u92jvy",
+    "resourceType": "image",
+    "version": 1775404093,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404093/exterior-snow-back-2026_u92jvy.webp"
+  },
+  "/imgs/fontina-dop-hero.mp4": {
+    "publicId": "fontina-dop-hero_ja8jsz",
+    "resourceType": "video",
+    "version": 1775404098,
+    "format": "mp4",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404098/fontina-dop-hero_ja8jsz.mp4"
+  },
+  "/imgs/freeride-guide.jpg": {
+    "publicId": "freeride-guide_jjrtox",
+    "resourceType": "image",
+    "version": 1775404071,
+    "format": "jpg",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404071/freeride-guide_jjrtox.jpg"
+  },
+  "/imgs/home-activities.webp": {
+    "publicId": "home-activities_m4xy28",
+    "resourceType": "image",
+    "version": 1775404094,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404094/home-activities_m4xy28.webp"
+  },
+  "/imgs/hotel_by_night.jpg": {
+    "publicId": "hotel_by_night_nczawp",
+    "resourceType": "image",
+    "version": 1775404096,
+    "format": "jpg",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404096/hotel_by_night_nczawp.jpg"
+  },
+  "/imgs/jacuzzi-spa-hds-2026.webp": {
+    "publicId": "jacuzzi-spa-hds-2026_pgoowf",
+    "resourceType": "image",
+    "version": 1775404095,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404095/jacuzzi-spa-hds-2026_pgoowf.webp"
+  },
+  "/imgs/kids_club.png": {
+    "publicId": "kids_club_cvwrtc",
+    "resourceType": "image",
+    "version": 1775404123,
+    "format": "png",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404123/kids_club_cvwrtc.png"
+  },
+  "/imgs/lobby.webp": {
+    "publicId": "lobby_oel0p9",
+    "resourceType": "image",
+    "version": 1775404096,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404096/lobby_oel0p9.webp"
+  },
+  "/imgs/logo.webp": {
+    "publicId": "logo_czekvu",
+    "resourceType": "image",
+    "version": 1775404097,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404097/logo_czekvu.webp"
+  },
+  "/imgs/map-hds.webp": {
+    "publicId": "map-hds_ugpx00",
+    "resourceType": "image",
+    "version": 1775404102,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404102/map-hds_ugpx00.webp"
+  },
+  "/imgs/massaggi-ingresso.webp": {
+    "publicId": "massaggi-ingresso_bdd0qx",
+    "resourceType": "image",
+    "version": 1775404097,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404097/massaggi-ingresso_bdd0qx.webp"
+  },
+  "/imgs/meeting-room.webp": {
+    "publicId": "meeting-room_dthg9d",
+    "resourceType": "image",
+    "version": 1775404103,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404103/meeting-room_dthg9d.webp"
+  },
+  "/imgs/mtb-torgnon-1.webp": {
+    "publicId": "mtb-torgnon-1_rrbqsu",
+    "resourceType": "image",
+    "version": 1775404104,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404104/mtb-torgnon-1_rrbqsu.webp"
+  },
+  "/imgs/nature-fauna-ibex.jpg": {
+    "publicId": "nature-fauna-ibex_vvclrj",
+    "resourceType": "image",
+    "version": 1775404083,
+    "format": "jpg",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404083/nature-fauna-ibex_vvclrj.jpg"
+  },
+  "/imgs/piscina.webp": {
+    "publicId": "piscina_kzqnmf",
+    "resourceType": "image",
+    "version": 1775404104,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404104/piscina_kzqnmf.webp"
+  },
+  "/imgs/room-view-menu.webp": {
+    "publicId": "room-view-menu_obi4zd",
+    "resourceType": "image",
+    "version": 1775404111,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404111/room-view-menu_obi4zd.webp"
+  },
+  "/imgs/sauna-hds.webp": {
+    "publicId": "sauna-hds_ndgbzz",
+    "resourceType": "image",
+    "version": 1775404105,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404105/sauna-hds_ndgbzz.webp"
+  },
+  "/imgs/ski-gondola-view.webp": {
+    "publicId": "ski-gondola-view_nclloz",
+    "resourceType": "image",
+    "version": 1775404111,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404111/ski-gondola-view_nclloz.webp"
+  },
+  "/imgs/ski-ome-activities.webp": {
+    "publicId": "ski-ome-activities_lxkf6c",
+    "resourceType": "image",
+    "version": 1775404105,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404105/ski-ome-activities_lxkf6c.webp"
+  },
+  "/imgs/ski-sport-hero.webp": {
+    "publicId": "ski-sport-hero_g1qg1m",
+    "resourceType": "image",
+    "version": 1775404106,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404106/ski-sport-hero_g1qg1m.webp"
+  },
+  "/imgs/skier-torgnon.webp": {
+    "publicId": "skier-torgnon_saufc0",
+    "resourceType": "image",
+    "version": 1775404109,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404109/skier-torgnon_saufc0.webp"
+  },
+  "/imgs/skiers-torgnon.webp": {
+    "publicId": "skiers-torgnon_yjt3nx",
+    "resourceType": "image",
+    "version": 1775404112,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404112/skiers-torgnon_yjt3nx.webp"
+  },
+  "/imgs/slope-torgnon.webp": {
+    "publicId": "slope-torgnon_aa8fta",
+    "resourceType": "image",
+    "version": 1775404119,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404119/slope-torgnon_aa8fta.webp"
+  },
+  "/imgs/slope_Torgnon (1).webp": {
+    "publicId": "slope_Torgnon_1_fjc9lr",
+    "resourceType": "image",
+    "version": 1775404114,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404114/slope_Torgnon_1_fjc9lr.webp"
+  },
+  "/imgs/slope_Torgnon.webp": {
+    "publicId": "slope_Torgnon_cpq8ms",
+    "resourceType": "image",
+    "version": 1775404119,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404119/slope_Torgnon_cpq8ms.webp"
+  },
+  "/imgs/snowshoe-guide.jpg": {
+    "publicId": "snowshoe-guide_i6j9l9",
+    "resourceType": "image",
+    "version": 1775404086,
+    "format": "jpg",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404086/snowshoe-guide_i6j9l9.jpg"
+  },
+  "/imgs/summer_hero_video.mp4": {
+    "publicId": "summer_hero_video_pgdxsf",
+    "resourceType": "video",
+    "version": 1775404168,
+    "format": "mp4",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404168/summer_hero_video_pgdxsf.mp4"
+  },
+  "/imgs/terrace-poolfront.webp": {
+    "publicId": "terrace-poolfront_cpx2zl",
+    "resourceType": "image",
+    "version": 1775404118,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404118/terrace-poolfront_cpx2zl.webp"
+  },
+  "/imgs/torgnon-lemotagnard.webp": {
+    "publicId": "torgnon-lemotagnard_vxntdu",
+    "resourceType": "image",
+    "version": 1775404125,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404125/torgnon-lemotagnard_vxntdu.webp"
+  },
+  "/imgs/torgnon-slope.webp": {
+    "publicId": "torgnon-slope_mthz4c",
+    "resourceType": "image",
+    "version": 1775404122,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404122/torgnon-slope_mthz4c.webp"
+  },
+  "/imgs/torgnon-view.webp": {
+    "publicId": "torgnon-view_sr4iyx",
+    "resourceType": "image",
+    "version": 1775404127,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404127/torgnon-view_sr4iyx.webp"
+  },
+  "/imgs/torgnon-winterpark.webp": {
+    "publicId": "torgnon-winterpark_kocmsz",
+    "resourceType": "image",
+    "version": 1775404124,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404124/torgnon-winterpark_kocmsz.webp"
+  },
+  "/imgs/video-creation-for-website-hero.mp4": {
+    "publicId": "video-creation-for-website-hero_cfxs3n",
+    "resourceType": "video",
+    "version": 1775404159,
+    "format": "mp4",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404159/video-creation-for-website-hero_cfxs3n.mp4"
+  },
+  "/imgs/winter-entrance-hero.webp": {
+    "publicId": "winter-entrance-hero_soacnb",
+    "resourceType": "image",
+    "version": 1775404125,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404125/winter-entrance-hero_soacnb.webp"
+  },
+  "/imgs/winter-park.webp": {
+    "publicId": "winter-park_oeu7l1",
+    "resourceType": "image",
+    "version": 1775404128,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404128/winter-park_oeu7l1.webp"
+  },
+  "/imgs/yoga-in-the-snow.webp": {
+    "publicId": "yoga-in-the-snow_iqt4ig",
+    "resourceType": "image",
+    "version": 1775404134,
+    "format": "webp",
+    "secureUrl": "https://res.cloudinary.com/dukwcjd3d/image/upload/v1775404134/yoga-in-the-snow_iqt4ig.webp"
+  }
+}

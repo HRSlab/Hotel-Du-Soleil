@@ -5,6 +5,7 @@ import {
 	PUBLIC_CLOUDINARY_ENABLE_DELIVERY,
 	PUBLIC_CLOUDINARY_UPLOAD_PRESET
 } from '$env/static/public';
+import cloudinaryManifest from '$lib/generated/cloudinary-manifest.json';
 
 export type CloudinaryResourceType = 'image' | 'video' | 'raw';
 
@@ -35,6 +36,14 @@ export type CloudinaryDeliverySource = {
 	version?: string | number;
 };
 
+type CloudinaryManifestEntry = {
+	publicId: string;
+	resourceType: CloudinaryResourceType;
+	version?: string | number;
+	format?: string;
+	secureUrl?: string;
+};
+
 export const cloudinaryConfig = {
 	cloudName: PUBLIC_CLOUDINARY_CLOUD_NAME,
 	apiKey: PUBLIC_CLOUDINARY_API_KEY,
@@ -52,6 +61,8 @@ export const isCloudinaryDeliveryEnabled = Boolean(
 export const hasCloudinaryUnsignedUpload = Boolean(
 	cloudinaryConfig.cloudName && cloudinaryConfig.apiKey && cloudinaryConfig.uploadPreset
 );
+
+const mappedCloudinaryAssets = cloudinaryManifest as Record<string, CloudinaryManifestEntry>;
 
 function buildTransformationSegment(options: CloudinaryTransformationOptions = {}): string {
 	const segments = [
@@ -103,6 +114,10 @@ export function inferCloudinaryResourceType(source: string): CloudinaryResourceT
 	return 'image';
 }
 
+export function getMappedCloudinaryAsset(source: string): CloudinaryManifestEntry | undefined {
+	return mappedCloudinaryAssets[source];
+}
+
 export function toCloudinaryPublicId(source: string): string {
 	const pathname = getPathnameWithoutQuery(source);
 	const normalizedPath = pathname.replace(/^\/+/, '').replace(/\.[^./]+$/, '');
@@ -150,11 +165,14 @@ export function resolveCloudinaryUrl(
 				return source;
 			}
 
-			return getCloudinaryDeliveryUrl(
-				toCloudinaryPublicId(source),
-				inferCloudinaryResourceType(source),
-				options
-			);
+			const mappedAsset = getMappedCloudinaryAsset(source);
+			if (mappedAsset) {
+				return getCloudinaryDeliveryUrl(mappedAsset.publicId, mappedAsset.resourceType, options, {
+					version: mappedAsset.version
+				});
+			}
+
+			return source;
 		}
 
 		if (!hasCloudinaryDelivery) {
