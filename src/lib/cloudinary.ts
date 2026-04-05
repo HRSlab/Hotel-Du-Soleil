@@ -1,6 +1,8 @@
 import {
 	PUBLIC_CLOUDINARY_API_KEY,
+	PUBLIC_CLOUDINARY_BASE_FOLDER,
 	PUBLIC_CLOUDINARY_CLOUD_NAME,
+	PUBLIC_CLOUDINARY_ENABLE_DELIVERY,
 	PUBLIC_CLOUDINARY_UPLOAD_PRESET
 } from '$env/static/public';
 
@@ -36,10 +38,16 @@ export type CloudinaryDeliverySource = {
 export const cloudinaryConfig = {
 	cloudName: PUBLIC_CLOUDINARY_CLOUD_NAME,
 	apiKey: PUBLIC_CLOUDINARY_API_KEY,
-	uploadPreset: PUBLIC_CLOUDINARY_UPLOAD_PRESET
+	uploadPreset: PUBLIC_CLOUDINARY_UPLOAD_PRESET,
+	enableDelivery: PUBLIC_CLOUDINARY_ENABLE_DELIVERY === 'true',
+	baseFolder: PUBLIC_CLOUDINARY_BASE_FOLDER
 } as const;
 
 export const hasCloudinaryDelivery = Boolean(cloudinaryConfig.cloudName);
+
+export const isCloudinaryDeliveryEnabled = Boolean(
+	cloudinaryConfig.cloudName && cloudinaryConfig.enableDelivery
+);
 
 export const hasCloudinaryUnsignedUpload = Boolean(
 	cloudinaryConfig.cloudName && cloudinaryConfig.apiKey && cloudinaryConfig.uploadPreset
@@ -52,7 +60,7 @@ function buildTransformationSegment(options: CloudinaryTransformationOptions = {
 		options.crop ? `c_${options.crop}` : undefined,
 		options.quality ? `q_${options.quality}` : undefined,
 		options.format ? `f_${options.format}` : undefined,
-		options.fetchFormat ? `fl_${options.fetchFormat}` : undefined,
+		options.fetchFormat ? `f_${options.fetchFormat}` : undefined,
 		options.gravity ? `g_${options.gravity}` : undefined,
 		options.effect ? `e_${options.effect}` : undefined,
 		options.dpr ? `dpr_${options.dpr}` : undefined,
@@ -74,6 +82,33 @@ function encodePublicId(publicId: string): string {
 		.filter(Boolean)
 		.map((segment) => encodeURIComponent(segment))
 		.join('/');
+}
+
+function getPathnameWithoutQuery(source: string): string {
+	return source.split(/[?#]/, 1)[0] ?? source;
+}
+
+export function isLocalStaticAsset(source: string): boolean {
+	return getPathnameWithoutQuery(source).startsWith('/imgs/');
+}
+
+export function inferCloudinaryResourceType(source: string): CloudinaryResourceType {
+	const pathname = getPathnameWithoutQuery(source);
+	const extension = pathname.split('.').pop()?.toLowerCase();
+
+	if (extension && ['mp4', 'mov', 'webm', 'ogv'].includes(extension)) {
+		return 'video';
+	}
+
+	return 'image';
+}
+
+export function toCloudinaryPublicId(source: string): string {
+	const pathname = getPathnameWithoutQuery(source);
+	const normalizedPath = pathname.replace(/^\/+/, '').replace(/\.[^./]+$/, '');
+	const baseFolder = cloudinaryConfig.baseFolder.replace(/^\/+|\/+$/g, '');
+
+	return baseFolder ? `${baseFolder}/${normalizedPath}` : normalizedPath;
 }
 
 export function getCloudinaryDeliveryUrl(
@@ -106,8 +141,20 @@ export function resolveCloudinaryUrl(
 	options: CloudinaryTransformationOptions = {}
 ): string {
 	if (typeof source === 'string') {
-		if (/^https?:\/\//.test(source) || source.startsWith('/')) {
+		if (/^https?:\/\//.test(source)) {
 			return source;
+		}
+
+		if (source.startsWith('/')) {
+			if (!isCloudinaryDeliveryEnabled || !isLocalStaticAsset(source)) {
+				return source;
+			}
+
+			return getCloudinaryDeliveryUrl(
+				toCloudinaryPublicId(source),
+				inferCloudinaryResourceType(source),
+				options
+			);
 		}
 
 		if (!hasCloudinaryDelivery) {
@@ -118,6 +165,10 @@ export function resolveCloudinaryUrl(
 	}
 
 	if (source.publicId && hasCloudinaryDelivery) {
+		if (!isCloudinaryDeliveryEnabled && source.fallbackSrc) {
+			return source.fallbackSrc;
+		}
+
 		return getCloudinaryDeliveryUrl(source.publicId, source.resourceType ?? 'image', options, {
 			type: source.type,
 			version: source.version

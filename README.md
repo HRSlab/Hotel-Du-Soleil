@@ -53,11 +53,15 @@ Copy the values you need into `.env`:
 PUBLIC_CLOUDINARY_CLOUD_NAME=
 PUBLIC_CLOUDINARY_API_KEY=
 PUBLIC_CLOUDINARY_UPLOAD_PRESET=
+PUBLIC_CLOUDINARY_ENABLE_DELIVERY=false
+PUBLIC_CLOUDINARY_BASE_FOLDER=hotel-du-soleil
 CLOUDINARY_API_SECRET=
 ```
 
 - `PUBLIC_CLOUDINARY_CLOUD_NAME` is required for delivery URLs.
 - `PUBLIC_CLOUDINARY_API_KEY` and `PUBLIC_CLOUDINARY_UPLOAD_PRESET` are required for unsigned browser uploads.
+- `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=true` turns on automatic rewriting of local `/imgs/...` paths to Cloudinary delivery URLs.
+- `PUBLIC_CLOUDINARY_BASE_FOLDER` defines the folder prefix used when local assets are mapped to Cloudinary public IDs.
 - `CLOUDINARY_API_SECRET` is server-only and must never be sent to the client.
 
 ### Browser usage
@@ -97,3 +101,13 @@ const result = await cloudinary.uploader.upload('/absolute/path/to/file.webp');
 ```
 
 Existing image paths in the app were left unchanged. To migrate page assets to Cloudinary delivery, provide the public IDs or the folder naming convention used in your Cloudinary account.
+
+### Automatic local asset mapping
+
+The app now includes a global runtime hook in `src/lib/components/CloudinaryRuntime.svelte`.
+
+- When `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=false`, the site keeps using the current local `/imgs/...` files.
+- When `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=true`, local image, video source, and poster URLs are rewritten to Cloudinary on the client.
+- The default mapping turns `/imgs/Rooms/matrimoniale-superior-hero-1.webp` into `hotel-du-soleil/imgs/Rooms/matrimoniale-superior-hero-1`.
+
+That means you can upload assets later using the same relative path structure under your Cloudinary base folder, then switch delivery on without editing every page.

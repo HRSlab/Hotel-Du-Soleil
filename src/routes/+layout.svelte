@@ -4,6 +4,7 @@
   import { page } from '$app/state';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import CloudinaryRuntime from '$lib/components/CloudinaryRuntime.svelte';
   import SecurityGuard from '$lib/components/SecurityGuard.svelte';
 
   let { children } = $props();
@@ -45,6 +46,7 @@
 </script>
 
 <SecurityGuard />
+<CloudinaryRuntime />
 <Navbar />
 
 <main class="min-h-screen overflow-x-clip">
