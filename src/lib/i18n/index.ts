@@ -39,4 +39,4 @@ export const dir = derived(locale, ($locale) => {
   return $locale === 'ar' ? 'rtl' : 'ltr';
 });
 
-export const locales = ['it', 'en'];
+export const locales = ['it', 'en', 'ru'];

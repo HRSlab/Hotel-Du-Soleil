@@ -2,6 +2,7 @@
   import { ArrowLeft, ArrowRight } from 'lucide-svelte';
   import { clsx, type ClassValue } from 'clsx';
   import { twMerge } from 'tailwind-merge';
+  import { locale } from '$lib/i18n';
 
   function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
@@ -17,8 +18,32 @@
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const monthNames = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
-                    "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+  const localeMap: Record<string, string> = {
+    it: 'it-IT',
+    en: 'en-GB',
+    ru: 'ru-RU',
+    fr: 'fr-FR',
+    de: 'de-DE',
+    es: 'es-ES',
+    ar: 'ar-EG',
+    zh: 'zh-CN'
+  };
+
+  const formatterLocale = $derived(localeMap[$locale] ?? 'it-IT');
+  const monthLabel = $derived(
+    new Intl.DateTimeFormat(formatterLocale, {
+      month: 'long',
+      year: 'numeric'
+    }).format(viewDate)
+  );
+  const weekdayLabels = $derived(
+    Array.from({ length: 7 }, (_, index) => {
+      const monday = new Date(Date.UTC(2024, 0, 1 + index));
+      return new Intl.DateTimeFormat(formatterLocale, { weekday: 'short' })
+        .format(monday)
+        .replace('.', '');
+    })
+  );
   
   const days = $derived(() => {
     const year = viewDate.getFullYear();
@@ -70,7 +95,7 @@
       <ArrowLeft class="w-4 h-4 text-alpine-muted" />
     </button>
     <span class="text-xs font-bold uppercase tracking-widest text-alpine-text lg:text-sm">
-      {monthNames[viewDate.getMonth()]} {viewDate.getFullYear()}
+      {monthLabel}
     </span>
     <button onclick={nextMonth} type="button" class="p-1 hover:bg-alpine-bg rounded-full transition-colors">
       <ArrowRight class="w-4 h-4 text-alpine-muted" />
@@ -78,7 +103,7 @@
   </div>
 
   <div class="grid grid-cols-7 gap-2 text-center mb-2">
-    {#each ['L', 'M', 'M', 'G', 'V', 'S', 'D'] as day, i (i)}
+    {#each weekdayLabels as day, i (i)}
       <span class="text-[10px] font-bold text-alpine-muted/60 uppercase lg:text-xs">{day}</span>
     {/each}
   </div>
