@@ -3,7 +3,9 @@
 
 	// Svelte 5 reactivity for scroll-based animations
 	let scrollY = $state(0);
+	let activeGalleryIndex = $state(0);
 	let heroRef: HTMLElement;
+	let galleryViewport: HTMLElement;
 	let observer: IntersectionObserver;
 
 	// Remove complex gallery state and animation code
@@ -57,6 +59,83 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
+
+	function syncGalleryIndex() {
+		if (!galleryViewport) {
+			return;
+		}
+
+		const cards = Array.from(galleryViewport.querySelectorAll<HTMLElement>('[data-gallery-card]'));
+		if (cards.length === 0) {
+			return;
+		}
+
+		const viewportCenter = galleryViewport.scrollLeft + galleryViewport.clientWidth / 2;
+		let nearestIndex = 0;
+		let nearestDistance = Number.POSITIVE_INFINITY;
+
+		cards.forEach((card, index) => {
+			const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+			const distance = Math.abs(cardCenter - viewportCenter);
+
+			if (distance < nearestDistance) {
+				nearestDistance = distance;
+				nearestIndex = index;
+			}
+		});
+
+		activeGalleryIndex = nearestIndex;
+	}
+
+	function scrollGalleryTo(index: number, behavior: ScrollBehavior = 'smooth') {
+		if (!galleryViewport) {
+			return;
+		}
+
+		const cards = Array.from(galleryViewport.querySelectorAll<HTMLElement>('[data-gallery-card]'));
+		const clampedIndex = Math.max(0, Math.min(index, cards.length - 1));
+		const targetCard = cards[clampedIndex];
+
+		if (!targetCard) {
+			return;
+		}
+
+		galleryViewport.scrollTo({
+			left: targetCard.offsetLeft,
+			behavior
+		});
+		activeGalleryIndex = clampedIndex;
+	}
+
+	function previousGalleryImage() {
+		scrollGalleryTo(activeGalleryIndex - 1);
+	}
+
+	function nextGalleryImage() {
+		scrollGalleryTo(activeGalleryIndex + 1);
+	}
+
+	function handleGalleryWheel(event: WheelEvent) {
+		if (!galleryViewport || window.innerWidth < 1024) {
+			return;
+		}
+
+		const hasHorizontalOverflow = galleryViewport.scrollWidth > galleryViewport.clientWidth;
+		if (!hasHorizontalOverflow) {
+			return;
+		}
+
+		if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) {
+			return;
+		}
+
+		event.preventDefault();
+		galleryViewport.scrollBy({
+			left: event.deltaY,
+			behavior: 'auto'
+		});
+		syncGalleryIndex();
+	}
 </script>
 
 <svelte:head>
@@ -209,19 +288,57 @@
 			</h2>
 		</div>
 
-		<!-- Horizontal scroll container with smooth scrolling -->
-		<div class="scrollbar-hide w-full max-w-full overflow-x-auto px-2 pb-8">
-			<div class="inline-flex w-max items-stretch gap-8 py-4">
+		<div class="mb-8 flex items-end justify-between gap-6">
+			<p class="max-w-md text-sm font-light text-alpine-muted">
+				Swipe on mobile or use your mouse wheel and arrows on desktop to move through the gallery.
+			</p>
+			<div class="hidden items-center gap-3 lg:flex">
+				<button
+					type="button"
+					onclick={previousGalleryImage}
+					class="flex h-12 w-12 items-center justify-center rounded-full border border-alpine-border bg-white text-alpine-text transition-colors hover:border-alpine-gold hover:text-alpine-gold disabled:cursor-not-allowed disabled:opacity-35"
+					disabled={activeGalleryIndex === 0}
+					aria-label="Show previous ski gallery image"
+				>
+					←
+				</button>
+				<button
+					type="button"
+					onclick={nextGalleryImage}
+					class="flex h-12 w-12 items-center justify-center rounded-full border border-alpine-border bg-white text-alpine-text transition-colors hover:border-alpine-gold hover:text-alpine-gold disabled:cursor-not-allowed disabled:opacity-35"
+					disabled={activeGalleryIndex === galleryImages.length - 1}
+					aria-label="Show next ski gallery image"
+				>
+					→
+				</button>
+			</div>
+		</div>
+
+		<div
+			bind:this={galleryViewport}
+			class="scrollbar-hide -mx-6 overflow-x-auto px-6 pb-8 scroll-smooth snap-x snap-mandatory overscroll-x-contain [scrollbar-gutter:stable]"
+			onscroll={syncGalleryIndex}
+			onwheel={handleGalleryWheel}
+		>
+			<div class="flex w-max items-stretch gap-5 py-3 lg:gap-8">
 				{#each galleryImages as item (item.src)}
 					<div
-						class="h-[42vh] min-w-[82vw] overflow-hidden rounded-3xl border border-alpine-border bg-[#0b0b0b] shadow-2xl sm:h-[50vh] sm:min-w-[72vw] md:h-[55vh] md:min-w-[42vw] lg:min-w-[34vw] xl:min-w-[28vw]"
+						data-gallery-card
+						class="group relative h-[54svh] min-w-[86vw] snap-center overflow-hidden rounded-4xl border border-alpine-border bg-[#0b0b0b] shadow-2xl sm:min-w-[72vw] md:min-w-[56vw] lg:min-w-[38vw] xl:min-w-[32vw]"
 					>
 						<img
 							src={item.src}
 							alt={item.alt}
-							class="h-full w-full object-contain p-2 transition-transform duration-700 md:object-cover md:p-0 md:hover:scale-105"
+							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
 							loading="lazy"
 						/>
+						<div class="absolute inset-0 bg-linear-to-t from-black/75 via-black/10 to-transparent"></div>
+						<div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+							<p class="mb-2 text-[10px] font-bold tracking-[0.32em] text-white/65 uppercase">
+								Torgnon
+							</p>
+							<h3 class="font-serif text-2xl font-light text-white md:text-3xl">{item.alt}</h3>
+						</div>
 					</div>
 				{/each}
 			</div>
@@ -229,14 +346,18 @@
 
 		<div class="fade-up-element mt-12 text-center">
 			<p class="mx-auto max-w-md text-sm font-light text-alpine-muted">
-				Scroll horizontally to explore our winter wonderland through stunning alpine photography
+				Explore our winter wonderland through alpine photography curated for touch and desktop browsing.
 			</p>
-			<!-- Scroll indicator -->
 			<div class="mt-6 flex justify-center">
-				<div class="flex space-x-2">
-					<div class="h-2 w-2 animate-pulse rounded-full bg-alpine-gold"></div>
-					<div class="h-2 w-2 rounded-full bg-alpine-gold/50"></div>
-					<div class="h-2 w-2 rounded-full bg-alpine-gold/30"></div>
+				<div class="flex flex-wrap justify-center gap-2">
+					{#each galleryImages as _, index (index)}
+						<button
+							type="button"
+							onclick={() => scrollGalleryTo(index)}
+							class={`h-2 rounded-full transition-all duration-300 ${activeGalleryIndex === index ? 'w-8 bg-alpine-gold' : 'w-2 bg-alpine-gold/30 hover:bg-alpine-gold/60'}`}
+							aria-label={`Go to ski gallery image ${index + 1}`}
+						></button>
+					{/each}
 				</div>
 			</div>
 		</div>
