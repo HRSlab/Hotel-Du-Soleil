@@ -31,12 +31,11 @@
     let isLangOpen = $state(false);
     let isMobileLangOpen = $state(false);
 
-    const darkHeroRoutes = ['/', '/camere', '/struttura', '/wellness', '/esperienze', '/offerte'];
+    const darkHeroRoutes = ['/', '/camere', '/struttura', '/wellness', '/offerte'];
     const isDarkHero = $derived(
         darkHeroRoutes.includes(page.url.pathname) || 
         page.url.pathname.startsWith('/camere/') ||
         page.url.pathname.startsWith('/wellness/') ||
-        page.url.pathname.startsWith('/esperienze/') ||
         page.url.pathname.startsWith('/offerte/')
     );
 
@@ -45,7 +44,6 @@
         rooms: '/imgs/room-view-menu.webp',
         restaurant: '/imgs/deer-dish-hero.webp',
         wellness: '/imgs/jacuzzi-spa-hds-2026.webp',
-        experiences: '/imgs/yoga-in-the-snow.webp',
         offers: '/imgs/exterior-snow-back-2026.webp'
     };
 
@@ -62,7 +60,6 @@
         { key: 'rooms', href: '/camere' },
         { key: 'restaurant', href: '/ristorante' },
         { key: 'wellness', href: '/wellness' },
-        { key: 'experiences', href: '/esperienze' },
         { key: 'offers', href: '/offerte' }
     ];
 
