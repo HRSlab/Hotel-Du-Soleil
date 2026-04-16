@@ -27,10 +27,16 @@
 
 @layer components {
   .fade-up-element {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
   }
+
+  .animations-enabled .fade-up-element {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
   .fade-up-element.is-visible {
     opacity: 1;
     transform: translateY(0);

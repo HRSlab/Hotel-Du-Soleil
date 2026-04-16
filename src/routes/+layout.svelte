@@ -13,6 +13,7 @@
     if (typeof document !== 'undefined') {
       document.documentElement.lang = $locale;
       document.documentElement.dir = $dir;
+      document.documentElement.classList.add('animations-enabled');
     }
   });
 
