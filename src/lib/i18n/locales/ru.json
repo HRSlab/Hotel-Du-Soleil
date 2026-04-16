@@ -13,6 +13,7 @@
     "wellness": "Велнес",
     "sport": "Спорт и отдых",
     "experiences": "Территория",
+    "offers": "Предложения",
     "book": "Забронировать"
   },
   "megamenu": {
@@ -122,6 +123,46 @@
       "featured_label": "Рекомендуем",
       "featured_text": "Не просто отпуск, а коллекция воспоминаний. Исследуйте регион через аутентичные занятия в полной гармонии с ритмами гор.",
       "featured_cta": "Вдохновиться"
+    },
+    "offers": {
+      "title": "Предложения и пакеты",
+      "links": [
+        {
+          "name": "Все программы",
+          "href": "/offerte"
+        },
+        {
+          "name": "Пакет RESTART",
+          "href": "/offerte/restart"
+        },
+        {
+          "name": "Workation Alpino",
+          "href": "/offerte/workation-alpino"
+        },
+        {
+          "name": "Family Base Camp",
+          "href": "/offerte/family-base-camp"
+        },
+        {
+          "name": "Summit Taste",
+          "href": "/offerte/summit-taste"
+        },
+        {
+          "name": "Wheels & Relax",
+          "href": "/offerte/wheels-relax"
+        },
+        {
+          "name": "Orizzonti e Silenzio",
+          "href": "/offerte/orizzonti-silenzio"
+        },
+        {
+          "name": "Family Mountain Camp",
+          "href": "/offerte/family-mountain-camp"
+        }
+      ],
+      "featured_label": "Рекомендуем",
+      "featured_text": "Откройте сезонные предложения и тематические пакеты для разных гостей: wellness, family, gourmet и outdoor.",
+      "featured_cta": "К предложениям"
     }
   },
   "home": {

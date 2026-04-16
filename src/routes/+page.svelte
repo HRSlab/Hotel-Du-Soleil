@@ -164,39 +164,6 @@
 			</div>
 		</div>
 
-		<!-- Part 3: Activities -->
-		<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-24">
-			<div class="fade-up-element order-2 lg:order-1">
-				<div class="relative aspect-4/5 overflow-hidden rounded-sm shadow-2xl lg:aspect-square">
-					<img
-						src="/imgs/ski-ome-activities.webp"
-						alt="Attività Outdoor"
-						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-					/>
-				</div>
-			</div>
-			<div class="fade-up-element order-1 lg:order-2">
-				<span
-					class="mb-4 block text-[10px] font-bold tracking-[0.3em] text-alpine-gold uppercase md:text-xs"
-				>
-					{#if $t('nav.sport')}
-						{$t('nav.sport')}
-					{/if}
-				</span>
-				<h2 class="mb-8 font-serif text-4xl text-alpine-text lg:text-6xl">
-					{$t('home.sport_section_title')}
-				</h2>
-				<p class="mb-10 max-w-lg text-sm leading-relaxed font-light text-alpine-muted lg:text-lg">
-					{$t('home.sport_section_text')}
-				</p>
-				<a
-					href="/sport"
-					class="inline-block border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors hover:border-alpine-gold hover:text-alpine-gold"
-				>
-					Vivi l'Alpe
-				</a>
-			</div>
-		</div>
 	</div>
 </section>
 

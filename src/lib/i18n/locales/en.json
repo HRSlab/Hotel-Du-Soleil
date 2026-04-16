@@ -13,6 +13,7 @@
     "wellness": "Wellness",
     "sport": "Sport & Outdoors",
     "experiences": "Territory",
+    "offers": "Offers",
     "book": "Book Now"
   },
   "megamenu": {
@@ -122,6 +123,46 @@
       "featured_label": "Featured",
       "featured_text": "Not just a holiday, but a collection of memories. Explore the area through authentic activities, in perfect harmony with the rhythms of the mountain.",
       "featured_cta": "Get Inspired"
+    },
+    "offers": {
+      "title": "Offers & Packages",
+      "links": [
+        {
+          "name": "All proposals",
+          "href": "/offerte"
+        },
+        {
+          "name": "RESTART Package",
+          "href": "/offerte/restart"
+        },
+        {
+          "name": "Workation Alpino",
+          "href": "/offerte/workation-alpino"
+        },
+        {
+          "name": "Family Base Camp",
+          "href": "/offerte/family-base-camp"
+        },
+        {
+          "name": "Summit Taste",
+          "href": "/offerte/summit-taste"
+        },
+        {
+          "name": "Wheels & Relax",
+          "href": "/offerte/wheels-relax"
+        },
+        {
+          "name": "Orizzonti e Silenzio",
+          "href": "/offerte/orizzonti-silenzio"
+        },
+        {
+          "name": "Family Mountain Camp",
+          "href": "/offerte/family-mountain-camp"
+        }
+      ],
+      "featured_label": "Featured",
+      "featured_text": "Explore seasonal proposals and curated packages built for specific audiences: wellness, family, gourmet and outdoor.",
+      "featured_cta": "View offers"
     }
   },
   "home": {

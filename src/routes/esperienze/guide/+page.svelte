@@ -200,7 +200,7 @@
                     <p class="text-xs lg:text-sm text-alpine-muted font-light leading-relaxed">
                         {$t('guide_page.activity_mtb_text')}
                     </p>
-                    <a href={$locale === 'it' ? '/sport/bike' : '/sport'} class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-alpine-text hover:text-alpine-gold transition-colors mt-6">
+                    <a href="/offerte/wheels-relax" class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-alpine-text hover:text-alpine-gold transition-colors mt-6">
                         {$t('guide_page.activity_mtb_cta')} <ArrowRight class="w-3.5 h-3.5" />
                     </a>
                 </div>
@@ -443,7 +443,7 @@
                 {$t('guide_page.cta_text')}
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href={$locale === 'it' ? '/sport/trekking' : '/sport'} class="inline-flex items-center justify-center gap-3 bg-white text-alpine-text px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-alpine-gold hover:text-white transition-all duration-300">
+                <a href="/offerte/orizzonti-silenzio" class="inline-flex items-center justify-center gap-3 bg-white text-alpine-text px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-alpine-gold hover:text-white transition-all duration-300">
                     {$t('guide_page.cta_trails')} <ArrowRight class="w-4 h-4" />
                 </a>
                 <a href="/esperienze/ciaspolate" class="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-10 py-4 text-[11px] tracking-[0.2em] uppercase font-bold hover:border-white hover:bg-white/10 transition-all duration-300">

@@ -13,6 +13,7 @@
     "wellness": "Wellness",
     "sport": "Sport & Outdoor",
     "experiences": "Territorio",
+    "offers": "Offerte",
     "book": "Prenota"
   },
   "megamenu": {
@@ -122,6 +123,46 @@
       "featured_label": "In Evidenza",
       "featured_text": "Non una semplice vacanza, ma una collezione di ricordi. Esplora il territorio attraverso attività autentiche, in totale sintonia con i ritmi della montagna.",
       "featured_cta": "Lasciati ispirare"
+    },
+    "offers": {
+      "title": "Offerte & Pacchetti",
+      "links": [
+        {
+          "name": "Tutte le proposte",
+          "href": "/offerte"
+        },
+        {
+          "name": "Pacchetto RESTART",
+          "href": "/offerte/restart"
+        },
+        {
+          "name": "Workation Alpino",
+          "href": "/offerte/workation-alpino"
+        },
+        {
+          "name": "Family Base Camp",
+          "href": "/offerte/family-base-camp"
+        },
+        {
+          "name": "Summit Taste",
+          "href": "/offerte/summit-taste"
+        },
+        {
+          "name": "Wheels & Relax",
+          "href": "/offerte/wheels-relax"
+        },
+        {
+          "name": "Orizzonti e Silenzio",
+          "href": "/offerte/orizzonti-silenzio"
+        },
+        {
+          "name": "Family Mountain Camp",
+          "href": "/offerte/family-mountain-camp"
+        }
+      ],
+      "featured_label": "In Evidenza",
+      "featured_text": "Scopri le nostre proposte stagionali e i pacchetti esperienziali creati per target specifici: benessere, famiglia, gourmet e outdoor.",
+      "featured_cta": "Vai alle offerte"
     }
   },
   "home": {

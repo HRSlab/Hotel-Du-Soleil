@@ -31,13 +31,13 @@
     let isLangOpen = $state(false);
     let isMobileLangOpen = $state(false);
 
-    const darkHeroRoutes = ['/', '/camere', '/struttura', '/posizione', '/wellness', '/sport', '/esperienze'];
+    const darkHeroRoutes = ['/', '/camere', '/struttura', '/wellness', '/esperienze', '/offerte'];
     const isDarkHero = $derived(
         darkHeroRoutes.includes(page.url.pathname) || 
         page.url.pathname.startsWith('/camere/') ||
         page.url.pathname.startsWith('/wellness/') ||
-        page.url.pathname.startsWith('/sport/') ||
-        page.url.pathname.startsWith('/esperienze/')
+        page.url.pathname.startsWith('/esperienze/') ||
+        page.url.pathname.startsWith('/offerte/')
     );
 
     const images: Record<string, string> = {
@@ -45,8 +45,8 @@
         rooms: '/imgs/room-view-menu.webp',
         restaurant: '/imgs/deer-dish-hero.webp',
         wellness: '/imgs/jacuzzi-spa-hds-2026.webp',
-        sport: '/imgs/piscina.webp',
-        experiences: '/imgs/yoga-in-the-snow.webp'
+        experiences: '/imgs/yoga-in-the-snow.webp',
+        offers: '/imgs/exterior-snow-back-2026.webp'
     };
 
     onMount(() => {
@@ -62,9 +62,27 @@
         { key: 'rooms', href: '/camere' },
         { key: 'restaurant', href: '/ristorante' },
         { key: 'wellness', href: '/wellness' },
-        { key: 'sport', href: '/sport' },
-        { key: 'experiences', href: '/esperienze' }
+        { key: 'experiences', href: '/esperienze' },
+        { key: 'offers', href: '/offerte' }
     ];
+
+    function getLinkHref(link: unknown, fallbackHref: string): string {
+        if (typeof link === 'object' && link !== null && 'href' in link) {
+            const href = (link as { href?: unknown }).href;
+            if (typeof href === 'string') return href;
+        }
+        return fallbackHref;
+    }
+
+    function isHiddenSectionHref(href: string): boolean {
+        return href === '/posizione' || href === '/sport' || href.startsWith('/sport/');
+    }
+
+    function getVisibleMegaLinks(itemKey: string, fallbackHref: string): unknown[] {
+        const links = $t('megamenu.' + itemKey + '.links');
+        if (!Array.isArray(links)) return [];
+        return links.filter((link) => !isHiddenSectionHref(getLinkHref(link, fallbackHref)));
+    }
 
     const bookingPhoneHref = 'tel:+393793357713';
     const bookingPhoneLabel = '+39 379 335 7713';
@@ -100,7 +118,7 @@
             {#each navItems as item (item.key)}
                 <li class="group py-6">
                     <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
-                    <a href={item.href as any} class="nav-item-link relative inline-block">{$t(`nav.${item.key}`)}</a>
+                    <a href={item.href as any} class="nav-item-link relative inline-block">{$t('nav.' + item.key)}</a>
 
                     <div
                         class="mega-menu-content cursor-default border-t border-alpine-border bg-white text-alpine-text shadow-2xl"
@@ -108,10 +126,10 @@
                         <div class="mx-auto grid max-w-screen-2xl grid-cols-12 gap-12 px-6 py-12 text-left">
                             <div class="col-span-3">
                                 <h4 class="mb-6 font-serif text-3xl tracking-normal text-alpine-text capitalize">
-                                    {$t(`megamenu.${item.key}.title`)}
+                                    {$t('megamenu.' + item.key + '.title')}
                                 </h4>
                                 <ul class="space-y-4 text-sm font-normal tracking-normal normal-case">
-                                    {#each (Array.isArray($t(`megamenu.${item.key}.links`)) ? $t(`megamenu.${item.key}.links`) : []) as link, i (i)}
+                                    {#each getVisibleMegaLinks(item.key, item.href) as link, i (i)}
                                         <li>
                                             <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
                                             <a
@@ -131,17 +149,17 @@
                                 <span
                                     class="mb-4 text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
                                 >
-                                    {$t(`megamenu.${item.key}.featured_label`)}
+                                    {$t('megamenu.' + item.key + '.featured_label')}
                                 </span>
                                 <p class="mb-6 text-sm leading-relaxed text-alpine-muted">
-                                    {$t(`megamenu.${item.key}.featured_text`)}
+                                    {$t('megamenu.' + item.key + '.featured_text')}
                                 </p>
                                 <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
                                 <a
                                     href={item.href as any}
                                     class="flex items-center gap-2 text-xs font-bold tracking-widest text-alpine-text uppercase transition-colors hover:text-alpine-gold"
                                 >
-                                    {$t(`megamenu.${item.key}.featured_cta`)}
+                                    {$t('megamenu.' + item.key + '.featured_cta')}
                                     <ArrowRight class="h-4 w-4" />
                                 </a>
                             </div>
@@ -263,12 +281,12 @@
         {#each navItems as item (item.key)}
             <div class="flex flex-col gap-2">
                 <a href={item.href as any} class="font-serif text-3xl text-alpine-text" onclick={() => (isMobileMenuOpen = false)}>
-                    {$t(`nav.${item.key}`)}
+                    {$t('nav.' + item.key)}
                 </a>
                 
-                {#if Array.isArray($t(`megamenu.${item.key}.links`)) && $t(`megamenu.${item.key}.links`).length > 0}
+                {#if getVisibleMegaLinks(item.key, item.href).length > 0}
                     <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 px-4 opacity-60">
-                        {#each $t(`megamenu.${item.key}.links`) as link, i (i)}
+                        {#each getVisibleMegaLinks(item.key, item.href) as link, i (i)}
                              <a 
                                 href={(typeof link === 'object' && link !== null && 'href' in link ? (link as any).href : item.href) as any}
                                 class="text-[10px] uppercase tracking-widest font-bold"
