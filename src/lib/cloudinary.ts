@@ -1,11 +1,11 @@
-import {
-	PUBLIC_CLOUDINARY_API_KEY,
-	PUBLIC_CLOUDINARY_BASE_FOLDER,
-	PUBLIC_CLOUDINARY_CLOUD_NAME,
-	PUBLIC_CLOUDINARY_ENABLE_DELIVERY,
-	PUBLIC_CLOUDINARY_UPLOAD_PRESET
-} from '$env/static/public';
+import { env as publicEnv } from '$env/dynamic/public';
 import cloudinaryManifest from '$lib/generated/cloudinary-manifest.json';
+
+const PUBLIC_CLOUDINARY_API_KEY = publicEnv.PUBLIC_CLOUDINARY_API_KEY ?? '';
+const PUBLIC_CLOUDINARY_BASE_FOLDER = publicEnv.PUBLIC_CLOUDINARY_BASE_FOLDER ?? '';
+const PUBLIC_CLOUDINARY_CLOUD_NAME = publicEnv.PUBLIC_CLOUDINARY_CLOUD_NAME ?? '';
+const PUBLIC_CLOUDINARY_ENABLE_DELIVERY = publicEnv.PUBLIC_CLOUDINARY_ENABLE_DELIVERY ?? '';
+const PUBLIC_CLOUDINARY_UPLOAD_PRESET = publicEnv.PUBLIC_CLOUDINARY_UPLOAD_PRESET ?? '';
 
 export type CloudinaryResourceType = 'image' | 'video' | 'raw';
 
