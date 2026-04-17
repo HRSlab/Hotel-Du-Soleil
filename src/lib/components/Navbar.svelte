@@ -75,10 +75,17 @@
         return href === '/posizione' || href === '/sport' || href.startsWith('/sport/');
     }
 
+    function isInactiveOfferHref(href: string): boolean {
+        return href.startsWith('/offerte/') && href !== '/offerte/restart';
+    }
+
     function getVisibleMegaLinks(itemKey: string, fallbackHref: string): unknown[] {
         const links = $t('megamenu.' + itemKey + '.links');
         if (!Array.isArray(links)) return [];
-        return links.filter((link) => !isHiddenSectionHref(getLinkHref(link, fallbackHref)));
+        return links.filter((link) => {
+            const href = getLinkHref(link, fallbackHref);
+            return !isHiddenSectionHref(href) && !(itemKey === 'offers' && isInactiveOfferHref(href));
+        });
     }
 
     const bookingPhoneHref = 'tel:+393793357713';

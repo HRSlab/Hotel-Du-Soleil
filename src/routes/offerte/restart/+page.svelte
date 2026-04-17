@@ -1,12 +1,8 @@
-<script lang="ts">
-  import OfferLeadForm from '$lib/components/OfferLeadForm.svelte';
-</script>
-
 <svelte:head>
   <title>Pacchetto RESTART | Chalet du Soleil</title>
   <meta
     name="description"
-    content="Pacchetto RESTART giugno: 3 notti infrasettimanali con escursione guidata, SPA illimitata e degustazione valdostana."
+    content="RESTART: il risveglio della natura e il tuo momento di pace, con 3 notti infrasettimanali, esperienze soul-deep e tariffa esclusiva."
   />
 </svelte:head>
 
@@ -25,11 +21,11 @@
       Esclusiva Giugno 2026
     </span>
     <h1 class="font-serif text-5xl leading-tight font-light text-white md:text-8xl">
-      RESTART
-      <span class="mt-2 block text-3xl italic md:text-5xl">Ritrova il tuo equilibrio tra le fioriture di Torgnon.</span>
+      RESTART: Il risveglio della natura,
+      <span class="mt-2 block text-3xl italic md:text-5xl">il tuo momento di pace.</span>
     </h1>
     <p class="mt-6 max-w-2xl text-sm font-light text-white/60 md:text-base">
-      Risveglio alpino e silenzio rigenerante: il momento perfetto per vivere la montagna lontano dalla folla.
+      Scopri la magia di Giugno a Torgnon: giornate infinite, fioriture alpine e il lusso del silenzio. Rigenerati nell'Alpine Base Camp della Valle d'Aosta.
     </p>
   </div>
 </header>
@@ -38,25 +34,28 @@
   <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-24">
     <div>
       <div class="mb-10 h-20 w-px bg-alpine-border"></div>
-      <h2 class="font-serif text-4xl leading-tight text-alpine-text md:text-6xl">Il lusso di giugno in quota</h2>
+      <h2 class="font-serif text-4xl leading-tight text-alpine-text md:text-6xl">L'Essenza di Giugno</h2>
       <p class="mt-6 text-sm leading-relaxed font-light text-alpine-muted md:text-base">
-        RESTART nasce per coppie e ospiti in cerca di benessere, quiete e natura autentica. Un invito a staccare
-        il ritmo e ritrovare energia tra fioriture alpine, sentieri panoramici e aria pura.
+        Mentre il mondo corre, quassu a 1.500 metri il tempo rallenta. Giugno e il segreto meglio custodito degli
+        amanti della montagna: e il mese in cui l'aria e piu pura, i prati esplodono di colori rari e il sole non
+        sembra voler mai tramontare.
       </p>
       <p class="mt-4 text-sm leading-relaxed font-light text-alpine-muted md:text-base">
-        Formula infrasettimanale: soggiorno minimo 3 notti con arrivo da domenica a martedi.
+        Abbiamo creato il pacchetto RESTART per chi, come te, sa che la vera ricarica avviene lontano dalla folla del
+        weekend.
       </p>
 
       <div class="mt-10 border border-alpine-border bg-white p-8">
-        <span class="text-[10px] font-bold tracking-[0.22em] text-alpine-muted uppercase">Offerta RESTART</span>
+        <span class="text-[10px] font-bold tracking-[0.22em] text-alpine-muted uppercase">Un'Offerta Esclusiva</span>
+        <p class="mt-4 text-sm leading-relaxed font-light text-alpine-muted">
+          Soggiorna almeno 3 notti con arrivo tra Domenica e Martedi e approfitta di una tariffa irripetibile:
+        </p>
         <div class="mt-4 flex flex-wrap items-end gap-x-3 gap-y-1">
           <span class="font-serif text-5xl text-alpine-text">EUR 94,00</span>
-          <span class="pb-2 text-sm font-light text-alpine-muted">a notte / persona</span>
+          <span class="pb-2 text-sm font-light text-alpine-muted">a notte / persona in Mezza Pensione</span>
         </div>
         <ul class="mt-4 space-y-2 text-sm leading-relaxed text-alpine-muted">
-          <li>• Mezza pensione inclusa</li>
-          <li>• Soggiorno minimo di 3 notti</li>
-          <li class="text-alpine-text">• Sconto 25% rispetto alla tariffa alta stagione</li>
+          <li class="text-alpine-text">• Risparmi il 25% rispetto alle tariffe di alta stagione</li>
         </ul>
       </div>
     </div>
@@ -65,25 +64,28 @@
       <div class="grid grid-cols-1 gap-6">
         <article class="border border-alpine-border bg-white p-7">
           <span class="text-[10px] font-bold tracking-[0.2em] text-alpine-gold uppercase">01</span>
-          <h3 class="mt-3 font-serif text-3xl text-alpine-text">Trekking all'Alpe Gordza</h3>
+          <h3 class="mt-3 font-serif text-3xl text-alpine-text">Forest Bathing all'Alpe Gordza</h3>
           <p class="mt-3 text-sm leading-relaxed font-light text-alpine-muted">
-            Escursione guidata di mezza giornata tra forest bathing e fioriture alpine, con picnic gourmet.
+            Un'escursione guidata di mezza giornata per immergersi nel bosco, osservare la flora alpina e ritrovare
+            il ritmo del respiro. Include il Picnic del Pastore preparato dalla nostra cucina.
           </p>
         </article>
 
         <article class="border border-alpine-gold/40 bg-alpine-text p-7 text-white">
           <span class="text-[10px] font-bold tracking-[0.2em] text-alpine-gold uppercase">02</span>
-          <h3 class="mt-3 font-serif text-3xl">Kit Nuvola & Wellness</h3>
+          <h3 class="mt-3 font-serif text-3xl">Wellness & Kit Nuvola</h3>
           <p class="mt-3 text-sm leading-relaxed font-light text-white/75">
-            Accesso illimitato alla SPA con kit comfort Nuvola: accappatoio, ciabattine e sali da bagno alpini.
+            Accesso illimitato alla nostra SPA (piscina, sauna, idromassaggio). Ti accogliamo con il Kit Nuvola:
+            accappatoio, ciabattine e i nostri esclusivi Sali da Bagno Alpini alle erbe Alpine.
           </p>
         </article>
 
         <article class="border border-alpine-border bg-white p-7">
           <span class="text-[10px] font-bold tracking-[0.2em] text-alpine-gold uppercase">03</span>
-          <h3 class="mt-3 font-serif text-3xl text-alpine-text">Degustazione d'Autore</h3>
+          <h3 class="mt-3 font-serif text-3xl text-alpine-text">Degustazione Sensoriale</h3>
           <p class="mt-3 text-sm leading-relaxed font-light text-alpine-muted">
-            Degustazione sensoriale di formaggi d'alpeggio e vini valdostani selezionati.
+            Un viaggio tra i sapori autentici. Una selezione di formaggi a latte crudo (Fontina DOP e Tome
+            stagionate) abbinata a due eccellenze vinicole della Valle d'Aosta.
           </p>
         </article>
       </div>
@@ -91,9 +93,15 @@
   </div>
 </section>
 
-<OfferLeadForm
-  title="Richiedi il tuo preventivo RESTART"
-  subtitle="Compila il modulo: il team booking ti inviera una proposta personalizzata con disponibilita aggiornata."
-  notesPlaceholder="Data di arrivo (dom-martedi), numero notti e preferenze benessere"
-  successText="Il nostro team ti rispondera al piu presto con disponibilita e proposta dedicata."
-/>
+<section class="bg-white px-6 pb-24">
+  <div class="mx-auto max-w-7xl text-center">
+    <a
+      href="https://booking.slope.it/140f49cb-e4f4-40e9-b494-25cfa4618e56/promotions/0a5f7d69-f3a1-4589-a5da-6815eec23058"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center bg-alpine-text px-10 py-4 text-[11px] font-bold tracking-[0.2em] text-white uppercase transition-colors hover:bg-alpine-gold"
+    >
+      VERIFICA DISPONIBILITA RESTART
+    </a>
+  </div>
+</section>

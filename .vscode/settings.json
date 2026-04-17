@@ -1,5 +1,11 @@
 {
 	"files.associations": {
 		"*.css": "tailwindcss"
+	},
+	"chat.tools.terminal.autoApprove": {
+		"/^cd '/Users/hrs/Documents/01 PROJECT/Hotel Du Soleil' && node - <<'NODE'\nconst fs=require\\('fs'\\);\nconst dir='src/lib/i18n/locales';\nconst files=fs\\.readdirSync\\(dir\\)\\.filter\\(f=>f\\.endsWith\\('\\.json'\\)\\)\\.sort\\(\\);\nconst italianMarkers=\\['offerte','camere','ristorante','benessere','sostenibilita','esperienze','posizione','struttura','contatti','prenota','scopri','pacchetto','giugno','settimana','mezza pensione','tariffe'\\];\nfor\\(const f of files\\)\\{if\\(f==='it\\.json'\\)continue; const txt=fs\\.readFileSync\\(`\\$\\{dir\\}/\\$\\{f\\}`,'utf8'\\)\\.toLowerCase\\(\\);\n const found=italianMarkers\\.filter\\(m=>txt\\.includes\\(m\\)\\);\n if\\(found\\.length\\) console\\.log\\(f, 'contains possible italian terms:', \\[\\.\\.\\.new Set\\(found\\)\\]\\.join\\(', '\\)\\);\n\\}\nNODE$/": {
+			"approve": true,
+			"matchCommandLine": true
+		}
 	}
 }
