@@ -1,8 +1,12 @@
+<script lang="ts">
+	import { t } from '$lib/i18n';
+</script>
+
 <svelte:head>
-  <title>Offerte & Pacchetti | Chalet du Soleil</title>
+  <title>{$t('offers_page.head_title')}</title>
   <meta
     name="description"
-    content="Offerte speciali e pacchetti esperienziali Chalet du Soleil Estate 2026: benessere, family, gourmet e outdoor."
+    content={$t('offers_page.meta_description')}
   />
 </svelte:head>
 
@@ -10,7 +14,7 @@
   <div class="absolute inset-0">
     <img
       src="/imgs/exterior-snow-back-2026.webp"
-      alt="Offerte Chalet du Soleil"
+      alt={$t('offers_page.hero_alt')}
       class="h-full w-full object-cover opacity-55"
     />
     <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-alpine-bg"></div>
@@ -18,13 +22,13 @@
 
   <div class="absolute inset-0 z-10 flex flex-col items-center justify-end px-6 pb-24 text-center">
     <span class="mb-4 block text-[10px] font-medium tracking-[0.4em] text-white/80 uppercase">
-      Estate 2026
+      {$t('offers_page.hero_tag')}
     </span>
     <h1 class="font-serif text-5xl leading-tight font-light text-white md:text-7xl">
-      Offerte & Pacchetti
+      {$t('offers_page.hero_title')}
     </h1>
     <p class="mt-6 max-w-2xl text-sm font-light text-white/60 md:text-base">
-      Al momento e disponibile esclusivamente il pacchetto RESTART. Le altre proposte saranno attivate successivamente.
+      {$t('offers_page.hero_text')}
     </p>
   </div>
 </header>
@@ -32,9 +36,9 @@
 <section class="bg-alpine-bg px-6 py-20 md:py-28">
   <div class="mx-auto max-w-7xl">
     <div class="mb-16 border-b border-alpine-border pb-8">
-      <h2 class="font-serif text-4xl text-alpine-text md:text-5xl">Le nostre proposte</h2>
+      <h2 class="font-serif text-4xl text-alpine-text md:text-5xl">{$t('offers_page.section_title')}</h2>
       <p class="mt-4 max-w-2xl text-sm leading-relaxed font-light text-alpine-muted md:text-base">
-        Selezione attiva al momento: Pacchetto RESTART.
+        {$t('offers_page.section_text')}
       </p>
     </div>
 
@@ -49,13 +53,13 @@
             />
           </div>
           <div class="p-8">
-            <span class="text-[10px] font-bold tracking-[0.22em] text-alpine-gold uppercase">Giugno 2026</span>
+            <span class="text-[10px] font-bold tracking-[0.22em] text-alpine-gold uppercase">{$t('offers_page.card_tag')}</span>
             <h3 class="mt-3 font-serif text-3xl text-alpine-text">RESTART</h3>
             <p class="mt-3 text-sm leading-relaxed font-light text-alpine-muted">
-              Risveglio alpino e quiete rigenerante: 3 notti infrasettimanali con esperienza guidata, SPA e degustazione.
+              {$t('offers_page.card_text')}
             </p>
             <span class="mt-6 inline-flex border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors group-hover:border-alpine-gold group-hover:text-alpine-gold">
-              Scopri l'offerta
+              {$t('offers_page.card_cta')}
             </span>
           </div>
         </a>
