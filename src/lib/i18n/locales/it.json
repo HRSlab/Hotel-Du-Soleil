@@ -677,7 +677,58 @@
 		"main_title": "Le Nostre Camere",
 		"back_link": "Tutte le sistemazioni",
 		"description_label": "Descrizione",
-		"amenities_label": "Servizi inclusi"
+		"amenities_label": "Servizi inclusi",
+		"collection_label": "Room Collection",
+		"collection_text": "Ogni camera interpreta lo stesso linguaggio: materiali naturali, comfort essenziale e una relazione diretta con il paesaggio alpino.",
+		"detail_label": "Dettagli camera",
+		"size_label": "Dimensione",
+		"occupancy_label": "Ospiti",
+		"beds_label": "Letti",
+		"gallery_label": "Galleria Fotografica",
+		"detail_tagline": "A soli 20 metri dalle piste, la camera non e solo un letto: e il tuo Base Camp alpino.",
+		"detail_notes_title": "Informazioni utili",
+		"detail_note_1": "Le immagini rappresentano la categoria; distribuzione interna e arredi possono variare all'interno dello stesso standard.",
+		"detail_note_2": "Configurazioni letto e servizi speciali sono confermati in fase di prenotazione in base alla disponibilita."
+	},
+	"rooms_amenities": {
+		"beds_double_single": "Letti matrimoniali e singoli",
+		"tv_satellite": "TV satellitare",
+		"cable_channels": "Canali via cavo",
+		"phone": "Telefono con centralino",
+		"wardrobe_drawers": "Armadio e cassettiera",
+		"heating": "Riscaldamento",
+		"toiletries": "Prodotti da bagno",
+		"shower_or_bathtub": "Doccia o vasca",
+		"towels": "Asciugamani",
+		"slippers": "Pantofole",
+		"hairdryer": "Asciugacapelli",
+		"bidet": "Bidet",
+		"wifi_free": "Wi-Fi gratuita",
+		"half_board": "Servizio di mezza pensione",
+		"ski_box": "Ski Box",
+		"parking_covered_free": "Parcheggio coperto e gratuito"
+	},
+	"rooms_specs": {
+		"matrimoniale": {
+			"size": "18-20 mq",
+			"occupancy": "2 ospiti",
+			"beds": "Matrimoniale o Twin"
+		},
+		"tripla": {
+			"size": "20 mq",
+			"occupancy": "3 ospiti",
+			"beds": "Matrimoniale + singolo o 3 singoli"
+		},
+		"quadrupla_standard": {
+			"size": "24 mq",
+			"occupancy": "4 ospiti",
+			"beds": "4 singoli o matrimoniale + 2 singoli"
+		},
+		"familiare": {
+			"size": "28-32 mq",
+			"occupancy": "4 ospiti",
+			"beds": "Matrimoniale + letti singoli"
+		}
 	},
 	"posizione": {
 		"title": "Posizione",

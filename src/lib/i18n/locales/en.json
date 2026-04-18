@@ -702,7 +702,58 @@
 		"main_title": "Our Rooms",
 		"back_link": "All Accommodations",
 		"description_label": "Description",
-		"amenities_label": "Amenities included"
+		"amenities_label": "Amenities included",
+		"collection_label": "Suite Collection",
+		"collection_text": "Each room follows the same language: natural materials, essential comfort, and a direct relationship with the alpine landscape.",
+		"detail_label": "Suite Details",
+		"size_label": "Size",
+		"occupancy_label": "Guests",
+		"beds_label": "Beds",
+		"gallery_label": "Photo Gallery",
+		"detail_tagline": "Just 20 meters from the slopes, your room is not only a bed: it is your alpine Base Camp.",
+		"detail_notes_title": "Useful Information",
+		"detail_note_1": "Images represent the room category; internal layout and furnishings may vary within the same standard.",
+		"detail_note_2": "Bed configurations and special services are confirmed at booking stage, subject to availability."
+	},
+	"rooms_amenities": {
+		"beds_double_single": "Double and single beds",
+		"tv_satellite": "Satellite TV",
+		"cable_channels": "Cable channels",
+		"phone": "Telephone",
+		"wardrobe_drawers": "Wardrobe and drawers",
+		"heating": "Heating",
+		"toiletries": "Bathroom amenities",
+		"shower_or_bathtub": "Shower or bathtub",
+		"towels": "Towels",
+		"slippers": "Slippers",
+		"hairdryer": "Hairdryer",
+		"bidet": "Bidet",
+		"wifi_free": "Free Wi-Fi",
+		"half_board": "Half-board service",
+		"ski_box": "Ski box",
+		"parking_covered_free": "Free covered parking"
+	},
+	"rooms_specs": {
+		"matrimoniale": {
+			"size": "18-20 sqm",
+			"occupancy": "2 guests",
+			"beds": "Double or Twin"
+		},
+		"tripla": {
+			"size": "20 sqm",
+			"occupancy": "3 guests",
+			"beds": "Double + single or 3 single beds"
+		},
+		"quadrupla_standard": {
+			"size": "24 sqm",
+			"occupancy": "4 guests",
+			"beds": "4 single beds or double + 2 single beds"
+		},
+		"familiare": {
+			"size": "28-32 sqm",
+			"occupancy": "4 guests",
+			"beds": "Double + single beds"
+		}
 	},
 	"footer": {
 		"description": "A quiet refuge in the heart of Torgnon. Character, elegance, and the warmth of the Aosta Valley since 1980.",

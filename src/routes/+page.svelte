@@ -9,6 +9,14 @@
 
 <svelte:head>
 	<title>Chalet du Soleil | Modern Alpine Retreat</title>
+	<meta
+		name="description"
+		content="Vacanze giugno Valle d'Aosta tra natura e relax: Hotel silenzioso a Torgnon con offerte montagna giugno e promo RESTART in mezza pensione."
+	/>
+	<meta
+		name="keywords"
+		content="Vacanze giugno Valle d'Aosta, Hotel silenzioso Torgnon, Offerte montagna giugno, promo RESTART"
+	/>
 </svelte:head>
 
 <!-- HERO SECTION -->
@@ -163,7 +171,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </section>
 
