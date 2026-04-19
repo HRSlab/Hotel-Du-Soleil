@@ -666,19 +666,19 @@
 	"rooms_data": {
 		"matrimoniale": {
 			"name": "Double Room",
-			"description": "Our double room in Torgnon offers a simple, warm, and functional retreat — perfect for couples or skiers looking for a practical stay in the Aosta Valley. Furnished with traditional solid wood, these rooms blend the warmth of classic design with extraordinary views of the surrounding peaks."
+			"description": "Built for couples or two guests who need a practical mountain base. Solid wood interiors, essential amenities, and a clean layout that works well for short or longer stays. Rooms face outside: depending on assignment, they overlook either the slopes or the village."
 		},
 		"tripla": {
 			"name": "Triple Room",
-			"description": "Our triple room in Torgnon is the ideal choice for those seeking a mountain holiday in the Aosta Valley without sacrificing space. With up to 20 sqm of floor area, these rooms offer a peaceful atmosphere."
+			"description": "Clear solution for 3 guests, ideal for a family with one child or a small group. Flexible bed setup (double + single or three singles), private bathroom, and all essential amenities for a smooth stay."
 		},
 		"quadrupla_standard": {
 			"name": "Standard Quadruple",
-			"description": "Quadruple Room in Torgnon: the ideal space for your family. If you are planning a family holiday in the Aosta Valley, our quadruple rooms in Torgnon offer the perfect retreat."
+			"description": "24 sqm room for 4 guests who want to stay in one space and move comfortably. Bed setup: four singles or one double plus two singles. A practical option for families that need straightforward logistics and reliable comfort after a full day outside."
 		},
 		"familiare": {
 			"name": "Family Quadruple",
-			"description": "Our most exclusive accommodation, designed for maximum family comfort in the mountains. Generous spaces and premium finishes."
+			"description": "This is the most spacious room category in the hotel, designed for families who need extra breathing room. It hosts up to 4 guests with a practical bed layout and comfortable space to get ready and unwind after activities. If your priority is to stay together without feeling tight on space, this is the right choice."
 		}
 	},
 	"hero": {

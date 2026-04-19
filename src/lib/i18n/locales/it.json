@@ -641,19 +641,19 @@
 	"rooms_data": {
 		"matrimoniale": {
 			"name": "Camera Matrimoniale",
-			"description": "La nostra camera doppia a Torgnon offre un rifugio semplice, caldo e funzionale, perfetto per le coppie o gli sciatori che desiderano un soggiorno pratico in Valle d’Aosta. Caratterizzate dall'arredamento tradizionale in legno massiccio, queste stanze fondono il calore del design classico con una vista straordinaria sulle cime circostanti."
+			"description": "Camera pensata per coppie o due persone che cercano una base pratica in quota. Arredi in legno, dotazioni essenziali e spazio ben organizzato. L'affaccio e verso l'esterno: in base alla camera puo guardare le piste oppure il paese."
 		},
 		"tripla": {
 			"name": "Camera Tripla",
-			"description": "La nostra camera tripla a Torgnon è la soluzione ideale per chi cerca una vacanza in montagna in Valle d’Aosta senza rinunciare allo spazio. Con una superficie che arriva fino a 20mq, queste stanze offrono un’atmosfera di quiete."
+			"description": "Soluzione chiara per 3 ospiti, adatta a famiglia con un bambino o piccolo gruppo. Layout flessibile (matrimoniale + singolo oppure tre singoli), bagno privato e dotazioni complete per un soggiorno senza complicazioni."
 		},
 		"quadrupla_standard": {
 			"name": "Quadrupla Standard",
-			"description": "Camera Quadrupla a Torgnon: Lo Spazio Ideale per la tua Famiglia. Se stai pianificando una vacanza in famiglia in Valle d’Aosta, le nostre camere quadruple a Torgnon offrono il rifugio perfetto."
+			"description": "Camera da 24 mq per chi viaggia in 4 e vuole stare nello stesso ambiente, con spazio reale per muoversi. Configurazione letti: quattro singoli oppure matrimoniale + due singoli. E la scelta giusta per famiglie che cercano praticita, ordine e tempi semplici nella gestione della giornata."
 		},
 		"familiare": {
 			"name": "Quadrupla Familiare",
-			"description": "L'alloggio più esclusivo, pensato per il massimo comfort della famiglia in montagna. Spazi ampi e finiture premium."
+			"description": "E la camera piu ampia della struttura, pensata per famiglie che vogliono piu respiro durante il soggiorno. Ospita fino a 4 persone con una disposizione pratica dei letti e spazi comodi per prepararsi e rientrare dalle attivita. Se vi serve una soluzione solida per restare insieme senza stringervi, questa e la proposta piu adatta."
 		}
 	},
 	"hero": {
