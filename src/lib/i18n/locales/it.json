@@ -641,7 +641,7 @@
 	"rooms_data": {
 		"matrimoniale": {
 			"name": "Camera Matrimoniale",
-			"description": "Camera pensata per coppie o due persone che cercano una base pratica in quota. Arredi in legno, dotazioni essenziali e spazio ben organizzato. L'affaccio e verso l'esterno: in base alla camera puo guardare le piste oppure il paese."
+			"description": "Il punto di partenza ideale per la vostra avventura in quota. Progettata per coppie o compagni di viaggio che apprezzano la sostanza, questa camera unisce il calore del legno naturale a una disposizione intelligente degli spazi. Ogni dettaglio e pensato per offrire il massimo riposo dopo una giornata attiva all'aria aperta. Affaccio esterno con vista sulle piste da sci o sul borgo di Torgnon. Disponibile con letto matrimoniale o letti singoli."
 		},
 		"tripla": {
 			"name": "Camera Tripla",
@@ -649,11 +649,11 @@
 		},
 		"quadrupla_standard": {
 			"name": "Quadrupla Standard",
-			"description": "Camera da 24 mq per chi viaggia in 4 e vuole stare nello stesso ambiente, con spazio reale per muoversi. Configurazione letti: quattro singoli oppure matrimoniale + due singoli. E la scelta giusta per famiglie che cercano praticita, ordine e tempi semplici nella gestione della giornata."
+			"description": "Il rifugio definitivo per le vostre spedizioni alpine in famiglia o con gli amici. Questa camera celebra l'esperienza collettiva della montagna senza scendere a compromessi sul comfort. Lo spazio e generoso e intelligentemente ripartito, dominato dal calore del legno naturale e da un design essenziale che elimina ogni distrazione. E il campo base perfetto dove pianificare la prossima scalata o rilassarsi insieme dopo una giornata intensa in quota. Layout: versatilita totale con configurazione a letto matrimoniale + due singoli, oppure quattro letti separati. Caratteristiche: spazi ampi per l'attrezzatura e affaccio esterno panoramico sulle Alpi o sul paese."
 		},
 		"familiare": {
-			"name": "Quadrupla Familiare",
-			"description": "E la camera piu ampia della struttura, pensata per famiglie che vogliono piu respiro durante il soggiorno. Ospita fino a 4 persone con una disposizione pratica dei letti e spazi comodi per prepararsi e rientrare dalle attivita. Se vi serve una soluzione solida per restare insieme senza stringervi, questa e la proposta piu adatta."
+			"name": "Quadrupla Famigliare",
+			"description": "Il quartier generale perfetto per la vostra tribu alpina. Progettata per offrire l'equilibrio ideale tra momenti condivisi e necessita di privacy, questa camera dispone di ambienti distinti. Il calore del legno naturale si sposa con un design essenziale e ordinato, permettendo a genitori e figli di godere della propria liberta in un'atmosfera accogliente. E il luogo dove le storie della giornata si intrecciano prima di un riposo profondo e rigenerante. Layout: ambienti separati per garantire il massimo comfort a ogni membro della famiglia. Vista: affaccio esterno panoramico sul borgo o sulle vette."
 		}
 	},
 	"hero": {

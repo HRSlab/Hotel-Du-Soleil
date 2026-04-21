@@ -666,7 +666,7 @@
 	"rooms_data": {
 		"matrimoniale": {
 			"name": "Double Room",
-			"description": "Built for couples or two guests who need a practical mountain base. Solid wood interiors, essential amenities, and a clean layout that works well for short or longer stays. Rooms face outside: depending on assignment, they overlook either the slopes or the village."
+			"description": "The perfect launchpad for your mountain adventures. Designed for couples or travel partners who value substance, this room blends the warmth of natural wood with an intelligent, functional layout. Every detail is curated to provide essential comfort and rest after an active day outdoors. Exterior views overlooking either the ski slopes or the charming village of Torgnon. Available with one double bed or two twin beds."
 		},
 		"tripla": {
 			"name": "Triple Room",
@@ -674,11 +674,11 @@
 		},
 		"quadrupla_standard": {
 			"name": "Standard Quadruple",
-			"description": "24 sqm room for 4 guests who want to stay in one space and move comfortably. Bed setup: four singles or one double plus two singles. A practical option for families that need straightforward logistics and reliable comfort after a full day outside."
+			"description": "The ultimate sanctuary for your alpine expeditions with family or friends. This room celebrates the shared mountain experience without compromising on comfort. The space is generous and intelligently partitioned, characterized by the warmth of natural wood and a minimalist design that removes all distractions. It is the perfect base camp to plan your next trek or unwind together after an intense day at high altitude. Layout: total versatility with a choice of one double bed + two singles, or four separate twin beds. Features: ample space for gear and panoramic exterior views of the Alps or the village."
 		},
 		"familiare": {
 			"name": "Family Quadruple",
-			"description": "This is the most spacious room category in the hotel, designed for families who need extra breathing room. It hosts up to 4 guests with a practical bed layout and comfortable space to get ready and unwind after activities. If your priority is to stay together without feeling tight on space, this is the right choice."
+			"description": "The ultimate headquarters for your alpine tribe. Designed to offer the perfect balance between shared moments and the need for privacy, this room features distinct living areas. The warmth of natural wood meets a minimalist, uncluttered design, allowing parents and children to enjoy their freedom in a cozy yet refined atmosphere. It is the place where the day's stories unfold before a deep and restorative sleep. Layout: distinct spaces to ensure maximum comfort for every family member. View: panoramic exterior views of the village or the peaks."
 		}
 	},
 	"hero": {

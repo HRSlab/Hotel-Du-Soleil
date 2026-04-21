@@ -577,7 +577,7 @@
   "rooms_data": {
     "matrimoniale": {
       "name": "Doppelzimmer",
-      "description": "Unser Doppelzimmer in Torgnon bietet ein schlichtes, warmes und funktionales Refugium, perfekt für Paare oder Skifahrer. Die traditionelle Massivholzmöblierung verbindet die Wärme klassischen Designs mit einem außergewöhnlichen Blick auf die umliegenden Gipfel."
+			"description": "Der ideale Ausgangspunkt fuer Ihre Abenteuer in den Bergen. Dieses Zimmer wurde fuer Paare oder Reisegefaehrten entworfen, die Wert auf das Wesentliche legen. Es kombiniert die Waerme von Naturholz mit einer intelligenten Raumaufteilung. Jedes Detail ist darauf ausgerichtet, Ruhe und Funktionalitaet nach einem aktiven Tag in der Natur zu bieten. Aussenblick auf die Skipisten oder das malerische Dorf Torgnon. Verfuegbar mit Doppelbett oder zwei Einzelbetten."
     },
     "tripla": {
       "name": "Dreibettzimmer",
@@ -585,11 +585,11 @@
     },
     "quadrupla_standard": {
       "name": "Vierbettzimmer Standard",
-      "description": "Vierbettzimmer in Torgnon: Der ideale Raum für Ihre Familie. Wenn Sie einen Familienurlaub im Aostatal planen, bieten unsere Vierbettzimmer das perfekte Refugium."
+			"description": "Der ultimative Rueckzugsort fuer Ihre alpinen Expeditionen mit der Familie oder Freunden. Dieses Zimmer zelebriert das gemeinsame Bergerlebnis, ohne auf Komfort zu verzichten. Der Raum ist grosszuegig und intelligent aufgeteilt, gepraegt von der Waerme des Naturholzes und einem minimalistischen Design, das jede Ablenkung vermeidet. Es ist das perfekte Basislager, um die naechste Tour zu planen oder nach einem intensiven Tag in der Hoehe gemeinsam zu entspannen. Layout: volle Vielseitigkeit, wahlweise mit Doppelbett + zwei Einzelbetten oder vier getrennten Einzelbetten. Highlights: viel Platz fuer Ausruestung und Panorama-Aussenblick auf die Alpen oder das Dorf."
     },
     "familiare": {
       "name": "Familien-Vierbettzimmer",
-      "description": "Die exklusivste Unterkunft für maximalen Familienkomfort in den Bergen. Großzügige Räume und Premium-Ausstattung."
+			"description": "Das perfekte Hauptquartier fuer Ihren alpinen Stamm. Dieses Zimmer wurde entworfen, um die ideale Balance zwischen gemeinsamen Momenten und dem Beduerfnis nach Privatsphaere zu bieten, es verfuegt ueber getrennte Bereiche. Die Waerme von Naturholz trifft auf ein schlichtes, geordnetes Design, das es Eltern und Kindern ermoeglicht, ihre Freiheit in einer einladenden Atmosphaere zu geniessen. Hier fliessen die Erlebnisse des Tages zusammen, bevor alle in einen tiefen, erholsamen Schlaf sinken. Layout: getrennte Bereiche, um den Komfort fuer jedes Familienmitglied zu gewaehrleisten. Aussicht: Panorama-Aussenblick auf das Dorf oder die Gipfel."
     }
   },
   "hero": {

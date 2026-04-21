@@ -598,7 +598,7 @@
   "rooms_data": {
     "matrimoniale": {
       "name": "Chambre Double",
-      "description": "Notre chambre double à Torgnon offre un refuge simple, chaleureux et fonctionnel, parfait pour les couples ou les skieurs souhaitant un séjour pratique dans le Val d'Aoste. Caractérisées par un mobilier traditionnel en bois massif, ces chambres allient la chaleur du design classique à une vue extraordinaire sur les sommets environnants."
+			"description": "Le point de depart ideal pour vos aventures en altitude. Concue pour les couples ou les voyageurs privilegiant l'essentiel, cette chambre allie la chaleur du bois naturel a un agencement intelligent et fonctionnel. Chaque detail est pense pour offrir un repos optimal apres une journee active au grand air. Vue exterieure sur les pistes de ski ou sur le village pittoresque de Torgnon. Disponible avec un grand lit double ou deux lits jumeaux."
     },
     "tripla": {
       "name": "Chambre Triple",
@@ -606,11 +606,11 @@
     },
     "quadrupla_standard": {
       "name": "Quadruple Standard",
-      "description": "Chambre Quadruple à Torgnon : l'espace idéal pour votre famille. Si vous planifiez des vacances en famille dans le Val d'Aoste, nos chambres quadruples à Torgnon offrent le refuge parfait."
+			"description": "Le refuge ultime pour vos expeditions alpines en famille ou entre amis. Cette chambre celebre l'experience partagee de la montagne sans faire de compromis sur le confort. L'espace est genereux et intelligemment reparti, marque par la chaleur du bois naturel et un design minimaliste qui libere l'esprit. C'est le camp de base ideal pour planifier votre prochaine ascension ou vous detendre ensemble apres une journee intense en altitude. Configuration : polyvalence totale avec un grand lit double + deux lits simples, ou quatre lits jumeaux. Atouts : grands espaces pour l'equipement et vue exterieure panoramique sur les Alpes ou le village."
     },
     "familiare": {
       "name": "Quadruple Familiale",
-      "description": "L'hébergement le plus exclusif, conçu pour le confort maximal de la famille en montagne. Espaces généreux et finitions haut de gamme."
+			"description": "Le quartier general ideal pour votre tribu alpine. Concue pour offrir l'equilibre parfait entre moments partages et besoin d'intimite, cette chambre dispose d'espaces distincts. La chaleur du bois naturel s'allie a un design epure et ordonne, permettant aux parents et aux enfants de profiter de leur liberte dans une atmosphere chaleureuse. C'est l'endroit ou les recits de la journee se rejoignent avant un sommeil profond et reparateur. Configuration : espaces separes pour garantir le confort de chaque membre de la famille. Vue : vue exterieure panoramique sur le village ou les sommets."
     }
   },
   "hero": {
