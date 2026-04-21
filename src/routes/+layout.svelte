@@ -6,8 +6,10 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import CloudinaryRuntime from '$lib/components/CloudinaryRuntime.svelte';
 	import SecurityGuard from '$lib/components/SecurityGuard.svelte';
+	import { getRestartPromotionUrl } from '$lib/config/booking';
 
 	let { children } = $props();
+	const restartPromoUrl = getRestartPromotionUrl('global_restart_banner');
 
 	$effect(() => {
 		if (typeof document !== 'undefined') {
@@ -71,7 +73,7 @@
 					<span class="font-serif text-2xl leading-none">{$t('promo.price_value')}</span>
 				</div>
 				<a
-					href="https://booking.slope.it/140f49cb-e4f4-40e9-b494-25cfa4618e56/promotions/0a5f7d69-f3a1-4589-a5da-6815eec23058"
+					href={restartPromoUrl}
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-flex items-center border border-alpine-text bg-white px-4 py-1.5 text-[10px] font-bold tracking-[0.18em] uppercase transition-colors hover:bg-alpine-text hover:text-white"

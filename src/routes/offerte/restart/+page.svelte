@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { t } from '$lib/i18n';
+	import { getRestartPromotionUrl } from '$lib/config/booking';
+
+	const restartPromoUrl = getRestartPromotionUrl('restart_offer_page');
 </script>
 
 <svelte:head>
@@ -99,7 +102,7 @@
 <section class="bg-white px-6 pb-24">
 	<div class="mx-auto max-w-7xl text-center">
 		<a
-			href="https://booking.slope.it/140f49cb-e4f4-40e9-b494-25cfa4618e56/promotions/0a5f7d69-f3a1-4589-a5da-6815eec23058"
+			href={restartPromoUrl}
 			target="_blank"
 			rel="noopener noreferrer"
 			class="inline-flex items-center justify-center bg-alpine-text px-10 py-4 text-[11px] font-bold tracking-[0.2em] text-white uppercase transition-colors hover:bg-alpine-gold"

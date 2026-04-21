@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { t, locale } from '$lib/i18n';
+	import { t } from '$lib/i18n';
 	import { ArrowRight } from 'lucide-svelte';
 	import Calendar from '$lib/components/Calendar.svelte';
 	import { clsx, type ClassValue } from 'clsx';
 	import { twMerge } from 'tailwind-merge';
-	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import { getBookingEngineUrl } from '$lib/config/booking';
 
 	function cn(...inputs: ClassValue[]) {
 		return twMerge(clsx(inputs));
@@ -15,27 +15,7 @@
 	let adults = $state(2);
 	let children = $state(0);
 
-	const bookingUrl = $derived(() => {
-		const base = 'https://booking.passepartout.cloud/booking';
-		const params = new SvelteURLSearchParams({
-			oidPortale: '17552',
-			lingua: $locale,
-			arrivo: arrival || '',
-			partenza: departure || '',
-			adulti: adults.toString(),
-			bambini: children.toString()
-		});
-
-		const camereObj = [
-			{
-				adulti: adults.toString(),
-				bambini: [children.toString()]
-			}
-		];
-		params.set('camere', JSON.stringify(camereObj));
-
-		return `${base}?${params.toString()}`;
-	});
+	const bookingUrl = $derived(getBookingEngineUrl('room_booking_widget'));
 </script>
 
 <div class="fade-up-element sticky top-32 border border-alpine-border bg-white p-8 shadow-sm">
@@ -89,7 +69,7 @@
 		<!-- CTA -->
 		<div class="pt-4">
 			<a
-				href={bookingUrl()}
+				href={bookingUrl}
 				target="_blank"
 				class={cn(
 					'group flex w-full items-center justify-center gap-3 py-6 text-[11px] font-bold tracking-[0.2em] uppercase transition-all',

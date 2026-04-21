@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { t, locale } from '$lib/i18n';
+  import { t } from '$lib/i18n';
   import Calendar from '$lib/components/Calendar.svelte';
   import { Users, Calendar as CalendarIcon, ChevronDown } from 'lucide-svelte';
   import { clickOutside } from '$lib/utils/clickOutside';
-  import { SvelteURLSearchParams } from 'svelte/reactivity';
+  import { getBookingEngineUrl } from '$lib/config/booking';
 
   let arrival = $state('');
   let departure = $state('');
@@ -13,25 +13,7 @@
   let showCalendar = $state(false);
   let showGuests = $state(false);
 
-  const bookingUrl = $derived(() => {
-    const base = 'https://booking.passepartout.cloud/booking';
-    const params = new SvelteURLSearchParams({
-      oidPortale: '17552',
-      lingua: $locale,
-      arrivo: arrival || '',
-      partenza: departure || '',
-      adulti: adults.toString(),
-      bambini: children.toString()
-    });
-
-    const camereObj = [{ 
-      adulti: adults.toString(), 
-      bambini: [children.toString()] 
-    }];
-    params.set('camere', JSON.stringify(camereObj));
-
-    return `${base}?${params.toString()}`;
-  });
+  const bookingUrl = $derived(getBookingEngineUrl('booking_bar'));
 
   function toggleCalendar() {
     showCalendar = !showCalendar;
@@ -130,7 +112,7 @@
     </div>
 
     <a 
-      href={bookingUrl()} 
+      href={bookingUrl} 
       target="_blank"
       class="w-full md:w-auto bg-alpine-text text-white px-14 py-6 md:py-8 text-xs md:text-sm font-bold tracking-[0.2em] uppercase hover:bg-alpine-gold transition-all text-center flex items-center justify-center gap-3 group"
     >
