@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { t } from '$lib/i18n';
-	import { getRestartPromotionUrl } from '$lib/config/booking';
+	import { RESTART_PROMOTION_ID, getPromotionUrl } from '$lib/config/booking';
 
-	const restartPromoUrl = getRestartPromotionUrl('restart_offer_page');
+	const restartPromoUrl = getPromotionUrl(RESTART_PROMOTION_ID, 'restart_offer_page');
 </script>
 
 <svelte:head>

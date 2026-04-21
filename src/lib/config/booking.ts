@@ -12,10 +12,14 @@ export function getBookingEngineUrl(source?: string): string {
 	return url.toString();
 }
 
-export function getRestartPromotionUrl(source?: string): string {
-	const promotionPath = `/promotions/${RESTART_PROMOTION_ID}`;
+export function getPromotionUrl(promotionId: string, source?: string): string {
+	const promotionPath = `/promotions/${promotionId}`;
 	const base = source ? getBookingEngineUrl(source) : BOOKING_ENGINE_URL;
 	const url = new URL(base);
 	url.pathname = `${url.pathname.replace(/\/$/, '')}${promotionPath}`;
 	return url.toString();
+}
+
+export function getRestartPromotionUrl(source?: string): string {
+	return getPromotionUrl(RESTART_PROMOTION_ID, source);
 }

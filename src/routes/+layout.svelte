@@ -6,10 +6,10 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import CloudinaryRuntime from '$lib/components/CloudinaryRuntime.svelte';
 	import SecurityGuard from '$lib/components/SecurityGuard.svelte';
-	import { getRestartPromotionUrl } from '$lib/config/booking';
+	import { RESTART_PROMOTION_ID, getPromotionUrl } from '$lib/config/booking';
 
 	let { children } = $props();
-	const restartPromoUrl = getRestartPromotionUrl('global_restart_banner');
+	const restartPromoUrl = getPromotionUrl(RESTART_PROMOTION_ID, 'global_restart_banner');
 
 	$effect(() => {
 		if (typeof document !== 'undefined') {
