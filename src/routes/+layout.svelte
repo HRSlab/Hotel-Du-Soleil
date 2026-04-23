@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import { onMount } from 'svelte';
 	import { locale, dir, t } from '$lib/i18n';
 	import { page } from '$app/state';
 	import Navbar from '$lib/components/Navbar.svelte';
@@ -10,6 +11,43 @@
 
 	let { children } = $props();
 	const restartPromoUrl = getPromotionUrl(RESTART_PROMOTION_ID, 'global_restart_banner');
+
+	onMount(() => {
+		if (typeof window === 'undefined' || typeof document === 'undefined') return;
+		if (document.getElementById('CanaryChatWidget')) return;
+
+		(function (w: any, d: Document, o: string, f: string) {
+			w[o] =
+				w[o] ||
+				function () {
+					(w[o].q = w[o].q || []).push(arguments);
+				};
+
+			const js = d.createElement('script') as HTMLScriptElement;
+			const fjs = d.getElementsByTagName('script')[0];
+			js.id = o;
+			js.src = f;
+			js.async = true;
+			fjs.parentNode?.insertBefore(js, fjs);
+		})(
+			window as any,
+			document,
+			'CanaryChatWidget',
+			'https://static.cdn.canarytechnologies.com/dist/web-chat-loader.js'
+		);
+
+		(window as any).CanaryChatWidget?.(
+			'init',
+			{
+				slug: 'hotel-du-soleil-torgnon83',
+				chat_button_bottom_offset: 20,
+				chat_button_color: '#B89872',
+				chat_button_background_color: '#B89872',
+				chat_button_text_color: '#2C3333'
+			},
+			'https://eu.canarytechnologies.com'
+		);
+	});
 
 	$effect(() => {
 		if (typeof document !== 'undefined') {
