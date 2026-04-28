@@ -76,7 +76,13 @@
 	}
 
 	function isInactiveOfferHref(href: string): boolean {
-		return href.startsWith('/offerte/') && href !== '/offerte/restart';
+		if (!href.startsWith('/offerte/')) return false;
+		return (
+			href !== '/offerte/restart' &&
+			href !== '/offerte/torgnon-hiking-adventure' &&
+			href !== '/offerte/forte-di-bard-gourmet-escape' &&
+			href !== '/offerte/aosta-romana-castello-di-fenis'
+		);
 	}
 
 	function getVisibleMegaLinks(itemKey: string, fallbackHref: string): unknown[] {
@@ -97,7 +103,7 @@
 <nav
 	id="navbar"
 	class={cn(
-		'fixed top-36.5 z-50 w-full transition-all duration-500 sm:top-33.5 lg:top-29.5',
+		'fixed top-10 z-50 w-full transition-all duration-500',
 		isScrolled
 			? 'bg-alpine-bg py-4 text-alpine-text shadow-sm'
 			: isDarkHero

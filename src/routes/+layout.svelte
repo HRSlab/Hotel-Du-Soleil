@@ -7,10 +7,9 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import CloudinaryRuntime from '$lib/components/CloudinaryRuntime.svelte';
 	import SecurityGuard from '$lib/components/SecurityGuard.svelte';
-	import { RESTART_PROMOTION_ID, getPromotionUrl } from '$lib/config/booking';
+	import PromoCarousel from '$lib/components/PromoCarousel.svelte';
 
 	let { children } = $props();
-	const restartPromoUrl = getPromotionUrl(RESTART_PROMOTION_ID, 'global_restart_banner');
 
 	onMount(() => {
 		if (typeof window === 'undefined' || typeof document === 'undefined') return;
@@ -88,41 +87,7 @@
 
 <SecurityGuard />
 <CloudinaryRuntime />
-<div
-	class="fixed inset-x-0 top-0 z-60 border-b border-alpine-text/20 bg-alpine-gold text-alpine-text"
->
-	<div class="mx-auto max-w-screen-2xl px-4 py-3 sm:px-6">
-		<div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-			<div class="text-center lg:text-left">
-				<p class="text-xs font-extrabold tracking-[0.12em] uppercase">
-					{$t('promo.restart_title')}
-				</p>
-				<p class="mt-1 text-sm leading-snug font-medium">{$t('promo.restart_subtitle')}</p>
-				<p class="mt-1 text-[12px] leading-snug text-alpine-text/80">
-					{$t('promo.restart_highlight')}
-				</p>
-			</div>
-
-			<div class="flex shrink-0 flex-col items-center gap-1 lg:items-end">
-				<div class="inline-flex items-center gap-2 rounded-sm bg-alpine-text px-3 py-1 text-white">
-					<span class="text-[10px] font-bold tracking-[0.12em] uppercase"
-						>{$t('promo.price_label')}</span
-					>
-					<span class="font-serif text-2xl leading-none">{$t('promo.price_value')}</span>
-				</div>
-				<a
-					href={restartPromoUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-flex items-center border border-alpine-text bg-white px-4 py-1.5 text-[10px] font-bold tracking-[0.18em] uppercase transition-colors hover:bg-alpine-text hover:text-white"
-				>
-					{$t('promo.restart_cta')}
-				</a>
-				<p class="text-[11px] text-alpine-text/85">{$t('promo.restart_scarcity')}</p>
-			</div>
-		</div>
-	</div>
-</div>
+<PromoCarousel />
 <Navbar />
 
 <main class="min-h-screen overflow-x-clip">
