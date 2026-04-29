@@ -4,6 +4,7 @@
 	import BookingBar from '$lib/components/BookingBar.svelte';
 	import WeatherWidget from '$lib/components/WeatherWidget.svelte';
 	import RoomCarousel from '$lib/components/RoomCarousel.svelte';
+	import OffersCarousel from '$lib/components/OffersCarousel.svelte';
 	import { Map, Utensils, ShieldCheck } from 'lucide-svelte';
 </script>
 
@@ -100,6 +101,9 @@
 
 	<RoomCarousel />
 </section>
+
+<!-- OFFERTE & PACCHETTI -->
+<OffersCarousel />
 
 <!-- EDITORIAL SECTIONS (Restaurant, Wellness, Activities) -->
 <section class="bg-white py-24 lg:py-48">

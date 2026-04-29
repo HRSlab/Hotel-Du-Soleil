@@ -43,7 +43,7 @@
 <header class="relative h-[82vh] w-full overflow-hidden bg-[#1a1a1a]">
 	<div class="absolute inset-0">
 		<img
-			src="https://www.villageparadis.it/immagini/arco-d-augusto-aosta-romana-villageparadis-agriturismo_ea.jpg"
+			src="https://commons.wikimedia.org/wiki/Special:FilePath/Arco_Augusto_Aosta.jpg"
 			alt={$t('aosta_romana_offer_page.hero_alt')}
 			class="h-full w-full object-cover opacity-55"
 		/>

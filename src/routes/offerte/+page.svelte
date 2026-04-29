@@ -41,7 +41,7 @@
 			</p>
 		</div>
 
-		<div class="grid grid-cols-1 gap-8 md:max-w-2xl">
+		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 			<article
 				class="group border border-alpine-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-alpine-gold hover:shadow-2xl"
 			>
@@ -135,7 +135,7 @@
 				<a href="/offerte/aosta-romana-castello-di-fenis" class="block">
 					<div class="aspect-16/10 overflow-hidden">
 						<img
-							src="https://www.villageparadis.it/immagini/arco-d-augusto-aosta-romana-villageparadis-agriturismo_ea.jpg"
+							src="https://commons.wikimedia.org/wiki/Special:FilePath/Castello_F%C3%A9nis.jpg"
 							alt="Aosta Romana & Castello di Fénis"
 							class="img-elegant h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
 						/>
