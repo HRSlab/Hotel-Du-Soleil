@@ -1023,6 +1023,13 @@
 		"contact_text": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
 		"last_updated": "Last updated: March 2026"
 	},
+	"cookie_banner": {
+		"title": "Your privacy matters",
+		"description": "We use essential cookies and, only with your consent, analytics cookies to improve the website.",
+		"policy_link": "Read the Cookie Policy",
+		"reject": "Essential only",
+		"accept": "Accept analytics"
+	},
 	"degustazione_page": {
 		"meta_title": "Fontina DOP Tasting | Chalet du Soleil",
 		"meta_description": "Fontina DOP and alpine cheese tasting in partnership with the Lo Copafen Farm, Perraillon family.",

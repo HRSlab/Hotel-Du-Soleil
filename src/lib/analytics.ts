@@ -1,15 +1,19 @@
 type EventParams = Record<string, string | number | boolean | null | undefined>;
 
+import { hasAnalyticsConsent } from '$lib/consent';
+
 function isBrowser(): boolean {
 	return typeof window !== 'undefined';
 }
 
 export function trackEvent(eventName: string, params: EventParams = {}): void {
+	if (!hasAnalyticsConsent()) return;
 	if (!isBrowser() || typeof window.gtag !== 'function') return;
 	window.gtag('event', eventName, params);
 }
 
 export function trackPageView(path: string, title: string): void {
+	if (!hasAnalyticsConsent()) return;
 	if (!isBrowser() || typeof window.gtag !== 'function') return;
 	window.gtag('event', 'page_view', {
 		page_path: path,
