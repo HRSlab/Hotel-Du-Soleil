@@ -14,19 +14,68 @@
 			rel="stylesheet"
 		/>
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGKFG688CK"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
+			const measurementId = 'G-GGKFG688CK';
+			const consentStorageKey = 'hds_cookie_consent_v1';
 
-			gtag('config', 'G-GGKFG688CK', {
-				send_page_view: false,
-				anonymize_ip: true
+			window.dataLayer = window.dataLayer || [];
+			window.gtag =
+				window.gtag ||
+				function () {
+					window.dataLayer.push(arguments);
+				};
+
+			function loadGoogleTag() {
+				if (window.__gaLoaded) return;
+
+				const script = document.createElement('script');
+				script.async = true;
+				script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+				script.onload = () => {
+					window.gtag?.('config', measurementId, {
+						send_page_view: false,
+						anonymize_ip: true
+					});
+				};
+				document.head.appendChild(script);
+				window.__gaLoaded = true;
+			}
+
+			window.gtag('js', new Date());
+			window.gtag('consent', 'default', {
+				analytics_storage: 'denied',
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				wait_for_update: 500
 			});
+
+			window.__updateConsent = (consent) => {
+				const analyticsGranted = Boolean(consent?.analytics);
+				const marketingGranted = Boolean(consent?.marketing);
+
+				window.gtag?.('consent', 'update', {
+					analytics_storage: analyticsGranted ? 'granted' : 'denied',
+					ad_storage: marketingGranted ? 'granted' : 'denied',
+					ad_user_data: marketingGranted ? 'granted' : 'denied',
+					ad_personalization: marketingGranted ? 'granted' : 'denied'
+				});
+
+				if (analyticsGranted) {
+					loadGoogleTag();
+				}
+			};
+
+			try {
+				const rawConsent = localStorage.getItem(consentStorageKey);
+				if (rawConsent) {
+					const parsedConsent = JSON.parse(rawConsent);
+					window.__cookieConsentState = parsedConsent;
+					window.__updateConsent(parsedConsent);
+				}
+			} catch {
+				// Ignore storage read errors
+			}
 		</script>
 
 		%sveltekit.head%

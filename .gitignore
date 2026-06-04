@@ -1,4 +1,4 @@
-node_modules
+node_modules/
 
 # Output
 .output
@@ -7,6 +7,7 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+.next/
 
 # OS
 .DS_Store
@@ -21,3 +22,14 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Editor / local workspace
+.vscode/
+*.code-workspace
+
+# Local notes / backups
+to-do.md
+index.html.bak
+
+# Local content helper scripts (not required for runtime)
+scripts/
