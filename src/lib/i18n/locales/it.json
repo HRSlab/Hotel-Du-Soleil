@@ -1019,6 +1019,26 @@
 		"contact_text": "Se hai domande sull'uso dei cookie o su questa Politica sui Cookie, contattaci:",
 		"last_updated": "Ultimo aggiornamento: Marzo 2026"
 	},
+	"cookie_banner": {
+		"title": "Rispettiamo la tua privacy",
+		"description": "Usiamo cookie tecnici necessari e, solo con il tuo consenso, cookie funzionali, analitici e marketing per migliorare servizi e offerte.",
+		"detail": "Puoi modificare la scelta in qualsiasi momento.",
+		"necessary": "Tecnici necessari",
+		"necessary_desc": "Sempre attivi per sicurezza, navigazione e prenotazione.",
+		"functional": "Funzionali",
+		"functional_desc": "Abilitano servizi opzionali come chat assistenza.",
+		"analytics": "Analitici",
+		"analytics_desc": "Misurano visite e performance in forma aggregata.",
+		"marketing": "Marketing",
+		"marketing_desc": "Personalizzano comunicazioni e campagne promozionali.",
+		"reject_all": "Rifiuta tutto",
+		"accept_all": "Accetta tutto",
+		"customize": "Personalizza",
+		"save_preferences": "Salva preferenze",
+		"manage": "Impostazioni cookie",
+		"policy_link": "Cookie Policy",
+		"privacy_link": "Privacy Policy"
+	},
 	"degustazione_page": {
 		"meta_title": "Degustazione Fontina DOP | Chalet du Soleil",
 		"meta_description": "Degustazione di Fontina DOP e formaggi d'alpeggio in collaborazione con l'Azienda Agricola Lo Copafen, famiglia Perraillon.",

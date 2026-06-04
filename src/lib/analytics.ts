@@ -1,3 +1,5 @@
+import { hasConsentCategory } from '$lib/consent';
+
 type EventParams = Record<string, string | number | boolean | null | undefined>;
 
 function isBrowser(): boolean {
@@ -5,11 +7,13 @@ function isBrowser(): boolean {
 }
 
 export function trackEvent(eventName: string, params: EventParams = {}): void {
+	if (!hasConsentCategory('analytics')) return;
 	if (!isBrowser() || typeof window.gtag !== 'function') return;
 	window.gtag('event', eventName, params);
 }
 
 export function trackPageView(path: string, title: string): void {
+	if (!hasConsentCategory('analytics')) return;
 	if (!isBrowser() || typeof window.gtag !== 'function') return;
 	window.gtag('event', 'page_view', {
 		page_path: path,
