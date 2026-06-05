@@ -10,7 +10,7 @@ function isBrowser(): boolean {
 	return typeof window !== 'undefined';
 }
 
-function updateGoogleConsent(mode: Exclude<CookieConsent, null>): void {
+function updateGoogleConsent(mode: CookieConsent): void {
 	if (!isBrowser() || typeof window.gtag !== 'function') return;
 
 	const analyticsGranted = mode === 'accepted' ? 'granted' : 'denied';
@@ -36,6 +36,7 @@ export function initializeCookieConsent(): void {
 	}
 
 	cookieConsent.set(null);
+	updateGoogleConsent(null);
 }
 
 export function setCookieConsent(mode: Exclude<CookieConsent, null>): void {
@@ -44,6 +45,14 @@ export function setCookieConsent(mode: Exclude<CookieConsent, null>): void {
 	window.localStorage.setItem(STORAGE_KEY, mode);
 	cookieConsent.set(mode);
 	updateGoogleConsent(mode);
+}
+
+export function resetCookieConsent(): void {
+	if (!isBrowser()) return;
+
+	window.localStorage.removeItem(STORAGE_KEY);
+	cookieConsent.set(null);
+	updateGoogleConsent(null);
 }
 
 export function hasAnalyticsConsent(): boolean {

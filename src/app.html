@@ -6,13 +6,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Chalet du Soleil | Modern Alpine Retreat</title>
 
-		<!-- Google Fonts: Cormorant Garamond (Eleganza) & Inter (Pulizia) -->
+		<!-- Google Fonts: async stylesheet to reduce render-blocking -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap"
-			rel="stylesheet"
+			rel="preload"
+			as="style"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+			onload="
+				this.onload = null;
+				this.rel = 'stylesheet';
+			"
 		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGKFG688CK"></script>

@@ -1,6 +1,14 @@
 <script lang="ts">
     import { t } from '$lib/i18n';
-    import { Cookie, Shield, Settings } from 'lucide-svelte';
+    import { resetCookieConsent } from '$lib/consent';
+    import { Cookie, Database, RotateCcw, Settings, Shield, SlidersHorizontal } from 'lucide-svelte';
+
+    let preferencesReset = false;
+
+    function handleResetPreferences(): void {
+        resetCookieConsent();
+        preferencesReset = true;
+    }
 </script>
 
 <svelte:head>
@@ -69,14 +77,72 @@
                 </div>
             </div>
 
+            <!-- Consent choices -->
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <SlidersHorizontal class="w-6 h-6 text-alpine-gold shrink-0" />
+                    <h2 class="font-serif text-2xl md:text-3xl text-alpine-text">{$t('cookie_policy.consent_title')}</h2>
+                </div>
+                <p class="mb-6">{$t('cookie_policy.consent_text')}</p>
+
+                <div class="bg-white border border-alpine-border p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-alpine-text">{$t('cookie_policy.consent_choices_title')}</h3>
+                    <p>{$t('cookie_policy.consent_choices_text')}</p>
+                </div>
+            </div>
+
+            <!-- Providers and retention -->
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <Database class="w-6 h-6 text-alpine-gold shrink-0" />
+                    <h2 class="font-serif text-2xl md:text-3xl text-alpine-text">{$t('cookie_policy.providers_title')}</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-white border border-alpine-border p-6 space-y-3">
+                        <h3 class="text-lg font-semibold text-alpine-text">{$t('cookie_policy.provider_google_title')}</h3>
+                        <p>{$t('cookie_policy.provider_google_text')}</p>
+                    </div>
+
+                    <div class="bg-white border border-alpine-border p-6 space-y-3">
+                        <h3 class="text-lg font-semibold text-alpine-text">{$t('cookie_policy.provider_canary_title')}</h3>
+                        <p>{$t('cookie_policy.provider_canary_text')}</p>
+                    </div>
+
+                    <div class="bg-white border border-alpine-border p-6 space-y-3">
+                        <h3 class="text-lg font-semibold text-alpine-text">{$t('cookie_policy.retention_title')}</h3>
+                        <p>{$t('cookie_policy.retention_text')}</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- How to manage cookies -->
             <div>
-                <h2 class="font-serif text-2xl md:text-3xl text-alpine-text mb-6">{$t('cookie_policy.manage_title')}</h2>
+                <div class="flex items-center gap-3 mb-6">
+                    <RotateCcw class="w-6 h-6 text-alpine-gold shrink-0" />
+                    <h2 class="font-serif text-2xl md:text-3xl text-alpine-text">{$t('cookie_policy.manage_title')}</h2>
+                </div>
                 <p class="mb-6">{$t('cookie_policy.manage_text')}</p>
 
                 <div class="bg-white border border-alpine-border p-6 space-y-4">
                     <h3 class="text-lg font-semibold text-alpine-text">{$t('cookie_policy.browser_title')}</h3>
                     <p>{$t('cookie_policy.browser_text')}</p>
+
+                    <div class="border-t border-alpine-border pt-4 space-y-3">
+                        <h3 class="text-lg font-semibold text-alpine-text">{$t('cookie_policy.preferences_title')}</h3>
+                        <p>{$t('cookie_policy.preferences_text')}</p>
+                        <button
+                            type="button"
+                            on:click={handleResetPreferences}
+                            class="cursor-pointer rounded-full border border-alpine-text px-5 py-2 text-xs font-semibold tracking-[0.14em] text-alpine-text uppercase transition hover:bg-alpine-text hover:text-white"
+                        >
+                            {$t('cookie_policy.reopen_button')}
+                        </button>
+
+                        {#if preferencesReset}
+                            <p class="text-xs text-alpine-muted" aria-live="polite">{$t('cookie_policy.reopen_success')}</p>
+                        {/if}
+                    </div>
                 </div>
             </div>
 
