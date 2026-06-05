@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { t } from '$lib/i18n';
 
 	import BookingBar from '$lib/components/BookingBar.svelte';
@@ -6,10 +7,25 @@
 	import RoomCarousel from '$lib/components/RoomCarousel.svelte';
 	import OffersCarousel from '$lib/components/OffersCarousel.svelte';
 	import { Map, Utensils, ShieldCheck } from 'lucide-svelte';
+
+	let showHeroVideo = $state(false);
+
+	onMount(() => {
+		if (typeof window === 'undefined') return;
+
+		const desktopMedia = window.matchMedia('(min-width: 1024px)');
+		const motionMedia = window.matchMedia('(prefers-reduced-motion: no-preference)');
+		const saveData =
+			(navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData ===
+			true;
+
+		showHeroVideo = desktopMedia.matches && motionMedia.matches && !saveData;
+	});
 </script>
 
 <svelte:head>
 	<title>Chalet du Soleil | Modern Alpine Retreat</title>
+	<link rel="preload" as="image" href="/imgs/exterior-snow-back-2026.webp" fetchpriority="high" />
 	<meta
 		name="description"
 		content="Vacanze giugno Valle d'Aosta tra natura e relax: Hotel silenzioso a Torgnon con offerte montagna giugno e promo RESTART in mezza pensione."
@@ -26,18 +42,23 @@
 		<img
 			src="/imgs/exterior-snow-back-2026.webp"
 			alt="Chalet du Soleil hero background"
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
 			class="absolute inset-0 h-full w-full object-cover"
 		/>
-		<video
-			autoplay
-			loop
-			muted
-			playsinline
-			preload="metadata"
-			src="https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404168/summer_hero_video_pgdxsf.mp4"
-			poster="/imgs/deer-dish-hero.webp"
-			class="absolute inset-0 h-full w-full object-cover opacity-100"
-		></video>
+		{#if showHeroVideo}
+			<video
+				autoplay
+				loop
+				muted
+				playsinline
+				preload="none"
+				src="https://res.cloudinary.com/dukwcjd3d/video/upload/v1775404168/summer_hero_video_pgdxsf.mp4"
+				poster="/imgs/exterior-snow-back-2026.webp"
+				class="absolute inset-0 h-full w-full object-cover opacity-100"
+			></video>
+		{/if}
 		<div class="absolute inset-0 bg-black/40"></div>
 		<div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-alpine-bg"></div>
 	</div>
@@ -63,7 +84,7 @@
 <BookingBar />
 
 <!-- WEATHER & INFO -->
-<div class="mx-auto flex max-w-7xl justify-center px-6 py-12">
+<div class="mx-auto flex min-h-12 max-w-7xl items-center justify-center px-6 py-12">
 	<WeatherWidget />
 </div>
 
@@ -89,7 +110,7 @@
 </section>
 
 <!-- LE CAMERE (Grid Editoriale) -->
-<section class="mx-auto max-w-7xl px-6 py-24">
+<section class="content-auto-section mx-auto max-w-7xl px-6 py-24">
 	<div
 		class="fade-up-element mb-16 flex flex-col items-end justify-between border-b border-alpine-border pb-6 md:flex-row"
 	>
@@ -103,10 +124,12 @@
 </section>
 
 <!-- OFFERTE & PACCHETTI -->
-<OffersCarousel />
+<div class="content-auto-section">
+	<OffersCarousel />
+</div>
 
 <!-- EDITORIAL SECTIONS (Restaurant, Wellness, Activities) -->
-<section class="bg-white py-24 lg:py-48">
+<section class="content-auto-section bg-white py-24 lg:py-48">
 	<div class="mx-auto max-w-7xl space-y-32 px-6 lg:space-y-64">
 		<!-- Part 1: Ristorante -->
 		<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-24">
@@ -115,6 +138,8 @@
 					<img
 						src="/imgs/deer-dish-hero.webp"
 						alt="Ristorante Chalet du Soleil"
+						loading="lazy"
+						decoding="async"
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
 				</div>
@@ -170,6 +195,8 @@
 					<img
 						src="/imgs/jacuzzi-spa-hds-2026.webp"
 						alt="Wellness & Spa"
+						loading="lazy"
+						decoding="async"
 						class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
 					/>
 				</div>
@@ -179,7 +206,7 @@
 </section>
 
 <!-- ESPERIENZA ALPINA -->
-<section class="mt-10 border-t border-alpine-border bg-white py-20 lg:py-32">
+<section class="content-auto-section mt-10 border-t border-alpine-border bg-white py-20 lg:py-32">
 	<div class="mx-auto max-w-7xl px-6">
 		<div class="fade-up-element mb-24 text-center">
 			<h2 class="mb-6 font-serif text-4xl text-alpine-text">{$t('home.experience_title')}</h2>

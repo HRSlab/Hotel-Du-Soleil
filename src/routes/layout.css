@@ -113,4 +113,9 @@
 		visibility: visible;
 		transform: translateY(0);
 	}
+
+	.content-auto-section {
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 900px;
+	}
 }
