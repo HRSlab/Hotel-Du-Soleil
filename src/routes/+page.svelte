@@ -3,7 +3,7 @@
 	import { t } from '$lib/i18n';
 
 	import BookingBar from '$lib/components/BookingBar.svelte';
-	import WeatherWidget from '$lib/components/WeatherWidget.svelte';
+	import HomeWeatherWidget from '$lib/components/HomeWeatherWidget.svelte';
 	import RoomCarousel from '$lib/components/RoomCarousel.svelte';
 	import OffersCarousel from '$lib/components/OffersCarousel.svelte';
 	import { Map, Utensils, ShieldCheck } from 'lucide-svelte';
@@ -85,7 +85,7 @@
 
 <!-- WEATHER & INFO -->
 <div class="mx-auto flex min-h-12 max-w-7xl items-center justify-center px-6 py-12">
-	<WeatherWidget />
+	<HomeWeatherWidget />
 </div>
 
 <!-- FILOSOFIA -->
