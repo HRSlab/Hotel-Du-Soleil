@@ -1,116 +1,80 @@
-# sv
+# Hotel Du Soleil
 
-![CodeTime badge](https://shields.jannchie.com/endpoint?style=for-the-badge&color=fafafa&url=https%3A%2F%2Fapi.codetime.dev%2Fv3%2Fusers%2Fshield%3Fuid%3D1672%26project%3DHotel%2BDu%2BSoleil%26minutes%3D9360)
+Marketing website for **Hotel Du Soleil**, an alpine hotel in **Torgnon, Valle
+d'Aosta** ([www.hotel-du-soleil.it](https://www.hotel-du-soleil.it)).
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Built with **SvelteKit 2 · Svelte 5 (runes) · Tailwind CSS 4 · TypeScript**, with
+multilingual content, Cloudinary media delivery, a Slope.it booking-engine
+integration, Google Analytics (Consent Mode), and a live weather page for the resort.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
+## Quick start
 
 ```sh
-# recreate this project
-npx sv@0.12.8 create --template minimal --types ts --add tailwindcss="plugins:none" prettier eslint --install npm ./
+npm install          # also runs `svelte-kit sync`
+cp .env.example .env # optional: Cloudinary config (site works without it)
+npm run dev          # start the dev server (add `-- --open` to open a browser)
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+Build & preview a production bundle:
 
 ```sh
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Scripts
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+| Script                    | Purpose                                               |
+| ------------------------- | ----------------------------------------------------- |
+| `npm run dev`             | Dev server with HMR.                                  |
+| `npm run build`           | Production build.                                     |
+| `npm run preview`         | Serve the production build.                           |
+| `npm run check`           | Type-check (`svelte-check`).                          |
+| `npm run lint`            | `prettier --check` + `eslint`.                        |
+| `npm run format`          | Auto-format with Prettier.                            |
+| `npm run cloudinary:sync` | Rebuild the Cloudinary asset manifest (needs `.env`). |
+| `npm run optimize-images` | Convert `static/imgs` images to WebP.                 |
 
-## Cloudinary
+> No pre-commit hooks are configured — run `npm run format`, `npm run lint`, and
+> `npm run check` manually before committing.
 
-Cloudinary is wired into the SvelteKit app with public env vars for browser-safe delivery and a server-only helper for signed operations.
+## Project layout
 
-### Environment variables
-
-Copy the values you need into `.env`:
-
-```env
-PUBLIC_CLOUDINARY_CLOUD_NAME=
-PUBLIC_CLOUDINARY_API_KEY=
-PUBLIC_CLOUDINARY_UPLOAD_PRESET=
-PUBLIC_CLOUDINARY_ENABLE_DELIVERY=false
-PUBLIC_CLOUDINARY_BASE_FOLDER=hotel-du-soleil
-CLOUDINARY_API_SECRET=
+```
+src/
+├── app.html            # Document shell (fonts, GA bootstrap)
+├── hooks.server.ts     # Redirects hidden sections (/sport, /posizione) to /
+├── routes/             # File-based pages, layouts, endpoints
+└── lib/
+    ├── components/      # Reusable Svelte components
+    ├── i18n/            # Custom translation store + locale JSON
+    ├── config/booking.ts  # Booking engine + promotion URLs
+    ├── cloudinary.ts / server/cloudinary.ts  # Media delivery
+    ├── analytics.ts / consent.ts             # GA4 + cookie consent
+    └── rooms.ts         # Room catalog data
+static/imgs/            # Public images (served at /imgs/...)
+scripts/                # Image optimization, Cloudinary sync, content helpers
 ```
 
-- `PUBLIC_CLOUDINARY_CLOUD_NAME` is required for delivery URLs.
-- `PUBLIC_CLOUDINARY_API_KEY` and `PUBLIC_CLOUDINARY_UPLOAD_PRESET` are required for unsigned browser uploads.
-- `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=true` turns on automatic rewriting of local `/imgs/...` paths to Cloudinary delivery URLs.
-- `PUBLIC_CLOUDINARY_BASE_FOLDER` defines the folder prefix used when local assets are mapped to Cloudinary public IDs.
-- `CLOUDINARY_API_SECRET` is server-only and must never be sent to the client.
+## Documentation
 
-### Browser usage
+Full documentation lives in [`docs/`](./docs/README.md):
 
-Use `$lib` exports from `src/lib/cloudinary.ts` to build delivery URLs or upload forms:
+- [Architecture](./docs/architecture.md)
+- [Project structure](./docs/project-structure.md)
+- [Development guide](./docs/development.md)
+- [Routes & pages](./docs/routes.md)
+- [Components](./docs/components.md)
+- [Internationalization (i18n)](./docs/internationalization.md)
+- [Booking integration](./docs/booking.md)
+- [Cloudinary media pipeline](./docs/cloudinary.md)
+- [Analytics & cookie consent](./docs/analytics-and-consent.md)
+- [Weather feature](./docs/weather.md)
+- [Configuration reference](./docs/configuration.md)
+- [Content management](./docs/content.md)
+- [Deployment](./docs/deployment.md)
 
-```ts
-import { getCloudinaryDeliveryUrl, resolveCloudinaryUrl } from '$lib';
+## Tech stack
 
-const heroUrl = getCloudinaryDeliveryUrl('hotel-du-soleil/home/hero', 'image', {
-	width: 1600,
-	height: 900,
-	crop: 'fill',
-	quality: 'auto',
-	format: 'auto'
-});
-
-const src = resolveCloudinaryUrl({
-	publicId: 'hotel-du-soleil/rooms/matrimoniale-hero',
-	fallbackSrc: '/imgs/Rooms/matrimoniale-superior-hero-1.webp'
-});
-```
-
-### Server usage
-
-Use `src/lib/server/cloudinary.ts` for signed uploads or admin-style operations:
-
-```ts
-import { cloudinary, signCloudinaryParams } from '$lib/server/cloudinary';
-
-const signature = signCloudinaryParams({
-	folder: 'hotel-du-soleil/uploads',
-	timestamp: Math.floor(Date.now() / 1000)
-});
-
-const result = await cloudinary.uploader.upload('/absolute/path/to/file.webp');
-```
-
-Existing image paths in the app were left unchanged. To migrate page assets to Cloudinary delivery, provide the public IDs or the folder naming convention used in your Cloudinary account.
-
-### Automatic local asset mapping
-
-The app now includes a global runtime hook in `src/lib/components/CloudinaryRuntime.svelte`.
-
-- When `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=false`, the site keeps using the current local `/imgs/...` files.
-- When `PUBLIC_CLOUDINARY_ENABLE_DELIVERY=true`, local image, video source, and poster URLs are rewritten to Cloudinary on the client.
-- Exact local-to-Cloudinary mapping is read from `src/lib/generated/cloudinary-manifest.json`.
-- Run `npm run cloudinary:sync` after uploading new files so the manifest picks up their real public IDs and versions.
-
-If a local asset is not present in the manifest yet, the app falls back to the existing local `/imgs/...` file instead of breaking the page.
+SvelteKit · Svelte 5 · Tailwind CSS 4 · Vite 7 · TypeScript 5 · Cloudinary ·
+GSAP / svelte-motion / Swiper · Lucide icons · deployed on Netlify (`adapter-auto`).

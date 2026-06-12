@@ -1,86 +1,125 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { Cloud, Sun, CloudRain, Wind, Eye, SunDim, Snowflake, Activity } from 'lucide-svelte';
-  import { t, locale } from '$lib/i18n';
+	import { onMount } from 'svelte';
+	import { Cloud, CloudRain, Eye, Snowflake, Sun, Thermometer, Wind } from 'lucide-svelte';
 
-  type WeatherData = {
-    temp: string;
-    feelsLike: string;
-    desc: string;
-    wind: string;
-    visibility: string;
-    uv: string;
-    precip: string;
-    snow: string;
-    chanceSnow: string;
-    icon: any;
-  };
+	type IconType = typeof Sun;
 
-  let weather = $state<WeatherData | null>(null);
+	type WeatherData = {
+		temp: number;
+		feelsLike: number;
+		desc: string;
+		wind: number;
+		visibilityKm: number;
+		precip: number;
+		snow: number;
+		icon: IconType;
+	};
 
-  onMount(async () => {
-    try {
-      const res = await fetch('https://wttr.in/Torgnon?format=j1');
-      if (!res.ok) throw new Error('API Error');
-      const data = await res.json();
-      const current = data.current_condition[0];
-      const today = data.weather[0];
-      
-      weather = {
-        temp: current.temp_C,
-        feelsLike: current.FeelsLikeC,
-        desc: current.lang_it?.[0]?.value || current.weatherDesc[0].value,
-        wind: current.windspeedKmph,
-        visibility: current.visibility,
-        uv: current.uvIndex,
-        precip: current.precipMM,
-        snow: today.totalSnow_cm || "0",
-        chanceSnow: today.hourly[0].chanceofsnow || "0",
-        icon: parseInt(current.weatherCode) < 116 ? Sun : Cloud
-      };
-    } catch (e) {
-      console.error('Weather fetch error:', e);
-      weather = null;
-    }
-  });
+	let weather = $state<WeatherData | null>(null);
+
+	function iconFromCode(code: number): IconType {
+		if (code === 0) return Sun;
+		if (code <= 3) return Cloud;
+		if (code <= 67) return CloudRain;
+		if (code <= 86) return Snowflake;
+		return Cloud;
+	}
+
+	function descFromCode(code: number): string {
+		if (code === 0) return 'Sereno';
+		if (code <= 3) return 'Parzialmente nuvoloso';
+		if (code <= 48) return 'Nebbia';
+		if (code <= 67) return 'Pioggia';
+		if (code <= 86) return 'Neve';
+		return 'Variabile';
+	}
+
+	onMount(async () => {
+		try {
+			const endpoint = new URL('https://api.open-meteo.com/v1/forecast');
+			endpoint.searchParams.set('latitude', '45.844');
+			endpoint.searchParams.set('longitude', '7.575');
+			endpoint.searchParams.set(
+				'current',
+				'temperature_2m,apparent_temperature,weather_code,wind_speed_10m,visibility,precipitation,snowfall'
+			);
+			endpoint.searchParams.set('timezone', 'Europe/Rome');
+
+			const res = await fetch(endpoint);
+			if (!res.ok) throw new Error('API Error');
+			const data = await res.json();
+			const current = data.current;
+
+			if (!current) {
+				weather = null;
+				return;
+			}
+
+			const code = Number(current.weather_code ?? 3);
+
+			weather = {
+				temp: Number(current.temperature_2m ?? 0),
+				feelsLike: Number(current.apparent_temperature ?? 0),
+				desc: descFromCode(code),
+				wind: Number(current.wind_speed_10m ?? 0),
+				visibilityKm: Number(current.visibility ?? 0) / 1000,
+				precip: Number(current.precipitation ?? 0),
+				snow: Number(current.snowfall ?? 0),
+				icon: iconFromCode(code)
+			};
+		} catch (e) {
+			console.error('Weather fetch error:', e);
+			weather = null;
+		}
+	});
 </script>
+
 {#if weather}
-  <a 
-    href="/meteo" 
-    class="flex flex-wrap items-center gap-x-6 gap-y-2 text-alpine-text/60 text-[0.75em] uppercase tracking-[0.15em] font-bold hover:text-alpine-text transition-all group"
-  >
-    <!-- Main -->
-    <div class="flex items-center gap-2">
-      <weather.icon class="w-3.5 h-3.5 text-alpine-gold" />
-      <span class="text-alpine-text">Torgnon {weather.temp}°C</span>
-      <span class="opacity-60 ml-1">({weather.desc})</span>
-    </div>
+	<a
+		href="/meteo"
+		class="group block max-w-xl border border-alpine-border bg-white p-4 shadow-sm transition-colors hover:border-alpine-gold"
+	>
+		<div class="flex items-start justify-between gap-4">
+			<div>
+				<p class="text-[10px] font-bold tracking-[0.2em] text-alpine-muted uppercase">
+					Weather Card
+				</p>
+				<p class="mt-1 text-sm font-semibold text-alpine-text">Torgnon</p>
+			</div>
+			<weather.icon class="h-5 w-5 text-alpine-gold" />
+		</div>
 
-    <!-- Snow/Outdoor Details -->
-    <div class="flex items-center gap-4 border-l border-alpine-border pl-6">
-      
-      <!-- Snow Depth / Forecast -->
-      {#if parseFloat(weather.snow) > 0 || parseFloat(weather.chanceSnow) > 10}
-        <div class="flex items-center gap-1.5 text-alpine-gold" title="Neve">
-          <Snowflake class="w-3 h-3" />
-          <span>{weather.snow} cm / {weather.chanceSnow}% Neve</span>
-        </div>
-      {:else}
-        <div class="flex items-center gap-1.5 opacity-40" title="Neve al suolo (stimata)">
-          <Snowflake class="w-3 h-3" />
-          <span>Fresco & Stabile</span>
-        </div>
-      {/if}
+		<div class="mt-4 flex items-end gap-3 border-b border-alpine-border/70 pb-4">
+			<p class="font-serif text-4xl text-alpine-text">{weather.temp.toFixed(0)}°C</p>
+			<p class="pb-1 text-xs text-alpine-muted">Feels {weather.feelsLike.toFixed(0)}°C</p>
+		</div>
 
-      <div class="flex items-center gap-1.5" title="Vento">
-        <Wind class="w-3 h-3" />
-        <span>{weather.wind} km/h</span>
-      </div>
-      
-      <div class="flex items-center gap-1.5 text-alpine-gold opacity-0 group-hover:opacity-100 transition-opacity ml-2">
-        <span class="text-[8px]">In-Depth</span>
-        <Activity class="w-3 h-3" />
-      </div>
-    </div>
-  </a>
+		<p class="mt-3 text-xs tracking-[0.12em] text-alpine-muted uppercase">{weather.desc}</p>
+
+		<div class="mt-4 grid grid-cols-2 gap-3 text-xs text-alpine-text">
+			<div class="flex items-center gap-1.5">
+				<Snowflake class="h-3.5 w-3.5 text-alpine-gold" />
+				<span>{weather.snow.toFixed(1)} mm neve</span>
+			</div>
+			<div class="flex items-center gap-1.5">
+				<Wind class="h-3.5 w-3.5 text-alpine-gold" />
+				<span>{weather.wind.toFixed(0)} km/h</span>
+			</div>
+			<div class="flex items-center gap-1.5">
+				<CloudRain class="h-3.5 w-3.5 text-alpine-gold" />
+				<span>{weather.precip.toFixed(1)} mm pioggia</span>
+			</div>
+			<div class="flex items-center gap-1.5">
+				<Eye class="h-3.5 w-3.5 text-alpine-gold" />
+				<span>{weather.visibilityKm.toFixed(1)} km visibilita</span>
+			</div>
+		</div>
+
+		<div
+			class="mt-3 flex items-center gap-1.5 text-[10px] tracking-[0.18em] text-alpine-muted uppercase group-hover:text-alpine-text"
+		>
+			<Thermometer class="h-3.5 w-3.5" />
+			Apri forecast completo
+		</div>
+	</a>
 {/if}

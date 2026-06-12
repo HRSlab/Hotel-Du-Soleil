@@ -5,18 +5,21 @@
 	import { page } from '$app/state';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import CookieBanner from '$lib/components/CookieBanner.svelte';
 	import CloudinaryRuntime from '$lib/components/CloudinaryRuntime.svelte';
 	import SecurityGuard from '$lib/components/SecurityGuard.svelte';
 	import PromoCarousel from '$lib/components/PromoCarousel.svelte';
 	import CookieBanner from '$lib/components/CookieBanner.svelte';
 	import { trackEvent, trackPageView, isBookingUrl, classifyContactHref } from '$lib/analytics';
-	import { hasConsentCategory, initConsentFromStorage } from '$lib/consent';
+	import { initializeCookieConsent } from '$lib/consent';
 
 	let { children } = $props();
 	const scrollMilestonesSent = new Set<number>();
 	let lastTrackedPath = '';
 
 	onMount(() => {
+		initializeCookieConsent();
+
 		if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
 		initConsentFromStorage();
@@ -202,6 +205,7 @@
 <CloudinaryRuntime />
 <PromoCarousel />
 <Navbar />
+<CookieBanner />
 
 <main class="min-h-screen overflow-x-clip">
 	{@render children()}

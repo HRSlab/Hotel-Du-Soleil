@@ -6,48 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Chalet du Soleil | Modern Alpine Retreat</title>
 
-		<!-- Google Fonts: Cormorant Garamond (Eleganza) & Inter (Pulizia) -->
+		<!-- Google Fonts: async stylesheet to reduce render-blocking -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap"
-			rel="stylesheet"
+			rel="preload"
+			as="style"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+			onload="
+				this.onload = null;
+				this.rel = 'stylesheet';
+			"
 		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
 
 		<script>
 			const measurementId = 'G-GGKFG688CK';
 			const consentStorageKey = 'hds_cookie_consent_v1';
 
-			window.dataLayer = window.dataLayer || [];
-			window.gtag =
-				window.gtag ||
-				function () {
-					window.dataLayer.push(arguments);
-				};
-
-			function loadGoogleTag() {
-				if (window.__gaLoaded) return;
-
-				const script = document.createElement('script');
-				script.async = true;
-				script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-				script.onload = () => {
-					window.gtag?.('config', measurementId, {
-						send_page_view: false,
-						anonymize_ip: true
-					});
-				};
-				document.head.appendChild(script);
-				window.__gaLoaded = true;
-			}
-
-			window.gtag('js', new Date());
-			window.gtag('consent', 'default', {
+			gtag('consent', 'default', {
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				ad_user_data: 'denied',
 				ad_personalization: 'denied',
-				wait_for_update: 500
+				functionality_storage: 'granted',
+				security_storage: 'granted'
+			});
+
+			gtag('config', 'G-GGKFG688CK', {
+				send_page_view: false,
+				anonymize_ip: true
 			});
 
 			window.__updateConsent = (consent) => {

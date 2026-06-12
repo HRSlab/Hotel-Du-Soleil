@@ -1,79 +1,84 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { Sun, Cloud, Snowflake, Map, Camera, ExternalLink } from 'lucide-svelte';
-	import { t } from '$lib/i18n';
-	import type { ComponentType } from 'svelte';
+	import { AlertTriangle, Camera, Droplets, ExternalLink, Thermometer } from 'lucide-svelte';
+	import { locale, t } from '$lib/i18n';
+	import type { PageData } from './$types';
 
-	type WeatherData = {
-		temp: string;
-		feelsLike: string;
-		desc: string;
-		wind: string;
-		visibility: string;
-		uv: string;
-		precip: string;
-		snow: string;
-		chanceSnow: string;
-		icon: ComponentType;
-	};
+	let { data }: { data: PageData } = $props();
 
-	let weather = $state<WeatherData | null>(null);
+	function localeTag() {
+		if ($locale === 'en') return 'en-GB';
+		if ($locale === 'ru') return 'ru-RU';
+		return 'it-IT';
+	}
 
-	let skiStats = $state({
-		slopes: { open: 18, total: 18, details: { blue: 5, red: 11, black: 2 } },
-		lifts: { open: 5, total: 6 },
-		snowDepth: { base: '30cm', top: '50cm' },
-		lastSnowfall: '14/03/2026',
-		snowQuality: 'Hard packed / Spring'
-	});
-
-	onMount(async () => {
-		try {
-			const res = await fetch('https://wttr.in/Torgnon?format=j1');
-			if (!res.ok) throw new Error('API Error');
-			const data = await res.json();
-			const current = data.current_condition[0];
-			const today = data.weather[0];
-
-			weather = {
-				temp: current.temp_C,
-				feelsLike: current.FeelsLikeC,
-				desc: current.lang_it?.[0]?.value || current.weatherDesc[0].value,
-				wind: current.windspeedKmph,
-				visibility: current.visibility,
-				uv: current.uvIndex,
-				precip: current.precipMM,
-				snow: today.totalSnow_cm || '0',
-				chanceSnow: today.hourly[0].chanceofsnow || '0',
-				icon: parseInt(current.weatherCode) < 116 ? Sun : Cloud
-			};
-
-			// Updates for "Bollettino Neve" from Live Data
-			if (parseFloat(weather.snow) > 0) {
-				skiStats.snowQuality = 'Neve Fresca / Polverosa';
-				skiStats.lastSnowfall = 'Oggi';
-			} else if (parseInt(weather.temp) > 3) {
-				skiStats.snowQuality = 'Trasformata / Primaverile';
-			}
-
-			// Check current and forecast for last snowfall in current data array
-			const allSnowEvents = data.weather.filter(
-				(w: { totalSnow_cm: string }) => parseFloat(w.totalSnow_cm) > 0
-			);
-			if (allSnowEvents.length > 0) {
-				// Sort by date descending to find the most recent one
-				const sortedEvents = allSnowEvents.sort((a: { date: string }, b: { date: string }) =>
-					b.date.localeCompare(a.date)
-				);
-				skiStats.lastSnowfall = new Date(sortedEvents[0].date).toLocaleDateString('it-IT');
-			}
-
-			// Sync Lift/Slopes - ensuring reactive state is used in HTML
-			// (The UI already binds to skiStats, so updating it here triggers the update)
-		} catch (e) {
-			console.error('Weather fetch error:', e);
+	function metric(value: number | null | undefined, unit = '', digits = 0) {
+		if (value === null || value === undefined) {
+			return 'n/d';
 		}
-	});
+
+		return `${value.toFixed(digits)}${unit}`;
+	}
+
+	function updatedLabel(value: string | null) {
+		if (!value) {
+			return 'n/d';
+		}
+
+		return new Intl.DateTimeFormat(localeTag(), {
+			day: '2-digit',
+			month: '2-digit',
+			hour: '2-digit',
+			minute: '2-digit'
+		}).format(new Date(value));
+	}
+
+	function yesNo(value: boolean | null | undefined) {
+		if (value === null || value === undefined) {
+			return 'n/d';
+		}
+
+		return value ? $t('meteo.day') : $t('meteo.night');
+	}
+
+	function formatClock(value: string | null | undefined) {
+		if (!value) {
+			return 'n/d';
+		}
+
+		const date = new Date(value);
+		if (Number.isNaN(date.getTime())) {
+			return value;
+		}
+
+		return new Intl.DateTimeFormat(localeTag(), {
+			hour: '2-digit',
+			minute: '2-digit'
+		}).format(date);
+	}
+
+	function formatDuration(seconds: number | null | undefined) {
+		if (seconds === null || seconds === undefined) {
+			return 'n/d';
+		}
+
+		const totalMinutes = Math.round(seconds / 60);
+		const hours = Math.floor(totalMinutes / 60);
+		const minutes = totalMinutes % 60;
+		return `${hours}h ${minutes}m`;
+	}
+
+	function formatDateLabel(date: string) {
+		const d = new Date(`${date}T00:00:00`);
+		if (Number.isNaN(d.getTime())) {
+			return date;
+		}
+
+		return new Intl.DateTimeFormat(localeTag(), {
+			weekday: 'short',
+			day: '2-digit',
+			month: '2-digit'
+		}).format(d);
+	}
 </script>
 
 <svelte:head>
@@ -82,178 +87,174 @@
 
 <main class="min-h-screen bg-alpine-bg pt-32 pb-24">
 	<div class="mx-auto max-w-7xl px-6">
-		<!-- Title & Status -->
-		<div
-			class="mb-16 flex flex-col items-end justify-between border-b border-alpine-border pb-8 md:flex-row"
-		>
-			<div>
-				<h1 class="mb-4 font-serif text-5xl text-alpine-text">{$t('meteo.title')}</h1>
-				<p class="text-xs tracking-[0.3em] text-alpine-muted uppercase">{$t('meteo.subtitle')}</p>
-			</div>
-			<div
-				class="mt-8 flex items-center gap-4 border border-alpine-border bg-white px-6 py-3 md:mt-0"
-			>
-				<div class="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
-				<span class="text-[10px] font-bold tracking-widest text-alpine-text uppercase"
-					>{$t('meteo.status_open')}</span
-				>
+		<div class="mb-10 border-b border-alpine-border pb-8">
+			<div class="flex flex-wrap items-end justify-between gap-6">
+				<div>
+					<p class="text-xs tracking-[0.3em] text-alpine-muted uppercase">{$t('meteo.subtitle')}</p>
+					<h1 class="mt-3 font-serif text-5xl text-alpine-text">{$t('meteo.title')}</h1>
+					<p class="mt-4 max-w-3xl text-sm leading-relaxed text-alpine-muted">
+						{$t('meteo.live_intro')}
+					</p>
+				</div>
+				<div class="space-y-2">
+					<p class="text-[11px] tracking-[0.18em] text-alpine-muted uppercase">
+						{$t('meteo.updated_label')}: {updatedLabel(data.lastUpdated)}
+					</p>
+				</div>
 			</div>
 		</div>
 
-		<!-- Main Dashboard Grid -->
-		<div class="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-12">
-			<!-- Left: Real Time Weather -->
-			<div class="space-y-8 lg:col-span-4">
-				<div class="h-full border border-alpine-border bg-white p-8 shadow-sm">
-					<h2
-						class="mb-10 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
-					>
-						<Sun class="h-4 w-4 text-alpine-gold" />
-						{$t('meteo.current_conditions')}
-					</h2>
+		<div class="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
+			<div class="lg:col-span-8">
+				<div class="border border-alpine-border bg-white p-8 shadow-sm">
+					<div class="mb-7 flex flex-wrap items-center justify-between gap-4">
+						<h2
+							class="flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
+						>
+							<Thermometer class="h-4 w-4 text-alpine-gold" />
+							{$t('meteo.live_data_title')}
+						</h2>
+						<p class="text-[10px] tracking-[0.18em] text-alpine-muted uppercase">
+							{$t('meteo.updated_label')}: {updatedLabel(data.lastUpdated)}
+						</p>
+					</div>
 
-					{#if weather}
-						<div class="space-y-10">
-							<div class="flex items-center gap-6">
-								<weather.icon class="h-16 w-16 text-alpine-gold" />
-								<div>
-									<div class="text-6xl font-light text-alpine-text">{weather.temp}°</div>
-									<div class="mt-2 text-xs font-medium tracking-widest text-alpine-muted uppercase">
-										{weather.desc}
-									</div>
-								</div>
+					{#if data.weather}
+						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.condition')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{data.weather.base.description ?? 'n/d'}</p>
 							</div>
-
-							<div class="grid grid-cols-2 gap-8 border-t border-alpine-border/50 pt-8">
-								<div class="space-y-2">
-									<span class="text-[9px] tracking-widest text-alpine-muted uppercase"
-										>{$t('meteo.feels_like')}</span
-									>
-									<p class="font-serif text-lg text-alpine-text italic">{weather.feelsLike}°C</p>
-								</div>
-								<div class="space-y-2">
-									<span class="text-[9px] tracking-widest text-alpine-muted uppercase"
-										>{$t('meteo.wind')}</span
-									>
-									<p class="font-serif text-lg text-alpine-text italic">
-										{weather.wind} <span class="font-sans text-xs font-bold not-italic">km/h</span>
-									</p>
-								</div>
-								<div class="space-y-2">
-									<span class="text-[9px] tracking-widest text-alpine-muted uppercase"
-										>{$t('meteo.visibility')}</span
-									>
-									<p class="font-serif text-lg text-alpine-text italic">
-										{weather.visibility}
-										<span class="font-sans text-xs font-bold not-italic">km</span>
-									</p>
-								</div>
-								<div class="space-y-2">
-									<span class="text-[9px] tracking-widest text-alpine-muted uppercase"
-										>{$t('meteo.uv_index')}</span
-									>
-									<p class="font-serif text-lg text-alpine-text italic">{weather.uv}</p>
-								</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.temperature')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.base.tempC, '°C')}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.feels_like_full')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.base.feelsLikeC, '°C')}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.day')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{yesNo(data.weather.isDay)}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.humidity')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.humidityPct, '%')}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.precipitation')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.precipMm, ' mm', 1)}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.cloud_cover')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.cloudPct, '%')}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.wind_speed')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.base.windKmh, ' km/h')}</p>
+							</div>
+							<div class="border border-alpine-border/70 p-4">
+								<p class="text-[9px] tracking-widest text-alpine-muted uppercase">{$t('meteo.wind_gusts')}</p>
+								<p class="mt-2 font-serif text-2xl text-alpine-text">{metric(data.weather.base.windGustKmh, ' km/h')}</p>
 							</div>
 						</div>
 					{:else}
-						<div class="animate-pulse space-y-4">
-							<div class="h-20 bg-alpine-bg"></div>
-							<div class="h-40 bg-alpine-bg"></div>
+						<div class="rounded-sm border border-amber-200 bg-amber-50 p-4">
+							<p class="text-sm text-alpine-text">{$t('meteo.not_available_current')}</p>
 						</div>
 					{/if}
 				</div>
 			</div>
-
-			<!-- Center: Snow & Slopes -->
-			<div class="space-y-8 lg:col-span-8">
-				<div class="grid h-full grid-cols-1 gap-8 md:grid-cols-2">
-					<!-- Snow Depth -->
-					<div
-						class="relative overflow-hidden border border-alpine-text/10 bg-alpine-text p-8 text-white shadow-xl"
+			<div class="lg:col-span-4">
+				<div class="border border-alpine-border bg-white p-8 shadow-sm">
+					<h2
+						class="mb-7 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
 					>
-						<Snowflake class="absolute -top-8 -right-8 h-48 w-48 opacity-10" />
-						<h2
-							class="mb-10 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-white/60 uppercase"
-						>
-							{$t('meteo.snow_report')}
-						</h2>
-						<div class="relative z-10 space-y-12">
-							<div class="flex items-end justify-between border-b border-white/20 pb-4">
-								<span class="text-sm font-light italic">{$t('meteo.snow_depth_base')}</span>
-								<span class="font-serif text-4xl">{skiStats.snowDepth.base}</span>
-							</div>
-							<div class="flex items-end justify-between border-b border-white/20 pb-4">
-								<span class="text-sm font-light italic">{$t('meteo.snow_depth_top')}</span>
-								<span class="font-serif text-4xl">{skiStats.snowDepth.top}</span>
-							</div>
-							<div class="grid grid-cols-2 gap-4">
-								<div class="bg-white/10 p-4">
-									<span class="mb-1 block text-[9px] tracking-widest text-white/50 uppercase"
-										>{$t('meteo.snow_quality')}</span
-									>
-									<p class="text-xs font-bold">{skiStats.snowQuality}</p>
+						<AlertTriangle class="h-4 w-4 text-alpine-gold" />
+						Piste e impianti
+					</h2>
+					<div class="space-y-3">
+						{#each data.officialLinks as link}
+							<a
+								href={link.url}
+								target="_blank"
+								rel="noreferrer"
+								class="flex items-center justify-between border border-alpine-border p-4 transition-colors hover:border-alpine-gold hover:bg-alpine-bg/60"
+							>
+								<div>
+									<p class="text-sm font-semibold text-alpine-text">{link.title}</p>
+									<p class="text-[10px] tracking-[0.16em] text-alpine-muted uppercase">{link.label}</p>
 								</div>
-								<div class="bg-white/10 p-4">
-									<span class="mb-1 block text-[9px] tracking-widest text-white/50 uppercase"
-										>{$t('meteo.last_snowfall')}</span
-									>
-									<p class="text-xs font-bold">{skiStats.lastSnowfall}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slopes Status -->
-					<div class="border border-alpine-border bg-white p-8 shadow-sm">
-						<h2
-							class="mb-10 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-alpine-muted uppercase"
-						>
-							<Map class="h-4 w-4 text-alpine-gold" />
-							{$t('meteo.slopes_lifts')}
-						</h2>
-						<div class="space-y-10">
-							<div class="flex items-center gap-4">
-								<div class="font-serif text-6xl text-alpine-text">
-									{skiStats.slopes.open}
-									<span class="text-2xl text-alpine-muted">/ {skiStats.slopes.total}</span>
-								</div>
-								<div
-									class="text-[10px] leading-tight font-bold tracking-widest text-alpine-muted uppercase"
-								>
-									{$t('meteo.slopes_open')}
-								</div>
-							</div>
-
-							<div class="grid grid-cols-3 gap-2">
-								<div class="h-1 bg-blue-500" style="width: 100%"></div>
-								<div class="h-1 bg-red-500" style="width: 100%"></div>
-								<div class="h-1 bg-black" style="width: 100%"></div>
-							</div>
-
-							<div class="space-y-6 border-t border-alpine-border/50 pt-6">
-								<div class="flex items-center justify-between">
-									<span class="text-xs font-medium tracking-widest text-alpine-muted uppercase"
-										>{$t('meteo.lifts_running')}</span
-									>
-									<span class="font-serif text-lg text-alpine-text"
-										>{skiStats.lifts.open} / {skiStats.lifts.total}</span
-									>
-								</div>
-								<div class="h-1.5 w-full overflow-hidden bg-alpine-bg">
-									<div
-										class="h-full bg-alpine-gold"
-										style="width: {(skiStats.lifts.open / skiStats.lifts.total) * 100}%"
-									></div>
-								</div>
-							</div>
-						</div>
+								<ExternalLink class="h-4 w-4 text-alpine-muted" />
+							</a>
+						{/each}
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Webcams Section -->
+		<div class="mb-10 border border-alpine-border bg-white p-8 shadow-sm">
+			<h2 class="mb-6 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-alpine-muted uppercase">
+				<Droplets class="h-4 w-4 text-alpine-gold" />
+				{$t('meteo.weekly_forecast_title')}
+			</h2>
+
+			{#if data.dailyForecast && data.dailyForecast.length > 0}
+				<div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+					{#each data.dailyForecast as day}
+						<div class="border border-alpine-border/70 p-5">
+							<div class="mb-4 border-b border-alpine-border/60 pb-3">
+								<p class="font-serif text-2xl text-alpine-text">{formatDateLabel(day.date)}</p>
+								<p class="mt-1 text-xs tracking-[0.14em] text-alpine-muted uppercase">{day.weatherDescription}</p>
+							</div>
+
+							<div class="mb-4 flex items-end justify-between gap-3">
+								<div>
+									<p class="text-[10px] tracking-[0.15em] text-alpine-muted uppercase">{$t('meteo.max_temp')}</p>
+									<p class="font-serif text-3xl text-alpine-text">{metric(day.maxTempC, '°C')}</p>
+								</div>
+								<div class="text-right">
+									<p class="text-[10px] tracking-[0.15em] text-alpine-muted uppercase">{$t('meteo.min_temp')}</p>
+									<p class="font-serif text-2xl text-alpine-muted">{metric(day.minTempC, '°C')}</p>
+								</div>
+							</div>
+
+							<div class="grid grid-cols-2 gap-2 text-xs">
+								<div class="border border-alpine-border/60 p-2">
+									<p class="tracking-wide text-alpine-muted uppercase">{$t('meteo.sunrise')}</p>
+									<p class="mt-1 text-alpine-text">{formatClock(day.sunrise)}</p>
+								</div>
+								<div class="border border-alpine-border/60 p-2">
+									<p class="tracking-wide text-alpine-muted uppercase">{$t('meteo.sunset')}</p>
+									<p class="mt-1 text-alpine-text">{formatClock(day.sunset)}</p>
+								</div>
+								<div class="border border-alpine-border/60 p-2">
+									<p class="tracking-wide text-alpine-muted uppercase">{$t('meteo.precip_probability')}</p>
+									<p class="mt-1 text-alpine-text">{metric(day.precipitationProbabilityMax, '%')}</p>
+								</div>
+								<div class="border border-alpine-border/60 p-2">
+									<p class="tracking-wide text-alpine-muted uppercase">{$t('meteo.daily_rain')}</p>
+									<p class="mt-1 text-alpine-text">{metric(day.rainSumMm, ' mm', 1)}</p>
+								</div>
+								<div class="border border-alpine-border/60 p-2">
+									<p class="tracking-wide text-alpine-muted uppercase">{$t('meteo.daily_snow')}</p>
+									<p class="mt-1 text-alpine-text">{metric(day.snowfallSumCm, ' cm', 1)}</p>
+								</div>
+								<div class="border border-alpine-border/60 p-2">
+									<p class="tracking-wide text-alpine-muted uppercase">{$t('meteo.max_wind')}</p>
+									<p class="mt-1 text-alpine-text">{metric(day.maxWindSpeedKmh, ' km/h')}</p>
+								</div>
+							</div>
+						</div>
+					{/each}
+				</div>
+			{:else}
+				<div class="rounded-sm border border-amber-200 bg-amber-50 p-4">
+					<p class="text-sm text-alpine-text">{$t('meteo.not_available_daily')}</p>
+				</div>
+			{/if}
+		</div>
+
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
 			<div class="lg:col-span-12">
 				<div class="overflow-hidden border border-alpine-border bg-white shadow-sm">
@@ -267,6 +268,7 @@
 						<a
 							href="https://torgnon-skiarea.panomax.com/"
 							target="_blank"
+							rel="noreferrer"
 							class="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase transition-colors hover:text-alpine-gold"
 						>
 							{$t('meteo.fullscreen')}
@@ -285,6 +287,7 @@
 							<a
 								href="https://torgnon-skiarea.panomax.com/"
 								target="_blank"
+								rel="noreferrer"
 								class="transform bg-white px-10 py-5 text-[11px] font-bold tracking-[0.3em] uppercase shadow-2xl transition-all hover:scale-105 hover:bg-alpine-text hover:text-white"
 							>
 								{$t('meteo.activate_stream')}
