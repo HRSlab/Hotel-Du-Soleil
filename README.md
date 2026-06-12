@@ -1,5 +1,7 @@
 # Hotel Du Soleil
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5d207c32-b7e7-4626-8aea-6246d1de6347/deploy-status)](https://app.netlify.com/projects/preeminent-marigold-40ba4d/deploys)
+
 Marketing website for **Hotel Du Soleil**, an alpine hotel in **Torgnon, Valle
 d'Aosta** ([www.hotel-du-soleil.it](https://www.hotel-du-soleil.it)).
 
