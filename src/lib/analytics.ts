@@ -1,5 +1,3 @@
-import { hasConsentCategory } from '$lib/consent';
-
 type EventParams = Record<string, string | number | boolean | null | undefined>;
 
 import { hasAnalyticsConsent } from '$lib/consent';
