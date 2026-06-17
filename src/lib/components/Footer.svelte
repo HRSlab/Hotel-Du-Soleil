@@ -41,4 +41,7 @@
     <p>{$t('footer.rights')}</p>
     <p class="mt-4 md:mt-0">{$t('footer.made_by')}</p>
   </div>
+  <div class="max-w-7xl mx-auto mt-4 text-center text-[10px] uppercase tracking-widest opacity-40">
+    <p>REA VE-464812 &nbsp;&bull;&nbsp; P.IVA 02525680423</p>
+  </div>
 </footer>
