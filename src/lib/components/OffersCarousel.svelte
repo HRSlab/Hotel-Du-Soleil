@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
+	import { ArrowRight } from 'lucide-svelte';
 
 	interface Offer {
 		href: string;
@@ -19,53 +19,11 @@
 				'Pacchetto benessere e connessione con la natura tra sauna, yoga e sentieri silenziosi.',
 			image:
 				'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920&auto=format&fit=crop'
-		},
-		{
-			href: '/offerte/torgnon-hiking-adventure',
-			tag: 'Avventura',
-			title: 'TORGNON HIKING & ADVENTURE',
-			description:
-				'4 giorni tra trekking, Petit Monde, Adventure Park e giro panoramico in e-bike.',
-			image:
-				'https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1920&auto=format&fit=crop'
-		},
-		{
-			href: '/offerte/forte-di-bard-gourmet-escape',
-			tag: 'Heritage & Taste',
-			title: 'FORTE DI BARD & GOURMET ESCAPE',
-			description:
-				'3 notti tra Forte di Bard, degustazione locale, hiking signature day ed e-bike panoramica.',
-			image:
-				'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1920&auto=format&fit=crop'
-		},
-		{
-			href: '/offerte/aosta-romana-castello-di-fenis',
-			tag: 'Roman Heritage & Castle',
-			title: 'AOSTA ROMANA & CASTELLO DI FÉNIS',
-			description:
-				'3 notti tra il cuore romano di Aosta, Porta Praetoria, Castello di Fénis e base montana a Torgnon.',
-			image:
-				'https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_romano_aosta_verso_l%27alto.JPG'
 		}
 	];
 
 	let currentIndex = $state(0);
 	let direction = $state<'next' | 'prev'>('next');
-
-	function next() {
-		direction = 'next';
-		currentIndex = (currentIndex + 1) % offers.length;
-	}
-
-	function prev() {
-		direction = 'prev';
-		currentIndex = (currentIndex - 1 + offers.length) % offers.length;
-	}
-
-	function goTo(i: number) {
-		direction = i > currentIndex ? 'next' : 'prev';
-		currentIndex = i;
-	}
 
 	const current = $derived(offers[currentIndex]);
 	const xIn = $derived(direction === 'next' ? 40 : -40);
@@ -131,43 +89,12 @@
 			</div>
 		{/key}
 
-		<!-- Prev / Next buttons -->
-		<div class="absolute right-6 bottom-12 z-20 flex items-center gap-3 md:right-12 md:bottom-16">
-			<button
-				onclick={prev}
-				aria-label="Offerta precedente"
-				class="flex h-12 w-12 items-center justify-center border border-white/30 text-white transition-all duration-300 hover:border-alpine-gold hover:bg-alpine-gold hover:text-alpine-text"
-			>
-				<ArrowLeft class="h-4 w-4" />
-			</button>
-			<button
-				onclick={next}
-				aria-label="Offerta successiva"
-				class="flex h-12 w-12 items-center justify-center border border-white/30 text-white transition-all duration-300 hover:border-alpine-gold hover:bg-alpine-gold hover:text-alpine-text"
-			>
-				<ArrowRight class="h-4 w-4" />
-			</button>
-		</div>
-
 		<!-- Counter -->
 		<div
 			class="absolute top-6 right-8 z-20 text-[10px] font-bold tracking-[0.3em] text-white/50 md:right-12"
 		>
 			{String(currentIndex + 1).padStart(2, '0')} / {String(offers.length).padStart(2, '0')}
 		</div>
-	</div>
-
-	<!-- Dot navigation -->
-	<div class="flex items-center justify-center gap-2 py-6">
-		{#each offers as _, i}
-			<button
-				onclick={() => goTo(i)}
-				aria-label={`Offerta ${i + 1}`}
-				class="h-0.5 transition-all duration-400 {i === currentIndex
-					? 'w-8 bg-alpine-gold'
-					: 'w-3 bg-white/25 hover:bg-white/50'}"
-			></button>
-		{/each}
 	</div>
 
 	<!-- Mobile CTA -->
