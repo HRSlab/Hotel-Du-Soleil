@@ -41,7 +41,7 @@
 			</p>
 		</div>
 
-		<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+		<div class="grid grid-cols-1 gap-8">
 			<article
 				class="group border border-alpine-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-alpine-gold hover:shadow-2xl"
 			>
@@ -65,96 +65,6 @@
 							class="mt-6 inline-flex border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors group-hover:border-alpine-gold group-hover:text-alpine-gold"
 						>
 							{$t('offers_page.card_cta')}
-						</span>
-					</div>
-				</a>
-			</article>
-
-			<article
-				class="group border border-alpine-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-alpine-gold hover:shadow-2xl"
-			>
-				<a href="/offerte/torgnon-hiking-adventure" class="block">
-					<div class="aspect-16/10 overflow-hidden">
-						<img
-							src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1600&auto=format&fit=crop"
-							alt="Torgnon Hiking & Adventure"
-							class="img-elegant h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-						/>
-					</div>
-					<div class="p-8">
-						<span class="text-[10px] font-bold tracking-[0.22em] text-alpine-gold uppercase"
-							>PACCHETTO AVVENTURA</span
-						>
-						<h3 class="mt-3 font-serif text-3xl text-alpine-text">TORGNON HIKING & ADVENTURE</h3>
-						<p class="mt-3 text-sm leading-relaxed font-light text-alpine-muted">
-							4 giorni tra trekking, Petit Monde, Adventure Park e giro panoramico in e-bike.
-						</p>
-						<span
-							class="mt-6 inline-flex border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors group-hover:border-alpine-gold group-hover:text-alpine-gold"
-						>
-							SCOPRI IL PACCHETTO
-						</span>
-					</div>
-				</a>
-			</article>
-
-			<article
-				class="group border border-alpine-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-alpine-gold hover:shadow-2xl"
-			>
-				<a href="/offerte/forte-di-bard-gourmet-escape" class="block">
-					<div class="aspect-16/10 overflow-hidden">
-						<img
-							src="https://www.lovevda.it/immagini/DisplayImage/33914"
-							alt="Forte di Bard & Gourmet Escape"
-							class="img-elegant h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-						/>
-					</div>
-					<div class="p-8">
-						<span class="text-[10px] font-bold tracking-[0.22em] text-alpine-gold uppercase"
-							>HERITAGE & TASTE</span
-						>
-						<h3 class="mt-3 font-serif text-3xl text-alpine-text">
-							FORTE DI BARD & GOURMET ESCAPE
-						</h3>
-						<p class="mt-3 text-sm leading-relaxed font-light text-alpine-muted">
-							3 notti tra Forte di Bard, degustazione locale, hiking signature day ed e-bike
-							panoramica.
-						</p>
-						<span
-							class="mt-6 inline-flex border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors group-hover:border-alpine-gold group-hover:text-alpine-gold"
-						>
-							SCOPRI IL PACCHETTO
-						</span>
-					</div>
-				</a>
-			</article>
-
-			<article
-				class="group border border-alpine-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-alpine-gold hover:shadow-2xl"
-			>
-				<a href="/offerte/aosta-romana-castello-di-fenis" class="block">
-					<div class="aspect-16/10 overflow-hidden">
-						<img
-							src="https://commons.wikimedia.org/wiki/Special:FilePath/Castello_F%C3%A9nis.jpg"
-							alt="Aosta Romana & Castello di Fénis"
-							class="img-elegant h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-						/>
-					</div>
-					<div class="p-8">
-						<span class="text-[10px] font-bold tracking-[0.22em] text-alpine-gold uppercase"
-							>ROMAN HERITAGE & CASTLE</span
-						>
-						<h3 class="mt-3 font-serif text-3xl text-alpine-text">
-							AOSTA ROMANA & CASTELLO DI FÉNIS
-						</h3>
-						<p class="mt-3 text-sm leading-relaxed font-light text-alpine-muted">
-							3 notti tra il cuore romano di Aosta, Porta Praetoria, Castello di Fénis e base
-							montana a Torgnon.
-						</p>
-						<span
-							class="mt-6 inline-flex border-b border-alpine-text pb-1 text-[11px] font-bold tracking-[0.2em] text-alpine-text uppercase transition-colors group-hover:border-alpine-gold group-hover:text-alpine-gold"
-						>
-							SCOPRI IL PACCHETTO
 						</span>
 					</div>
 				</a>

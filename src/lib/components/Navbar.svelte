@@ -77,12 +77,7 @@
 
 	function isInactiveOfferHref(href: string): boolean {
 		if (!href.startsWith('/offerte/')) return false;
-		return (
-			href !== '/offerte/restart' &&
-			href !== '/offerte/torgnon-hiking-adventure' &&
-			href !== '/offerte/forte-di-bard-gourmet-escape' &&
-			href !== '/offerte/aosta-romana-castello-di-fenis'
-		);
+		return href !== '/offerte/restart';
 	}
 
 	function getVisibleMegaLinks(itemKey: string, fallbackHref: string): unknown[] {

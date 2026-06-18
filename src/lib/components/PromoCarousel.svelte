@@ -1,10 +1,5 @@
 <script lang="ts">
-	import {
-		getRestartPromotionUrl,
-		getTorgnonHikingAdventurePromotionUrl,
-		getForteBardGourmetEscapePromotionUrl,
-		getAostaRomanaPromotionUrl
-	} from '$lib/config/booking';
+	import { getRestartPromotionUrl } from '$lib/config/booking';
 
 	interface Promo {
 		title: string;
@@ -15,23 +10,8 @@
 	const promos: Promo[] = [
 		{
 			title: 'RESTART',
-			price: 'EUR 520',
+			price: 'EUR 94',
 			url: getRestartPromotionUrl('promo_marquee_restart')
-		},
-		{
-			title: 'TORGNON HIKING & ADVENTURE',
-			price: 'EUR 520',
-			url: getTorgnonHikingAdventurePromotionUrl('promo_marquee_torgnon')
-		},
-		{
-			title: 'FORTE DI BARD & GOURMET ESCAPE',
-			price: 'EUR 540',
-			url: getForteBardGourmetEscapePromotionUrl('promo_marquee_forte')
-		},
-		{
-			title: 'AOSTA ROMANA & CASTELLO DI FENIS',
-			price: 'EUR 580',
-			url: getAostaRomanaPromotionUrl('promo_marquee_aosta')
 		}
 	];
 
