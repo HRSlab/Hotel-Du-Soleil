@@ -117,7 +117,7 @@
 		"section_text": "Created for guests who want to combine a mountain stay with the timeless beauty of the Valle d'Aosta's historic treasures. The Roman heart of Aosta brings elegant urban atmosphere and a sense of continuity with the ancient world, while Castello di Fénis adds a classic castle experience to the journey.",
 		"price_label": "Final package rate",
 		"price_guests": "2 adults",
-		"price_unit": "Double room \u2022 HB \u2022 3 nights",
+		"price_unit": "Double room • HB • 3 nights",
 		"highlights_title": "Highlights",
 		"highlight_1": "Roman Walk through Aosta with Porta Praetoria as a signature highlight.",
 		"highlight_2": "Castello di Fénis, one of the region's most photogenic castles.",
@@ -1455,5 +1455,25 @@
 		"cta_text": "After a day in the mountains, treat yourself to the luxury of perfect recovery. Our therapists are waiting for you.",
 		"cta_spa": "Discover the SPA",
 		"cta_treatments": "Body Treatments"
+	},
+	"cookie_banner": {
+		"title": "We respect your privacy",
+		"description": "We use necessary technical cookies and, only with your consent, functional, analytical and marketing cookies to improve services and offers.",
+		"detail": "You can change your choice at any time.",
+		"necessary": "Necessary",
+		"necessary_desc": "Always active for security, navigation, and booking.",
+		"functional": "Functional",
+		"functional_desc": "They enable optional services such as chat assistance.",
+		"analytics": "Analytical",
+		"analytics_desc": "They measure visits and performance in aggregate form.",
+		"marketing": "Marketing",
+		"marketing_desc": "They personalize communications and promotional campaigns.",
+		"reject_all": "Reject everything",
+		"accept_all": "Accept everything",
+		"customize": "Customize",
+		"save_preferences": "Save preferences",
+		"manage": "Cookie settings",
+		"policy_link": "Cookie Policy",
+		"privacy_link": "Privacy Policy"
 	}
 }
