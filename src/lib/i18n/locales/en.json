@@ -1501,5 +1501,25 @@
 		"cta_text": "After a day in the mountains, treat yourself to the luxury of perfect recovery. Our therapists are waiting for you.",
 		"cta_spa": "Discover the SPA",
 		"cta_treatments": "Body Treatments"
+	},
+	"cookie_banner": {
+		"title": "We respect your privacy",
+		"description": "We use necessary technical cookies and, only with your consent, functional, analytical and marketing cookies to improve services and offers.",
+		"detail": "You can change your choice at any time.",
+		"necessary": "Necessary",
+		"necessary_desc": "Always active for security, navigation, and booking.",
+		"functional": "Functional",
+		"functional_desc": "They enable optional services such as chat assistance.",
+		"analytics": "Analytical",
+		"analytics_desc": "They measure visits and performance in aggregate form.",
+		"marketing": "Marketing",
+		"marketing_desc": "They personalize communications and promotional campaigns.",
+		"reject_all": "Reject everything",
+		"accept_all": "Accept everything",
+		"customize": "Customize",
+		"save_preferences": "Save preferences",
+		"manage": "Cookie settings",
+		"policy_link": "Cookie Policy",
+		"privacy_link": "Privacy Policy"
 	}
 }

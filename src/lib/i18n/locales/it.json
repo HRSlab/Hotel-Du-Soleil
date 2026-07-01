@@ -430,6 +430,10 @@
 			"water": {
 				"title": "Acqua di Fonte",
 				"text": "Valorizziamo l'acqua purissima delle sorgenti di Torgnon, filtrata e servita al tavolo."
+			},
+			"km0": {
+				"title": "Km 0 & Biologico",
+				"text": "Privilegiamo i produttori della valle per ridurre le emissioni legate ai trasporti."
 			}
 		}
 	},
