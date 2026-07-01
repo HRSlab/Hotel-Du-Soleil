@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026 Carlo Bello. All rights reserved.
+ * Proprietary commercial software.
+ * No modification is permitted without prior written consent.
+ * Contact: carlo@hrslab.com
+ */
+
 import prettier from 'eslint-config-prettier';
 import path from 'node:path';
 import { includeIgnoreFile } from '@eslint/compat';

@@ -1,0 +1,74 @@
+# Hotel Du Soleil - Proprietary Commercial License
+
+Copyright (c) 2026 Carlo Bello
+All rights reserved.
+
+## 1. Owner and Scope
+
+This license governs ownership and usage rights for the source code and technical
+implementation of this repository (the "Code"). The Code is proprietary commercial
+property owned exclusively by Carlo Bello.
+
+This license does not claim ownership of, and does not transfer rights in, hotel
+business operations, hotel services, company identity, website domain, customer
+data, trademarks, logos, marketing copy, media content, or other non-code business
+assets that belong to the hotel company or other respective owners.
+
+## 2. No Open-Source Grant
+
+No open-source license is granted for the Code. No rights are granted by
+implication, estoppel, or otherwise, except as explicitly granted in a separate
+written agreement signed by Carlo Bello.
+
+## 3. Permitted Use
+
+Any use of the Code requires prior written authorization from Carlo Bello,
+unless a separate signed commercial agreement states otherwise.
+
+## 4. Restrictions
+
+Without prior written consent from Carlo Bello, you must not:
+
+- modify, adapt, translate, or create derivative works of the Code;
+- copy, reproduce, republish, distribute, transmit, display, or disclose the Code;
+- sublicense, lease, rent, sell, assign, or otherwise commercially exploit the Code;
+- reverse engineer, decompile, disassemble, or attempt to derive source logic,
+  except where non-waivable law explicitly permits it;
+- remove, alter, or obscure any copyright, trademark, or proprietary notices.
+
+## 5. Intellectual Property
+
+All intellectual property rights, title, and interest in and to the Code,
+including all updates, modifications, and derivative works (if any are authorized),
+remain solely with Carlo Bello unless explicitly transferred in a signed writing.
+
+## 6. Written Consent and Contact
+
+For written consent requests, licensing permissions, or commercial terms, contact:
+[carlo@hrslab.com](mailto:carlo@hrslab.com)
+
+## 7. Termination
+
+Any unauthorized use automatically terminates any granted permission, and you must
+immediately stop use and destroy all copies in your possession or control, unless
+otherwise required by law.
+
+## 8. Warranty Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+## 9. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, CARLO BELLO SHALL NOT BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES,
+OR FOR ANY LOSS OF DATA, PROFITS, REVENUE, OR BUSINESS, ARISING OUT OF OR RELATED TO
+THE CODE OR THIS LICENSE, WHETHER IN CONTRACT, TORT, STRICT LIABILITY, OR
+OTHERWISE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+## 10. Governing Terms
+
+This document sets the default proprietary terms for the Code. If a separate
+signed agreement exists between you and Carlo Bello, that agreement controls in the
+event of a conflict.

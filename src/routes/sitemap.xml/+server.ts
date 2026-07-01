@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026 Carlo Bello. All rights reserved.
+ * Proprietary commercial software.
+ * No modification is permitted without prior written consent.
+ * Contact: carlo@hrslab.com
+ */
+
 import type { RequestHandler } from '@sveltejs/kit';
 
 const SITE_URL = 'https://www.hotel-du-soleil.it';

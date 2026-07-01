@@ -1,5 +1,18 @@
 # sv
 
+## Legal Notice
+
+Copyright (c) 2026 Carlo Bello. All rights reserved.
+
+This codebase is proprietary commercial software owned by Carlo Bello.
+No modification, reuse, distribution, sublicensing, or derivative work is permitted
+without prior written consent from the owner.
+
+This legal notice applies to source code rights only. Website/business brand and
+operational rights remain with the hotel company and respective owners.
+
+For written consent requests, contact: [carlo@hrslab.com](mailto:carlo@hrslab.com)
+
 ![CodeTime badge](https://shields.jannchie.com/endpoint?style=for-the-badge&color=fafafa&url=https%3A%2F%2Fapi.codetime.dev%2Fv3%2Fusers%2Fshield%3Fuid%3D1672%26project%3DHotel%2BDu%2BSoleil%26minutes%3D9360)
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
