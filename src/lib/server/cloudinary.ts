@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026 Carlo Bello. All rights reserved.
+ * Proprietary commercial software.
+ * No modification is permitted without prior written consent.
+ * Contact: carlo@hrslab.com
+ */
+
 import { CLOUDINARY_API_SECRET } from '$env/static/private';
 import { env as publicEnv } from '$env/dynamic/public';
 import { v2 as cloudinary } from 'cloudinary';
@@ -32,7 +39,9 @@ export function signCloudinaryParams(params: Record<string, string | number | un
 	assertCloudinaryServerConfig();
 
 	const filteredParams = Object.fromEntries(
-		Object.entries(params).filter((entry): entry is [string, string | number] => entry[1] !== undefined)
+		Object.entries(params).filter(
+			(entry): entry is [string, string | number] => entry[1] !== undefined
+		)
 	);
 
 	return cloudinary.utils.api_sign_request(filteredParams, CLOUDINARY_API_SECRET);

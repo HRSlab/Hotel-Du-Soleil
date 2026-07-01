@@ -1,6 +1,8 @@
 {
 	"name": "hotel-du-soleil",
 	"private": true,
+	"license": "UNLICENSED",
+	"author": "Carlo Bello <carlo@hrslab.com>",
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
